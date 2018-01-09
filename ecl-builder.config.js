@@ -7,7 +7,7 @@ module.exports = {
   scripts: [
     {
       entry: path.resolve(__dirname, 'framework/index.js'),
-      dest: path.resolve(__dirname, outputFolder, 'scripts/europa.js'),
+      dest: path.resolve(__dirname, outputFolder, 'scripts/ema.js'),
       options: {
         sourceMap: isProd ? false : 'inline',
         moduleName: 'ECL',
@@ -17,7 +17,7 @@ module.exports = {
   styles: [
     {
       entry: path.resolve(__dirname, 'framework/index.scss'),
-      dest: path.resolve(__dirname, outputFolder, 'styles/europa.css'),
+      dest: path.resolve(__dirname, outputFolder, 'styles/ema.css'),
       options: {
         sourceMap: isProd ? 'file' : true,
       },
