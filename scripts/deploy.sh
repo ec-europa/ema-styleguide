@@ -15,6 +15,6 @@ fi
 # Deploy
 ./node_modules/.bin/gh-pages \
   --silent \
-  --repo https://${GH_TOKEN}@github.com/ec-europa/europa-component-library.git \
+  --repo https://${GH_TOKEN}@github.com/ec-europa/ema-styleguide.git \
   --dist dist \
   --message "Update GitHub Pages [SKIP CI]"
