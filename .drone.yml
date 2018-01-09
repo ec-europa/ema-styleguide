@@ -1,0 +1,55 @@
+branches:
+  exclude: [ gh-pages ]
+
+clone:
+  git:
+    image: plugins/git
+    commands:
+      - git init
+      - git remote add origin ${DRONE_REMOTE_URL}
+      - git fetch --no-tags origin master ${DRONE_COMMIT_REF}
+      - git checkout -qf master;
+      - if [ "${DRONE_BUILD_EVENT}" == "pull_request" ] || [ "${DRONE_BUILD_EVENT}" == "tag" ] ; then
+          git checkout -qf FETCH_HEAD;
+        else
+          git checkout -qf ${DRONE_COMMIT_BRANCH};
+        fi
+
+matrix:
+  TEST:
+    - coding-conventions
+    - functional
+
+pipeline:
+  install:
+    image: node:latest
+    commands:
+      - yarn install --frozen-lockfile
+
+  coding-conventions:
+    image: node:latest
+    commands:
+      - yarn test:coding-conventions
+    when:
+      matrix:
+        TEST: coding-conventions
+
+  build:
+    image: node:latest
+    commands:
+      - yarn dist
+    when:
+      event: [push]
+      matrix:
+        TEST: functional
+
+  deploy-pages:
+    image: node:latest
+    secrets: [ GH_TOKEN ]
+    commands:
+      - ./scripts/deploy.sh
+    when:
+      event: [push]
+      branch: master
+      matrix:
+        TEST: functional
