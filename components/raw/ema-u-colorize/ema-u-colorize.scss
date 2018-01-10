@@ -1,0 +1,13 @@
+/*
+  EMA Colorize
+  ===========
+*/
+
+@each $key, $value in $ema-colors {
+  .ema-u-color-#{$key} {
+    color: $value;
+  }
+  .ema-u-bg-#{$key} {
+    background-color: $value;
+  }
+}
