@@ -3,6 +3,7 @@
 
 # Ignore some folders
 node_modules
+/framework/_imports
 /static/assets/searchIndex.json
 /static/framework
 dist
