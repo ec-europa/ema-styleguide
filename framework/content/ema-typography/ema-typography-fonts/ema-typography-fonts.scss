@@ -1,0 +1,17 @@
+// EMA fonts
+
+html {
+  font-size: 90%;
+
+  @include ecl-media-breakpoint-up(md) {
+    font-size: 100%;
+  }
+}
+
+body {
+  font-family: $ema-font-family-base;
+}
+
+small {
+  font-size: map-get($ecl-font-size, 's');
+}

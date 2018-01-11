@@ -1,0 +1,63 @@
+/**
+* EMA Links component
+*/
+
+@import 'links-mixins';
+
+.ema-link {
+  @include link();
+}
+
+.ema-link--external {
+  @include link-external();
+}
+
+.ema-link--standalone {
+  color: map-get($ema-colors, 'blue-2');
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.ema-link--obvious {
+  color: map-get($ema-colors, 'ema-black');
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: map-get($ema-colors, 'blue-2');
+    text-decoration: underline;
+  }
+}
+
+.ema-link--inverted {
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
+
+.ema-link--all {
+  clear: right;
+  float: right;
+  text-transform: uppercase;
+}
+
+.ema-link--more {
+  text-transform: uppercase;
+
+  &::after {
+    @extend %ecl-icon--after;
+
+    @include ecl-icon('right');
+
+    font-size: 75%;
+    margin-left: 0.4em;
+    margin-right: 0.2em;
+  }
+}
