@@ -1,0 +1,17 @@
+@mixin link() {
+  color: map-get($ema-colors, 'blue-2');
+  margin: 0;
+  text-decoration: underline;
+}
+
+@mixin link-external {
+  &::after {
+    @extend %ecl-icon--after;
+
+    @include ecl-icon('external');
+
+    font-size: 75%;
+    margin-left: 0.4em;
+    margin-right: 0.2em;
+  }
+}
