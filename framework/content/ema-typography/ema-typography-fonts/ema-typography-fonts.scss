@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  color: map-get($ema-colors, 'black');
   font-family: $ema-font-family-base;
 }
 
