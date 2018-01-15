@@ -1,5 +1,3 @@
 # Separator
 
-## When to use it
-
-## When not to use it
+Provides a way to separate different blocks of content

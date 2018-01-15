@@ -10,12 +10,15 @@
   background-color: map-get($ema-colors, 'light-grey-2');
   display: flex;
   line-height: 1.1;
-  padding: 1em;
+  padding: map-get($ecl-spacing, 's');
 }
 
 .ema-separator__heading--title {
   flex-grow: 1;
-  font-weight: 400;
   margin: 0;
+  max-width: none;
 }
 
+.ema-separator__heading--icon {
+  color: map-get($ema-colors, 'grey-3');
+}

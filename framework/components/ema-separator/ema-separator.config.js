@@ -3,7 +3,7 @@ module.exports = {
   label: 'Separator',
   status: 'ready',
   context: {
-    icon: 'ecl-icon--file',
+    icon: 'file',
     title: 'Related documents',
   },
 };
