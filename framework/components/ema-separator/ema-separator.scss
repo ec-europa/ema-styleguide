@@ -1,0 +1,21 @@
+/**
+* EMA Separator component
+*/
+
+.ema-separator {
+  margin: 0;
+}
+
+.ema-separator__heading {
+  background-color: map-get($ema-colors, 'light-grey-2');
+  display: flex;
+  line-height: 1.1;
+  padding: 1em;
+}
+
+.ema-separator__heading--title {
+  flex-grow: 1;
+  font-weight: 400;
+  margin: 0;
+}
+
