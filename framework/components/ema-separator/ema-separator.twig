@@ -1,0 +1,33 @@
+{#
+  Accepts:
+    - title (string): title of the panel (default: '')
+    - icon (string): name of the ECL-icons class to be used in the heading
+    - extra_classes (string): additional classes to add to the component
+    - extra_attributes (array of { name: '', value: '' })
+#}
+
+{# Internal properties #}
+{% set _css_class = 'ema-separator' %}
+{% set _extra_attributes = '' %}
+{% set _title = title|default('') %}
+{% set _icon = 'ecl-icon ecl-icon--' ~ icon|default('') %}
+
+{% if extra_classes is defined and extra_classes is not empty %}
+  {% set _css_class = _css_class ~ ' ' ~ extra_classes %}
+{% endif %}
+
+{% if extra_attributes is defined and extra_attributes is not empty %}
+  {% for attr in extra_attributes %}
+    {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name ~ '="' ~ attr.value ~ '"' %}
+  {% endfor %}
+{% endif %}
+
+{# Print result #}
+<div class="{{ _css_class }}"{{ _extra_attributes }}>
+  <div class="ema-separator__heading">
+    <h3 class="ema-separator__heading--title ema-heading ema-heading--h3">
+      {{_title}}
+    </h3>
+    <span class="ema-separator__heading--icon {{_icon}}"></span>
+  </div>
+</div>
