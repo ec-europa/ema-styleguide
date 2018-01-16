@@ -34,8 +34,7 @@
 <footer class="{{ _css_class }}" {{ _extra_attributes }}>
   <div class="ema-footer__links">
     {% for link in links %}
-      {% include '@ec-europa/ema-styleguide/ema-links' with link %}
-      <a href="{{ link.href }}">{{ link.label }}</a>
+      {% include '@ec-europa/ema-links' with link %}
     {% endfor %}
   </div>
 
