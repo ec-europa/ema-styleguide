@@ -13,7 +13,6 @@
 }
 
 .ema-footer__links {
-  margin-bottom: map-get($ecl-spacing, 'xxs');
   width: 100%;
 }
 
@@ -27,6 +26,15 @@
 
 .ema-footer__copyright {
   flex-grow: 1;
+  margin-top: map-get($ecl-spacing, 'xxs');
+}
+
+.ema-footer__description {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  margin-top: map-get($ecl-spacing, 'xxs');
 }
 
 .ema-footer__logo {
