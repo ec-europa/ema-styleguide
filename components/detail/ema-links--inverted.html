@@ -210,6 +210,30 @@
         
         
         <li class="ecl-navigation-menu__item"  data-role="item">
+          <a href="ema-typography-paragraphs" class="ecl-navigation-menu__link ">
+            
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="background-color: #467a39; border-color: #467a39;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            <span>Paragraphs</span>
+          </a>
+        </li>
+        
+    
+        
+        
+        <li class="ecl-navigation-menu__item"  data-role="item">
           <a href="ema-typography-fonts" class="ecl-navigation-menu__link ">
             
 
@@ -251,30 +275,6 @@
 
 
             <span>Headings</span>
-          </a>
-        </li>
-        
-    
-        
-        
-        <li class="ecl-navigation-menu__item"  data-role="item">
-          <a href="ema-typography-paragraphs" class="ecl-navigation-menu__link ">
-            
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="background-color: #467a39; border-color: #467a39;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            <span>Paragraphs</span>
           </a>
         </li>
         
@@ -471,6 +471,7 @@
           <div class="ecl-editor">
             
             <h1 id="ema-links">EMA Links</h1>
+<p>Based on ECL links, with custom modifiers.</p>
 
             
           </div>
@@ -545,40 +546,7 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-7f5f5fbf2189de2043b90b87343b103d-panel-view">
     <code class="Code Code--lang-twig">
-        <pre><span class="xml"></span><span class="hljs-comment">{#
-  Accepts:
-    - variant (string): can be empty,'external','standalone', 'inverted', 'all', 'more' (default: empty)
-    - href (string): target of the link (default: '#')
-    - label (string or block): label of the link (default: '')
-    - extra_classes (string): additional classes to add to the component
-    - extra_attributes (array of { name: '', value: '' })
-#}</span><span class="xml">
-
-</span><span class="hljs-comment">{# Internal properties #}</span><span class="xml">
-
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _css_class = 'ema-link' %}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _extra_attributes = '' %}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _href = href|<span class="hljs-keyword">default</span>('#') %}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _label = label|<span class="hljs-keyword">default</span>('') %}</span><span class="xml">
-
-</span><span class="hljs-comment">{# Internal logic - Process properties #}</span><span class="xml">
-
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> variant is defined and variant is not empty %}</span><span class="xml">
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _css_class = _css_class ~ ' ' ~ 'ema-link--' ~ variant %}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> extra_classes is defined and extra_classes is not empty %}</span><span class="xml">
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _css_class = _css_class ~ ' ' ~ extra_classes %}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> extra_attributes is defined and extra_attributes is not empty %}</span><span class="xml">
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> attr in extra_attributes %}</span><span class="xml">
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _extra_attributes = _extra_attributes ~ ' ' ~ attr.name ~ '="' ~ attr.value ~ '"' %}</span><span class="xml">
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-
-</span><span class="hljs-comment">{# Print result #}</span><span class="xml">
-<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _css_class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _href }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _extra_attributes }}</span><span class="xml"><span class="hljs-tag">&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">block</span></span> label _label %}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span></pre>
+        <pre><span class="xml"></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-links' %}</span><span class="xml"></span></pre>
     </code>
 </div>
 
@@ -588,10 +556,9 @@
         
             
             <pre>{
-  <span class="hljs-attr">"variant"</span>: <span class="hljs-string">"inverted"</span>,
+  <span class="hljs-attr">"extra_classes"</span>: <span class="hljs-string">"ecl-link--ema-inverted ema-u-bg-primary"</span>,
   <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#"</span>,
-  <span class="hljs-attr">"label"</span>: <span class="hljs-string">"inverted link"</span>,
-  <span class="hljs-attr">"extra_classes"</span>: <span class="hljs-string">"ema-u-bg-primary"</span>
+  <span class="hljs-attr">"label"</span>: <span class="hljs-string">"inverted link"</span>
 }</pre>
             
         
@@ -603,7 +570,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-7f5f5fbf2189de2043b90b87343b103d-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-link ema-link--inverted ema-u-bg-primary"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>inverted link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-link--ema-inverted ema-u-bg-primary"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>inverted link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -678,8 +645,12 @@
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre>@<span class="hljs-keyword">mixin</span> link() {
   <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'blue-2'</span>);
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">text-decoration</span>: underline;
+
+  &amp;:hover,
+  &amp;:focus {
+    <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'blue-2'</span>);
+  }
 }
 
 @<span class="hljs-keyword">mixin</span> link-external {
@@ -709,7 +680,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">281 Bytes</span>
+                    <span class="Meta-value">339 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -728,15 +699,17 @@
 
 @<span class="hljs-keyword">import</span> <span class="hljs-string">'links-mixins'</span>;
 
-<span class="hljs-selector-class">.ema-link</span> {
+<span class="hljs-selector-class">.ecl-link--ema-default</span> {
   @<span class="hljs-keyword">include</span> link();
 }
 
-<span class="hljs-selector-class">.ema-link--external</span> {
+<span class="hljs-selector-class">.ecl-link--ema-external</span> {
+  @<span class="hljs-keyword">include</span> link();
   @<span class="hljs-keyword">include</span> link-external();
 }
 
-<span class="hljs-selector-class">.ema-link--standalone</span> {
+<span class="hljs-selector-class">.ecl-link--ema-standalone</span> {
+  @<span class="hljs-keyword">include</span> link();
   <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'blue-2'</span>);
   <span class="hljs-attribute">text-decoration</span>: none;
 
@@ -746,7 +719,8 @@
   }
 }
 
-<span class="hljs-selector-class">.ema-link--obvious</span> {
+<span class="hljs-selector-class">.ecl-link--ema-obvious</span> {
+  @<span class="hljs-keyword">include</span> link();
   <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'black'</span>);
   <span class="hljs-attribute">text-decoration</span>: none;
 
@@ -757,7 +731,8 @@
   }
 }
 
-<span class="hljs-selector-class">.ema-link--inverted</span> {
+<span class="hljs-selector-class">.ecl-link--ema-inverted</span> {
+  @<span class="hljs-keyword">include</span> link();
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
 
   &amp;:hover,
@@ -766,13 +741,15 @@
   }
 }
 
-<span class="hljs-selector-class">.ema-link--all</span> {
+<span class="hljs-selector-class">.ecl-link--ema-all</span> {
+  @<span class="hljs-keyword">include</span> link();
   <span class="hljs-attribute">clear</span>: right;
   <span class="hljs-attribute">float</span>: right;
   <span class="hljs-attribute">text-transform</span>: uppercase;
 }
 
-<span class="hljs-selector-class">.ema-link--more</span> {
+<span class="hljs-selector-class">.ecl-link--ema-more</span> {
+  @<span class="hljs-keyword">include</span> link();
   <span class="hljs-attribute">text-transform</span>: uppercase;
 
   &amp;::after {
@@ -801,7 +778,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">853 Bytes</span>
+                    <span class="Meta-value">1 KB</span>
                 </li>
             </ul>
         </div>
