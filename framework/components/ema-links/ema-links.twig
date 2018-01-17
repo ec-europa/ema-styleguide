@@ -1,16 +1,1 @@
-{#
-  Accepts:
-    - variant (string): can be empty,'external','standalone', 'inverted', 'all', 'more' (default: empty)
-    - href (string): target of the link (default: '#')
-    - label (string or block): label of the link (default: '')
-    - extra_classes (string): additional classes to add to the component
-    - extra_attributes (array of { name: '', value: '' })
-#}
-
-{% include '@ec-europa/ecl-links' with {
-  variant: variant,
-  href: href,
-  label: label,
-  extra_classes: extra_classes,
-  extra_attributes: extra_attributes,
-} %}
+{% include '@ec-europa/ecl-links' %}
