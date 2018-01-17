@@ -5,12 +5,21 @@ module.exports = {
   tags: ['molecule'],
   context: {
     links: [
-      { label: 'Help', href: '#', variant: ['inverted', 'standalone'] },
-      { label: 'Sitemap', href: '#', variant: ['inverted', 'standalone'] },
+      {
+        label: 'Help',
+        href: '#',
+        extra_classes: 'ecl-link--ema-inverted ema-footer__link-item',
+      },
+      {
+        label: 'Sitemap',
+        href: '#',
+        extra_classes: 'ecl-link--ema-inverted ema-footer__link-item',
+      },
       {
         label: 'EMA public website',
         href: '#',
-        variant: ['inverted', 'standalone', 'external'],
+        extra_classes:
+          'ecl-link--ema-inverted ecl-link--ema-external ema-footer__link-item',
       },
     ],
     copyright:
