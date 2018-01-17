@@ -5,3 +5,31 @@
 .ema-side-navigation {
   margin: 0;
 }
+
+.ema-side-navigation__link {
+  background-color: map-get($ema-colors, 'primary');
+  color:#fff;
+  display: block;
+  padding: map-get($ecl-spacing, 's');
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.ema-side-navigation__link--depth-1 {
+  background-color: map-get($ema-colors, 'primary');
+}
+
+.ema-side-navigation__link--depth-2 {
+  background-color: map-get($ema-colors, 'blue-1');
+}
+
+.ema-side-navigation__link--depth-3 {
+  background-color: map-get($ema-colors, 'secondary');
+}
+
+.ema-side-navigation__link--depth-4 {
+  background-color: map-get($ema-colors, 'blue-3');
+}

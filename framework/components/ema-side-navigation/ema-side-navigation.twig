@@ -21,28 +21,35 @@
 {% endif %}
 
 {# Print result #}
-{% macro menu_links(list, parent_index) %}
+{% macro menu_links(list, depth, parent_index) %}
   {% import _self as macros %}
   {% for item in list %}
     {% set _current_index = parent_index ? parent_index ~ "-" ~ loop.index : loop.index %}
+    {% set _depth = (depth|default(0)) + 1 %}
+    {% set _class = "ecl-expandable__button ema-side-navigation__link ema-side-navigation__link--depth-" ~ _depth %}
     <li>
       {% if item.list is defined and item.list is not empty %}
         <a
           aria-controls={{ "example-expandable-" ~ _current_index }}
           aria-expanded="false"
-          class="ecl-link ecl-expandable__button"
+          class="{{ _class }}"
           href={{ item.link }}
           id={{ "example-expandable-button-" ~ _current_index }}>
           {{ item.label }}
         </a>
         <ul
+          class="ecl-listing"
           aria-hidden="true"
           aria-labelledby={{ "example-expandable-button-" ~ _current_index }}
           id={{ "example-expandable-" ~ _current_index }}>
-          {{ macros.menu_links(item.list, _current_index) }}
+          {{ macros.menu_links(item.list, _depth, _current_index) }}
         </ul>
       {% else %}
-        <a href={{ item.link }}>{{ item.label }}</a>
+        <a
+          class="{{ _class }}"
+          href={{ item.link }}>
+          {{ item.label }}
+        </a>
       {% endif %}
     </li>
   {% endfor %}
@@ -50,7 +57,7 @@
 
 {% import _self as macros %}
 <div class="{{ _css_class }}"{{ _extra_attributes }}>
-  <ul>
-    {{ macros.menu_links(_list, 0) }}
+  <ul class="ecl-listing">
+    {{ macros.menu_links(_list) }}
   </ul>
 </div>
