@@ -2,7 +2,6 @@ module.exports = {
   title: 'Headings',
   label: 'Headings',
   status: 'ready',
-  order: 2,
   collated: true,
   default: 'h1',
   variants: [
@@ -11,8 +10,8 @@ module.exports = {
       label: 'h1',
       context: {
         element: 'h1',
-        class: 'ema-heading ema-heading--h1',
-        text: 'Heading <h1> with class ema-heading ema-heading--h1',
+        class: 'ecl-heading ecl-heading--ema-h1',
+        text: 'Heading <h1>: class ema-heading ema-heading--h1',
       },
     },
     {
@@ -20,8 +19,8 @@ module.exports = {
       label: 'h2',
       context: {
         element: 'h2',
-        class: 'ema-heading ema-heading--h2',
-        text: 'Heading <h2> with class ema-heading ema-heading--h2',
+        class: 'ecl-heading ecl-heading--ema-h2',
+        text: 'Heading <h2>: class ema-heading ema-heading--h2',
       },
     },
     {
@@ -29,8 +28,8 @@ module.exports = {
       label: 'h3',
       context: {
         element: 'h3',
-        class: 'ema-heading ema-heading--h3',
-        text: 'Heading <h3> with class ema-heading ema-heading--h3',
+        class: 'ecl-heading ecl-heading--ema-h3',
+        text: 'Heading <h3>: class ema-heading ema-heading--h3',
       },
     },
     {
@@ -38,8 +37,8 @@ module.exports = {
       label: 'h4',
       context: {
         element: 'h4',
-        class: 'ema-heading ema-heading--h4',
-        text: 'Heading <h4> with class ema-heading ema-heading--h4',
+        class: 'ecl-heading ecl-heading--ema-h4',
+        text: 'Heading <h4>: class ema-heading ema-heading--h4',
       },
     },
   ],
