@@ -1,0 +1,18 @@
+[
+  {
+    "name": "default",
+    "label": "Primary",
+    "context": {
+      "label": "Primary",
+      "modifier": "call"
+    }
+  },
+  {
+    "name": "tag",
+    "label": "Tag",
+    "context": {
+      "label": "Tag",
+      "modifier": "tag"
+    }
+  }
+]
