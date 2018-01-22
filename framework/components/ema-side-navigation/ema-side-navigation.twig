@@ -33,7 +33,7 @@
           aria-controls={{ "example-expandable-" ~ _current_index }}
           aria-expanded="false"
           class="{{ _class }}"
-          href={{ item.link }}
+          href="{{ item.link }}"
           id={{ "example-expandable-button-" ~ _current_index }}>
           {{ item.label }}
         </a>
@@ -47,7 +47,7 @@
       {% else %}
         <a
           class="{{ _class }}"
-          href={{ item.link }}>
+          href="{{ item.link }}">
           {{ item.label }}
         </a>
       {% endif %}
