@@ -11,11 +11,11 @@
     background-color: map-get($ema-colors, 'primary');
     border-color: map-get($ema-colors, 'primary');
     color: #fff;
+  }
 
-    &:hover,
-    &:focus {
-      background-color: map-get($ema-colors, 'blue-3');
-      border-color: map-get($ema-colors, 'blue-3');
-    }
+  .ecl-search-form__button:hover,
+  .ecl-search-form__button:focus {
+    background-color: map-get($ema-colors, 'blue-3');
+    border-color: map-get($ema-colors, 'blue-3');
   }
 }
