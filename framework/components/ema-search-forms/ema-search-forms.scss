@@ -1,0 +1,21 @@
+/**
+* EMA Search form component
+*/
+
+.ecl-search-form--ema {
+  .ecl-search-form__textfield {
+    padding: map-get($ecl-spacing, 'xxxs') map-get($ecl-spacing, 'xxs');
+  }
+
+  .ecl-search-form__button {
+    background-color: map-get($ema-colors, 'primary');
+    border-color: map-get($ema-colors, 'primary');
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: map-get($ema-colors, 'blue-3');
+      border-color: map-get($ema-colors, 'blue-3');
+    }
+  }
+}

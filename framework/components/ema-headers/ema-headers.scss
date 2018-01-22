@@ -37,3 +37,14 @@
 .ema-header__languages {
   margin-left: map-get($ecl-spacing, 'm');
 }
+
+.ema-header__logo {
+  flex-grow: 1;
+}
+
+.ema-header__banner {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
