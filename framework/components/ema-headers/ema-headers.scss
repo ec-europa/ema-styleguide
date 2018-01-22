@@ -1,0 +1,39 @@
+/**
+* EMA Header component
+*/
+
+.ema-header {
+  margin: 0;
+}
+
+.ema-header__extra {
+  align-items: center;
+  display: flex;
+  font-size: map-get($ecl-font-size, 's');
+  justify-content: flex-end;
+}
+
+.ema-header__link-item {
+  margin-left: map-get($ecl-spacing, 'xxs');
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+.ema-header__user {
+  align-items: center;
+  display: flex;
+  margin-left: map-get($ecl-spacing, 'm');
+}
+
+.ema-header__user-picture {
+  background-color: map-get($ema-colors, 'light-grey-1');
+  border-radius: 50%;
+  height: 2rem;
+  margin-left: map-get($ecl-spacing, 'xxs');
+  width: 2rem;
+}
+
+.ema-header__languages {
+  margin-left: map-get($ecl-spacing, 'm');
+}
