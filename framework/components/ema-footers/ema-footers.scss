@@ -1,0 +1,42 @@
+/**
+ * Footers component
+ */
+
+.ema-footer {
+  align-items: center;
+  background-color: map-get($ema-colors, 'primary');
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: map-get($ecl-spacing, 'm') map-get($ecl-spacing, 'xs');
+}
+
+.ema-footer__links {
+  width: 100%;
+}
+
+.ema-footer__link-item {
+  margin-left: map-get($ecl-spacing, 'xxs');
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.ema-footer__copyright {
+  flex-grow: 1;
+  margin-top: map-get($ecl-spacing, 'xxs');
+}
+
+.ema-footer__description {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  margin-top: map-get($ecl-spacing, 'xxs');
+}
+
+.ema-footer__logo {
+  margin-left: map-get($ecl-spacing, 'xxs');
+}

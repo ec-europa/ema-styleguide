@@ -11,7 +11,7 @@ module.exports = {
       context: {
         element: 'h1',
         class: 'ecl-heading ecl-heading--ema-h1',
-        text: 'Heading <h1>: class ema-heading ema-heading--h1',
+        text: 'Heading <h1>: class ecl-heading ecl-heading--ema-h1',
       },
     },
     {
@@ -20,7 +20,7 @@ module.exports = {
       context: {
         element: 'h2',
         class: 'ecl-heading ecl-heading--ema-h2',
-        text: 'Heading <h2>: class ema-heading ema-heading--h2',
+        text: 'Heading <h2>: class ecl-heading ecl-heading--ema-h2',
       },
     },
     {
@@ -29,7 +29,7 @@ module.exports = {
       context: {
         element: 'h3',
         class: 'ecl-heading ecl-heading--ema-h3',
-        text: 'Heading <h3>: class ema-heading ema-heading--h3',
+        text: 'Heading <h3>: class ecl-heading ecl-heading--ema-h3',
       },
     },
     {
@@ -38,7 +38,7 @@ module.exports = {
       context: {
         element: 'h4',
         class: 'ecl-heading ecl-heading--ema-h4',
-        text: 'Heading <h4>: class ema-heading ema-heading--h4',
+        text: 'Heading <h4>: class ecl-heading ecl-heading--ema-h4',
       },
     },
   ],

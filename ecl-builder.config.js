@@ -32,5 +32,9 @@ module.exports = {
       from: path.resolve(__dirname, 'node_modules/@ec-europa/ecl-icons/fonts'),
       to: path.resolve(__dirname, outputFolder, 'fonts'),
     },
+    {
+      from: path.resolve(__dirname, 'framework/components/ema-footers/images'),
+      to: path.resolve(__dirname, outputFolder, 'images'),
+    },
   ],
 };
