@@ -34,7 +34,7 @@
 <link rel="stylesheet" href="../../themes/ecl-fractal-theme/css/fractal.css?cachebust=0.12.0" type="text/css">
 
 
-<title>Headings: h4 | EMA Style Guide</title>
+<title>Footers | EMA Style Guide</title>
 
 </head>
 <body class="language-en">
@@ -141,8 +141,8 @@
     
         
         
-        <li class="ecl-navigation-menu__item"  data-role="item">
-          <a href="ema-footers" class="ecl-navigation-menu__link ">
+        <li class="ecl-navigation-menu__item"  data-state="current" data-role="item">
+          <a href="" class="ecl-navigation-menu__link  ecl-navigation-menu__link--active">
             
 
 <div class="Status Status--unlabelled">
@@ -459,14 +459,14 @@
     
     
 
-<div class="Pen" id="pen-fb3822390693263ec12f1886e7328f06">
+<div class="Pen" id="pen-49005b5e457836e4dd5b209daeecd2b7">
 
     
 
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
-        <a class="Pen-previewLink" href="../preview/ema-typography-headings--h4" title="Component preview">
-            Headings: h4
+        <a class="Pen-previewLink" href="../preview/ema-footers" title="Component preview">
+            Footers
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -494,21 +494,21 @@
         <div class="Pen-documentation active ecl-u-mv-s" id="documentation">
           <div class="ecl-editor">
             
-            <h1 id="ema-headings">EMA Headings</h1>
+            <h1 id="ema-footers">EMA footers</h1>
 
             
           </div>
         </div>
 
         <div class="Pen-playground" data-behaviour="pen" id="playground">
-          <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-fb3822390693263ec12f1886e7328f06">
+          <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-49005b5e457836e4dd5b209daeecd2b7">
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
              <iframe
                 class="Preview-iframe"
                 data-role="window"
-                src="../preview/ema-typography-headings--h4"
+                src="../preview/ema-footers"
                 sandbox="allow-same-origin allow-scripts allow-forms"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
@@ -521,7 +521,7 @@
 
           <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
           <div class="Pen-panel Pen-info" data-role="info">
-    <div class="Browser" data-behaviour="browser" id="browser-fb3822390693263ec12f1886e7328f06">
+    <div class="Browser" data-behaviour="browser" id="browser-49005b5e457836e4dd5b209daeecd2b7">
 
     
 
@@ -530,19 +530,19 @@
         
         
         <li class="Browser-tab Browser-tab--view is-active " data-role="tab">
-            <a href="#browser-fb3822390693263ec12f1886e7328f06-panel-view">View</a>
+            <a href="#browser-49005b5e457836e4dd5b209daeecd2b7-panel-view">View</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-fb3822390693263ec12f1886e7328f06-panel-context">Context</a>
+            <a href="#browser-49005b5e457836e4dd5b209daeecd2b7-panel-context">Context</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--html" data-role="tab">
-            <a href="#browser-fb3822390693263ec12f1886e7328f06-panel-html">HTML</a>
+            <a href="#browser-49005b5e457836e4dd5b209daeecd2b7-panel-html">HTML</a>
         </li>
         
         
@@ -550,7 +550,7 @@
         
         
         <li class="Browser-tab Browser-tab--resources" data-role="tab">
-            <a href="#browser-fb3822390693263ec12f1886e7328f06-panel-assets">Code</a>
+            <a href="#browser-49005b5e457836e4dd5b209daeecd2b7-panel-assets">Code</a>
         </li>
         
         
@@ -558,7 +558,7 @@
         
         
         <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-fb3822390693263ec12f1886e7328f06-panel-info">Info</a>
+            <a href="#browser-49005b5e457836e4dd5b209daeecd2b7-panel-info">Info</a>
         </li>
         
         
@@ -567,21 +567,87 @@
 
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-fb3822390693263ec12f1886e7328f06-panel-view">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-49005b5e457836e4dd5b209daeecd2b7-panel-view">
     <code class="Code Code--lang-twig">
-        <pre><span class="xml"></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-typography-headings' %}</span><span class="xml"></span></pre>
+        <pre><span class="xml"></span><span class="hljs-comment">{#
+  - "links" (array): array of links components
+  - "copyright" (string): copyright text (default: '')
+  - "description" (string): description text (default: '')
+  - "logo" (object): {
+    - "src" (string): source of the image (default: '')
+    - "alt" (string): alt text of the image (default: '')
+  }
+  - "extra_classes" (string): extra CSS classes to be added
+  - "extra_attributes" (array): extra attributes classes (optional, format: [{ 'name': 'name_of_the_attribute', 'value': 'value_of_the_attribute'}])
+#}</span><span class="xml">
+
+</span><span class="hljs-comment">{# Internal properties #}</span><span class="xml">
+
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _copyright = copyright|<span class="hljs-keyword">default</span>('') %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _description = description|<span class="hljs-keyword">default</span>('') %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _css_class = 'ema-footer' %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _extra_attributes = '' %}</span><span class="xml">
+
+</span><span class="hljs-comment">{# Internal logic - Process properties #}</span><span class="xml">
+
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> extra_class is defined %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _css_class = _css_class ~ ' ' ~ extra_class %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> extra_attributes is defined %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> attr in extra_attributes %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _extra_attributes = _extra_attributes ~ ' ' ~ attr.name ~ '="' ~ attr.value ~'"' %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+
+</span><span class="hljs-comment">{# Print the result  #}</span><span class="xml">
+
+<span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _css_class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> </span></span><span class="hljs-template-variable">{{ _extra_attributes }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-footer__links"</span>&gt;</span>
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> link in links %}</span><span class="xml">
+      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-links' with link %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-footer__copyright"</span>&gt;</span></span><span class="hljs-template-variable">{{ copyright }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-footer__description"</span>&gt;</span>
+    </span><span class="hljs-template-variable">{{ description }}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-footer__logo"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ logo.src }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ logo.alt }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span></span></pre>
     </code>
 </div>
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-fb3822390693263ec12f1886e7328f06-panel-context">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-49005b5e457836e4dd5b209daeecd2b7-panel-context">
     <code class="Code Code--lang-json">
         
             
             <pre>{
-  <span class="hljs-attr">"element"</span>: <span class="hljs-string">"h4"</span>,
-  <span class="hljs-attr">"class"</span>: <span class="hljs-string">"ecl-heading ecl-heading--ema-h4"</span>,
-  <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Heading &lt;h4&gt;: class ecl-heading ecl-heading--ema-h4"</span>
+  <span class="hljs-attr">"links"</span>: [
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Help"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#"</span>,
+      <span class="hljs-attr">"extra_classes"</span>: <span class="hljs-string">"ecl-link--ema-inverted ema-footer__link-item"</span>
+    },
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Sitemap"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#"</span>,
+      <span class="hljs-attr">"extra_classes"</span>: <span class="hljs-string">"ecl-link--ema-inverted ema-footer__link-item"</span>
+    },
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"EMA public website"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#"</span>,
+      <span class="hljs-attr">"extra_classes"</span>: <span class="hljs-string">"ecl-link--ema-inverted ecl-link--ema-external ema-footer__link-item"</span>
+    }
+  ],
+  <span class="hljs-attr">"copyright"</span>: <span class="hljs-string">"&amp;copy; 2016 EMA - 30 Churchill Place - Canary Whaf - London E14 5EU - United Kingdom"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"An agency of the European Union"</span>,
+  <span class="hljs-attr">"logo"</span>: {
+    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/framework/images/eu.png"</span>,
+    <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"European Union flag"</span>
+  }
 }</pre>
             
         
@@ -590,10 +656,26 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-fb3822390693263ec12f1886e7328f06-panel-html">
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-49005b5e457836e4dd5b209daeecd2b7-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-heading ecl-heading--ema-h4"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">""</span>&gt;</span>Heading &amp;lt;h4&amp;gt;: class ecl-heading ecl-heading--ema-h4<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-footer"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-footer__links"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-link--ema-inverted ema-footer__link-item"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Help<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-link--ema-inverted ema-footer__link-item"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Sitemap<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-link--ema-inverted ecl-link--ema-external ema-footer__link-item"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>EMA public website<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-footer__copyright"</span>&gt;</span>&amp;copy; 2016 EMA - 30 Churchill Place - Canary Whaf - London E14 5EU - United Kingdom<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-footer__description"</span>&gt;</span>
+    An agency of the European Union
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-footer__logo"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/framework/images/eu.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"European Union flag"</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -602,24 +684,20 @@
     
 
 
-<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-fb3822390693263ec12f1886e7328f06-panel-assets">
+<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-49005b5e457836e4dd5b209daeecd2b7-panel-assets">
     <div class="FileBrowser">
 
         <div class="FileBrowser-selectWrapper">
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-39cdf1fba34e4ebb270a298b04d05093">_editor-headings.scss</option>
-                
-                <option value="file-646ed19edb79ea6aca798be4563c1a0f">_headings-mixins.scss</option>
-                
-                <option value="file-509b8125d68a6baf9ebd811b3245a454">ema-typography-headings.scss</option>
+                <option value="file-09886f18a68f719b53557b8060068725">ema-footers.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-39cdf1fba34e4ebb270a298b04d05093" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-09886f18a68f719b53557b8060068725" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -627,90 +705,47 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
-                                <pre><span class="hljs-comment">// Headers</span>
-@<span class="hljs-keyword">import</span> <span class="hljs-string">'headings-mixins'</span>;
+                                <pre><span class="hljs-comment">/**
+ * Footers component
+ */</span>
 
-<span class="hljs-selector-class">.ecl-editor</span> <span class="hljs-selector-tag">h1</span> {
-  @<span class="hljs-keyword">include</span> heading();
-  @<span class="hljs-keyword">include</span> heading-1();
-}
-
-<span class="hljs-selector-class">.ecl-editor</span> <span class="hljs-selector-tag">h2</span> {
-  @<span class="hljs-keyword">include</span> heading();
-  @<span class="hljs-keyword">include</span> heading-2();
-}
-
-<span class="hljs-selector-class">.ecl-editor</span> <span class="hljs-selector-tag">h3</span> {
-  @<span class="hljs-keyword">include</span> heading();
-  @<span class="hljs-keyword">include</span> heading-3();
-}
-
-<span class="hljs-selector-class">.ecl-editor</span> <span class="hljs-selector-tag">h4</span> {
-  @<span class="hljs-keyword">include</span> heading();
-  @<span class="hljs-keyword">include</span> heading-4();
-}
-</pre>
-                            </code>
-                            
-                        </div>
-                    </span>
-                </li>
-                <li class="Meta-item">
-                    <strong class="Meta-key">URL:</strong>
-                    <span class="Meta-value"><a href="../raw/ema-typography-headings/_editor-headings.scss"><span>/components/raw/ema-typography-headings/_editor-headings.scss</span></a></span>
-                </li>
-                <li class="Meta-item">
-                    <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">framework/content/ema-typography/ema-typography-headings/_editor-headings.scss</span>
-                </li>
-                <li class="Meta-item">
-                    <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">302 Bytes</span>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="FileBrowser-item" id="file-646ed19edb79ea6aca798be4563c1a0f" data-role="resource-preview">
-            <ul class="Meta">
-                <li class="Meta-item">
-                    <strong class="Meta-key">Content:</strong>
-                    <span class="Meta-value">
-                        <div class="FileBrowser-itemPreview">
-                            
-                            <code class="Code Code--lang-SCSS FileBrowser-code">
-                                <pre>@<span class="hljs-keyword">mixin</span> heading() {
+<span class="hljs-selector-class">.ema-footer</span> {
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">background-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'primary'</span>);
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-wrap</span>: wrap;
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'m'</span>) map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xs'</span>);
 }
 
-@<span class="hljs-keyword">mixin</span> heading-1() {
-  <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'black'</span>);
-  <span class="hljs-attribute">font-size</span>: map-get(<span class="hljs-variable">$ecl-font-size</span>, <span class="hljs-string">'xxl'</span>);
-  <span class="hljs-attribute">font-weight</span>: normal;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.1</span>;
+<span class="hljs-selector-class">.ema-footer__links</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 }
 
-@<span class="hljs-keyword">mixin</span> heading-2() {
-  <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'black'</span>);
-  <span class="hljs-attribute">font-size</span>: map-get(<span class="hljs-variable">$ecl-font-size</span>, <span class="hljs-string">'xl'</span>);
-  <span class="hljs-attribute">font-weight</span>: normal;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.1</span>;
+<span class="hljs-selector-class">.ema-footer__link-item</span> {
+  <span class="hljs-attribute">margin-left</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxs'</span>);
+
+  &amp;:first-child {
+    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
+  }
 }
 
-@<span class="hljs-keyword">mixin</span> heading-3() {
-  <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'black'</span>);
-  <span class="hljs-attribute">font-size</span>: map-get(<span class="hljs-variable">$ecl-font-size</span>, <span class="hljs-string">'l'</span>);
-  <span class="hljs-attribute">font-weight</span>: normal;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.1</span>;
-  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">32em</span>;
+<span class="hljs-selector-class">.ema-footer__copyright</span> {
+  <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">margin-top</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxs'</span>);
 }
 
-@<span class="hljs-keyword">mixin</span> heading-4() {
-  <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'black'</span>);
-  <span class="hljs-attribute">font-size</span>: map-get(<span class="hljs-variable">$ecl-font-size</span>, <span class="hljs-string">'m'</span>);
-  <span class="hljs-attribute">font-weight</span>: bold;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.1</span>;
-  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">32em</span>;
+<span class="hljs-selector-class">.ema-footer__description</span> {
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">justify-content</span>: flex-end;
+  <span class="hljs-attribute">margin-top</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxs'</span>);
+}
+
+<span class="hljs-selector-class">.ema-footer__logo</span> {
+  <span class="hljs-attribute">margin-left</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxs'</span>);
 }
 </pre>
                             </code>
@@ -720,75 +755,15 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">URL:</strong>
-                    <span class="Meta-value"><a href="../raw/ema-typography-headings/_headings-mixins.scss"><span>/components/raw/ema-typography-headings/_headings-mixins.scss</span></a></span>
+                    <span class="Meta-value"><a href="../raw/ema-footers/ema-footers.scss"><span>/components/raw/ema-footers/ema-footers.scss</span></a></span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">framework/content/ema-typography/ema-typography-headings/_headings-mixins.scss</span>
+                    <span class="Meta-value">framework/components/ema-footers/ema-footers.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">687 Bytes</span>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="FileBrowser-item" id="file-509b8125d68a6baf9ebd811b3245a454" data-role="resource-preview">
-            <ul class="Meta">
-                <li class="Meta-item">
-                    <strong class="Meta-key">Content:</strong>
-                    <span class="Meta-value">
-                        <div class="FileBrowser-itemPreview">
-                            
-                            <code class="Code Code--lang-SCSS FileBrowser-code">
-                                <pre><span class="hljs-comment">// EMA Headers</span>
-@<span class="hljs-keyword">import</span> <span class="hljs-string">'headings-mixins'</span>;
-
-<span class="hljs-selector-class">.ecl-heading--ema-h1</span> {
-  @<span class="hljs-keyword">include</span> heading-1();
-}
-
-<span class="hljs-selector-class">.ecl-heading--ema-h2</span> {
-  @<span class="hljs-keyword">include</span> heading-2();
-}
-
-<span class="hljs-selector-class">.ecl-heading--ema-h3</span> {
-  @<span class="hljs-keyword">include</span> heading-3();
-}
-
-<span class="hljs-selector-class">.ecl-heading--ema-h4</span> {
-  @<span class="hljs-keyword">include</span> heading-4();
-}
-
-<span class="hljs-comment">// Spacing</span>
-* + <span class="hljs-selector-class">.ecl-heading--ema-h1</span> {
-  <span class="hljs-attribute">margin-top</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxl'</span>);
-}
-
-* + <span class="hljs-selector-class">.ecl-heading--ema-h2</span> {
-  <span class="hljs-attribute">margin-top</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xl'</span>);
-}
-
-* + <span class="hljs-selector-class">.ecl-heading--ema-h3</span> {
-  <span class="hljs-attribute">margin-top</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'l'</span>);
-}
-</pre>
-                            </code>
-                            
-                        </div>
-                    </span>
-                </li>
-                <li class="Meta-item">
-                    <strong class="Meta-key">URL:</strong>
-                    <span class="Meta-value"><a href="../raw/ema-typography-headings/ema-typography-headings.scss"><span>/components/raw/ema-typography-headings/ema-typography-headings.scss</span></a></span>
-                </li>
-                <li class="Meta-item">
-                    <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">framework/content/ema-typography/ema-typography-headings/ema-typography-headings.scss</span>
-                </li>
-                <li class="Meta-item">
-                    <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">472 Bytes</span>
+                    <span class="Meta-value">723 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -799,11 +774,22 @@
 
 
     
-    <div class="Browser-panel" data-role="tab-panel" id="browser-fb3822390693263ec12f1886e7328f06-panel-info">
+    <div class="Browser-panel" data-role="tab-panel" id="browser-49005b5e457836e4dd5b209daeecd2b7-panel-info">
     <ul class="Meta">
         <li class="Meta-item">
             <strong class="Meta-key">Handle:</strong>
-            <span class="Meta-value">@ec-europa/ema-typography-headings--h4</span>
+            <span class="Meta-value">@ec-europa/ema-footers</span>
+        </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Tags:</strong>
+            <span class="Meta-value">
+                
+                    <span>
+                
+                    <span>molecule</span>
+                
+            </span>
         </li>
         
         
@@ -814,12 +800,12 @@
             <strong class="Meta-key">Preview:</strong>
             <span class="Meta-value">
                 <ul>
-                    <li><a href="../preview/ema-typography-headings--h4"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a href="../preview/ema-footers"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
 </a></li>
-                    <li><a href="../render/ema-typography-headings--h4"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a href="../render/ema-footers"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
@@ -829,7 +815,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">framework/content/ema-typography/ema-typography-headings/ema-typography-headings.twig</span>
+            <span class="Meta-value">framework/components/ema-footers/ema-footers.twig</span>
         </li>
         
         
