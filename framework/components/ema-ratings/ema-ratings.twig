@@ -1,0 +1,16 @@
+{% set _css_class = 'ema-ratings' %}
+{% set _title = title %}
+
+<div class="{{_css_class}}">
+  <span>{{_title}}</span>
+  <div class="ema-ratings__stars">
+    {% for i in 5..1 %}
+      <input class="ema-ratings__input" type="radio" id="ema-ratings__input{{i}}" name="ema-rating" value={{i}} />
+      <label class="ema-ratings__star" for="ema-ratings__input{{i}}">
+        {% include '@ec-europa/ecl-icons' with {
+          modifier: 'ecl-icon--success',
+        } %}
+      </label>
+    {% endfor %}
+  </div>
+</div>
