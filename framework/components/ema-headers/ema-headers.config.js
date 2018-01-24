@@ -5,7 +5,7 @@ module.exports = {
   tags: ['molecule'],
   context: {
     logo: {
-      src: '/framework/images/logo_ema.jpg',
+      src: '../../framework/images/logo_ema.jpg',
       alt: 'EMA logo',
     },
     links: [
