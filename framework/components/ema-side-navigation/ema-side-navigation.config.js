@@ -47,10 +47,5 @@ module.exports = {
         link: '#',
       },
     ],
-    _demo: {
-      scripts: `
-        ECL.initExpandables();
-      `,
-    },
   },
 };

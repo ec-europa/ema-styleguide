@@ -26,22 +26,16 @@
   {% for item in list %}
     {% set _current_index = parent_index ? parent_index ~ "-" ~ loop.index : loop.index %}
     {% set _depth = (depth|default(0)) + 1 %}
-    {% set _class = "ecl-expandable__button ema-side-navigation__link ema-side-navigation__link--depth-" ~ _depth %}
+    {% set _class = "ema-side-navigation__link ema-side-navigation__link--depth-" ~ _depth %}
     <li>
       {% if item.list is defined and item.list is not empty %}
         <a
-          aria-controls={{ "example-expandable-" ~ _current_index }}
-          aria-expanded="false"
-          class="{{ _class }}"
-          href="{{ item.link }}"
-          id={{ "example-expandable-button-" ~ _current_index }}>
+          class="{{ _class }} ema-side-navigation__link--has-list"
+          href="{{ item.link }}">
           {{ item.label }}
         </a>
         <ul
-          class="ecl-listing"
-          aria-hidden="true"
-          aria-labelledby={{ "example-expandable-button-" ~ _current_index }}
-          id={{ "example-expandable-" ~ _current_index }}>
+          class="ecl-listing">
           {{ macros.menu_links(item.list, _depth, _current_index) }}
         </ul>
       {% else %}

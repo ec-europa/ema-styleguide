@@ -16,6 +16,14 @@
   &:hover {
     text-decoration: underline;
   }
+
+  &:not(.ema-side-navigation__link--has-list) {
+    padding-left: map-get($ecl-spacing, 'l');
+  }
+}
+
+.ema-side-navigation__link--has-list::before {
+  content: '\25bc';
 }
 
 .ema-side-navigation__link--depth-1 {
