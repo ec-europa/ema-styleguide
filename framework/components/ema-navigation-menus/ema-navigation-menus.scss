@@ -1,0 +1,103 @@
+/**
+* EMA Navigation menu component
+*/
+
+.ecl-navigation-menu--ema {
+  background-color: map-get($ema-colors, 'primary');
+
+  .ecl-navigation-menu__banner {
+    display: none;
+    position: relative;
+  }
+
+  .ecl-navigation-menu__group {
+    flex-direction: column;
+  }
+
+  .ecl-navigation-menu__group::before {
+    background-color: map-get($ema-colors, 'light-grey-2');
+  }
+
+  .ecl-navigation-menu__link {
+    background-color: map-get($ema-colors, 'primary');
+    color: #fff;
+    font-weight: normal;
+  }
+
+  .ecl-navigation-menu__item--active {
+    background-color: map-get($ema-colors, 'primary');
+  }
+
+  .ecl-navigation-menu__item--active .ecl-navigation-menu__link::before {
+    background-color: #fff;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 4px;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .ecl-navigation-menu__link[aria-expanded='true'] {
+    background-color: map-get($ema-colors, 'primary');
+    color: #fff;
+  }
+
+  .ecl-navigation-menu__children {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .ecl-navigation-menu__children .ecl-navigation-menu__link {
+    background-color: transparent;
+    color: map-get($ema-colors, 'black');
+  }
+
+  .ecl-navigation-menu__children .ecl-navigation-menu__link::before {
+    display: none;
+  }
+
+  .ecl-navigation-menu__children .ecl-navigation-menu__item {
+    flex-basis: 100%;
+  }
+
+  .ecl-navigation-menu__children .ecl-navigation-menu__link--active {
+    background-color: map-get($ema-colors, 'grey-3');
+    font-weight: normal;
+  }
+
+  .ecl-navigation-menu__toggle {
+    background-color: map-get($ema-colors, 'primary');
+  }
+
+  .ecl-navigation-menu__root::before,
+  .ecl-navigation-menu__item--active::before {
+    background-color: transparent;
+  }
+}
+
+@media (min-width: map-get($ecl-grid-breakpoints, 'md')) {
+  .ecl-navigation-menu__children .ecl-navigation-menu__link {
+    font-size: map-get($ecl-font-size, 'm');
+    padding: map-get($ecl-spacing, 's');
+  }
+
+  .ecl-navigation-menu--ema .ecl-navigation-menu__children .ecl-navigation-menu__item {
+    flex-basis: 50%;
+  }
+
+  .ecl-navigation-menu--ema .ecl-navigation-menu__banner {
+    display: block;
+  }
+}
+
+@media (min-width: map-get($ecl-grid-breakpoints, 'lg')) {
+  .ecl-navigation-menu--ema .ecl-navigation-menu__children .ecl-navigation-menu__item {
+    flex-basis: 33%;
+  }
+}
