@@ -27,3 +27,9 @@
     </form>
   </div>
 {% endfor %}
+
+{% include '@ec-europa/ecl-forms-textareas' %}
+{% include '@ec-europa/ecl-buttons' with {
+  modifier: 'primary',
+  label: 'Submit'
+} %}
