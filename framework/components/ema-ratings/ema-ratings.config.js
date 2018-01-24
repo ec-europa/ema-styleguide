@@ -3,6 +3,16 @@ module.exports = {
   label: 'Ratings',
   status: 'ready',
   context: {
-    title: 'Give a rating',
+    ratings: [
+      {
+        title: 'Your rating',
+        name: 'ema-rating1',
+      },
+      {
+        title: 'Average',
+        name: 'ema-rating2',
+        default_rating: 3,
+      },
+    ],
   },
 };

@@ -1,16 +1,18 @@
 {% set _css_class = 'ema-ratings' %}
-{% set _title = title %}
 
-<div class="{{_css_class}}">
-  <span>{{_title}}</span>
-  <form class="ema-ratings__stars">
-    {% for i in 5..1 %}
-      <input class="ema-ratings__input" type="radio" id="ema-ratings__input{{i}}" name="ema-rating" value={{i}} />
-      <label class="ema-ratings__star" for="ema-ratings__input{{i}}">
-        {% include '@ec-europa/ecl-icons' with {
-          modifier: 'ecl-icon--success',
-        } %}
-      </label>
-    {% endfor %}
-  </form>
-</div>
+{% for rating in ratings %}
+  <div class="{{_css_class}}">
+    {% set _title = rating.title|default('Your rating') %}
+    {% set _default_rating = rating.default_rating|default(0) %}
+    {% set _name = rating.name|default('ema-rating') %}
+    <span>{{_title}}</span>
+    <form class="ema-ratings__stars">
+      {% for i in 5..1 %}
+        <input class="ema-ratings__input" type="radio" id="ema-ratings__input{{i}}" {{ i == _default_rating ? 'aria-checked="true" checked="checked"' }} aria-hidden="true" name={{_name}} tabindex={{i-1}} value={{i}} />
+        <label class="ema-ratings__star" for="ema-ratings__input{{i}}">
+          ★
+        </label>
+      {% endfor %}
+    </form>
+  </div>
+{% endfor %}
