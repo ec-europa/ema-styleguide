@@ -20,11 +20,15 @@
 .ema-ratings__stars:not(:checked) {
   .ema-ratings__star {
     color: map-get($ema-colors, 'grey-3');
-    cursor: pointer;
     float: right;
   }
-  .ema-ratings__star:hover,
-  .ema-ratings__star:hover ~ label {
-    color: map-get($ema-colors, 'orange-2');
-  }
+}
+
+.ema-ratings__input:not(:disabled) ~ .ema-ratings__star {
+  cursor: pointer;
+}
+
+.ema-ratings__input:not(:disabled) ~ .ema-ratings__star:hover,
+.ema-ratings__input:not(:disabled) ~ .ema-ratings__star:hover ~ label {
+  color: map-get($ema-colors, 'orange-2');
 }

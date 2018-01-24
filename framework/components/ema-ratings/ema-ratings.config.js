@@ -12,6 +12,7 @@ module.exports = {
         title: 'Average',
         name: 'ema-rating2',
         default_rating: 3,
+        disabled: true,
       },
     ],
   },

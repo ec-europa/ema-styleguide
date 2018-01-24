@@ -5,11 +5,22 @@
     {% set _title = rating.title|default('Your rating') %}
     {% set _default_rating = rating.default_rating|default(0) %}
     {% set _name = rating.name|default('ema-rating') %}
+    {% set _disabled = rating.disabled|default(false) %}
     <span>{{_title}}</span>
     <form class="ema-ratings__stars">
       {% for i in 5..1 %}
-        <input class="ema-ratings__input" type="radio" id="ema-ratings__input{{i}}" {{ i == _default_rating ? 'aria-checked="true" checked="checked"' }} aria-hidden="true" name={{_name}} tabindex={{i-1}} value={{i}} />
-        <label class="ema-ratings__star" for="ema-ratings__input{{i}}">
+        <input
+          type="radio"
+          class="ema-ratings__input"
+          aria-hidden="true"
+          id="ema-ratings__{{_name}}--{{i}}"
+          name={{ _name }}
+          tabindex={{ i-1 }}
+          value={{ i }}
+          {{ _disabled ? 'disabled="disabled"'}}
+          {{ i == _default_rating ? 'aria-checked="true" checked="checked"' }}
+        />
+        <label class="ema-ratings__star" for="ema-ratings__{{_name}}--{{i}}">
           ★
         </label>
       {% endfor %}
