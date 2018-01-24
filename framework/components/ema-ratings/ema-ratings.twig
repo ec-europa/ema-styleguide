@@ -3,7 +3,7 @@
 
 <div class="{{_css_class}}">
   <span>{{_title}}</span>
-  <div class="ema-ratings__stars">
+  <form class="ema-ratings__stars">
     {% for i in 5..1 %}
       <input class="ema-ratings__input" type="radio" id="ema-ratings__input{{i}}" name="ema-rating" value={{i}} />
       <label class="ema-ratings__star" for="ema-ratings__input{{i}}">
@@ -12,5 +12,5 @@
         } %}
       </label>
     {% endfor %}
-  </div>
+  </form>
 </div>

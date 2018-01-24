@@ -21,6 +21,6 @@
   }
   .ema-ratings__star:hover,
   .ema-ratings__star:hover ~ label {
-    color: map-get($ema-colors, 'orange-2')
+    color: map-get($ema-colors, 'orange-2');
   }
 }
