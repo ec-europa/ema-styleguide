@@ -7,7 +7,7 @@ module.exports = {
   context: {
     header: {
       logo: {
-        src: '/framework/images/logo_ema.jpg',
+        src: '../../framework/images/logo_ema.jpg',
         alt: 'EMA logo',
       },
       links: [
@@ -53,7 +53,7 @@ module.exports = {
         '&copy; 2016 EMA - 30 Churchill Place - Canary Whaf - London E14 5EU - United Kingdom',
       description: 'An agency of the European Union',
       logo: {
-        src: '/framework/images/eu.png',
+        src: '../../framework/images/eu.png',
         alt: 'European Union flag',
       },
     },
@@ -116,16 +116,6 @@ module.exports = {
         },
       ],
     },
-    separator: [
-      {
-        icon: 'multiple-files',
-        title: 'Related documents',
-      },
-      {
-        icon: 'digital',
-        title: 'Related links',
-      },
-    ],
     _demo: {
       scripts: `document.addEventListener('DOMContentLoaded', function () {
         ECL.megamenu();
