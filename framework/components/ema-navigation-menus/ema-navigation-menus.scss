@@ -7,10 +7,12 @@
 
   .ecl-navigation-menu__group {
     flex-direction: column;
+    padding: 0;
   }
 
   .ecl-navigation-menu__group::before {
     background-color: map-get($ema-colors, 'light-grey-2');
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
   }
 
   .ecl-navigation-menu__link {
@@ -47,5 +49,9 @@
   .ecl-navigation-menu__root::before,
   .ecl-navigation-menu__item--active::before {
     background-color: transparent;
+  }
+
+  .ema-context-banner {
+    margin-left: -(map-get($ecl-spacing, 's'));
   }
 }
