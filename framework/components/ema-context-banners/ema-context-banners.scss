@@ -1,0 +1,48 @@
+/**
+* EMA Context banner component
+*/
+
+.ema-context-banner {
+  background-color: map-get($ema-colors, 'light-grey-2');
+  margin: 0;
+}
+
+.ema-context-banner__links {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.ema-context-banner__item {
+  flex-basis: 100%;
+}
+
+.ema-context-banner__link {
+  color: map-get($ema-colors, 'black');
+  display: block;
+  padding: map-get($ecl-spacing, 's');
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.ema-context-banner__link--active {
+  background-color: map-get($ema-colors, 'grey-3');
+}
+
+@media (min-width: map-get($ecl-grid-breakpoints, 'md')) {
+  .ema-context-banner__item {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: map-get($ecl-grid-breakpoints, 'lg')) {
+  .ema-context-banner__item {
+    flex-basis: 33%;
+  }
+}
