@@ -1,0 +1,35 @@
+{% set _css_class = 'ema-ratings' %}
+
+{% for rating in ratings %}
+  <div class="{{_css_class}}">
+    {% set _title = rating.title|default('Your rating') %}
+    {% set _default_rating = rating.default_rating|default(0) %}
+    {% set _name = rating.name|default('ema-rating') %}
+    {% set _disabled = rating.disabled|default(false) %}
+    <span class="ema-ratings__title">{{_title}}</span>
+    <form class="ema-ratings__stars">
+      {% for i in 5..1 %}
+        <input
+          type="radio"
+          class="ema-ratings__input"
+          aria-hidden="true"
+          id="ema-ratings__{{_name}}--{{i}}"
+          name={{ _name }}
+          tabindex={{ i-1 }}
+          value={{ i }}
+          {{ _disabled ? 'disabled="disabled"'}}
+          {{ i == _default_rating ? 'aria-checked="true" checked="checked"' }}
+        />
+        <label class="ema-ratings__star" for="ema-ratings__{{_name}}--{{i}}">
+          ★
+        </label>
+      {% endfor %}
+    </form>
+  </div>
+{% endfor %}
+
+{% include '@ec-europa/ecl-forms-textareas' %}
+{% include '@ec-europa/ecl-buttons' with {
+  modifier: 'primary',
+  label: 'Submit'
+} %}

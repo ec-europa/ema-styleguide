@@ -1,5 +1,10 @@
 .ema-ratings {
+  display: flex;
   margin: 0;
+}
+
+.ema-ratings__title {
+  margin-right: map-get($ecl-spacing, 'xxxs');
 }
 
 .ema-ratings__stars {
