@@ -35,7 +35,7 @@
           {{ item.label }}
         </a>
         <ul
-          class="ecl-listing">
+          class="ecl-listing ecl-list--unstyled">
           {{ macros.menu_links(item.list, _depth, _current_index) }}
         </ul>
       {% else %}
@@ -51,7 +51,7 @@
 
 {% import _self as macros %}
 <div class="{{ _css_class }}"{{ _extra_attributes }}>
-  <ul class="ecl-listing">
+  <ul class="ecl-listing ecl-list--unstyled">
     {{ macros.menu_links(_list) }}
   </ul>
 </div>
