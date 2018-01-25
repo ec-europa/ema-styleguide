@@ -1,0 +1,22 @@
+{% embed '@ec-europa/ecl-navigation-menus' %}
+  {% block navigation %}
+  {% for _link in links %}
+    {% set _link_class_name = 'ecl-navigation-menu__item' ~ (_link.is_active ? ' ecl-navigation-menu__item--active' : '') %}
+    <li class="{{ _link_class_name }}">
+      {% if _link.children_links is not defined or _link.children_links is empty %}
+        <a href="{{ _link.href }}" class="ecl-navigation-menu__link">{{ _link.label }}</a>
+      {% else %}
+        <a href="{{ _link.href }}" class="ecl-navigation-menu__link" aria-controls="nav-menu-expandable-group-{{ loop.index }}" aria-expanded="false" aria-haspopup="true">{{ _link.label }}</a>
+
+        <div class="ecl-navigation-menu__group" id="nav-menu-expandable-group-{{ loop.index }}">
+        {% include '@ec-europa/ema-context-banners' with {
+          links: _link.children_links,
+          title: _link.title,
+          description: _link.description,
+        }%}
+        </div>
+      {% endif %}
+    </li>
+  {% endfor %}
+  {% endblock %}
+{% endembed %}
