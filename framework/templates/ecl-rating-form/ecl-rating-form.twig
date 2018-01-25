@@ -1,22 +1,18 @@
-{% set _css_class = 'ema-rating-form' %}
-
-<div class="ecl-container">
-  <form class="{{_css_class}}">
-    <div class="ecl-row">
-      <div class="ecl-col">
-        <h3 class="ecl-heading ecl-heading--h3">How useful was this page?</h3>
-        {% for rating in ratings %}
-          {% include '@ec-europa/ema-ratings' with rating %}
-        {% endfor %}
-        <a class="ecl-link" href="#">View all 12 ratings</a>
-        {% include '@ec-europa/ecl-forms-textareas' with { rows: 3 } %}
+<form class="ma-rating-form">
+  <h3 class="ecl-heading ecl-heading--h3">How useful was this page?</h3>
+  <div class="ecl-u-d-flex">
+    {% for rating in ratings %}
+      <div class="ecl-u-mr-l">
+        {% include '@ec-europa/ema-ratings' with { rating } %}
       </div>
-      <div class="ecl-col">
-        {% include '@ec-europa/ecl-buttons' with {
-          modifier: 'primary',
-          label: 'Submit'
-        } %}
-      </div>
-    </div>
-  </form>
-</div>
+    {% endfor %}
+    <a class="ecl-link" href="#">View all 12 ratings</a>
+  </div>
+  <div class="ecl-u-d-flex ecl-u-align-items-end ecl-u-mt-s">
+    {% include '@ec-europa/ecl-forms-textareas' with { rows: 3, extraClass: 'ecl-u-mr-s' } %}
+    {% include '@ec-europa/ecl-buttons' with {
+      modifier: 'primary',
+      label: 'Submit'
+    } %}
+  </div>
+</form>

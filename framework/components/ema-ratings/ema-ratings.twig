@@ -13,6 +13,11 @@
 {% set _name = name|default('ema-rating') %}
 {% set _disabled = disabled|default(false) %}
 
+{# Internal logic - Process properties #}
+{% if extra_class is defined %}
+  {% set _css_class = _css_class ~ ' ' ~ extra_class %}
+{% endif %}
+
 {# Print result #}
 <div class="{{_css_class}}">
   <span class="ema-ratings__title">{{_title}}</span>
