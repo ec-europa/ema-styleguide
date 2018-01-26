@@ -1,9 +1,10 @@
-.ecl-button--ema-call {
-  background-color: map-get($ema-colors, 'blue-4');
+.ecl-button--ema-primary {
+  background-color: map-get($ema-colors, 'primary');
+  border-color: map-get($ema-colors, 'primary');
   color: #fff;
 }
 
 .ecl-button--ema-tag {
   background-color: map-get($ema-colors, 'light-grey-2');
-  color: map-get($ema-colors, 'blue-4');
+  color: map-get($ema-colors, 'primary');
 }
