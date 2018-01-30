@@ -40,3 +40,12 @@
   background-color: map-get($ema-colors, 'blue-3');
   padding-left: map-get($ecl-spacing, 'xl');
 }
+
+.ema-side-navigation__link--active {
+  background-color: #fff;
+  color: map-get($ema-colors, 'primary');
+
+  &.ema-side-navigation__link--can-expand::after {
+    color: map-get($ema-colors, 'primary');
+  }
+}

@@ -27,6 +27,12 @@ module.exports = {
                   {
                     label: 'Link 1-3-1-1',
                     link: '#',
+                    active: true,
+                    canExpand: true,
+                  },
+                  {
+                    label: 'Link 1-3-1-2',
+                    link: '#',
                   },
                 ],
               },
