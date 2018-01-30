@@ -16,11 +16,16 @@
 <main class="ecl-u-mv-l">
   <div class="ecl-container">
     <div class="ecl-row">
-      <aside class="ecl-col-4">
+      <aside class="ecl-col-md-4 ecl-col-xl-3 ecl-u-order-last ecl-u-order-md-first">
+        {% include '@ec-europa/ema-buttons' with {
+          extra_classes: 'ecl-button--block ecl-u-mb-m',
+          label: '<span class="ecl-icon ecl-icon--share"></span> Share'
+        } %}
+
         {% include '@ec-europa/ema-side-navigation' with sideNavigation %}
       </aside>
 
-      <section class="ecl-col">
+      <section class="ecl-col ecl-offset-xl-1">
         <h2 class="ecl-heading ecl-heading--ema-h2">Transfers of orphan designation</h2>
 
         <p class="ecl-paragraph"><strong>A transfer of the orphan designation is the procedure by which the orphan designation is transferred from the currently approved sponsor (orphan designation holder) to a new sponsor which is a different person/legal entity.</strong></p>
