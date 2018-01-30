@@ -161,6 +161,104 @@ module.exports = {
         },
       ],
     },
+    sideNavigation: {
+      list: [
+        {
+          label: 'Adaptive pathways',
+          link: '#',
+        },
+        {
+          label: 'Advanced therapies',
+          link: '#',
+          canExpand: true,
+        },
+        {
+          label: 'Clinical trials',
+          link: '#',
+          canExpand: true,
+        },
+        {
+          label: 'Compassionate use',
+          link: '#',
+        },
+        {
+          label: 'Compliance',
+          link: '#',
+          canExpand: true,
+        },
+        {
+          label: 'Data on medicines (ISO IDMP standards)',
+          link: '#',
+          canExpand: true,
+        },
+        {
+          label: 'Geriatric medicine',
+          link: '#',
+        },
+        {
+          label: 'Innovation in medicines',
+          link: '#',
+        },
+        {
+          label: 'Non-pharmaceutical products',
+          link: '#',
+          canExpand: true,
+        },
+        {
+          label: 'Orphan designation',
+          link: '#',
+          list: [
+            {
+              label: 'Annual report',
+              link: '#',
+            },
+            {
+              label: 'How to apply',
+              link: '#',
+              canExpand: true,
+            },
+            {
+              label: 'Incentives',
+              link: '#',
+            },
+            {
+              label: 'Transfers',
+              link: '#',
+              active: true,
+            },
+          ],
+        },
+        {
+          label: 'Paediatric medicines',
+          link: '#',
+          canExpand: true,
+        },
+        {
+          label: 'Pharmacovigilance',
+          link: '#',
+          canExpand: true,
+        },
+        {
+          label: 'PRIME: priority medicines',
+          link: '#',
+        },
+        {
+          label: 'Quality by design',
+          link: '#',
+          canExpand: true,
+        },
+        {
+          label: 'Scientific advice and protocol assistance',
+          link: '#',
+          canExpand: true,
+        },
+        {
+          label: 'Scientific guidelines',
+          link: '#',
+          canExpand: true,
+        },
+      ],
+    },
     _demo: {
       scripts: `document.addEventListener('DOMContentLoaded', function () {
         ECL.megamenu();
