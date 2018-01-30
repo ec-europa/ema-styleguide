@@ -7,7 +7,7 @@
 #}
 
 {# Internal properties #}
-{% set _css_class = 'ema-ratings' %}
+{% set _css_class = 'ema-rating' %}
 {% set _title = title|default('Your rating') %}
 {% set _default_rating = default_rating|default(0) %}
 {% set _name = name|default('ema-rating') %}
@@ -20,21 +20,21 @@
 
 {# Print result #}
 <div class="{{_css_class}}">
-  <span class="ema-ratings__title">{{_title}}</span>
-  <div class="ema-ratings__stars">
+  <span class="ema-rating__title">{{_title}}</span>
+  <div class="ema-rating__stars">
     {% for i in 5..1 %}
       <input
         type="radio"
-        class="ema-ratings__input"
+        class="ema-rating__input"
         aria-hidden="true"
-        id="ema-ratings__{{_name}}--{{i}}"
+        id="ema-rating__{{_name}}--{{i}}"
         name={{ _name }}
         tabindex={{ i-1 }}
         value={{ i }}
         {{ _disabled ? 'disabled="disabled"'}}
         {{ i == _default_rating ? 'aria-checked="true" checked="checked"' }}
       />
-      <label class="ema-ratings__star" for="ema-ratings__{{_name}}--{{i}}">
+      <label class="ema-rating__star" for="ema-rating__{{_name}}--{{i}}">
         ★
       </label>
     {% endfor %}

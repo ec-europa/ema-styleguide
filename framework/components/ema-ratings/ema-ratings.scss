@@ -1,39 +1,39 @@
-.ema-ratings {
+.ema-rating {
   display: flex;
   margin: 0;
 }
 
-.ema-ratings__title {
+.ema-rating__title {
   margin-right: map-get($ecl-spacing, 'xxxs');
 }
 
-.ema-ratings__stars {
+.ema-rating__stars {
   display: inline-block;
 
-  .ema-ratings__input {
+  .ema-rating__input {
     display: none;
     left: -9999px;
     opacity: 0;
     position: absolute;
     visibility: hidden;
   }
-  .ema-ratings__input:checked ~ label {
+  .ema-rating__input:checked ~ label {
     color: map-get($ema-colors, 'orange-3');
   }
 }
 
-.ema-ratings__stars:not(:checked) {
-  .ema-ratings__star {
+.ema-rating__stars:not(:checked) {
+  .ema-rating__star {
     color: map-get($ema-colors, 'grey-3');
     float: right;
   }
 }
 
-.ema-ratings__input:not(:disabled) ~ .ema-ratings__star {
+.ema-rating__input:not(:disabled) ~ .ema-rating__star {
   cursor: pointer;
 }
 
-.ema-ratings__input:not(:disabled) ~ .ema-ratings__star:hover,
-.ema-ratings__input:not(:disabled) ~ .ema-ratings__star:hover ~ label {
+.ema-rating__input:not(:disabled) ~ .ema-rating__star:hover,
+.ema-rating__input:not(:disabled) ~ .ema-rating__star:hover ~ label {
   color: map-get($ema-colors, 'orange-2');
 }

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "default",
+    "label": "Call",
+    "context": {
+      "label": "Call",
+      "extra_classes": "ecl-button--ema-primary",
+      "modifier": "primary"
+    }
+  },
+  {
+    "name": "tag",
+    "label": "Tag",
+    "context": {
+      "label": "Tag",
+      "extra_classes": "ecl-button--ema-tag",
+      "modifier": "tag"
+    }
+  }
+]
