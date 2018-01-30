@@ -6,7 +6,7 @@ module.exports = {
   collated: true,
   collator(markup, item) {
     return `<!-- Start: @${item.handle} -->\n
-      <h2 class="ema-heading ema-heading--h2">${item.label}</h2>\n
+      <h2 class="ecl-heading ecl-heading--ema-h2">${item.label}</h2>\n
       ${markup}\n
       <!-- End: @${item.handle} -->\n`;
   },

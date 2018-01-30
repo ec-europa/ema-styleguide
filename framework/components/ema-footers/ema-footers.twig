@@ -1,0 +1,47 @@
+{#
+  - "links" (array): array of links components
+  - "copyright" (string): copyright text (default: '')
+  - "description" (string): description text (default: '')
+  - "logo" (object): {
+    - "src" (string): source of the image (default: '')
+    - "alt" (string): alt text of the image (default: '')
+  }
+  - "extra_classes" (string): extra CSS classes to be added
+  - "extra_attributes" (array): extra attributes classes (optional, format: [{ 'name': 'name_of_the_attribute', 'value': 'value_of_the_attribute'}])
+#}
+
+{# Internal properties #}
+
+{% set _copyright = copyright|default('') %}
+{% set _description = description|default('') %}
+{% set _css_class = 'ema-footer' %}
+{% set _extra_attributes = '' %}
+
+{# Internal logic - Process properties #}
+
+{% if extra_class is defined %}
+  {% set _css_class = _css_class ~ ' ' ~ extra_class %}
+{% endif %}
+
+{% if extra_attributes is defined %}
+  {% for attr in extra_attributes %}
+    {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name ~ '="' ~ attr.value ~'"' %}
+  {% endfor %}
+{% endif %}
+
+{# Print the result  #}
+
+<footer class="{{ _css_class }}" {{ _extra_attributes }}>
+  <div class="ema-footer__links">
+    {% for link in links %}
+      {% include '@ec-europa/ema-links' with link %}
+    {% endfor %}
+  </div>
+
+  <div class="ema-footer__copyright">{{ copyright }}</div>
+  <div class="ema-footer__description">
+    {{ description }}
+    <div class="ema-footer__logo"><img src="{{ logo.src }}" alt="{{ logo.alt }}" /></div>
+  </div>
+
+</footer>
