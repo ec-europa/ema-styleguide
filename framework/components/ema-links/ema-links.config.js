@@ -6,7 +6,7 @@ module.exports = {
   collated: true,
   collator(markup, item) {
     return `<!-- Start: @${item.handle} -->\n
-      <h2 class="ema-heading ema-heading--h2">${item.label}</h2>\n
+      <h2 class="ecl-heading ecl-heading--ema-h2">${item.label}</h2>\n
       ${markup}\n
       <!-- End: @${item.handle} -->\n`;
   },
@@ -15,6 +15,7 @@ module.exports = {
       name: 'default',
       label: 'Links in body text',
       context: {
+        extra_classes: 'ecl-link--ema-default',
         href: '#',
         label: 'in-line link',
       },
@@ -23,7 +24,7 @@ module.exports = {
       name: 'external',
       label: 'External links',
       context: {
-        variant: 'external',
+        extra_classes: 'ecl-link--ema-external',
         href: '#',
         label: 'external link',
       },
@@ -32,7 +33,7 @@ module.exports = {
       name: 'standalone',
       label: 'Standalone links',
       context: {
-        variant: 'standalone',
+        extra_classes: 'ecl-link--ema-standalone',
         href: '#',
         label: 'standalone link',
       },
@@ -41,7 +42,7 @@ module.exports = {
       name: 'obvious',
       label: 'Obvious links',
       context: {
-        variant: 'obvious',
+        extra_classes: 'ecl-link--ema-obvious',
         href: '#',
         label: 'obvious link',
       },
@@ -50,10 +51,9 @@ module.exports = {
       name: 'inverted',
       label: 'Inverted links (could be standalone or external too)',
       context: {
-        variant: 'inverted',
+        extra_classes: 'ecl-link--ema-inverted ema-u-bg-primary',
         href: '#',
         label: 'inverted link',
-        extra_classes: 'ema-u-bg-primary',
       },
     },
   ],

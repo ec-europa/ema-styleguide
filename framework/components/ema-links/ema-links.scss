@@ -4,15 +4,17 @@
 
 @import 'links-mixins';
 
-.ema-link {
+.ecl-link--ema-default {
   @include link();
 }
 
-.ema-link--external {
+.ecl-link--ema-external {
+  @include link();
   @include link-external();
 }
 
-.ema-link--standalone {
+.ecl-link--ema-standalone {
+  @include link();
   color: map-get($ema-colors, 'blue-2');
   text-decoration: none;
 
@@ -22,7 +24,8 @@
   }
 }
 
-.ema-link--obvious {
+.ecl-link--ema-obvious {
+  @include link();
   color: map-get($ema-colors, 'black');
   text-decoration: none;
 
@@ -33,7 +36,8 @@
   }
 }
 
-.ema-link--inverted {
+.ecl-link--ema-inverted {
+  @include link();
   color: #fff;
 
   &:hover,
@@ -42,13 +46,15 @@
   }
 }
 
-.ema-link--all {
+.ecl-link--ema-all {
+  @include link();
   clear: right;
   float: right;
   text-transform: uppercase;
 }
 
-.ema-link--more {
+.ecl-link--ema-more {
+  @include link();
   text-transform: uppercase;
 
   &::after {

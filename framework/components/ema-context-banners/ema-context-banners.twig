@@ -1,0 +1,49 @@
+{#
+  - "links" (array): array of links components
+  - "title" (string): section title (default: '')
+  - "description" (string): description text (default: '')
+  - "extra_classes" (string): extra CSS classes to be added
+  - "extra_attributes" (array): extra attributes classes (optional, format: [{ 'name': 'name_of_the_attribute', 'value': 'value_of_the_attribute'}])
+#}
+
+{# Internal properties #}
+
+{% set _title = title|default('') %}
+{% set _description = description|default('') %}
+{% set _css_class = 'ema-context-banner' %}
+{% set _extra_attributes = '' %}
+
+{# Internal logic - Process properties #}
+
+{% if extra_class is defined %}
+  {% set _css_class = _css_class ~ ' ' ~ extra_class %}
+{% endif %}
+
+{% if extra_attributes is defined %}
+  {% for attr in extra_attributes %}
+    {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name ~ '="' ~ attr.value ~'"' %}
+  {% endfor %}
+{% endif %}
+
+{# Print the result  #}
+
+<div class="{{ _css_class }}" {{ _extra_attributes }}>
+  <div class="ecl-container">
+    {% if _title is defined and _title is not empty %}
+    <h1 class="ecl-heading ecl-heading--ema-h1">{{ _title }}</h1>
+    {% endif %}
+
+    {% if _description is defined and _description is not empty %}
+    <p class="ecl-paragraph ecl-paragraph--l">{{ _description }}</p>
+    {% endif %}
+
+    <ul class="ema-context-banner__links">
+    {% for _link in links %}
+      {% set _link_class_name = 'ema-context-banner__link' ~ (_link.is_active ? ' ema-context-banner__link--active' : '') %}
+      <li class="ema-context-banner__item">
+        <a href="{{ _link.href }}" class="{{ _link_class_name }}">{{ _link.label }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
