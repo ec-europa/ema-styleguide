@@ -28,9 +28,9 @@
         class="ema-rating__input"
         aria-hidden="true"
         id="ema-rating__{{_name}}--{{i}}"
-        name={{ _name }}
-        tabindex={{ i-1 }}
-        value={{ i }}
+        name="{{ _name }}"
+        tabindex="{{ i-1 }}"
+        value="{{ i }}"
         {{ _disabled ? 'disabled="disabled"'}}
         {{ i == _default_rating ? 'aria-checked="true" checked="checked"' }}
       />
