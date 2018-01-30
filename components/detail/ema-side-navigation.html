@@ -34,7 +34,7 @@
 <link rel="stylesheet" href="../../themes/ecl-fractal-theme/css/fractal.css?cachebust=0.12.0" type="text/css">
 
 
-<title>Ecl Site Headers | EMA Style Guide</title>
+<title>Side Navigation | EMA Style Guide</title>
 
 </head>
 <body class="language-en">
@@ -333,8 +333,8 @@
     
         
         
-        <li class="ecl-navigation-menu__item"  data-role="item">
-          <a href="ema-side-navigation" class="ecl-navigation-menu__link ">
+        <li class="ecl-navigation-menu__item"  data-state="current" data-role="item">
+          <a href="" class="ecl-navigation-menu__link  ecl-navigation-menu__link--active">
             
 
 <div class="Status Status--unlabelled">
@@ -603,14 +603,14 @@
     
     
 
-<div class="Pen" id="pen-4acd834e81bf868cd1aac63b4aca30a1">
+<div class="Pen" id="pen-cbd5867438f3f8bfb767cc089947247b">
 
     
 
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
-        <a class="Pen-previewLink" href="../preview/ecl-site-headers" title="Component preview">
-            Ecl Site Headers
+        <a class="Pen-previewLink" href="../preview/ema-side-navigation" title="Component preview">
+            Side Navigation
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -626,7 +626,7 @@
 
 <div class="Status Status--tag">
 
-<label class="Status-label" style="background-color: #006fb4; border-color: #006fb4;">Planned</label>
+<label class="Status-label" style="background-color: #467a39; border-color: #467a39;">Ready</label>
 
 </div>
 
@@ -638,20 +638,22 @@
         <div class="Pen-documentation active ecl-u-mv-s" id="documentation">
           <div class="ecl-editor">
             
-            <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+            <h1 id="side-navigation">Side Navigation</h1>
+<p>The navigation bar supporting the mainmenu is a common graphical element shared by all EMA and Telematics websites</p>
+
             
           </div>
         </div>
 
         <div class="Pen-playground" data-behaviour="pen" id="playground">
-          <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-4acd834e81bf868cd1aac63b4aca30a1">
+          <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-cbd5867438f3f8bfb767cc089947247b">
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
              <iframe
                 class="Preview-iframe"
                 data-role="window"
-                src="../preview/ecl-site-headers"
+                src="../preview/ema-side-navigation"
                 sandbox="allow-same-origin allow-scripts allow-forms"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
@@ -664,7 +666,7 @@
 
           <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
           <div class="Pen-panel Pen-info" data-role="info">
-    <div class="Browser" data-behaviour="browser" id="browser-4acd834e81bf868cd1aac63b4aca30a1">
+    <div class="Browser" data-behaviour="browser" id="browser-cbd5867438f3f8bfb767cc089947247b">
 
     
 
@@ -673,31 +675,35 @@
         
         
         <li class="Browser-tab Browser-tab--view is-active " data-role="tab">
-            <a href="#browser-4acd834e81bf868cd1aac63b4aca30a1-panel-view">View</a>
+            <a href="#browser-cbd5867438f3f8bfb767cc089947247b-panel-view">View</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-4acd834e81bf868cd1aac63b4aca30a1-panel-context">Context</a>
+            <a href="#browser-cbd5867438f3f8bfb767cc089947247b-panel-context">Context</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--html" data-role="tab">
-            <a href="#browser-4acd834e81bf868cd1aac63b4aca30a1-panel-html">HTML</a>
+            <a href="#browser-cbd5867438f3f8bfb767cc089947247b-panel-html">HTML</a>
         </li>
         
         
         
         
+        
+        <li class="Browser-tab Browser-tab--resources" data-role="tab">
+            <a href="#browser-cbd5867438f3f8bfb767cc089947247b-panel-assets">Code</a>
+        </li>
         
         
         
         
         
         <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-4acd834e81bf868cd1aac63b4aca30a1-panel-info">Info</a>
+            <a href="#browser-cbd5867438f3f8bfb767cc089947247b-panel-info">Info</a>
         </li>
         
         
@@ -706,98 +712,142 @@
 
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-4acd834e81bf868cd1aac63b4aca30a1-panel-view">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-cbd5867438f3f8bfb767cc089947247b-panel-view">
     <code class="Code Code--lang-twig">
         <pre><span class="xml"></span><span class="hljs-comment">{#
-  For site switcher:
-    - "site_switcher" (object) {
-      - "political":  {
-        - "href" (string): target of the link (default: '')
-        - "label" (string): label of the link (default: '')
-        - "is_active" (boolean): set active link (default: false)
-      }
-      - "info":  {
-        - "href" (string): target of the link (default: '')
-        - "label" (string): label of the link (default: '')
-        - "is_active" (boolean): set active link (default: false)
-      }
-    }
-
-  For user menu:
-    - "user_menu" (object){
-      - "title" (string): the title of the user menu (default: 'Navigation')
-      - "links" (array): [
-        - "href" (string): target of the link
-        - "label" (string): label of the link
-        - "is_active" (boolean): set active link
-      ]
-    }
-
-  Generic:
-    - "extra_classes" (string): extra CSS classes to be added
-    - "extra_attributes" (array): extra attributes classes (optional, format: [{ 'name': 'name_of_the_attribute', 'value': 'value_of_the_attribute'}])
+  Accepts:
+    - extra_classes (string): additional classes to add to the component
+    - extra_attributes (array of { name: '', value: '' })
+    - list: the sub-tree generated by the server (array of { label: '', link: '', list: [] })
+    - active: this is the current page, link is active (boolean, default(false))
+    - canExpand: true if it has a sub-tree,
+        not to be used if the list is already provided (boolean, default(false))
 #}</span><span class="xml">
 
 </span><span class="hljs-comment">{# Internal properties #}</span><span class="xml">
-
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _css_class = 'ecl-site-header' %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _css_class = 'ema-side-navigation' %}</span><span class="xml">
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _extra_attributes = '' %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _list = list %}</span><span class="xml">
 
-</span><span class="hljs-comment">{# Internal logic - Process properties #}</span><span class="xml">
-
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> extra_classes is defined %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> extra_classes is defined and extra_classes is not empty %}</span><span class="xml">
   </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _css_class = _css_class ~ ' ' ~ extra_classes %}</span><span class="xml">
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
 
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> extra_attributes is defined %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> extra_attributes is defined and extra_attributes is not empty %}</span><span class="xml">
   </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> attr in extra_attributes %}</span><span class="xml">
     </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _extra_attributes = _extra_attributes ~ ' ' ~ attr.name ~ '="' ~ attr.value ~ '"' %}</span><span class="xml">
   </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
 
 </span><span class="hljs-comment">{# Print result #}</span><span class="xml">
-<span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _css_class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span></span></span><span class="hljs-template-variable">{{ _extra_attributes }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">macro</span></span> menu_links(list, depth, parent_index) %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">import</span></span> _self as macros %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> item in list %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _current_index = parent_index ? parent_index ~ "-" ~ loop.index : loop.index %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _depth = (depth|<span class="hljs-keyword">default</span>(0)) + 1 %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _canExpand = item.canExpand|<span class="hljs-keyword">default</span>(false) %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _active = item.active|<span class="hljs-keyword">default</span>(false) %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _class = "ecl-expandable__button ema-side-navigation__link ema-side-navigation__link--depth-" ~ _depth ~ (_canExpand ? ' ema-side-navigation__link--can-expand') ~ (_active ? ' ema-side-navigation__link--active') %}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> item.list is defined and item.list is not empty %}</span><span class="xml">
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> ema-side-navigation__link--has-list"</span>
+          <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ item.link }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
+          <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
+          </span><span class="hljs-template-variable">{{ item.label }}</span><span class="xml">
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-listing ecl-list--unstyled"</span>&gt;</span>
+          </span><span class="hljs-template-variable">{{ macros.menu_links(item.list, _depth, _current_index) }}</span><span class="xml">
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      </span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
+          <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ item.link }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+          </span><span class="hljs-template-variable">{{ item.label }}</span><span class="xml">
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endmacro</span></span> %}</span><span class="xml">
 
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> user_menu is defined and user_menu is iterable %}</span><span class="xml">
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-container"</span>&gt;</span>
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-navigation-lists' with {
-      variant: 'small',
-      extra_classes: 'ecl-u-f-r'
-    }|<span class="hljs-keyword">merge</span>(user_menu) %}</span><span class="xml">
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> site_switcher is defined %}</span><span class="xml">
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-site-switchers' with {
-    variant: 'header'
-    }|<span class="hljs-keyword">merge</span>(site_switcher ) %}</span><span class="xml">
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-container ecl-site-header__banner"</span>&gt;</span>
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-logos' with {
-      'to': 'https://ec.europa.eu',
-      'title': 'Home - European Commission',
-      'type': 'right',
-      'extra_class': 'ecl-site-header__logo'
-    } only %}</span><span class="xml">
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-lang-select-sites' with {
-      'extra_class': 'ecl-site-header__lang-select-sites'
-    } %}</span><span class="xml">
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-search-forms' with {
-      'input': { 'id': 'global-search' },
-      'extra_classes': 'ecl-site-header__search'
-    } %}</span><span class="xml">
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></span></pre>
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">import</span></span> _self as macros %}</span><span class="xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _css_class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _extra_attributes }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-listing ecl-list--unstyled"</span>&gt;</span>
+    </span><span class="hljs-template-variable">{{ macros.menu_links(_list) }}</span><span class="xml">
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
 </div>
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-4acd834e81bf868cd1aac63b4aca30a1-panel-context">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-cbd5867438f3f8bfb767cc089947247b-panel-context">
     <code class="Code Code--lang-json">
         
             
-            <pre><span class="hljs-comment">/* No context defined for this component. */</span></pre>
+            <pre>{
+  <span class="hljs-attr">"list"</span>: [
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Link 1"</span>,
+      <span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>,
+      <span class="hljs-attr">"list"</span>: [
+        {
+          <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Link 1-1"</span>,
+          <span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>
+        },
+        {
+          <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Link 1-2"</span>,
+          <span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>
+        },
+        {
+          <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Link 1-3"</span>,
+          <span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>,
+          <span class="hljs-attr">"list"</span>: [
+            {
+              <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Link 1-3-1"</span>,
+              <span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"list"</span>: [
+                {
+                  <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Link 1-3-1-1"</span>,
+                  <span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>,
+                  <span class="hljs-attr">"active"</span>: <span class="hljs-literal">true</span>,
+                  <span class="hljs-attr">"canExpand"</span>: <span class="hljs-literal">true</span>
+                },
+                {
+                  <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Link 1-3-1-2"</span>,
+                  <span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>
+                }
+              ]
+            },
+            {
+              <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Link 1-3-2"</span>,
+              <span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>
+            },
+            {
+              <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Link 1-3-3"</span>,
+              <span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"canExpand"</span>: <span class="hljs-literal">true</span>
+            }
+          ]
+        }
+      ]
+    },
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Link 2"</span>,
+      <span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>
+    },
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Link 3"</span>,
+      <span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>,
+      <span class="hljs-attr">"canExpand"</span>: <span class="hljs-literal">true</span>
+    },
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Link 4"</span>,
+      <span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>,
+      <span class="hljs-attr">"canExpand"</span>: <span class="hljs-literal">true</span>
+    }
+  ]
+}</pre>
             
         
     </code>
@@ -805,55 +855,83 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-4acd834e81bf868cd1aac63b4aca30a1-panel-html">
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-cbd5867438f3f8bfb767cc089947247b-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-site-header"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-side-navigation"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-listing ecl-list--unstyled"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-expandable__button ema-side-navigation__link ema-side-navigation__link--depth-1 ema-side-navigation__link--has-list"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
+          Link 1
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-listing ecl-list--unstyled"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-expandable__button ema-side-navigation__link ema-side-navigation__link--depth-2"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          Link 1-1
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-expandable__button ema-side-navigation__link ema-side-navigation__link--depth-2"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          Link 1-2
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-expandable__button ema-side-navigation__link ema-side-navigation__link--depth-2 ema-side-navigation__link--has-list"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
+          Link 1-3
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-listing ecl-list--unstyled"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-expandable__button ema-side-navigation__link ema-side-navigation__link--depth-3 ema-side-navigation__link--has-list"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
+          Link 1-3-1
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-listing ecl-list--unstyled"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-expandable__button ema-side-navigation__link ema-side-navigation__link--depth-4 ema-side-navigation__link--can-expand ema-side-navigation__link--active"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          Link 1-3-1-1
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-expandable__button ema-side-navigation__link ema-side-navigation__link--depth-4"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          Link 1-3-1-2
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-container ecl-site-header__banner"</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-expandable__button ema-side-navigation__link ema-side-navigation__link--depth-3"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          Link 1-3-2
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-expandable__button ema-side-navigation__link ema-side-navigation__link--depth-3 ema-side-navigation__link--can-expand"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          Link 1-3-3
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://ec.europa.eu"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-logo ecl-logo--logotype ecl-site-header__logo"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Home - European Commission"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>Home - European Commission<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-lang-select-sites ecl-site-header__lang-select-sites"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-lang-select-sites__link"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-lang-select-sites__label"</span>&gt;</span>English<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-lang-select-sites__code"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-icon ecl-icon--language ecl-lang-select-sites__icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-lang-select-sites__code-text"</span>&gt;</span>en<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-expandable__button ema-side-navigation__link ema-side-navigation__link--depth-1"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          Link 2
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-expandable__button ema-side-navigation__link ema-side-navigation__link--depth-1 ema-side-navigation__link--can-expand"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          Link 3
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-expandable__button ema-side-navigation__link ema-side-navigation__link--depth-1 ema-side-navigation__link--can-expand"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          Link 4
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-search-form ecl-site-header__search"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-search-form__textfield-wrapper"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>Search this website<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    
-
-
-
-
-
-
-  
-
-  
-
-
-<span class="hljs-tag">&lt;<span class="hljs-name">input</span>
-  <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span>
-  <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-text-input ecl-search-form__textfield"</span>
-  <span class="hljs-attr">id</span>=<span class="hljs-string">"global-search"</span>
-  <span class="hljs-attr">name</span>=<span class="hljs-string">"default-name"</span>
-  
-/&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-button ecl-button--form ecl-search-form__button"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></pre>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -862,14 +940,110 @@
     
 
 
+<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-cbd5867438f3f8bfb767cc089947247b-panel-assets">
+    <div class="FileBrowser">
+
+        <div class="FileBrowser-selectWrapper">
+            <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
+            <select class="FileBrowser-select" id="filebrowser-select">
+                
+                <option value="file-3c576dd8ec72caf44a90cf2de3ea6a37">ema-side-navigation.scss</option>
+                
+            </select>
+        </div>
+
+        
+        <div class="FileBrowser-item is-active" id="file-3c576dd8ec72caf44a90cf2de3ea6a37" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                                <pre><span class="hljs-comment">/**
+* EMA Side Navigation
+*/</span>
+
+<span class="hljs-selector-class">.ema-side-navigation</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.ema-side-navigation__link</span> {
+  <span class="hljs-attribute">background-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'primary'</span>);
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">padding</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'s'</span>);
+  <span class="hljs-attribute">text-decoration</span>: none;
+
+  &amp;:hover {
+    <span class="hljs-attribute">text-decoration</span>: underline;
+  }
+}
+
+<span class="hljs-selector-class">.ema-side-navigation__link--can-expand</span>::after {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">'\e828'</span>;
+}
+
+<span class="hljs-selector-class">.ema-side-navigation__link--depth-1</span> {
+  <span class="hljs-attribute">background-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'primary'</span>);
+}
+
+<span class="hljs-selector-class">.ema-side-navigation__link--depth-2</span> {
+  <span class="hljs-attribute">background-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'blue-1'</span>);
+  <span class="hljs-attribute">padding-left</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'m'</span>);
+}
+
+<span class="hljs-selector-class">.ema-side-navigation__link--depth-3</span> {
+  <span class="hljs-attribute">background-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'blue-2'</span>);
+  <span class="hljs-attribute">padding-left</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'l'</span>);
+}
+
+<span class="hljs-selector-class">.ema-side-navigation__link--depth-4</span> {
+  <span class="hljs-attribute">background-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'blue-3'</span>);
+  <span class="hljs-attribute">padding-left</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xl'</span>);
+}
+
+<span class="hljs-selector-class">.ema-side-navigation__link--active</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'primary'</span>);
+
+  &amp;<span class="hljs-selector-class">.ema-side-navigation__link--can-expand</span>::after {
+    <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'primary'</span>);
+  }
+}
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a href="../raw/ema-side-navigation/ema-side-navigation.scss"><span>/components/raw/ema-side-navigation/ema-side-navigation.scss</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">framework/components/ema-side-navigation/ema-side-navigation.scss</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">1.1 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
 
 
     
-    <div class="Browser-panel" data-role="tab-panel" id="browser-4acd834e81bf868cd1aac63b4aca30a1-panel-info">
+    <div class="Browser-panel" data-role="tab-panel" id="browser-cbd5867438f3f8bfb767cc089947247b-panel-info">
     <ul class="Meta">
         <li class="Meta-item">
             <strong class="Meta-key">Handle:</strong>
-            <span class="Meta-value">@ec-europa/ecl-site-headers</span>
+            <span class="Meta-value">@ec-europa/ema-side-navigation</span>
         </li>
         
         
@@ -880,12 +1054,12 @@
             <strong class="Meta-key">Preview:</strong>
             <span class="Meta-value">
                 <ul>
-                    <li><a href="../preview/ecl-site-headers"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a href="../preview/ema-side-navigation"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
 </a></li>
-                    <li><a href="../render/ecl-site-headers"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a href="../render/ema-side-navigation"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
@@ -895,7 +1069,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">framework/_imports/ecl-site-headers.twig</span>
+            <span class="Meta-value">framework/components/ema-side-navigation/ema-side-navigation.twig</span>
         </li>
         
         
