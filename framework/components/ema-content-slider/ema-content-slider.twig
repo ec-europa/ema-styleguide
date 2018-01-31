@@ -14,4 +14,15 @@
 
 {# Print result #}
 <div class="{{_css_class}}">
+  <div class="highlights">
+    {% for item in list %}
+      {% set item = item|merge({variant: 'highlight'}) %}
+      {% include '@ec-europa/ecl-list-items' with item %}
+    {% endfor %}
+  </div>
+  <div class="items">
+    {% for item in list %}
+      {% include '@ec-europa/ecl-list-items' with item %}
+    {% endfor %}
+  </div>
 </div>
