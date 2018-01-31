@@ -1,0 +1,66 @@
+/**
+* EMA List item component
+*/
+
+%ema-file {
+  .ecl-list-item__link {
+    position: relative;
+  }
+
+  .ecl-list-item__body {
+    padding-left: map-get($ecl-spacing, 'xl');
+  }
+
+  .ecl-list-item__body::before {
+    @extend %ecl-icon;
+
+    font-size: map-get($ecl-font-size, 'xl');
+    left: map-get($ecl-spacing, 'xxs');
+    position: absolute;
+    top: map-get($ecl-spacing, 'l');
+  }
+
+  .ecl-list-item__title {
+    font-weight: normal;
+  }
+}
+
+.ecl-list-item--ema-pdf {
+  @extend %ema-file;
+
+  .ecl-list-item__body::before {
+    @include ecl-icon('file');
+  }
+}
+
+.ecl-list-item--ema-doc {
+  @extend %ema-file;
+
+  .ecl-list-item__body::before {
+    @include ecl-icon('edit');
+  }
+}
+
+.ecl-list-item--ema-xls {
+  @extend %ema-file;
+
+  .ecl-list-item__body::before {
+    @include ecl-icon('spreadsheet');
+  }
+}
+
+.ecl-list-item--ema-ppt {
+  @extend %ema-file;
+
+  .ecl-list-item__body::before {
+    @include ecl-icon('slides');
+  }
+}
+
+.ecl-list-item--ema-zip {
+  @extend %ema-file;
+
+  .ecl-list-item__body::before {
+    @include ecl-icon('package');
+  }
+}

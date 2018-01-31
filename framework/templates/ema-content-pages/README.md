@@ -1,0 +1,1 @@
+# EMA content page template

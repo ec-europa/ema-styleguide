@@ -46,9 +46,11 @@
       {{ user.name }} <img class="ema-header__user-picture" src="{{ user.image.src }}" alt="{{ user.image.alt }}" />
     </div>
 
+    {% if lang_selector is defined %}
     <div class="ema-header__languages">
       {% include '@ec-europa/ecl-forms-selects' with lang_selector %}
     </div>
+    {% endif %}
   </div>
 
   <div class="ecl-container ema-header__banner">

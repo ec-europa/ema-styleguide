@@ -1,0 +1,42 @@
+{#
+  Accepts:
+    - title (string): title of the panel (default: '')
+    - default_rating (string): set a default rating (default: 0)
+    - name (string): name of your form group input
+    - disabled (boolean): read-only rating (default: false)
+#}
+
+{# Internal properties #}
+{% set _css_class = 'ema-rating' %}
+{% set _title = title|default('Your rating') %}
+{% set _default_rating = default_rating|default(0) %}
+{% set _name = name|default('ema-rating') %}
+{% set _disabled = disabled|default(false) %}
+
+{# Internal logic - Process properties #}
+{% if extra_class is defined %}
+  {% set _css_class = _css_class ~ ' ' ~ extra_class %}
+{% endif %}
+
+{# Print result #}
+<div class="{{_css_class}}">
+  <span class="ema-rating__title">{{_title}}</span>
+  <div class="ema-rating__stars">
+    {% for i in 5..1 %}
+      <input
+        type="radio"
+        class="ema-rating__input"
+        aria-hidden="true"
+        id="ema-rating__{{_name}}--{{i}}"
+        name="{{ _name }}"
+        tabindex="{{ i-1 }}"
+        value="{{ i }}"
+        {{ _disabled ? 'disabled="disabled"'}}
+        {{ i == _default_rating ? 'aria-checked="true" checked="checked"' }}
+      />
+      <label class="ema-rating__star" for="ema-rating__{{_name}}--{{i}}">
+        ★
+      </label>
+    {% endfor %}
+  </div>
+</div>

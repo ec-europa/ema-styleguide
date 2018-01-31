@@ -1,0 +1,41 @@
+.ema-rating {
+  align-items: center;
+  display: flex;
+  margin: 0;
+}
+
+.ema-rating__title {
+  margin-right: map-get($ecl-spacing, 'xxxs');
+}
+
+.ema-rating__stars {
+  display: inline-block;
+  font-size: map-get($ecl-font-size, 'l');
+
+  .ema-rating__input {
+    display: none;
+    left: -9999px;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+  }
+  .ema-rating__input:checked ~ label {
+    color: map-get($ema-colors, 'orange-3');
+  }
+}
+
+.ema-rating__stars:not(:checked) {
+  .ema-rating__star {
+    color: map-get($ema-colors, 'grey-3');
+    float: right;
+  }
+}
+
+.ema-rating__input:not(:disabled) ~ .ema-rating__star {
+  cursor: pointer;
+}
+
+.ema-rating__input:not(:disabled) ~ .ema-rating__star:hover,
+.ema-rating__input:not(:disabled) ~ .ema-rating__star:hover ~ label {
+  color: map-get($ema-colors, 'orange-2');
+}
