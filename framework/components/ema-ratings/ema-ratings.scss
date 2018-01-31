@@ -1,4 +1,5 @@
 .ema-rating {
+  align-items: center;
   display: flex;
   margin: 0;
 }
@@ -9,6 +10,7 @@
 
 .ema-rating__stars {
   display: inline-block;
+  font-size: map-get($ecl-font-size, 'l');
 
   .ema-rating__input {
     display: none;

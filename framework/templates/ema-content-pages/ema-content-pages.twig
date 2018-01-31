@@ -16,7 +16,7 @@
 <main class="ecl-u-mv-l">
   <div class="ecl-container">
     <div class="ecl-row">
-      <aside class="ecl-col-md-4 ecl-col-xl-3 ecl-u-order-last ecl-u-order-md-first">
+      <aside class="ecl-col-md-5 ecl-col-l-4 ecl-col-xl-3 ecl-u-order-last ecl-u-order-md-first">
         {% include '@ec-europa/ema-buttons' with {
           extra_classes: 'ecl-button--block ecl-u-mb-m',
           label: '<span class="ecl-icon ecl-icon--share"></span> Share'
@@ -81,17 +81,17 @@
           </li>
         </ul>
 
-        <form class="ema-rating-form ecl-u-mt-xl">
+        <form class="ema-rating-form ecl-u-mt-xl ecl-u-mb-l">
           <h3 class="ecl-heading ecl-heading--ema-h3">How useful was this page?</h3>
-          <div class="ecl-u-d-flex">
+          <div class="ecl-u-d-flex ecl-u-flex-wrap">
             {% for rating in ratings %}
-              <div class="ecl-u-mr-l">
+              <div class="ecl-u-mr-l ecl-u-mb-s">
                 {% include '@ec-europa/ema-ratings' with rating %}
               </div>
             {% endfor %}
-            <a class="ecl-link--ema-default" href="#">View all 12 ratings</a>
+            <a class="ecl-link--ema-default ecl-u-mb-s" href="#">View all 12 ratings</a>
           </div>
-          <div class="ecl-u-d-flex ecl-u-align-items-end ecl-u-mt-s">
+          <div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-flex-md-nowrap ecl-u-align-items-end">
             {% include '@ec-europa/ecl-forms-textareas' with { rows: 3, extraClass: 'ecl-u-mr-s' } %}
             {% include '@ec-europa/ema-buttons' with {
               extra_classes: 'ecl-button--ema-primary',
