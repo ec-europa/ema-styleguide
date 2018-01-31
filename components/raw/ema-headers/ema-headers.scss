@@ -4,6 +4,7 @@
 
 .ema-header {
   margin: 0;
+  padding: map-get($ecl-spacing, 'xs') 0;
 }
 
 .ema-header__extra {

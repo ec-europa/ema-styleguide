@@ -3,13 +3,16 @@
  */
 
 .ema-footer {
-  align-items: center;
   background-color: map-get($ema-colors, 'primary');
   color: #fff;
-  display: flex;
-  flex-wrap: wrap;
   margin: 0;
   padding: map-get($ecl-spacing, 'm') map-get($ecl-spacing, 'xs');
+}
+
+.ema-footer__content {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .ema-footer__links {

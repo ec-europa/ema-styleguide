@@ -262,6 +262,30 @@
         
         
         <li class="ecl-navigation-menu__item"  data-role="item">
+          <a href="ema-list-items" class="ecl-navigation-menu__link ">
+            
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="background-color: #467a39; border-color: #467a39;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            <span>List items</span>
+          </a>
+        </li>
+        
+    
+        
+        
+        <li class="ecl-navigation-menu__item"  data-role="item">
           <a href="ema-navigation-menus" class="ecl-navigation-menu__link ">
             
 
@@ -512,18 +536,9 @@
     
     
         
-        <li class="ecl-navigation-menu__item">
-          <h4 class="ecl-heading ecl-heading--h4 ecl-navigation-menu__heading">Pages</h4>
-          <ul class="ecl-list ecl-list--unstyled ecl-navigation-menu__item-list" data-role="items">
-            
-            
-            
-            
-    
-        
         
         <li class="ecl-navigation-menu__item"  data-role="item">
-          <a href="ecl-pages--simple" class="ecl-navigation-menu__link ">
+          <a href="ema-content-pages" class="ecl-navigation-menu__link ">
             
 
 <div class="Status Status--unlabelled">
@@ -539,7 +554,7 @@
 </div>
 
 
-            <span>Simple</span>
+            <span>Content pages</span>
           </a>
         </li>
         
@@ -547,36 +562,7 @@
         
         
         <li class="ecl-navigation-menu__item"  data-role="item">
-          <a href="ecl-pages--with-menu" class="ecl-navigation-menu__link ">
-            
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="background-color: #467a39; border-color: #467a39;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            <span>Page with menu</span>
-          </a>
-        </li>
-        
-    
-
-          </ul>
-        </li>
-        
-    
-        
-        
-        <li class="ecl-navigation-menu__item"  data-role="item">
-          <a href="ecl-rating-form" class="ecl-navigation-menu__link ">
+          <a href="ema-rating-form" class="ecl-navigation-menu__link ">
             
 
 <div class="Status Status--unlabelled">
@@ -809,9 +795,11 @@
       </span><span class="hljs-template-variable">{{ user.name }}</span><span class="xml"> <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-header__user-picture"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ user.image.src }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ user.image.alt }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> lang_selector is defined %}</span><span class="xml">
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-header__languages"</span>&gt;</span>
       </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-forms-selects' with lang_selector %}</span><span class="xml">
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-container ema-header__banner"</span>&gt;</span>
@@ -968,6 +956,7 @@
 
 <span class="hljs-selector-class">.ema-header</span> {
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xs'</span>) <span class="hljs-number">0</span>;
 }
 
 <span class="hljs-selector-class">.ema-header__extra</span> {
@@ -1028,7 +1017,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">825 Bytes</span>
+                    <span class="Meta-value">867 Bytes</span>
                 </li>
             </ul>
         </div>
