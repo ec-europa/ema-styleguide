@@ -32,16 +32,18 @@
 {# Print the result  #}
 
 <footer class="{{ _css_class }}" {{ _extra_attributes }}>
-  <div class="ema-footer__links">
-    {% for link in links %}
-      {% include '@ec-europa/ema-links' with link %}
-    {% endfor %}
-  </div>
+  <div class="ecl-container ema-footer__content">
+    <div class="ema-footer__links">
+      {% for link in links %}
+        {% include '@ec-europa/ema-links' with link %}
+      {% endfor %}
+    </div>
 
-  <div class="ema-footer__copyright">{{ copyright }}</div>
-  <div class="ema-footer__description">
-    {{ description }}
-    <div class="ema-footer__logo"><img src="{{ logo.src }}" alt="{{ logo.alt }}" /></div>
+    <div class="ema-footer__copyright">{{ copyright }}</div>
+    <div class="ema-footer__description">
+      {{ description }}
+      <div class="ema-footer__logo"><img src="{{ logo.src }}" alt="{{ logo.alt }}" /></div>
+    </div>
   </div>
 
 </footer>

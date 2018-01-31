@@ -5,12 +5,15 @@
 .ema-context-banner {
   background-color: map-get($ema-colors, 'light-grey-2');
   margin: 0;
+  padding-bottom: map-get($ecl-spacing, 's');
+  padding-top: map-get($ecl-spacing, 's');
 }
 
 .ema-context-banner__links {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  margin-bottom: 0;
   padding: 0;
   width: 100%;
 }
