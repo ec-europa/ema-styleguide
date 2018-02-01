@@ -1,4 +1,12 @@
 .ema-content-slider {
-  display: flex;
   margin: 0;
+}
+
+.ema-content-slider__ema-listing {
+  display: flex;
+  flex-direction: column;
+}
+
+.ema-content-slider__ema-list-item-highlight--active {
+  order: -1;
 }
