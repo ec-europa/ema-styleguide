@@ -3,7 +3,7 @@
   {% for _link in links %}
     {% set _link_class_name = 'ecl-navigation-menu__item' ~ (_link.is_active ? ' ecl-navigation-menu__item--active' : '') %}
     <li class="{{ _link_class_name }}">
-      {% if _link.children_links is not defined or _link.children_links is empty %}
+      {% if _link.children_links is not defined or _link.children_links is empty or _link.is_active %}
         <a href="{{ _link.href }}" class="ecl-navigation-menu__link">{{ _link.label }}</a>
       {% else %}
         <a href="{{ _link.href }}" class="ecl-navigation-menu__link" aria-controls="nav-menu-expandable-group-{{ loop.index }}" aria-expanded="false" aria-haspopup="true">{{ _link.label }}</a>
