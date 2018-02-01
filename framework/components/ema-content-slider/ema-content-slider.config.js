@@ -3,6 +3,11 @@ module.exports = {
   label: 'Content slider',
   status: 'ready',
   context: {
+    _demo: {
+      scripts: `document.addEventListener('DOMContentLoaded', function () {
+        // contentSlider();
+      });`,
+    },
     list: [
       {
         title: 'Labore nulla quis irure labore.',
