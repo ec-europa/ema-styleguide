@@ -5,8 +5,8 @@ import { queryAll } from '@ec-europa/ecl-base/helpers/dom';
  */
 export const contentSlider = ({
   selector: selector = '.ema-content-slider',
-  listItemSelector: listItemSelector = '.ema-content-slider__ema-listing .ecl-list-item',
-  listHighlightSelector: listHighlightSelector = '.ema-content-slider__ema-listing .ecl-list-item--highlight.ema-content-slider__ema-list-highlight',
+  listItemSelector: listItemSelector = '.ema-content-slider .ecl-list-item',
+  listHighlightSelector: listHighlightSelector = '.ema-content-slider .ecl-list-item--highlight.ema-content-slider__ema-list-item-highlight',
   activeHighlightSelector: activeHighlightSelector = 'ema-content-slider__ema-list-item-highlight--active',
 } = {}) => {
   if (
