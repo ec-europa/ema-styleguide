@@ -1,6 +1,5 @@
 {
-  "ema-color-primary": { "code": "#072b5d", "category": "primary" },
-  "ema-color-secondary": { "code": "#0b4ba0", "category": "primary" },
+  "ema-color-primary": { "code": "#0f3f81", "category": "primary" },
 
   "ema-color-blue-1": { "code": "#13376d", "category": "blue" },
   "ema-color-blue-2": { "code": "#0b4ba0", "category": "blue" },

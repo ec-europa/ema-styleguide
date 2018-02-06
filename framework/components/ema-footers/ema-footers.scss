@@ -5,26 +5,27 @@
 .ema-footer {
   background-color: map-get($ema-colors, 'primary');
   color: #fff;
+  font-size: map-get($ecl-font-size, 's');
   margin: 0;
   padding: map-get($ecl-spacing, 'm') map-get($ecl-spacing, 'xs');
 }
 
 .ema-footer__content {
-  align-items: center;
   display: flex;
-  flex-wrap: wrap;
 }
 
-.ema-footer__links {
-  width: 100%;
-}
+.ema-footer__section {
+  margin-right: map-get($ecl-spacing, 's');
 
-.ema-footer__link-item {
-  margin-left: map-get($ecl-spacing, 'xxs');
-
-  &:first-child {
-    margin-left: 0;
+  &:last-child {
+    margin-right: 0;
   }
+}
+
+.ema-footer__title {
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .ema-footer__copyright {
