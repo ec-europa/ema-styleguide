@@ -1,13 +1,16 @@
 .ema-content-slider {
   margin: 0;
 }
+
+$ema-content-slider-height: 500px;
+
 @media (min-width: map-get($ecl-grid-breakpoints, 'sm')) {
   .ema-content-slider {
     display: flex;
     flex: 1;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 500px;
+    height: $ema-content-slider-height;
   }
   .ecl-list-item:not([aria-hidden='true']) {
     display: flex;
@@ -15,9 +18,15 @@
     width: 40%;
 
     &.ema-content-slider__ema-list-item-highlight--active {
+      border: 0;
       flex: 0 0 100%;
+      max-height: $ema-content-slider-height;
       order: -1;
       width: 60%;
     }
+  }
+  .ema-content-slider__ema-list-item-highlight--active .ecl-link {
+    margin-right: map-get($ecl-spacing, 's');
+    padding: 0;
   }
 }
