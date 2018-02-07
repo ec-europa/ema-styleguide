@@ -22,7 +22,6 @@
 
     {# The highlight #}
     {% set item_highlight = item|merge({ variant: 'highlight', extra_attributes: [
-      { name:'aria-hidden', value: loop.index != 1 },
       { name:'id', value: 'ema-content-slider__ema-list-item-highlight--' ~ loop.index }
     ], extra_classes: 'ema-content-slider__ema-list-item-highlight' ~ (loop.index == 1 ? ' ema-content-slider__ema-list-item-highlight--active') }) %}
     {% include '@ec-europa/ecl-list-items' with item_highlight %}

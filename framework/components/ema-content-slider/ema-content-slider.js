@@ -75,6 +75,11 @@ export const contentSlider = ({
         bindAccordionEvents(contentSliderContainer);
       });
     }
+    hideAllHighlights();
+    // Display first item by default
+    showOwnHighlight(
+      document.querySelectorAll('.ema-content-slider .ecl-list-item')[0]
+    );
   }
 
   init();
