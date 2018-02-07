@@ -12,13 +12,22 @@
 
 .ema-footer__content {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .ema-footer__section {
-  margin-right: map-get($ecl-spacing, 's');
+  flex-basis: 100%;
 
-  &:last-child {
-    margin-right: 0;
+  @include ecl-media-breakpoint-up(sm) {
+    flex-basis: 50%;
+  }
+
+  @include ecl-media-breakpoint-up(md) {
+    flex-basis: 33%;
+  }
+
+  @include ecl-media-breakpoint-up(xl) {
+    flex-basis: 20%;
   }
 }
 
@@ -28,7 +37,29 @@
   text-transform: uppercase;
 }
 
+.ema-footer__hotline {
+  border: 1px solid map-get($ema-colors, 'grey-3');
+  display: flex;
+  margin-bottom: map-get($ecl-spacing, 's');
+  margin-right: map-get($ecl-spacing, 'xs');
+  padding: map-get($ecl-spacing, 'xxs');
+}
+
+.ema-footer__hotline-desc {
+  font-size: map-get($ecl-font-size, 'xs');
+  margin-top: map-get($ecl-spacing, 'xxxs');
+  text-transform: uppercase;
+}
+
+.ema-footer__social {
+  border-top: 1px solid map-get($ema-colors, 'grey-3');
+  margin-top: map-get($ecl-spacing, 'xs');
+  padding-bottom: map-get($ecl-spacing, 'xs');
+  padding-top: map-get($ecl-spacing, 'xs');
+}
+
 .ema-footer__copyright {
+  align-self: center;
   flex-grow: 1;
   margin-top: map-get($ecl-spacing, 'xxs');
 }

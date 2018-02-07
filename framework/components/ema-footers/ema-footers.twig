@@ -42,16 +42,12 @@
 <footer class="{{ _css_class }}" {{ _extra_attributes }}>
   <div class="ecl-container ema-footer__content">
     <div class="ema-footer__section">
-      <div class="ema-footer__hotline ecl-row">
-        <div class="ecl-col-3">
-          <span class="ecl-icon ecl-icon--language ecl-u-fs-xxl"></span>
-        </div>
-        <div class="ecl-col">
-          <a class="ecl-link--ema-inverted ecl-link--ema-standalone" href="{{ hotline.href }}">
-            <div class="ema-footer__hotline-title">{{ hotline.title }}</div>
-            <div class="ema-footer__hotline-desc">{{ hotline.description }}</div>
-          </a>
-        </div>
+      <div class="ema-footer__hotline">
+        <span class="ecl-icon ecl-icon--language ecl-u-fs-xxl ecl-u-mr-xs"></span>
+        <a class="ecl-link--ema-inverted ecl-link--ema-standalone" href="{{ hotline.href }}">
+          <div class="ema-footer__hotline-title">{{ hotline.title }}</div>
+          <div class="ema-footer__hotline-desc">{{ hotline.description }}</div>
+        </a>
       </div>
     </div>
 
@@ -68,6 +64,15 @@
       </ul>
     </div>
     {% endfor %}
+  </div>
+
+  <div class="ecl-container ">
+    <div class="ema-footer__social">
+      {% for link in social %}
+        <span class="ecl-icon ecl-icon--{{ link.icon }}"></span>
+        {% include '@ec-europa/ema-links' with link %}
+      {% endfor %}
+    </div>
   </div>
 
   <div class="ecl-container ema-footer__content">

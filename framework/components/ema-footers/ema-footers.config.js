@@ -133,6 +133,22 @@ module.exports = {
       title: 'Product emergency hotline',
       description: 'outside working hours',
     },
+    social: [
+      {
+        label: 'RSS',
+        href: '#',
+        icon: 'rss',
+        extra_classes:
+          'ecl-link--ema-inverted ecl-link--ema-standalone ecl-u-mr-xs',
+      },
+      {
+        label: 'Twitter',
+        href: '#',
+        icon: 'twitter',
+        extra_classes:
+          'ecl-link--ema-inverted ecl-link--ema-standalone ecl-u-mr-xs',
+      },
+    ],
     copyright: '&copy; 1995-2016 European Medicines Agency',
     description: 'An agency of the European Union',
     logo: {
