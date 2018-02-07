@@ -4,10 +4,9 @@ import { queryAll } from '@ec-europa/ecl-base/helpers/dom';
  * @param {object} options Object containing configuration overrides
  */
 export const contentSlider = ({
-  selector: selector = '.ema-content-slider',
+  contentSliderSelector: contentSliderSelector = '.ema-content-slider',
   listItemSelector: listItemSelector = '.ema-content-slider .ecl-list-item',
-  listHighlightSelector: listHighlightSelector = '.ema-content-slider .ecl-list-item--highlight.ema-content-slider__ema-list-item-highlight',
-  activeHighlightSelector: activeHighlightSelector = 'ema-content-slider__ema-list-item-highlight--active',
+  listItemHighlightSelector: listItemHighlightSelector = '.ema-content-slider .ecl-list-item--highlight.ema-content-slider__list-item--highlight',
 } = {}) => {
   if (
     !('querySelector' in document) ||
@@ -16,15 +15,10 @@ export const contentSlider = ({
   )
     return null;
 
-  // SETUP
-  // set contentSlider element NodeLists
-  const contentSliderContainers = queryAll(selector);
-
   // ACTIONS
   function hideAllHighlights() {
-    queryAll(listHighlightSelector).forEach(el => {
+    queryAll(listItemHighlightSelector).forEach(el => {
       el.setAttribute('aria-hidden', true);
-      el.classList.remove(activeHighlightSelector);
     });
   }
 
@@ -37,7 +31,6 @@ export const contentSlider = ({
     );
 
     hightlight.setAttribute('aria-hidden', 'false');
-    hightlight.classList.add(activeHighlightSelector);
   }
 
   function isOwnHighlightVisible(target) {
@@ -68,6 +61,10 @@ export const contentSlider = ({
     // ...
   }
 
+  // SETUP
+  // set contentSlider element NodeLists
+  const contentSliderContainers = queryAll(contentSliderSelector);
+
   // INIT
   function init() {
     if (contentSliderContainers.length) {
@@ -77,9 +74,7 @@ export const contentSlider = ({
     }
     hideAllHighlights();
     // Display first item by default
-    showOwnHighlight(
-      document.querySelectorAll('.ema-content-slider .ecl-list-item')[0]
-    );
+    showOwnHighlight(document.querySelectorAll(listItemSelector)[0]);
   }
 
   init();

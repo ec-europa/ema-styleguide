@@ -16,14 +16,15 @@
 <ul class="ecl-listing {{ _css_class }}">
   {% for item in list %}
     {% set item_thumb = item|merge({ extra_attributes: [
-      { name:'aria-controls', value: 'ema-content-slider__ema-list-item-highlight--' ~ loop.index },
+      { name: 'tabindex', value: loop.index },
+      { name:'aria-controls', value: 'ema-content-slider__list-item--highlight--' ~ loop.index },
     ] }) %}
     {% include '@ec-europa/ecl-list-items' with item_thumb %}
 
     {# The highlight #}
     {% set item_highlight = item|merge({ variant: 'highlight', extra_attributes: [
-      { name:'id', value: 'ema-content-slider__ema-list-item-highlight--' ~ loop.index }
-    ], extra_classes: 'ema-content-slider__ema-list-item-highlight' ~ (loop.index == 1 ? ' ema-content-slider__ema-list-item-highlight--active') }) %}
+      { name:'id', value: 'ema-content-slider__list-item--highlight--' ~ loop.index }
+    ], extra_classes: 'ema-content-slider__list-item--highlight' }) %}
     {% include '@ec-europa/ecl-list-items' with item_highlight %}
   {% endfor %}
 </ul>
