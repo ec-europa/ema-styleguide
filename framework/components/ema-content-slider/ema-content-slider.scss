@@ -2,7 +2,7 @@
   margin: 0;
 }
 
-@media (min-width: map-get($ecl-grid-breakpoints, 'sm')) {
+@media (min-width: map-get($ecl-grid-breakpoints, 'md')) {
   .ema-content-slider {
     display: grid;
     grid-template-columns: 60% 40%;

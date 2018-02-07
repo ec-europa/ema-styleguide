@@ -16,7 +16,6 @@
 <ul class="ecl-listing {{ _css_class }}">
   {% for item in list %}
     {% set item_thumb = item|merge({ extra_attributes: [
-      { name: 'tabindex', value: loop.index },
       { name:'aria-controls', value: 'ema-content-slider__list-item--highlight--' ~ loop.index },
     ] }) %}
     {% include '@ec-europa/ecl-list-items' with item_thumb %}

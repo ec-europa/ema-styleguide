@@ -56,14 +56,27 @@ export const contentSlider = ({
     });
   }
 
-  // DESTROY
-  function destroy() {
-    // ...
+  // UNBIND EVENTS
+  function unbindAccordionEvents(contentSliderContainer) {
+    const listItems = queryAll(listItemSelector, contentSliderContainer);
+    // bind all items in the list click and keydown events
+    listItems.forEach(listItem => {
+      listItem.removeEventListener('click', eventItemClick);
+    });
   }
 
   // SETUP
   // set contentSlider element NodeLists
   const contentSliderContainers = queryAll(contentSliderSelector);
+
+  // DESTROY
+  function destroy() {
+    if (contentSliderContainers.length) {
+      contentSliderContainers.forEach(contentSliderContainer => {
+        unbindAccordionEvents(contentSliderContainer);
+      });
+    }
+  }
 
   // INIT
   function init() {
@@ -73,7 +86,8 @@ export const contentSlider = ({
       });
     }
     hideAllHighlights();
-    // Display first item by default
+    // Hightlight first item in the list by default
+    // by simulating a click
     showOwnHighlight(document.querySelectorAll(listItemSelector)[0]);
   }
 
