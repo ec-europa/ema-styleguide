@@ -5,29 +5,61 @@
 .ema-footer {
   background-color: map-get($ema-colors, 'primary');
   color: #fff;
+  font-size: map-get($ecl-font-size, 's');
   margin: 0;
   padding: map-get($ecl-spacing, 'm') map-get($ecl-spacing, 'xs');
 }
 
 .ema-footer__content {
-  align-items: center;
   display: flex;
   flex-wrap: wrap;
 }
 
-.ema-footer__links {
-  width: 100%;
-}
+.ema-footer__section {
+  flex-basis: 100%;
 
-.ema-footer__link-item {
-  margin-left: map-get($ecl-spacing, 'xxs');
+  @include ecl-media-breakpoint-up(sm) {
+    flex-basis: 50%;
+  }
 
-  &:first-child {
-    margin-left: 0;
+  @include ecl-media-breakpoint-up(md) {
+    flex-basis: 33%;
+  }
+
+  @include ecl-media-breakpoint-up(xl) {
+    flex-basis: 20%;
   }
 }
 
+.ema-footer__title {
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.ema-footer__hotline {
+  border: 1px solid map-get($ema-colors, 'grey-3');
+  display: flex;
+  margin-bottom: map-get($ecl-spacing, 's');
+  margin-right: map-get($ecl-spacing, 'xs');
+  padding: map-get($ecl-spacing, 'xxs');
+}
+
+.ema-footer__hotline-desc {
+  font-size: map-get($ecl-font-size, 'xs');
+  margin-top: map-get($ecl-spacing, 'xxxs');
+  text-transform: uppercase;
+}
+
+.ema-footer__social {
+  border-top: 1px solid map-get($ema-colors, 'grey-3');
+  margin-top: map-get($ecl-spacing, 'xs');
+  padding-bottom: map-get($ecl-spacing, 'xs');
+  padding-top: map-get($ecl-spacing, 'xs');
+}
+
 .ema-footer__copyright {
+  align-self: center;
   flex-grow: 1;
   margin-top: map-get($ecl-spacing, 'xxs');
 }
