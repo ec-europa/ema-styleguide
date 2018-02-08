@@ -748,17 +748,10 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-8d0bc5d1a753c5684dc1439654b21b71-panel-view">
     <code class="Code Code--lang-twig">
         <pre><span class="xml"></span><span class="hljs-comment">{#
-  - "links" (array): array of links components
+  - "links" (array): array of links components, with icon
   - "logo" (object): {
     - "src" (string): source of the image (default: '')
     - "alt" (string): alt text of the image (default: '')
-  }
-  - "user" (object): {
-    - "name" (string): username (default: '')
-    - "image" (object) {
-      - "src" (string): source of user image (default: '')
-      - "alt" (string): alt text for user image (default: '')
-    }
   }
   - "extra_classes" (string): extra CSS classes to be added
   - "extra_attributes" (array): extra attributes classes (optional, format: [{ 'name': 'name_of_the_attribute', 'value': 'value_of_the_attribute'}])
@@ -790,16 +783,6 @@
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-links' with link %}</span><span class="xml">
       </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-header__user"</span>&gt;</span>
-      </span><span class="hljs-template-variable">{{ user.name }}</span><span class="xml"> <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-header__user-picture"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ user.image.src }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ user.image.alt }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> lang_selector is defined %}</span><span class="xml">
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-header__languages"</span>&gt;</span>
-      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-forms-selects' with lang_selector %}</span><span class="xml">
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-container ema-header__banner"</span>&gt;</span>
@@ -826,41 +809,39 @@
   },
   <span class="hljs-attr">"links"</span>: [
     {
-      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Topics A-Z"</span>,
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"&lt;span class=\"ecl-icon ecl-icon--rss\"&gt;&lt;/span&gt;"</span>,
       <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#"</span>,
-      <span class="hljs-attr">"extra_classes"</span>: <span class="hljs-string">"ema-header__link-item"</span>
+      <span class="hljs-attr">"extra_classes"</span>: <span class="hljs-string">"ema-header__link-item"</span>,
+      <span class="hljs-attr">"extra_attributes"</span>: [
+        {
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"title"</span>,
+          <span class="hljs-attr">"value"</span>: <span class="hljs-string">"RSS"</span>
+        }
+      ]
     },
     {
-      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Help"</span>,
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"&lt;span class=\"ecl-icon ecl-icon--twitter\"&gt;&lt;/span&gt;"</span>,
       <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#"</span>,
-      <span class="hljs-attr">"extra_classes"</span>: <span class="hljs-string">"ema-header__link-item"</span>
+      <span class="hljs-attr">"extra_classes"</span>: <span class="hljs-string">"ema-header__link-item"</span>,
+      <span class="hljs-attr">"extra_attributes"</span>: [
+        {
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"title"</span>,
+          <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Twitter"</span>
+        }
+      ]
+    },
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"&lt;span class=\"ecl-icon ecl-icon--generic-lang\"&gt;&lt;/span&gt;"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#"</span>,
+      <span class="hljs-attr">"extra_classes"</span>: <span class="hljs-string">"ema-header__link-item"</span>,
+      <span class="hljs-attr">"extra_attributes"</span>: [
+        {
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"title"</span>,
+          <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Mail"</span>
+        }
+      ]
     }
-  ],
-  <span class="hljs-attr">"user"</span>: {
-    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Doe"</span>,
-    <span class="hljs-attr">"image"</span>: {
-      <span class="hljs-attr">"src"</span>: <span class="hljs-literal">null</span>,
-      <span class="hljs-attr">"alt"</span>: <span class="hljs-literal">null</span>
-    }
-  },
-  <span class="hljs-attr">"lang_selector"</span>: {
-    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"language-selector"</span>,
-    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"language-selector"</span>,
-    <span class="hljs-attr">"options"</span>: [
-      {
-        <span class="hljs-attr">"value"</span>: <span class="hljs-string">"en"</span>,
-        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"English (en)"</span>
-      },
-      {
-        <span class="hljs-attr">"value"</span>: <span class="hljs-string">"fr"</span>,
-        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"français (fr)"</span>
-      },
-      {
-        <span class="hljs-attr">"value"</span>: <span class="hljs-string">"it"</span>,
-        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Italiano (it)"</span>
-      }
-    ]
-  }
+  ]
 }</pre>
             
         
@@ -876,18 +857,12 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-container ema-header__extra"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-header__links"</span>&gt;</span>
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ema-header__link-item"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Topics A-Z<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ema-header__link-item"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"RSS"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-icon ecl-icon--rss"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ema-header__link-item"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Help<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ema-header__link-item"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Twitter"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-icon ecl-icon--twitter"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ema-header__link-item"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Mail"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-icon ecl-icon--generic-lang"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-header__user"</span>&gt;</span>
-      John Doe <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-header__user-picture"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-header__languages"</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-select"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"language-selector"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"language-selector"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"en"</span>&gt;</span>English (en)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"fr"</span>&gt;</span>français (fr)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"it"</span>&gt;</span>Italiano (it)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-container ema-header__banner"</span>&gt;</span>
@@ -967,6 +942,7 @@
 }
 
 <span class="hljs-selector-class">.ema-header__link-item</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>;
   <span class="hljs-attribute">margin-left</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxs'</span>);
 
   &amp;:first-child {
@@ -1017,7 +993,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">867 Bytes</span>
+                    <span class="Meta-value">882 Bytes</span>
                 </li>
             </ul>
         </div>
