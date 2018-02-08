@@ -1,5 +1,13 @@
 {#
-  - "links" (array): array of links components
+  - "sections" (array): [{
+    - "label" (string): title of the section (default: '')
+    - "links" (array): array of links components
+  }]
+  - "hotline" (object): {
+    - "href" (string): link of the hotline (default: '#')
+    - "title" (string): hotline title (default: '')
+    - "description" (string): hotline description (default: '')
+  }
   - "copyright" (string): copyright text (default: '')
   - "description" (string): description text (default: '')
   - "logo" (object): {
@@ -33,12 +41,41 @@
 
 <footer class="{{ _css_class }}" {{ _extra_attributes }}>
   <div class="ecl-container ema-footer__content">
-    <div class="ema-footer__links">
-      {% for link in links %}
+    <div class="ema-footer__section">
+      <div class="ema-footer__hotline">
+        <span class="ecl-icon ecl-icon--language ecl-u-fs-xxl ecl-u-mr-xs"></span>
+        <a class="ecl-link--ema-inverted ecl-link--ema-standalone" href="{{ hotline.href }}">
+          <div class="ema-footer__hotline-title">{{ hotline.title }}</div>
+          <div class="ema-footer__hotline-desc">{{ hotline.description }}</div>
+        </a>
+      </div>
+    </div>
+
+    {% for section in sections %}
+    <div class="ema-footer__section">
+      <div class="ema-footer__title">{{ section.title }}</div>
+
+      <ul class="ecl-list ecl-list--unstyled ema-footer__links">
+        {% for link in section.links %}
+        <li>
+          {% include '@ec-europa/ema-links' with link %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="ecl-container ">
+    <div class="ema-footer__social">
+      {% for link in social %}
+        <span class="ecl-icon ecl-icon--{{ link.icon }}"></span>
         {% include '@ec-europa/ema-links' with link %}
       {% endfor %}
     </div>
+  </div>
 
+  <div class="ecl-container ema-footer__content">
     <div class="ema-footer__copyright">{{ copyright }}</div>
     <div class="ema-footer__description">
       {{ description }}
