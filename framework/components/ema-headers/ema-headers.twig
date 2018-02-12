@@ -1,15 +1,8 @@
 {#
-  - "links" (array): array of links components
+  - "links" (array): array of links components, with icon
   - "logo" (object): {
     - "src" (string): source of the image (default: '')
     - "alt" (string): alt text of the image (default: '')
-  }
-  - "user" (object): {
-    - "name" (string): username (default: '')
-    - "image" (object) {
-      - "src" (string): source of user image (default: '')
-      - "alt" (string): alt text for user image (default: '')
-    }
   }
   - "extra_classes" (string): extra CSS classes to be added
   - "extra_attributes" (array): extra attributes classes (optional, format: [{ 'name': 'name_of_the_attribute', 'value': 'value_of_the_attribute'}])
@@ -41,16 +34,6 @@
         {% include '@ec-europa/ema-links' with link %}
       {% endfor %}
     </div>
-
-    <div class="ema-header__user">
-      {{ user.name }} <img class="ema-header__user-picture" src="{{ user.image.src }}" alt="{{ user.image.alt }}" />
-    </div>
-
-    {% if lang_selector is defined %}
-    <div class="ema-header__languages">
-      {% include '@ec-europa/ecl-forms-selects' with lang_selector %}
-    </div>
-    {% endif %}
   </div>
 
   <div class="ecl-container ema-header__banner">

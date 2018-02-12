@@ -12,45 +12,172 @@ module.exports = {
       },
       links: [
         {
-          label: 'Topics A-Z',
+          label: '<span class="ecl-icon ecl-icon--rss"></span>',
           href: '#',
           extra_classes: 'ema-header__link-item',
+          extra_attributes: [{ name: 'title', value: 'RSS' }],
         },
         {
-          label: 'Help',
+          label: '<span class="ecl-icon ecl-icon--twitter"></span>',
           href: '#',
           extra_classes: 'ema-header__link-item',
+          extra_attributes: [{ name: 'title', value: 'Twitter' }],
+        },
+        {
+          label: '<span class="ecl-icon ecl-icon--generic-lang"></span>',
+          href: '#',
+          extra_classes: 'ema-header__link-item',
+          extra_attributes: [{ name: 'title', value: 'Mail' }],
         },
       ],
-      user: {
-        name: 'John Doe',
-        image: {
-          src: '',
-          alt: '',
-        },
-      },
     },
     footer: {
-      links: [
+      sections: [
         {
-          label: 'Help',
-          href: '#',
-          extra_classes: 'ecl-link--ema-inverted ema-footer__link-item',
+          title: 'About',
+          links: [
+            {
+              label: 'Who we are',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+            {
+              label: "What's new on the site",
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+            {
+              label: 'Expert blog',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+            {
+              label: 'Human regulation',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+            {
+              label: 'Veterinary regulation',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+            {
+              label: 'Commitees',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+          ],
         },
         {
-          label: 'Sitemap',
-          href: '#',
-          extra_classes: 'ecl-link--ema-inverted ema-footer__link-item',
+          title: 'Ask EMA',
+          links: [
+            {
+              label: 'Public enquiries',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+            {
+              label: 'FAQs',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+            {
+              label: 'Access to documents',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+          ],
         },
         {
-          label: 'EMA public website',
-          href: '#',
-          extra_classes:
-            'ecl-link--ema-inverted ecl-link--ema-external ema-footer__link-item',
+          title: 'Links',
+          links: [
+            {
+              label: 'Legal',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+            {
+              label: 'Privacy',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+            {
+              label: 'Complaints',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+            {
+              label: 'Browser compatibility',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+            {
+              label: 'Contacts',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+            {
+              label: 'Business hours and holidays',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+            {
+              label: 'Website help',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+          ],
+        },
+        {
+          title: 'Contact',
+          links: [
+            {
+              label:
+                'EMA<br />30 Churchill Place<br />Canary Whaf<br />London E14 5EU<br />United Kingdom',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+            {
+              label: 'Tel: +44 (0)20 3660 6000',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+            {
+              label: 'Fax: +44 (0)20 3660 5550',
+              href: '#',
+              extra_classes: 'ecl-link--ema-inverted ecl-link--ema-standalone',
+            },
+            {
+              label: 'Send a question',
+              href: '#',
+              extra_classes:
+                'ecl-link--ema-inverted ecl-link--ema-external ecl-link--ema-standalone',
+            },
+          ],
         },
       ],
-      copyright:
-        '&copy; 2016 EMA - 30 Churchill Place - Canary Whaf - London E14 5EU - United Kingdom',
+      hotline: {
+        href: '#',
+        title: 'Product emergency hotline',
+        description: 'outside working hours',
+      },
+      social: [
+        {
+          label: 'RSS',
+          href: '#',
+          icon: 'rss',
+          extra_classes:
+            'ecl-link--ema-inverted ecl-link--ema-standalone ecl-u-mr-xs',
+        },
+        {
+          label: 'Twitter',
+          href: '#',
+          icon: 'twitter',
+          extra_classes:
+            'ecl-link--ema-inverted ecl-link--ema-standalone ecl-u-mr-xs',
+        },
+      ],
+      copyright: '&copy; 1995-2016 European Medicines Agency',
       description: 'An agency of the European Union',
       logo: {
         src: '../../framework/images/eu.png',
@@ -271,9 +398,34 @@ module.exports = {
         disabled: true,
       },
     ],
+    files: {
+      variant: 'translation',
+      title: 'File title example',
+      language: 'English',
+      meta: '213.25 kB - PDF - 4 pages',
+      button_label: 'Download',
+      icon: 'file',
+      translations: [
+        {
+          title: 'Titre du fichier',
+          meta: '228.84 kB - PDF - 4 pages',
+        },
+        {
+          title: 'Dateititel',
+          meta: '232.12 kB - PDF - 4 pages',
+        },
+        {
+          title: 'Файл Заглавие',
+          meta: '257.54 kB - PDF - 4 pages',
+        },
+      ],
+      translations_label: 'Available languages (3)',
+      translations_tooltip: 'Click to see translations',
+    },
     _demo: {
       scripts: `document.addEventListener('DOMContentLoaded', function () {
         ECL.megamenu();
+        ECL.initExpandables('#translations-expand-button');
       });`,
     },
   },

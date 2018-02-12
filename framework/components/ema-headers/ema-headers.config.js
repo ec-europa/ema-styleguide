@@ -10,40 +10,23 @@ module.exports = {
     },
     links: [
       {
-        label: 'Topics A-Z',
+        label: '<span class="ecl-icon ecl-icon--rss"></span>',
         href: '#',
         extra_classes: 'ema-header__link-item',
+        extra_attributes: [{ name: 'title', value: 'RSS' }],
       },
       {
-        label: 'Help',
+        label: '<span class="ecl-icon ecl-icon--twitter"></span>',
         href: '#',
         extra_classes: 'ema-header__link-item',
+        extra_attributes: [{ name: 'title', value: 'Twitter' }],
+      },
+      {
+        label: '<span class="ecl-icon ecl-icon--generic-lang"></span>',
+        href: '#',
+        extra_classes: 'ema-header__link-item',
+        extra_attributes: [{ name: 'title', value: 'Mail' }],
       },
     ],
-    user: {
-      name: 'John Doe',
-      image: {
-        src: '',
-        alt: '',
-      },
-    },
-    lang_selector: {
-      id: 'language-selector',
-      name: 'language-selector',
-      options: [
-        {
-          value: 'en',
-          label: 'English (en)',
-        },
-        {
-          value: 'fr',
-          label: 'français (fr)',
-        },
-        {
-          value: 'it',
-          label: 'Italiano (it)',
-        },
-      ],
-    },
   },
 };
