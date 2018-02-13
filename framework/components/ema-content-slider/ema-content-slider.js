@@ -5,8 +5,8 @@ import { queryAll } from '@ec-europa/ecl-base/helpers/dom';
  */
 export const contentSlider = ({
   contentSliderSelector: contentSliderSelector = '.ema-content-slider',
-  listItemSelector: listItemSelector = '.ema-content-slider .ecl-list-item',
-  listItemHighlightSelector: listItemHighlightSelector = '.ema-content-slider .ecl-list-item--highlight.ema-content-slider__list-item--highlight',
+  listItemSelector: listItemSelector = '.ema-content-slider .ema-content-slider__list-item--default',
+  listItemHighlightSelector: listItemHighlightSelector = '.ema-content-slider .ema-content-slider__list-item--highlight',
 } = {}) => {
   if (
     !('querySelector' in document) ||
@@ -42,13 +42,14 @@ export const contentSlider = ({
 
   // EVENTS
   function eventItemClick(e) {
+    e.preventDefault();
     const target = e.currentTarget;
 
     if (!isOwnHighlightVisible(target)) showOwnHighlight(target);
   }
 
   // BIND EVENTS
-  function bindAccordionEvents(contentSliderContainer) {
+  function bindContentSliderEvents(contentSliderContainer) {
     const listItems = queryAll(listItemSelector, contentSliderContainer);
     // bind all items in the list click and keydown events
     listItems.forEach(listItem => {
@@ -57,7 +58,7 @@ export const contentSlider = ({
   }
 
   // UNBIND EVENTS
-  function unbindAccordionEvents(contentSliderContainer) {
+  function unbindContentSliderEvents(contentSliderContainer) {
     const listItems = queryAll(listItemSelector, contentSliderContainer);
     // bind all items in the list click and keydown events
     listItems.forEach(listItem => {
@@ -73,7 +74,7 @@ export const contentSlider = ({
   function destroy() {
     if (contentSliderContainers.length) {
       contentSliderContainers.forEach(contentSliderContainer => {
-        unbindAccordionEvents(contentSliderContainer);
+        unbindContentSliderEvents(contentSliderContainer);
       });
     }
   }
@@ -82,7 +83,7 @@ export const contentSlider = ({
   function init() {
     if (contentSliderContainers.length) {
       contentSliderContainers.forEach(contentSliderContainer => {
-        bindAccordionEvents(contentSliderContainer);
+        bindContentSliderEvents(contentSliderContainer);
       });
     }
     hideAllHighlights();

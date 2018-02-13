@@ -12,12 +12,18 @@
   {% set _css_class = _css_class ~ ' ' ~ extra_class %}
 {% endif %}
 
+{% if extra_attributes is defined %}
+  {% for attr in extra_attributes %}
+    {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name ~ '="' ~ attr.value ~'"' %}
+  {% endfor %}
+{% endif %}
+
 {# Print result #}
-<ul class="ecl-listing {{ _css_class }}">
+<ul class="ecl-listing {{ _css_class }}" {{ _extra_attributes }}>
   {% for item in list %}
     {% set item_thumb = item|merge({ extra_attributes: [
       { name:'aria-controls', value: 'ema-content-slider__list-item--highlight--' ~ loop.index },
-    ] }) %}
+    ], extra_classes: 'ema-content-slider__list-item--default' }) %}
     {% include '@ec-europa/ecl-list-items' with item_thumb %}
 
     {# The highlight #}

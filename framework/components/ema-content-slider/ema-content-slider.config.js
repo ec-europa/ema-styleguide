@@ -11,7 +11,7 @@ module.exports = {
     list: [
       {
         metas: ['data', 'cluster'],
-        href: '#',
+        href: '#content-slider-1',
         title: 'Labore nulla quis irure labore.',
         primary_image: {
           src: 'https://unsplash.it/640/480?image=222',
@@ -20,7 +20,7 @@ module.exports = {
       },
       {
         metas: ['message', 'market'],
-        href: '#',
+        href: '#content-slider-2',
         title: 'Velit mollit in sunt dolor exercitation elit nostrud do.',
         primary_image: {
           src: 'https://unsplash.it/640/480?image=223',
@@ -29,7 +29,7 @@ module.exports = {
       },
       {
         metas: ['content', 'dynamic'],
-        href: '#',
+        href: '#content-slider-3',
         title: 'Cupidatat commodo reprehenderit excepteur esse.',
         primary_image: {
           src: 'https://unsplash.it/640/480?image=221',
@@ -38,7 +38,7 @@ module.exports = {
       },
       {
         metas: ['management', 'team'],
-        href: '#',
+        href: '#content-slider-4',
         title: 'Excepteur ex dolore.',
         primary_image: {
           src: 'https://unsplash.it/640/480?image=225',
