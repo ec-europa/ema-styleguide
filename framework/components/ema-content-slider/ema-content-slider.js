@@ -5,8 +5,9 @@ import { queryAll } from '@ec-europa/ecl-base/helpers/dom';
  */
 export const contentSlider = ({
   contentSliderSelector: contentSliderSelector = '.ema-content-slider',
-  listItemSelector: listItemSelector = '.ema-content-slider .ema-content-slider__list-item--default',
-  listItemHighlightSelector: listItemHighlightSelector = '.ema-content-slider .ema-content-slider__list-item--highlight',
+  listItemSelector: listItemSelector = '.ema-content-slider .ecl-list-item.ema-content-slider__list-item--default',
+  listItemActiveClass: listItemActiveClass = 'ema-content-slider__list-item--active',
+  listItemHighlightSelector: listItemHighlightSelector = '.ema-content-slider .ecl-list-item--highlight.ema-content-slider__list-item--highlight',
 } = {}) => {
   if (
     !('querySelector' in document) ||
@@ -17,6 +18,9 @@ export const contentSlider = ({
 
   // ACTIONS
   function hideAllHighlights() {
+    queryAll(listItemSelector).forEach(el => {
+      el.classList.remove(listItemActiveClass);
+    });
     queryAll(listItemHighlightSelector).forEach(el => {
       el.setAttribute('aria-hidden', true);
     });
@@ -29,6 +33,8 @@ export const contentSlider = ({
     const hightlight = document.getElementById(
       target.getAttribute('aria-controls')
     );
+
+    target.classList.add(listItemActiveClass);
 
     hightlight.setAttribute('aria-hidden', 'false');
   }
