@@ -13,17 +13,6 @@
   @include link-external();
 }
 
-.ecl-link--ema-standalone {
-  @include link();
-  color: map-get($ema-colors, 'blue-2');
-  text-decoration: none;
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-}
-
 .ecl-link--ema-obvious {
   @include link();
   color: #000;

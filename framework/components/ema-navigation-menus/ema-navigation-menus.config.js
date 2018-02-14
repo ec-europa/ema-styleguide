@@ -46,6 +46,9 @@ module.exports = {
       {
         label: 'Item 2',
         href: '#item2',
+        title: 'Section title',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur cursus varius. Ut id leo sed libero placerat feugiat eu eget mi. In hac habitasse platea dictumst. Etiam eleifend justo nec ex lacinia blandit. Aenean pellentesque mauris ut malesuada ultricies. Vestibulum blandit arcu et metus semper porta.',
         children_links: [
           {
             label: 'Item 2.1',

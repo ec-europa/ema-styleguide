@@ -3,10 +3,12 @@
 */
 
 .ema-context-banner {
-  background-color: map-get($ema-colors, 'light-grey-2');
   margin: 0;
-  padding-bottom: map-get($ecl-spacing, 's');
-  padding-top: map-get($ecl-spacing, 's');
+}
+
+.ema-context-banner__wrapper {
+  background-color: map-get($ema-colors, 'light-grey-2');
+  padding: map-get($ecl-spacing, 's');
 }
 
 .ema-context-banner__links {
@@ -46,6 +48,6 @@
 
 @media (min-width: map-get($ecl-grid-breakpoints, 'lg')) {
   .ema-context-banner__item {
-    flex-basis: 33%;
+    flex-basis: 33.33%;
   }
 }

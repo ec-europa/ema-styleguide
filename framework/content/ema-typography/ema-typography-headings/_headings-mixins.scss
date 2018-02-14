@@ -4,21 +4,21 @@
 }
 
 @mixin heading-1() {
-  color: map-get($ema-colors, 'black');
+  color: #000;
   font-size: map-get($ecl-font-size, 'xxl');
   font-weight: normal;
   line-height: 1.1;
 }
 
 @mixin heading-2() {
-  color: map-get($ema-colors, 'black');
+  color: #000;
   font-size: map-get($ecl-font-size, 'xl');
   font-weight: normal;
   line-height: 1.1;
 }
 
 @mixin heading-3() {
-  color: map-get($ema-colors, 'black');
+  color: #000;
   font-size: map-get($ecl-font-size, 'l');
   font-weight: normal;
   line-height: 1.1;
@@ -26,7 +26,7 @@
 }
 
 @mixin heading-4() {
-  color: map-get($ema-colors, 'black');
+  color: #000;
   font-size: map-get($ecl-font-size, 'm');
   font-weight: bold;
   line-height: 1.1;
