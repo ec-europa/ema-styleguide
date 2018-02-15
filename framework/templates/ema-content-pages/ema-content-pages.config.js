@@ -401,6 +401,7 @@ module.exports = {
     _demo: {
       scripts: `document.addEventListener('DOMContentLoaded', function () {
         ECL.megamenu();
+        ECL.initExpandables('#translations-expand-button');
       });`,
     },
   },

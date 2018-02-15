@@ -2,29 +2,6 @@
 
 {% if variant == 'translation' %}
   <section class="{{ _css_class }}"{{ _extra_attributes|raw }}>
-    <div class="ecl-file__body">
-      <div class="ecl-row">
-        <div class=" ecl-col ecl-col-md-8">
-          <span class="ecl-icon ecl-icon--{{ icon }} ecl-file__icon"></span>
-          <div class="ecl-file__metadata">
-            <div class="ecl-file__title">{{ title }}</div>
-            <div class="ecl-file__info">
-              <span class="ecl-file__language">{{ language }}</span> ({{ meta }})
-            </div>
-          </div>
-        </div>
-
-        <div class="ecl-col-12 ecl-col-md-4">
-          {% include '@ec-europa/ecl-buttons' with {
-            'label': _button_label ~ '<span class="ecl-u-sr-only">(' ~ meta ~ ')',
-            'is_block': true,
-            'extra_classes': 'ecl-file__download',
-            'extra_attributes': [{ 'name': 'type', 'value': 'button' }]
-          } %}
-        </div>
-      </div>
-    </div>
-
     <div class="ecl-file__translations">
       {% include '@ec-europa/ecl-buttons' with {
         'label': translations_label,
