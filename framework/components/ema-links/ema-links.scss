@@ -23,6 +23,10 @@
     color: map-get($ema-colors, 'blue-2');
     text-decoration: underline;
   }
+
+  &:visited {
+    color: #000;
+  }
 }
 
 .ecl-link--ema-inverted {
@@ -30,7 +34,8 @@
   color: #fff;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:visited {
     color: #fff;
   }
 }
