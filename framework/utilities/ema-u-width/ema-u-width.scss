@@ -8,11 +8,11 @@
     $infix: ecl-breakpoint-infix($breakpoint, $ecl-grid-breakpoints);
 
     .ema-u-width#{$infix}-auto {
-      width: auto !important;
+      width: auto;
     }
 
     .ema-u-width#{$infix}-100 {
-      width: 100% !important;
+      width: 100%;
     }
   }
 }

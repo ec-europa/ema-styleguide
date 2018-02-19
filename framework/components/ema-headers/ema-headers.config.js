@@ -6,7 +6,7 @@ module.exports = {
   context: {
     logo: {
       src: '../../framework/images/logo_ema.jpg',
-      alt: 'EMA logoss',
+      alt: 'EMA logo',
     },
     links: [
       {
