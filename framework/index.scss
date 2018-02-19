@@ -8,9 +8,11 @@
 @import 'base/variables';
 @import 'content/ema-typography/ema-typography-fonts/ema-typography-fonts';
 @import 'content/ema-typography/ema-typography-headings/ema-typography-headings';
+@import 'content/ema-typography/ema-typography-paragraphs/ema-typography-paragraphs';
 @import 'components/ema-buttons/ema-buttons';
 @import 'components/ema-headers/ema-headers';
 @import 'components/ema-context-banners/ema-context-banners';
+@import 'components/ema-content-slider/ema-content-slider';
 @import 'components/ema-footers/ema-footers';
 @import 'components/ema-links/ema-links';
 @import 'components/ema-list-items/ema-list-items';
@@ -20,3 +22,4 @@
 @import 'components/ema-separator/ema-separator';
 @import 'components/ema-side-navigation/ema-side-navigation';
 @import 'utilities/ema-u-colorize/ema-u-colorize';
+@import 'utilities/ema-u-width/ema-u-width';

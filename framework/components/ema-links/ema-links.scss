@@ -13,17 +13,6 @@
   @include link-external();
 }
 
-.ecl-link--ema-standalone {
-  @include link();
-  color: map-get($ema-colors, 'blue-2');
-  text-decoration: none;
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-}
-
 .ecl-link--ema-obvious {
   @include link();
   color: #000;
@@ -34,6 +23,10 @@
     color: map-get($ema-colors, 'blue-2');
     text-decoration: underline;
   }
+
+  &:visited {
+    color: #000;
+  }
 }
 
 .ecl-link--ema-inverted {
@@ -41,7 +34,8 @@
   color: #fff;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:visited {
     color: #fff;
   }
 }

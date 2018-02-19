@@ -14,6 +14,7 @@
   .ecl-list-item__body::before {
     @extend %ecl-icon;
 
+    color: map-get($ema-colors, 'grey-2');
     font-size: map-get($ecl-font-size, 'xl');
     left: map-get($ecl-spacing, 'xxs');
     position: absolute;

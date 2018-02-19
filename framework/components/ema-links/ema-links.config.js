@@ -30,15 +30,6 @@ module.exports = {
       },
     },
     {
-      name: 'standalone',
-      label: 'Standalone links',
-      context: {
-        extra_classes: 'ecl-link--ema-standalone',
-        href: '#',
-        label: 'standalone link',
-      },
-    },
-    {
       name: 'obvious',
       label: 'Obvious links',
       context: {
@@ -49,7 +40,7 @@ module.exports = {
     },
     {
       name: 'inverted',
-      label: 'Inverted links (could be standalone or external too)',
+      label: 'Inverted links (could be external too)',
       context: {
         extra_classes: 'ecl-link--ema-inverted ema-u-bg-primary',
         href: '#',

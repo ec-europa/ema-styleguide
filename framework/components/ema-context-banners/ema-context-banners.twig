@@ -29,21 +29,23 @@
 
 <div class="{{ _css_class }}" {{ _extra_attributes }}>
   <div class="ecl-container">
-    {% if _title is defined and _title is not empty %}
-    <h1 class="ecl-heading ecl-heading--ema-h1">{{ _title }}</h1>
-    {% endif %}
+    <div class="ema-context-banner__wrapper">
+      {% if _title is defined and _title is not empty %}
+      <h1 class="ecl-heading ecl-heading--ema-h1">{{ _title }}</h1>
+      {% endif %}
 
-    {% if _description is defined and _description is not empty %}
-    <p class="ecl-paragraph ecl-paragraph--l">{{ _description }}</p>
-    {% endif %}
+      {% if _description is defined and _description is not empty %}
+      <p class="ecl-paragraph ecl-paragraph--ema ecl-paragraph--l">{{ _description }}</p>
+      {% endif %}
 
-    <ul class="ema-context-banner__links">
-    {% for _link in links %}
-      {% set _link_class_name = 'ema-context-banner__link' ~ (_link.is_active ? ' ema-context-banner__link--active' : '') %}
-      <li class="ema-context-banner__item">
-        <a href="{{ _link.href }}" class="{{ _link_class_name }}">{{ _link.label }}</a>
-      </li>
-    {% endfor %}
-    </ul>
+      <ul class="ema-context-banner__links">
+      {% for _link in links %}
+        {% set _link_class_name = 'ema-context-banner__link' ~ (_link.is_active ? ' ema-context-banner__link--active' : '') %}
+        <li class="ema-context-banner__item">
+          <a href="{{ _link.href }}" class="{{ _link_class_name }}">{{ _link.label }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
   </div>
 </div>
