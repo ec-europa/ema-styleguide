@@ -310,6 +310,30 @@
         
         
         <li class="ecl-navigation-menu__item"  data-role="item">
+          <a href="ema-listings" class="ecl-navigation-menu__link ">
+            
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="background-color: #467a39; border-color: #467a39;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            <span>Listings</span>
+          </a>
+        </li>
+        
+    
+        
+        
+        <li class="ecl-navigation-menu__item"  data-role="item">
           <a href="ema-navigation-menus" class="ecl-navigation-menu__link ">
             
 
@@ -795,7 +819,52 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-8d3a4efdfc4a3672bf3d1801ac3fd693-panel-view">
     <code class="Code Code--lang-twig">
-        <pre><span class="xml"></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-list-items' %}</span><span class="xml"></span></pre>
+        <pre><span class="xml"></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _extra_classes = translations is not empty ? 'ecl-list-items--with-translations' : '' %}</span><span class="xml">
+
+
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-list-items' with {
+  'extra_classes': _extra_classes
+} %}</span><span class="xml">
+
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> translations is defined and translations is not empty %}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ema-list-item__translations"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations"</span>&gt;</span>
+      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-buttons' with {
+        'label': translations_label,
+        'modifier': 'secondary',
+        'extra_classes': 'ecl-file__translations-toggle',
+        'extra_attributes': [
+          { 'name': 'aria-controls', 'value': 'translations-expand' },
+          { 'name': 'aria-expanded', 'value': 'true' },
+          { 'name': 'id', 'value': 'translations-expand-button' },
+          { 'name': 'type', 'value': 'button' },
+          { 'name': 'title', 'value': translations_tooltip }
+        ]
+      } %}</span><span class="xml">
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"translations-expand-button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"translations-expand"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-list"</span>&gt;</span>
+          </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> translations is defined %}</span><span class="xml">
+            </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> translation in translations %}</span><span class="xml">
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-item"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-metadata"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-title"</span>&gt;</span></span><span class="hljs-template-variable">{{ translation.title }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-info"</span>&gt;</span>(</span><span class="hljs-template-variable">{{ translation.meta }}</span><span class="xml">)<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-buttons' with {
+                  'label': _button_label ~ '&lt;span class="ecl-u-sr-only"&gt;(' ~ translation.meta ~ ')',
+                  'modifier': 'secondary',
+                  'extra_classes': 'ecl-file__translations-download',
+                  'extra_attributes': [{ 'name': 'type', 'value': 'button' }]
+                } %}</span><span class="xml">
+              <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
+          </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml"></span></pre>
     </code>
 </div>
 
@@ -819,14 +888,14 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-8d3a4efdfc4a3672bf3d1801ac3fd693-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--ema-pdf"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-list-item--ema-pdf"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta"</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -900,6 +969,20 @@
   }
 }
 
+<span class="hljs-selector-class">.ema-list-item__translations</span> <span class="hljs-selector-class">.ecl-file__translations-item</span> {
+  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'light-grey-3'</span>);
+}
+<span class="hljs-selector-class">.ema-list-item__translations</span> <span class="hljs-selector-class">.ecl-file__translations-item</span>:first-child {
+  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">0</span>;
+}
+<span class="hljs-selector-class">.ecl-list-items__with-translations</span> {
+  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-selector-class">.ecl-link</span> {
+    <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">0</span>;
+  }
+}
+
 <span class="hljs-selector-class">.ecl-list-item--ema-pdf</span> {
   @<span class="hljs-keyword">extend</span> %ema-file;
 
@@ -955,7 +1038,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.1 KB</span>
+                    <span class="Meta-value">1.4 KB</span>
                 </li>
             </ul>
         </div>
