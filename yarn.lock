@@ -75,6 +75,10 @@
     "@ec-europa/ecl-blockquotes" "^0.7.1"
     "@ec-europa/ecl-typography-paragraphs" "^0.6.1"
 
+"@ec-europa/ecl-base@0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@ec-europa/ecl-base/-/ecl-base-0.10.0.tgz#006a96fe82aa50ba3b7f0a7595987b134fdf1ad2"
+
 "@ec-europa/ecl-base@^0.9.0":
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/@ec-europa/ecl-base/-/ecl-base-0.9.0.tgz#55624b678e171ac5a4a5ee2c9accb26aa78f17cf"

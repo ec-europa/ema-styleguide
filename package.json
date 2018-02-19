@@ -46,6 +46,7 @@
     "stylelint-config-prettier": "2.0.0"
   },
   "dependencies": {
+    "@ec-europa/ecl-base": "0.10.0",
     "@ec-europa/ecl-preset-full": "0.3.2"
   },
   "engines": {
