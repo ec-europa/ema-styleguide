@@ -26,6 +26,10 @@
   }
 }
 
+.ema-list-item__translations .ecl-file__translations-item {
+  border: 0;
+}
+
 .ecl-list-item--ema-pdf {
   @extend %ema-file;
 
