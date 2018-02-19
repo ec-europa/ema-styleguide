@@ -642,6 +642,30 @@
         </li>
         
     
+        
+        
+        <li class="ecl-navigation-menu__item"  data-role="item">
+          <a href="ema-u-width" class="ecl-navigation-menu__link ">
+            
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="background-color: #467a39; border-color: #467a39;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            <span>Width</span>
+          </a>
+        </li>
+        
+    
 
   </ul>
 </li>
@@ -771,7 +795,11 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-breadcrumbs__segments-wrapper"</span>&gt;</span>
     </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> segment in segments %}</span><span class="xml">
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-breadcrumbs__segment</span></span></span><span class="hljs-template-variable">{{ loop.first ? " ecl-breadcrumbs__segment--first" : "" }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-variable">{{ loop.last ? " ecl-breadcrumbs__segment--last" : "" }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ segment.target }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-breadcrumbs__link"</span>&gt;</span></span><span class="hljs-template-variable">{{ segment.title }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-links' with {
+        'extra_classes': 'ecl-breadcrumbs__link',
+        'variant': ['inverted', 'standalone'],
+        }|<span class="hljs-keyword">merge</span>(segment)
+      %}</span><span class="xml">
     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>

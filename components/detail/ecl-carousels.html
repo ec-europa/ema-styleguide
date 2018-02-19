@@ -642,6 +642,30 @@
         </li>
         
     
+        
+        
+        <li class="ecl-navigation-menu__item"  data-role="item">
+          <a href="ema-u-width" class="ecl-navigation-menu__link ">
+            
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="background-color: #467a39; border-color: #467a39;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            <span>Width</span>
+          </a>
+        </li>
+        
+    
 
   </ul>
 </li>
@@ -866,7 +890,7 @@ Usage:
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _heading_attributes = _heading_attributes ~ 'id="' ~ _heading_id ~ '"' %}</span><span class="xml">
 
 </span><span class="hljs-comment">{# Print result #}</span><span class="xml">
-<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _css_class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> </span></span><span class="hljs-template-variable">{{ _extra_attributes }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _css_class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> </span></span><span class="hljs-template-variable">{{ _extra_attributes|<span class="hljs-keyword">raw</span> }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-headings ecl-headings--h3 ecl-u-sr-only"</span> </span></span><span class="hljs-template-variable">{{ _heading_attributes }}</span><span class="xml"><span class="hljs-tag"> &gt;</span></span><span class="hljs-template-variable">{{ _heading_title }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-carousel__list-wrapper"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-carousel__list ecl-list--unstyled"</span>&gt;</span>
@@ -882,18 +906,20 @@ Usage:
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-carousel__image-information"</span> <span class="hljs-attr">data-image</span>=</span></span><span class="hljs-template-variable">{{ loop.index0 }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-carousel__meta"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-carousel__meta-item ecl-carousel__meta-download"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-carousel__meta-link ecl-link ecl-link--inverted ecl-icon ecl-icon--download"</span>
-             <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ carousel_image.download.target }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
-             <span class="hljs-attr">title</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ carousel_image.download.title }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-               </span><span class="hljs-template-variable">{{ carousel_image.download.label }}</span><span class="xml">
-         <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-links' with {
+            'extra_classes': 'ecl-carousel__meta-link ecl-icon ecl-icon--download',
+            'extra_attributes': [ 'name': 'title', 'value': carousel_image.download.title ],
+            'variant': ['inverted', 'standalone'],
+            }|<span class="hljs-keyword">merge</span>(carousel_image.download)
+          %}</span><span class="xml">
         <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-carousel__meta-item ecl-carousel__meta-share"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-carousel__meta-link ecl-link ecl-link--inverted ecl-icon ecl-icon--share"</span>
-             <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ carousel_image.share.target }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
-             <span class="hljs-attr">title</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ carousel_image.share.title }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-               </span><span class="hljs-template-variable">{{ carousel_image.share.label }}</span><span class="xml">
-         <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-links' with {
+            'extra_classes': 'ecl-carousel__meta-link ecl-icon ecl-icon--share',
+            'extra_attributes': [ 'name': 'title', 'value': carousel_image.share.title ],
+            'variant': ['inverted', 'standalone'],
+            }|<span class="hljs-keyword">merge</span>(carousel_image.share)
+          %}</span><span class="xml">
         <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-carousel__image-description"</span>&gt;</span>
