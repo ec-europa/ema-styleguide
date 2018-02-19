@@ -1,1 +1,47 @@
-{% include '@ec-europa/ecl-list-items' %}
+
+{% set _extra_classes = translations is not empty ? 'ecl-list-items--with-translations' : '' %}
+
+
+{% include '@ec-europa/ecl-list-items' with {
+  'extra_classes': _extra_classes
+} %}
+
+{% if translations is defined and translations is not empty %}
+  <li class="ecl-list-item ema-list-item__translations">
+    <div class="ecl-file__translations">
+      {% include '@ec-europa/ecl-buttons' with {
+        'label': translations_label,
+        'modifier': 'secondary',
+        'extra_classes': 'ecl-file__translations-toggle',
+        'extra_attributes': [
+          { 'name': 'aria-controls', 'value': 'translations-expand' },
+          { 'name': 'aria-expanded', 'value': 'true' },
+          { 'name': 'id', 'value': 'translations-expand-button' },
+          { 'name': 'type', 'value': 'button' },
+          { 'name': 'title', 'value': translations_tooltip }
+        ]
+      } %}
+
+      <div aria-hidden="false" aria-labelledby="translations-expand-button" id="translations-expand">
+        <ul class="ecl-file__translations-list">
+          {% if translations is defined %}
+            {% for translation in translations %}
+              <li class="ecl-file__translations-item">
+                <div class="ecl-file__translations-metadata">
+                  <span class="ecl-file__translations-title">{{ translation.title }}</span>
+                  <div class="ecl-file__translations-info">({{ translation.meta }})</div>
+                </div>
+                {% include '@ec-europa/ecl-buttons' with {
+                  'label': _button_label ~ '<span class="ecl-u-sr-only">(' ~ translation.meta ~ ')',
+                  'modifier': 'secondary',
+                  'extra_classes': 'ecl-file__translations-download',
+                  'extra_attributes': [{ 'name': 'type', 'value': 'button' }]
+                } %}
+              </li>
+            {% endfor %}
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </li>
+{% endif %}
