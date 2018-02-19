@@ -2,4 +2,4 @@
 
 Default ECL paragraphs, with custom EMA font.
 
-It uses extra modifier `ecl-paragraph--ema`
+It uses an extra modifier `ecl-paragraph--ema`
