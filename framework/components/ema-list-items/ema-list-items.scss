@@ -27,7 +27,17 @@
 }
 
 .ema-list-item__translations .ecl-file__translations-item {
-  border: 0;
+  border-bottom: 0;
+  border-top: 1px solid map-get($ema-colors, 'light-grey-3');
+}
+.ema-list-item__translations .ecl-file__translations-item:first-child {
+  border-top: 0;
+}
+.ecl-list-items__with-translations {
+  border-bottom: 0;
+  .ecl-link {
+    padding-bottom: 0;
+  }
 }
 
 .ecl-list-item--ema-pdf {

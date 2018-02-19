@@ -1,7 +1,13 @@
-{% include '@ec-europa/ecl-list-items' %}
+
+{% set _extra_classes = translations is not empty ? 'ecl-list-items__with-translations' : '' %}
+
+
+{% include '@ec-europa/ecl-list-items' with {
+  'extra_classes': _extra_classes
+} %}
 
 {% if translations is defined and translations is not empty %}
-  <li class="ecl-list-item ema-list-item__translations"}}>
+  <li class="ecl-list-item ema-list-item__translations">
     <div class="ecl-file__translations">
       {% include '@ec-europa/ecl-buttons' with {
         'label': translations_label,
