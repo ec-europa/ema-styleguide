@@ -826,16 +826,6 @@
 </pre>
         
             <pre>
-<span class="hljs-comment">/* Standalone links */</span>
-{
-  <span class="hljs-attr">"extra_classes"</span>: <span class="hljs-string">"ecl-link--ema-standalone"</span>,
-  <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#"</span>,
-  <span class="hljs-attr">"label"</span>: <span class="hljs-string">"standalone link"</span>
-}
-
-</pre>
-        
-            <pre>
 <span class="hljs-comment">/* Obvious links */</span>
 {
   <span class="hljs-attr">"extra_classes"</span>: <span class="hljs-string">"ecl-link--ema-obvious"</span>,
@@ -846,7 +836,7 @@
 </pre>
         
             <pre>
-<span class="hljs-comment">/* Inverted links (could be standalone or external too) */</span>
+<span class="hljs-comment">/* Inverted links (could be external too) */</span>
 {
   <span class="hljs-attr">"extra_classes"</span>: <span class="hljs-string">"ecl-link--ema-inverted ema-u-bg-primary"</span>,
   <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#"</span>,
@@ -875,17 +865,12 @@
 
 </pre>
         
-            <pre><span class="hljs-comment">&lt;!-- Standalone links --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-link--ema-standalone"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>standalone link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-
-</pre>
-        
             <pre><span class="hljs-comment">&lt;!-- Obvious links --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-link--ema-obvious"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>obvious link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
 </pre>
         
-            <pre><span class="hljs-comment">&lt;!-- Inverted links (could be standalone or external too) --&gt;</span>
+            <pre><span class="hljs-comment">&lt;!-- Inverted links (could be external too) --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-link--ema-inverted ema-u-bg-primary"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>inverted link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
 </pre>
@@ -963,11 +948,13 @@
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre>@<span class="hljs-keyword">mixin</span> link() {
-  <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'blue-2'</span>);
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#06c</span>;
+  <span class="hljs-attribute">text-decoration</span>: none;
 
   &amp;:hover,
   &amp;:focus {
-    <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'blue-2'</span>);
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#06c</span>;
+    <span class="hljs-attribute">text-decoration</span>: underline;
   }
 }
 
@@ -998,7 +985,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">309 Bytes</span>
+                    <span class="Meta-value">314 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -1024,17 +1011,6 @@
 <span class="hljs-selector-class">.ecl-link--ema-external</span> {
   @<span class="hljs-keyword">include</span> link();
   @<span class="hljs-keyword">include</span> link-external();
-}
-
-<span class="hljs-selector-class">.ecl-link--ema-standalone</span> {
-  @<span class="hljs-keyword">include</span> link();
-  <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'blue-2'</span>);
-  <span class="hljs-attribute">text-decoration</span>: none;
-
-  &amp;:hover,
-  &amp;:focus {
-    <span class="hljs-attribute">text-decoration</span>: underline;
-  }
 }
 
 <span class="hljs-selector-class">.ecl-link--ema-obvious</span> {
@@ -1101,7 +1077,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1 KB</span>
+                    <span class="Meta-value">852 Bytes</span>
                 </li>
             </ul>
         </div>

@@ -34,7 +34,7 @@
 <link rel="stylesheet" href="../../themes/ecl-fractal-theme/css/fractal.css?cachebust=0.12.0" type="text/css">
 
 
-<title>Links: Inverted links (could be standalone or external too) | EMA Style Guide</title>
+<title>Links: Inverted links (could be external too) | EMA Style Guide</title>
 
 </head>
 <body class="language-en">
@@ -692,7 +692,7 @@
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
         <a class="Pen-previewLink" href="../preview/ema-links--inverted" title="Component preview">
-            Links: Inverted links (could be standalone or external too)
+            Links: Inverted links (could be external too)
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -894,11 +894,13 @@
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre>@<span class="hljs-keyword">mixin</span> link() {
-  <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'blue-2'</span>);
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#06c</span>;
+  <span class="hljs-attribute">text-decoration</span>: none;
 
   &amp;:hover,
   &amp;:focus {
-    <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'blue-2'</span>);
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#06c</span>;
+    <span class="hljs-attribute">text-decoration</span>: underline;
   }
 }
 
@@ -929,7 +931,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">309 Bytes</span>
+                    <span class="Meta-value">314 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -955,17 +957,6 @@
 <span class="hljs-selector-class">.ecl-link--ema-external</span> {
   @<span class="hljs-keyword">include</span> link();
   @<span class="hljs-keyword">include</span> link-external();
-}
-
-<span class="hljs-selector-class">.ecl-link--ema-standalone</span> {
-  @<span class="hljs-keyword">include</span> link();
-  <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'blue-2'</span>);
-  <span class="hljs-attribute">text-decoration</span>: none;
-
-  &amp;:hover,
-  &amp;:focus {
-    <span class="hljs-attribute">text-decoration</span>: underline;
-  }
 }
 
 <span class="hljs-selector-class">.ecl-link--ema-obvious</span> {
@@ -1032,7 +1023,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1 KB</span>
+                    <span class="Meta-value">852 Bytes</span>
                 </li>
             </ul>
         </div>

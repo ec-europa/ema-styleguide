@@ -1,9 +1,11 @@
 @mixin link() {
-  color: map-get($ema-colors, 'blue-2');
+  color: #06c;
+  text-decoration: none;
 
   &:hover,
   &:focus {
-    color: map-get($ema-colors, 'blue-2');
+    color: #06c;
+    text-decoration: underline;
   }
 }
 
