@@ -1,0 +1,10 @@
+.ema-icon {
+  display: inline-block;
+}
+
+@each $key, $value in $ecl-font-size {
+  .ema-icon-#{$key} {
+    height: $value;
+    width: $value;
+  }
+}
