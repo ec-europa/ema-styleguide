@@ -6,8 +6,8 @@ module.exports = {
   collator(markup, item) {
     return `<!-- Start: @${item.handle} -->\n
       <p class="ecl-u-d-flex ecl-u-align-items-center">\n
-        ${markup}\n
-        <span class="ecl-u-ml-s">${item.label}</span>\n
+        <span class="ecl-u-mh-s">${markup}</span>\n
+        ${item.label}\n
       </p>\n
       <!-- End: @${item.handle} -->\n`;
   },
