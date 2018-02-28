@@ -1,3 +1,29 @@
-<svg class="ema-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/framework/images/icons/ema-icons.svg#ema-icon-set_{{ icon }}" />
+{#
+  - "base_path" (string): path to the icons file
+  - "icon" (string): name of the icon
+  - "extra_classes" (string): extra CSS classes to be added
+  - "extra_attributes" (array): extra attributes classes (optional, format: [{ 'name': 'name_of_the_attribute', 'value': 'value_of_the_attribute'}])
+#}
+
+{# Internal properties #}
+
+{% set _css_class = 'ema-icon' %}
+{% set _extra_attributes = '' %}
+
+{# Internal logic - Process properties #}
+
+{% if extra_class is defined %}
+  {% set _css_class = _css_class ~ ' ' ~ extra_class %}
+{% endif %}
+
+{% if extra_attributes is defined %}
+  {% for attr in extra_attributes %}
+    {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name ~ '="' ~ attr.value ~'"' %}
+  {% endfor %}
+{% endif %}
+
+{# Print the result  #}
+
+<svg class="{{ _css_class }}" {{ _extra_attributes }}>
+  <use xlink:href="{{ base_path }}#ema-icon-set_{{ icon }}" />
 </svg>

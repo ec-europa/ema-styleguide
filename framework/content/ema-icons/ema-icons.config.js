@@ -5,13 +5,16 @@ module.exports = {
   collated: true,
   collator(markup, item) {
     return `<!-- Start: @${item.handle} -->\n
-      <div>\n
+      <p class="ecl-u-d-flex ecl-u-align-items-center">\n
         ${markup}\n
-        ${item.label}\n
-      </div>\n
+        <span class="ecl-u-ml-s">${item.label}</span>\n
+      </p>\n
       <!-- End: @${item.handle} -->\n`;
   },
   default: 'doi',
+  context: {
+    base_path: '/framework/images/icons/ema-icons.svg',
+  },
   variants: [
     {
       name: 'doi',
