@@ -27,8 +27,10 @@
     <h3 class="ema-separator__heading--title ecl-heading ecl-heading--ema-h3">
       {{_title}}
     </h3>
-    <span class="ema-separator__heading--icon">
-      {% include '@ec-europa/ema-icons' with icon %}
-    </span>
+    
+    {% include '@ec-europa/ema-icons' with {
+      'icon': icon,
+      'extra_classes': 'ema-separator__heading--icon'
+    } %}
   </div>
 </div>
