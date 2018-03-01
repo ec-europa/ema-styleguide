@@ -4,5 +4,11 @@ module.exports = {
   status: 'ready',
   tags: ['template'],
   preview: '@preview-website',
-  context: {},
+  context: {
+    _demo: {
+      scripts: `document.addEventListener('DOMContentLoaded', function () {
+        ECL.ratingForm();
+      });`,
+    },
+  },
 };
