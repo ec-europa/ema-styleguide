@@ -572,6 +572,30 @@
         </li>
         
     
+        
+        
+        <li class="ecl-navigation-menu__item"  data-role="item">
+          <a href="ema-icons" class="ecl-navigation-menu__link ">
+            
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="background-color: #467a39; border-color: #467a39;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            <span>Icons</span>
+          </a>
+        </li>
+        
+    
 
   </ul>
 </li>
@@ -832,7 +856,6 @@
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _css_class = 'ema-separator' %}</span><span class="xml">
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _extra_attributes = '' %}</span><span class="xml">
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _title = title|<span class="hljs-keyword">default</span>('') %}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _icon = 'ecl-icon ecl-icon--' ~ icon|<span class="hljs-keyword">default</span>('') %}</span><span class="xml">
 
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> extra_classes is defined and extra_classes is not empty %}</span><span class="xml">
   </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _css_class = _css_class ~ ' ' ~ extra_classes %}</span><span class="xml">
@@ -850,7 +873,11 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator__heading--title ecl-heading ecl-heading--ema-h3"</span>&gt;</span>
       </span><span class="hljs-template-variable">{{_title}}</span><span class="xml">
     <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator__heading--icon </span></span></span><span class="hljs-template-variable">{{_icon}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-icons' with {
+      'icon': icon,
+      'extra_classes': 'ema-separator__heading--icon'
+    } %}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
@@ -862,7 +889,7 @@
         
             
             <pre>{
-  <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"file"</span>,
+  <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"doi"</span>,
   <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Related documents"</span>
 }</pre>
             
@@ -880,7 +907,10 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator__heading--title ecl-heading ecl-heading--ema-h3"</span>&gt;</span>
       Related documents
     <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator__heading--icon ecl-icon ecl-icon--file"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-separator__heading--icon"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"/framework/images/icons/ema-icons.svg#ema-icon-set_doi"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
@@ -934,7 +964,7 @@
 }
 
 <span class="hljs-selector-class">.ema-separator__heading--icon</span> {
-  <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'grey-3'</span>);
+  fill: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'grey-3'</span>);
 }
 </pre>
                             </code>
@@ -952,7 +982,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">389 Bytes</span>
+                    <span class="Meta-value">388 Bytes</span>
                 </li>
             </ul>
         </div>

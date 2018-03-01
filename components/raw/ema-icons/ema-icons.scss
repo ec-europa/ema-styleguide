@@ -1,0 +1,13 @@
+.ema-icon {
+  display: inline-block;
+  fill: currentColor;
+  height: map-get($ecl-spacing, 'm');
+  width: map-get($ecl-spacing, 'm');
+}
+
+@each $key, $value in $ecl-spacing {
+  .ema-icon--#{$key} {
+    height: $value;
+    width: $value;
+  }
+}
