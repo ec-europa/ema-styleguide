@@ -9,14 +9,14 @@
 
 {# Print result #}
 <form class="{{_css_class}}">
-  <div class="ecl-u-d-flex ecl-u-flex-wrap">
+  <div class="ecl-u-d-flex ecl-u-flex-wrap" aria-controls="ema-rating-form__review-1">
     <div class="ecl-u-mr-l ecl-u-mb-s">
       {% include '@ec-europa/ema-ratings' with _rating %}
     </div>
 
     {% block extra_content extra_content %}
   </div>
-  <div class="ema-rating-form__review ecl-u-d-flex ecl-u-flex-wrap ecl-u-flex-md-nowrap ecl-u-align-items-end">
+  <div id="ema-rating-form__review-1" class="ema-rating-form__review ecl-u-flex-md-nowrap ecl-u-align-items-end" aria-hidden="true">
     {% include '@ec-europa/ecl-forms-textareas' with { rows: 3, extraClass: 'ecl-u-mr-md-s' } %}
     {% include '@ec-europa/ema-buttons' with {
       extra_classes: 'ecl-button--ema-primary ecl-u-mt-xxxs ema-u-width-100 ema-u-width-md-auto',
