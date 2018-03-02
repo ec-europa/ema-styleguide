@@ -26,6 +26,10 @@
   }
 }
 
+.ecl-list-item__title--normal {
+  font-weight: normal;
+}
+
 .ema-list-item__translations .ecl-file__translations-item {
   border-bottom: 0;
   border-top: 1px solid map-get($ema-colors, 'light-grey-3');
