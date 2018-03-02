@@ -3,7 +3,7 @@ module.exports = {
   label: 'Separator',
   status: 'ready',
   context: {
-    icon: 'file',
+    icon: 'doi',
     title: 'Related documents',
   },
 };

@@ -6,8 +6,19 @@
 @each $key, $value in $ema-colors {
   .ema-u-color-#{$key} {
     color: $value;
+    fill: $value;
   }
   .ema-u-bg-#{$key} {
     background-color: $value;
   }
+}
+
+.ema-u-color-white {
+  color: #fff;
+  fill: #fff;
+}
+
+.ema-u-color-black {
+  color: #000;
+  fill: #000;
 }

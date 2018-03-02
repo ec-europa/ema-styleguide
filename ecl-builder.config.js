@@ -47,5 +47,9 @@ module.exports = {
       from: path.resolve(__dirname, 'framework/components/ema-headers/images'),
       to: path.resolve(__dirname, outputFolder, 'images'),
     },
+    {
+      from: path.resolve(__dirname, 'framework/content/ema-icons/sprite'),
+      to: path.resolve(__dirname, outputFolder, 'images/icons'),
+    },
   ],
 };
