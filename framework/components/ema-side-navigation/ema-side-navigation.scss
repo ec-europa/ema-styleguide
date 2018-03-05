@@ -14,12 +14,15 @@
   text-decoration: none;
 
   &:hover {
+    background-color: map-get($ema-colors, 'blue-4');
     text-decoration: underline;
   }
-}
 
-.ema-side-navigation__link--can-expand::after {
-  content: '\e828';
+  &::after {
+    float: right;
+    line-height: map-get($ecl-font-size, 'l');
+    text-decoration: none;
+  }
 }
 
 .ema-side-navigation__link--depth-1 {
@@ -27,25 +30,16 @@
 }
 
 .ema-side-navigation__link--depth-2 {
-  background-color: map-get($ema-colors, 'blue-1');
+  background-color: map-get($ema-colors, 'primary');
   padding-left: map-get($ecl-spacing, 'm');
 }
 
 .ema-side-navigation__link--depth-3 {
-  background-color: map-get($ema-colors, 'blue-2');
+  background-color: map-get($ema-colors, 'blue-1');
   padding-left: map-get($ecl-spacing, 'l');
 }
 
 .ema-side-navigation__link--depth-4 {
-  background-color: map-get($ema-colors, 'blue-3');
+  background-color: map-get($ema-colors, 'blue-2');
   padding-left: map-get($ecl-spacing, 'xl');
-}
-
-.ema-side-navigation__link--active {
-  background-color: #fff;
-  color: map-get($ema-colors, 'primary');
-
-  &.ema-side-navigation__link--can-expand::after {
-    color: map-get($ema-colors, 'primary');
-  }
 }
