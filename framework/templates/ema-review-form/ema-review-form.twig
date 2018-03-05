@@ -1,0 +1,15 @@
+{% embed '@ec-europa/ema-rating-form' %}
+  {% block extra_content %}
+    <div class="ecl-u-mr-l ecl-u-mb-s">
+      {% include '@ec-europa/ema-ratings' with {
+          title: 'Average',
+          name: 'ema-rating2',
+          default_rating: 3,
+          disabled: true,
+        } %}
+    </div>
+    <div class="ecl-u-d-flex ecl-u-align-items-center">
+      <a class="ecl-link--ema-default ecl-u-mb-s" href="#">View all 12 ratings</a>
+    </div>
+  {% endblock %}
+{% endembed %}

@@ -1,0 +1,11 @@
+.ema-rating-form {
+  margin: 0;
+}
+
+.ema-rating-form__review {
+  display: flex;
+}
+
+.ema-rating-form__review[aria-hidden='true'] {
+  display: none;
+}
