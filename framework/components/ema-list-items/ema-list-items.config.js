@@ -16,7 +16,7 @@ module.exports = {
       label: 'PDF list item',
       context: {
         title:
-          'Title of the document <small class="ema-u-color-grey-2">(PDF - 230kb)</small>',
+          'Title of the document <small class="ema-u-color-grey-2 ecl-list-item__title--normal">(pdf - 230kb)</small>',
         detail:
           '<div class="ema-u-color-grey-2"><small>Published 15/01/2009<br />Updated 13/11/2017</small></div>',
         extra_classes: 'ecl-list-item--ema-pdf',
@@ -27,7 +27,7 @@ module.exports = {
       label: 'DOC list item',
       context: {
         title:
-          'Title of the document <small class="ema-u-color-grey-2">(DOC - 230kb)</small>',
+          'Title of the document <small class="ema-u-color-grey-2 ecl-list-item__title--normal">(doc - 230kb)</small>',
         detail:
           '<div class="ema-u-color-grey-2"><small>Published 15/01/2009<br />Updated 13/11/2017</small></div>',
         extra_classes: 'ecl-list-item--ema-doc',
@@ -38,7 +38,7 @@ module.exports = {
       label: 'XLS list item',
       context: {
         title:
-          'Title of the document <small class="ema-u-color-grey-2">(XLS - 230kb)</small>',
+          'Title of the document <small class="ema-u-color-grey-2 ecl-list-item__title--normal">(xls - 230kb)</small>',
         detail:
           '<div class="ema-u-color-grey-2"><small>Published 15/01/2009<br />Updated 13/11/2017</small></div>',
         extra_classes: 'ecl-list-item--ema-xls',
@@ -49,7 +49,7 @@ module.exports = {
       label: 'PPT list item',
       context: {
         title:
-          'Title of the document <small class="ema-u-color-grey-2">(PPT - 230kb)</small>',
+          'Title of the document <small class="ema-u-color-grey-2 ecl-list-item__title--normal">(ppt - 230kb)</small>',
         detail:
           '<div class="ema-u-color-grey-2"><small>Published 15/01/2009<br />Updated 13/11/2017</small></div>',
         extra_classes: 'ecl-list-item--ema-ppt',
@@ -60,7 +60,7 @@ module.exports = {
       label: 'ZIP list item',
       context: {
         title:
-          'Title of the document <small class="ema-u-color-grey-2">(ZIP - 230kb)</small>',
+          'Title of the document <small class="ema-u-color-grey-2 ecl-list-item__title--normal">(zip - 230kb)</small>',
         detail:
           '<div class="ema-u-color-grey-2"><small>Published 15/01/2009<br />Updated 13/11/2017</small></div>',
         extra_classes: 'ecl-list-item--ema-zip',
