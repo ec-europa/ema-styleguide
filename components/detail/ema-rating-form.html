@@ -34,7 +34,7 @@
 <link rel="stylesheet" href="../../themes/ecl-fractal-theme/css/fractal.css?cachebust=0.12.0" type="text/css">
 
 
-<title>Rating Form | EMA Style Guide</title>
+<title>Rating form | EMA Style Guide</title>
 
 </head>
 <body class="language-en">
@@ -357,6 +357,30 @@
     
         
         
+        <li class="ecl-navigation-menu__item"  data-state="current" data-role="item">
+          <a href="" class="ecl-navigation-menu__link  ecl-navigation-menu__link--active">
+            
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="background-color: #467a39; border-color: #467a39;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            <span>Rating form</span>
+          </a>
+        </li>
+        
+    
+        
+        
         <li class="ecl-navigation-menu__item"  data-role="item">
           <a href="ema-ratings" class="ecl-navigation-menu__link ">
             
@@ -633,8 +657,8 @@
     
         
         
-        <li class="ecl-navigation-menu__item"  data-state="current" data-role="item">
-          <a href="" class="ecl-navigation-menu__link  ecl-navigation-menu__link--active">
+        <li class="ecl-navigation-menu__item"  data-role="item">
+          <a href="ema-review-form" class="ecl-navigation-menu__link ">
             
 
 <div class="Status Status--unlabelled">
@@ -650,7 +674,7 @@
 </div>
 
 
-            <span>Rating Form</span>
+            <span>Review Form</span>
           </a>
         </li>
         
@@ -733,14 +757,14 @@
     
     
 
-<div class="Pen" id="pen-31552c672fe5180d2cfc6b6c1dc1386f">
+<div class="Pen" id="pen-79a8d06ccf557fe8fcc250adc8092a96">
 
     
 
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
         <a class="Pen-previewLink" href="../preview/ema-rating-form" title="Component preview">
-            Rating Form
+            Rating form
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -769,13 +793,14 @@
           <div class="ecl-editor">
             
             <h1 id="ema-rating-form">EMA Rating form</h1>
+<p>This component provides the form needed when you submit a rating.</p>
 
             
           </div>
         </div>
 
         <div class="Pen-playground" data-behaviour="pen" id="playground">
-          <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-31552c672fe5180d2cfc6b6c1dc1386f">
+          <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-79a8d06ccf557fe8fcc250adc8092a96">
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
@@ -795,7 +820,7 @@
 
           <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
           <div class="Pen-panel Pen-info" data-role="info">
-    <div class="Browser" data-behaviour="browser" id="browser-31552c672fe5180d2cfc6b6c1dc1386f">
+    <div class="Browser" data-behaviour="browser" id="browser-79a8d06ccf557fe8fcc250adc8092a96">
 
     
 
@@ -804,31 +829,35 @@
         
         
         <li class="Browser-tab Browser-tab--view is-active " data-role="tab">
-            <a href="#browser-31552c672fe5180d2cfc6b6c1dc1386f-panel-view">View</a>
+            <a href="#browser-79a8d06ccf557fe8fcc250adc8092a96-panel-view">View</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-31552c672fe5180d2cfc6b6c1dc1386f-panel-context">Context</a>
+            <a href="#browser-79a8d06ccf557fe8fcc250adc8092a96-panel-context">Context</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--html" data-role="tab">
-            <a href="#browser-31552c672fe5180d2cfc6b6c1dc1386f-panel-html">HTML</a>
+            <a href="#browser-79a8d06ccf557fe8fcc250adc8092a96-panel-html">HTML</a>
         </li>
         
         
         
         
+        
+        <li class="Browser-tab Browser-tab--resources" data-role="tab">
+            <a href="#browser-79a8d06ccf557fe8fcc250adc8092a96-panel-assets">Code</a>
+        </li>
         
         
         
         
         
         <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-31552c672fe5180d2cfc6b6c1dc1386f-panel-info">Info</a>
+            <a href="#browser-79a8d06ccf557fe8fcc250adc8092a96-panel-info">Info</a>
         </li>
         
         
@@ -837,19 +866,27 @@
 
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-31552c672fe5180d2cfc6b6c1dc1386f-panel-view">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-79a8d06ccf557fe8fcc250adc8092a96-panel-view">
     <code class="Code Code--lang-twig">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating-form"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-heading ecl-heading--ema-h3"</span>&gt;</span>How useful was this page?<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-d-flex ecl-u-flex-wrap"</span>&gt;</span>
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> rating in ratings %}</span><span class="xml">
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-mr-l ecl-u-mb-s"</span>&gt;</span>
-        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-ratings' with rating %}</span><span class="xml">
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link--ema-default ecl-u-mb-s"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>View all 12 ratings<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <pre><span class="xml"></span><span class="hljs-comment">{# Internal properties #}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _css_class = 'ema-rating-form' %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _rating = rating %}</span><span class="xml">
+
+</span><span class="hljs-comment">{# Internal logic - Process properties #}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> extra_class is defined %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _css_class = _css_class ~ ' ' ~ extra_class %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+
+</span><span class="hljs-comment">{# Print result #}</span><span class="xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{_css_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-d-flex ecl-u-flex-wrap"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"ema-rating-form__review-1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-mr-l ecl-u-mb-s"</span>&gt;</span>
+      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-ratings' with _rating %}</span><span class="xml">
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">block</span></span> extra_content extra_content %}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-d-flex ecl-u-flex-wrap ecl-u-flex-md-nowrap ecl-u-align-items-end"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating-form__review-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating-form__review ecl-u-flex-wrap ecl-u-flex-md-nowrap ecl-u-align-items-end"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
     </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-forms-textareas' with { rows: 3, extraClass: 'ecl-u-mr-md-s' } %}</span><span class="xml">
     </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-buttons' with {
       extra_classes: 'ecl-button--ema-primary ecl-u-mt-xxxs ema-u-width-100 ema-u-width-md-auto',
@@ -861,23 +898,18 @@
 </div>
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-31552c672fe5180d2cfc6b6c1dc1386f-panel-context">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-79a8d06ccf557fe8fcc250adc8092a96-panel-context">
     <code class="Code Code--lang-json">
         
             
             <pre>{
-  <span class="hljs-attr">"ratings"</span>: [
-    {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Your rating"</span>,
-      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"ema-rating1"</span>
-    },
-    {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Average"</span>,
-      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"ema-rating2"</span>,
-      <span class="hljs-attr">"default_rating"</span>: <span class="hljs-number">3</span>,
-      <span class="hljs-attr">"disabled"</span>: <span class="hljs-literal">true</span>
-    }
-  ]
+  <span class="hljs-attr">"_demo"</span>: {
+    <span class="hljs-attr">"scripts"</span>: <span class="hljs-string">"document.addEventListener('DOMContentLoaded', function () {\n        ECL.ratingForm();\n      });"</span>
+  },
+  <span class="hljs-attr">"rating"</span>: {
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Your rating"</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"ema-rating"</span>
+  }
 }</pre>
             
         
@@ -886,71 +918,42 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-31552c672fe5180d2cfc6b6c1dc1386f-panel-html">
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-79a8d06ccf557fe8fcc250adc8092a96-panel-html">
     <code class="Code Code--lang-html">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating-form"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-heading ecl-heading--ema-h3"</span>&gt;</span>How useful was this page?<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-d-flex ecl-u-flex-wrap"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-d-flex ecl-u-flex-wrap"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"ema-rating-form__review-1"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-mr-l ecl-u-mb-s"</span>&gt;</span>
 
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__title"</span>&gt;</span>Your rating<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__stars"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__input"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating__ema-rating1--5"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ema-rating1"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"5"</span> /&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__star"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ema-rating__ema-rating1--5"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__input"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating__ema-rating--5"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ema-rating"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"5"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__star"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ema-rating__ema-rating--5"</span>&gt;</span>
         ★
       <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__input"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating__ema-rating1--4"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ema-rating1"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"4"</span> /&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__star"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ema-rating__ema-rating1--4"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__input"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating__ema-rating--4"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ema-rating"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"4"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__star"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ema-rating__ema-rating--4"</span>&gt;</span>
         ★
       <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__input"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating__ema-rating1--3"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ema-rating1"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"3"</span> /&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__star"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ema-rating__ema-rating1--3"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__input"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating__ema-rating--3"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ema-rating"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"3"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__star"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ema-rating__ema-rating--3"</span>&gt;</span>
         ★
       <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__input"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating__ema-rating1--2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ema-rating1"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span> /&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__star"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ema-rating__ema-rating1--2"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__input"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating__ema-rating--2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ema-rating"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__star"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ema-rating__ema-rating--2"</span>&gt;</span>
         ★
       <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__input"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating__ema-rating1--1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ema-rating1"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span> /&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__star"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ema-rating__ema-rating1--1"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__input"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating__ema-rating--1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ema-rating"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__star"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ema-rating__ema-rating--1"</span>&gt;</span>
         ★
       <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-mr-l ecl-u-mb-s"</span>&gt;</span>
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__title"</span>&gt;</span>Average<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__stars"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__input"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating__ema-rating2--5"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ema-rating2"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">"disabled"</span> /&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__star"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ema-rating__ema-rating2--5"</span>&gt;</span>
-        ★
-      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__input"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating__ema-rating2--4"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ema-rating2"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">"disabled"</span> /&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__star"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ema-rating__ema-rating2--4"</span>&gt;</span>
-        ★
-      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__input"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating__ema-rating2--3"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ema-rating2"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">"disabled"</span> <span class="hljs-attr">aria-checked</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">"checked"</span> /&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__star"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ema-rating__ema-rating2--3"</span>&gt;</span>
-        ★
-      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__input"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating__ema-rating2--2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ema-rating2"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">"disabled"</span> /&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__star"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ema-rating__ema-rating2--2"</span>&gt;</span>
-        ★
-      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__input"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating__ema-rating2--1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ema-rating2"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">"disabled"</span> /&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating__star"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ema-rating__ema-rating2--1"</span>&gt;</span>
-        ★
-      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link--ema-default ecl-u-mb-s"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>View all 12 ratings<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-d-flex ecl-u-flex-wrap ecl-u-flex-md-nowrap ecl-u-align-items-end"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ema-rating-form__review-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating-form__review ecl-u-flex-wrap ecl-u-flex-md-nowrap ecl-u-align-items-end"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"default-name"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"default-id"</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-textarea ecl-u-mr-md-s"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"textbox"</span> <span class="hljs-attr">aria-multiline</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"default-id_label"</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
@@ -966,25 +969,155 @@
     
 
 
+<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-79a8d06ccf557fe8fcc250adc8092a96-panel-assets">
+    <div class="FileBrowser">
+
+        <div class="FileBrowser-selectWrapper">
+            <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
+            <select class="FileBrowser-select" id="filebrowser-select">
+                
+                <option value="file-e31ceac8eb8a3e6a5312a8321a194419">ema-rating-form.js</option>
+                
+                <option value="file-9185f33667504cbf593017dbbabedde9">ema-rating-form.scss</option>
+                
+            </select>
+        </div>
+
+        
+        <div class="FileBrowser-item is-active" id="file-e31ceac8eb8a3e6a5312a8321a194419" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JavaScript FileBrowser-code">
+                                <pre><span class="hljs-keyword">import</span> { queryAll } <span class="hljs-keyword">from</span> <span class="hljs-string">'@ec-europa/ecl-base/helpers/dom'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> ratingForm = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">if</span> (
+    !(<span class="hljs-string">'querySelector'</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">document</span>) ||
+    !(<span class="hljs-string">'addEventListener'</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">window</span>) ||
+    !<span class="hljs-built_in">document</span>.documentElement.classList
+  )
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+
+  <span class="hljs-comment">// SETUP</span>
+  <span class="hljs-keyword">const</span> ratingStars = queryAll(<span class="hljs-string">'.ema-rating__stars .ema-rating__star'</span>);
+
+  <span class="hljs-keyword">const</span> eventItemClick = <span class="hljs-function"><span class="hljs-params">evt</span> =&gt;</span> {
+    <span class="hljs-keyword">const</span> block = evt.currentTarget.parentElement.parentElement.parentElement.parentElement.getAttribute(
+      <span class="hljs-string">'aria-controls'</span>
+    );
+    queryAll(<span class="hljs-string">`#<span class="hljs-subst">${block}</span>`</span>)[<span class="hljs-number">0</span>].removeAttribute(<span class="hljs-string">'aria-hidden'</span>);
+  };
+
+  <span class="hljs-keyword">const</span> bindEvents = <span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
+    el.addEventListener(<span class="hljs-string">'click'</span>, eventItemClick);
+  };
+
+  <span class="hljs-keyword">const</span> unBindEvents = <span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
+    el.removeEventListener(<span class="hljs-string">'click'</span>, eventItemClick);
+  };
+
+  <span class="hljs-keyword">const</span> init = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-keyword">if</span> (ratingStars.length) {
+      ratingStars.forEach(<span class="hljs-function"><span class="hljs-params">star</span> =&gt;</span> {
+        bindEvents(star);
+      });
+    }
+  };
+
+  <span class="hljs-keyword">const</span> destroy = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-keyword">if</span> (ratingStars.length) {
+      ratingStars.forEach(<span class="hljs-function"><span class="hljs-params">star</span> =&gt;</span> {
+        unBindEvents(star);
+      });
+    }
+  };
+
+  init();
+
+  <span class="hljs-keyword">return</span> {
+    init,
+    destroy,
+  };
+};
+
+<span class="hljs-comment">// module exports</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ratingForm;
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a href="../raw/ema-rating-form/ema-rating-form.js"><span>/components/raw/ema-rating-form/ema-rating-form.js</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">framework/components/ema-rating-form/ema-rating-form.js</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">1.1 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-9185f33667504cbf593017dbbabedde9" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                                <pre><span class="hljs-selector-class">.ema-rating-form</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.ema-rating-form__review</span> {
+  <span class="hljs-attribute">display</span>: flex;
+}
+
+<span class="hljs-selector-class">.ema-rating-form__review</span><span class="hljs-selector-attr">[aria-hidden='true']</span> {
+  <span class="hljs-attribute">display</span>: none;
+}
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a href="../raw/ema-rating-form/ema-rating-form.scss"><span>/components/raw/ema-rating-form/ema-rating-form.scss</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">framework/components/ema-rating-form/ema-rating-form.scss</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">148 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
 
 
     
-    <div class="Browser-panel" data-role="tab-panel" id="browser-31552c672fe5180d2cfc6b6c1dc1386f-panel-info">
+    <div class="Browser-panel" data-role="tab-panel" id="browser-79a8d06ccf557fe8fcc250adc8092a96-panel-info">
     <ul class="Meta">
         <li class="Meta-item">
             <strong class="Meta-key">Handle:</strong>
             <span class="Meta-value">@ec-europa/ema-rating-form</span>
-        </li>
-        
-        <li class="Meta-item">
-            <strong class="Meta-key">Tags:</strong>
-            <span class="Meta-value">
-                
-                    <span>
-                
-                    <span>template</span>
-                
-            </span>
         </li>
         
         
@@ -1010,7 +1143,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">framework/templates/ema-rating-form/ema-rating-form.twig</span>
+            <span class="Meta-value">framework/components/ema-rating-form/ema-rating-form.twig</span>
         </li>
         
         
