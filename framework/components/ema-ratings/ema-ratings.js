@@ -1,6 +1,6 @@
 import { queryAll } from '@ec-europa/ecl-base/helpers/dom';
 
-export const ratingForm = () => {
+export const ratings = (feedback = []) => {
   if (
     !('querySelector' in document) ||
     !('addEventListener' in window) ||
@@ -13,19 +13,23 @@ export const ratingForm = () => {
     '.ema-rating__stars .ema-rating__star:not([disabled]'
   );
 
-  const eventItemClick = evt => {
-    const block = evt.currentTarget.parentElement.parentElement.parentElement.parentElement.getAttribute(
-      'aria-controls'
-    );
-    queryAll(`#${block}`)[0].removeAttribute('aria-hidden');
+  const eventEnter = evt => {
+    queryAll('.ema-rating__feedback')[0].innerHTML =
+      feedback[evt.currentTarget.getAttribute('for').substr(-1) - 1];
+  };
+
+  const eventLeave = () => {
+    queryAll('.ema-rating__feedback')[0].innerHTML = '';
   };
 
   const bindEvents = el => {
-    el.addEventListener('click', eventItemClick);
+    el.addEventListener('mouseenter', eventEnter);
+    el.addEventListener('mouseleave', eventLeave);
   };
 
   const unBindEvents = el => {
-    el.removeEventListener('click', eventItemClick);
+    el.removeEventListener('mouseenter', eventEnter);
+    el.removeEventListener('mouseleave', eventLeave);
   };
 
   const init = () => {
@@ -46,8 +50,6 @@ export const ratingForm = () => {
 
   init();
 
-  console.log('form', ratingStars);
-
   return {
     init,
     destroy,
@@ -55,4 +57,4 @@ export const ratingForm = () => {
 };
 
 // module exports
-export default ratingForm;
+export default ratings;

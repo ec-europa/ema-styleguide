@@ -34,9 +34,10 @@
         {{ _disabled ? 'disabled="disabled"'}}
         {{ i == _default_rating ? 'aria-checked="true" checked="checked"' }}
       />
-      <label class="ema-rating__star" for="ema-rating__{{_name}}--{{i}}">
+      <label class="ema-rating__star" {{ not _disabled ? 'for="ema-rating__' ~ _name ~ '--' ~ i ~ '"': 'disabled="disabled"'}}>
         ★
       </label>
     {% endfor %}
   </div>
+  <span class="ema-rating__feedback ecl-u-ml-s"></span>
 </div>

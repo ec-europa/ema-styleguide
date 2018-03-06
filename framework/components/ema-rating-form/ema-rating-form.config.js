@@ -1,3 +1,11 @@
+const feedback = [
+  'Unhelpful',
+  'Not very helpful',
+  'Fairly helpful',
+  'Helpful',
+  'Very helpful',
+];
+
 module.exports = {
   title: 'Rating form',
   label: 'Rating form',
@@ -6,6 +14,7 @@ module.exports = {
     _demo: {
       scripts: `document.addEventListener('DOMContentLoaded', function () {
         ECL.ratingForm();
+        ECL.ratings(${JSON.stringify(feedback)});
       });`,
     },
     rating: {
