@@ -13,7 +13,7 @@ module.exports = {
   },
   default: 'doi',
   context: {
-    icon_path: 'https://ec-europa.github.io/ema-styleguide/framework/images/icons/ema-icons.svg',
+    icon_path: '../../framework/images/icons/ema-icons.svg',
   },
   variants: [
     {
