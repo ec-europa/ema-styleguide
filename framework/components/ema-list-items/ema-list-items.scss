@@ -2,6 +2,14 @@
 * EMA List item component
 */
 
+.ecl-list-item__title {
+  font-weight: normal;
+}
+
+.ecl-file__translations-title {
+  font-weight: normal;
+}
+
 %ema-file {
   .ecl-list-item__link {
     position: relative;
@@ -24,10 +32,6 @@
   .ecl-list-item__title {
     font-weight: normal;
   }
-}
-
-.ecl-list-item__title--normal {
-  font-weight: normal;
 }
 
 .ema-list-item__translations .ecl-file__translations-item {
