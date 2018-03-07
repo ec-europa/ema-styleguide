@@ -18,5 +18,6 @@ module.exports = {
     },
     title: 'Your rating',
     name: 'ema-rating',
+    feedback,
   },
 };

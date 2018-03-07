@@ -20,8 +20,10 @@ module.exports = {
         ECL.ratings(${JSON.stringify(feedback)});
       });`,
     },
+    feedback,
     form: {
       selector,
+      message: 'Tell us more',
     },
   },
 };

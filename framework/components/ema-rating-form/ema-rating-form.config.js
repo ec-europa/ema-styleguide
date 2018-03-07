@@ -21,6 +21,7 @@ module.exports = {
     selector,
     message: 'Tell us more',
     rating: {
+      feedback,
       title: 'Your rating',
       name: 'ema-rating',
     },
