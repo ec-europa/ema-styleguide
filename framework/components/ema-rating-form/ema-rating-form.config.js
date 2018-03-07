@@ -5,7 +5,7 @@ const feedback = [
   'Helpful',
   'Very helpful',
 ];
-const selector = 'ema-rating-1';
+const selector = 'ema-rating-form__review';
 
 module.exports = {
   title: 'Rating form',
@@ -19,6 +19,7 @@ module.exports = {
       });`,
     },
     selector,
+    message: 'Tell us more',
     rating: {
       title: 'Your rating',
       name: 'ema-rating',
