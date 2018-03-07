@@ -1,6 +1,6 @@
 import { queryAll } from '@ec-europa/ecl-base/helpers/dom';
 
-export const ratingForm = () => {
+export const ratingForm = (selector = '') => {
   if (
     !('querySelector' in document) ||
     !('addEventListener' in window) ||
@@ -9,14 +9,10 @@ export const ratingForm = () => {
     return null;
 
   // SETUP
-  const ratingStars = queryAll(
-    '.ema-rating__stars .ema-rating__star:not([disabled]'
-  );
+  const ratingStars = queryAll(`#${selector} .ema-rating__star:not([disabled]`);
 
-  const eventItemClick = evt => {
-    const block = evt.currentTarget.parentElement.parentElement.parentElement.parentElement.getAttribute(
-      'aria-controls'
-    );
+  const eventItemClick = () => {
+    const block = queryAll(`#${selector}`)[0].getAttribute('aria-controls');
     queryAll(`#${block}`)[0].removeAttribute('aria-hidden');
   };
 
@@ -45,8 +41,6 @@ export const ratingForm = () => {
   };
 
   init();
-
-  console.log('form', ratingStars);
 
   return {
     init,

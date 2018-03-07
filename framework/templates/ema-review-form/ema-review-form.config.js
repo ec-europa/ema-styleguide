@@ -5,6 +5,7 @@ const feedback = [
   'Helpful',
   'Very helpful',
 ];
+const selector = 'ema-rating-2';
 
 module.exports = {
   title: 'Review Form',
@@ -15,9 +16,12 @@ module.exports = {
   context: {
     _demo: {
       scripts: `document.addEventListener('DOMContentLoaded', function () {
-        ECL.ratingForm();
+        ECL.ratingForm(${JSON.stringify(selector)});
         ECL.ratings(${JSON.stringify(feedback)});
       });`,
+    },
+    form: {
+      selector,
     },
   },
 };

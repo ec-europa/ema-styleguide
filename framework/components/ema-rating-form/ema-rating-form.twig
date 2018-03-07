@@ -1,6 +1,7 @@
 {# Internal properties #}
 {% set _css_class = 'ema-rating-form' %}
 {% set _rating = rating %}
+{% set _selector = selector %}
 
 {# Internal logic - Process properties #}
 {% if extra_class is defined %}
@@ -9,7 +10,7 @@
 
 {# Print result #}
 <form class="{{_css_class}}">
-  <div class="ecl-u-d-flex ecl-u-flex-wrap" aria-controls="ema-rating-form__review-1">
+  <div class="ecl-u-d-flex ecl-u-flex-wrap" id={{ _selector }} aria-controls="ema-rating-form__review-1">
     <div class="ecl-u-mr-l ecl-u-mb-s">
       {% include '@ec-europa/ema-ratings' with _rating %}
     </div>
