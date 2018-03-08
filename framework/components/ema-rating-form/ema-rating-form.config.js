@@ -15,15 +15,22 @@ module.exports = {
     _demo: {
       scripts: `document.addEventListener('DOMContentLoaded', function () {
         ECL.ratingForm(${JSON.stringify(selector)});
-        ECL.ratings(${JSON.stringify(feedback)});
       });`,
     },
     selector,
     message: 'Tell us more',
-    rating: {
-      feedback,
-      title: 'Your rating',
-      name: 'ema-rating',
-    },
+    ratings: [
+      {
+        feedback,
+        title: 'Your rating',
+        name: 'ema-rating1',
+      },
+      {
+        title: 'Average',
+        name: 'ema-rating2',
+        default_rating: 3,
+        disabled: true,
+      },
+    ],
   },
 };

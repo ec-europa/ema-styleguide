@@ -11,11 +11,6 @@ module.exports = {
   label: 'Ratings',
   status: 'ready',
   context: {
-    _demo: {
-      scripts: `document.addEventListener('DOMContentLoaded', function () {
-        ECL.ratings(${JSON.stringify(feedback)});
-      });`,
-    },
     title: 'Your rating',
     name: 'ema-rating',
     feedback,
