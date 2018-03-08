@@ -1,5 +1,5 @@
 {#
-  - "icon_path" (string): path to the icons file (default: '/framework/images/icons/ema-icons.svg')
+  - "icon_path" (string): path to the icons file (default: '../../framework/images/icons/ema-icons.svg')
   - "icon" (string): name of the icon (default: '')
   - "extra_classes" (string): extra CSS classes to be added
   - "extra_attributes" (array): extra attributes classes (optional, format: [{ 'name': 'name_of_the_attribute', 'value': 'value_of_the_attribute'}])
@@ -9,7 +9,7 @@
 
 {% set _css_class = 'ema-icon' %}
 {% set _extra_attributes = '' %}
-{% set _icon_path = icon_path|default('/framework/images/icons/ema-icons.svg') %}
+{% set _icon_path = icon_path|default('../../framework/images/icons/ema-icons.svg') %}
 
 {# Internal logic - Process properties #}
 
