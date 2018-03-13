@@ -12,6 +12,7 @@
 {% set _default_rating = default_rating|default(0) %}
 {% set _name = name|default('ema-rating') %}
 {% set _disabled = disabled|default(false) %}
+{% set _feedback = feedback|default([]) %}
 
 {# Internal logic - Process properties #}
 {% if extra_class is defined %}
@@ -34,7 +35,7 @@
         {{ _disabled ? 'disabled="disabled"'}}
         {{ i == _default_rating ? 'aria-checked="true" checked="checked"' }}
       />
-      <label class="ema-rating__star" for="ema-rating__{{_name}}--{{i}}">
+      <label class="ema-rating__star" title="{{ _feedback[i-1] }}" {{ not _disabled ? 'for="ema-rating__' ~ _name ~ '--' ~ i ~ '"': 'disabled="disabled"'}}>
         ★
       </label>
     {% endfor %}

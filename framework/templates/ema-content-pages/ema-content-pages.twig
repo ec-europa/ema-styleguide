@@ -89,24 +89,9 @@
           </li>
         </ul>
 
-        <form class="ema-rating-form ecl-u-mt-xl ecl-u-mb-l">
-          <h3 class="ecl-heading ecl-heading--ema-h3">How useful was this page?</h3>
-          <div class="ecl-u-d-flex ecl-u-flex-wrap">
-            {% for rating in ratings %}
-              <div class="ecl-u-mr-l ecl-u-mb-s">
-                {% include '@ec-europa/ema-ratings' with rating %}
-              </div>
-            {% endfor %}
-            <a class="ecl-link--ema-default ecl-u-mb-s" href="#">View all 12 ratings</a>
-          </div>
-          <div class="ecl-u-d-flex ecl-u-flex-wrap ecl-u-flex-md-nowrap ecl-u-align-items-end">
-            {% include '@ec-europa/ecl-forms-textareas' with { rows: 3, extraClass: 'ecl-u-mr-md-s' } %}
-            {% include '@ec-europa/ema-buttons' with {
-              extra_classes: 'ecl-button--ema-primary ecl-u-mt-xxxs ema-u-width-100 ema-u-width-md-auto',
-              label: 'Submit'
-            } %}
-          </div>
-        </form>
+        <div class="ecl-u-mr-md-l ecl-u-mb-s">
+          {% include '@ec-europa/ema-rating-form' with ratingForm %}
+        </div>
       </section>
     </div>
   </div>

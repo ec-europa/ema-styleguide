@@ -1,3 +1,12 @@
+const feedback = [
+  'Unhelpful',
+  'Not very helpful',
+  'Fairly helpful',
+  'Helpful',
+  'Very helpful',
+];
+const selector = 'ema-rating-form__review';
+
 module.exports = {
   title: 'Content pages',
   label: 'Content pages',
@@ -386,21 +395,26 @@ module.exports = {
         },
       ],
     },
-    ratings: [
-      {
-        title: 'Your rating',
-        name: 'ema-rating1',
-      },
-      {
-        title: 'Average',
-        name: 'ema-rating2',
-        default_rating: 3,
-        disabled: true,
-      },
-    ],
+    ratingForm: {
+      message: 'Tell us more',
+      ratings: [
+        {
+          feedback,
+          title: 'Your rating',
+          name: 'ema-rating1',
+        },
+        {
+          title: 'Average',
+          name: 'ema-rating2',
+          default_rating: 3,
+          disabled: true,
+        },
+      ],
+    },
     _demo: {
       scripts: `document.addEventListener('DOMContentLoaded', function () {
         ECL.megamenu();
+        ECL.ratingForm(${JSON.stringify(selector)});
         ECL.initExpandables('#translations-expand-button');
       });`,
     },
