@@ -1,3 +1,11 @@
+const feedback = [
+  'Unhelpful',
+  'Not very helpful',
+  'Fairly helpful',
+  'Helpful',
+  'Very helpful',
+];
+
 module.exports = {
   title: 'Ratings',
   label: 'Ratings',
@@ -5,5 +13,6 @@ module.exports = {
   context: {
     title: 'Your rating',
     name: 'ema-rating',
+    feedback,
   },
 };

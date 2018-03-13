@@ -1,3 +1,12 @@
+const feedback = [
+  'Unhelpful',
+  'Not very helpful',
+  'Fairly helpful',
+  'Helpful',
+  'Very helpful',
+];
+const selector = 'ema-rating-form__review';
+
 module.exports = {
   title: 'Rating form',
   label: 'Rating form',
@@ -5,12 +14,23 @@ module.exports = {
   context: {
     _demo: {
       scripts: `document.addEventListener('DOMContentLoaded', function () {
-        ECL.ratingForm();
+        ECL.ratingForm(${JSON.stringify(selector)});
       });`,
     },
-    rating: {
-      title: 'Your rating',
-      name: 'ema-rating',
-    },
+    selector,
+    message: 'Tell us more',
+    ratings: [
+      {
+        feedback,
+        title: 'Your rating',
+        name: 'ema-rating1',
+      },
+      {
+        title: 'Average',
+        name: 'ema-rating2',
+        default_rating: 3,
+        disabled: true,
+      },
+    ],
   },
 };
