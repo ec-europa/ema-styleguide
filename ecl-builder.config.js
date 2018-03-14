@@ -36,6 +36,13 @@ module.exports = {
       to: path.resolve(__dirname, outputFolder, 'images'),
     },
     {
+      from: path.resolve(
+        __dirname,
+        'node_modules/@ec-europa/ecl-forms-checkboxes/images'
+      ),
+      to: path.resolve(__dirname, outputFolder, 'images'),
+    },
+    {
       from: path.resolve(__dirname, 'node_modules/@ec-europa/ecl-icons/fonts'),
       to: path.resolve(__dirname, outputFolder, 'fonts'),
     },

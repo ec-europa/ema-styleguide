@@ -1,10 +1,16 @@
+{% set _classes = 'ema-list-item ' ~ extra_classes %}
 
-{% set _extra_classes = translations is not empty ? 'ecl-list-items--with-translations' : '' %}
+{% if translations is defined and translations is not empty %}
+  {% set _classes = _classes ~ ' ecl-list-items--with-translations' %}
+{% endif %}
 
+{% set _id = translations_id|default('translations-expand') %}
 
-{% include '@ec-europa/ecl-list-items' with {
-  'extra_classes': _extra_classes
-} %}
+{% embed '@ec-europa/ecl-list-items' with { 'extra_classes': _classes } %}
+  {% block meta_block %}
+    {% include 'ema-icons' with icon %}
+  {% endblock %}
+{% endembed %}
 
 {% if translations is defined and translations is not empty %}
   <li class="ecl-list-item ema-list-item__translations">
@@ -14,15 +20,15 @@
         'modifier': 'secondary',
         'extra_classes': 'ecl-file__translations-toggle',
         'extra_attributes': [
-          { 'name': 'aria-controls', 'value': 'translations-expand' },
-          { 'name': 'aria-expanded', 'value': 'true' },
-          { 'name': 'id', 'value': 'translations-expand-button' },
+          { 'name': 'aria-controls', 'value': _id },
+          { 'name': 'aria-expanded', 'value': 'false' },
+          { 'name': 'id', 'value': _id ~ '-button'},
           { 'name': 'type', 'value': 'button' },
           { 'name': 'title', 'value': translations_tooltip }
         ]
       } %}
 
-      <div aria-hidden="false" aria-labelledby="translations-expand-button" id="translations-expand">
+      <div aria-hidden="true" aria-labelledby="{{ _id }}-button" id="{{ _id }}">
         <ul class="ecl-file__translations-list">
           {% if translations is defined %}
             {% for translation in translations %}
