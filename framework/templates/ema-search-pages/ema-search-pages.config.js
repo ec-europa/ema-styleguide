@@ -6,6 +6,7 @@ module.exports = {
   preview: '@preview-website',
   context: {
     header: {
+      has_search: 'false',
       logo: {
         src: '../../framework/images/logo_ema.jpg',
         alt: 'EMA logo',
@@ -338,7 +339,7 @@ module.exports = {
     _demo: {
       scripts: `document.addEventListener('DOMContentLoaded', function () {
         ECL.megamenu();
-        ECL.initExpandables('.ecl-file__translations-toggle');
+        ECL.initExpandables();
 
         const date_from = new Pikaday({
           field: document.getElementById('date-from'),
@@ -346,6 +347,7 @@ module.exports = {
           maxDate: new Date(2020, 12, 31),
           theme: 'ecl-pika-theme',
           yearRange: [2000, 2020],
+          format: 'DD/MM/YYYY',
         });
         const date_to = new Pikaday({
           field: document.getElementById('date-to'),
@@ -353,6 +355,7 @@ module.exports = {
           maxDate: new Date(2020, 12, 31),
           theme: 'ecl-pika-theme',
           yearRange: [2000, 2020],
+          format: 'DD/MM/YYYY',
         });
       });`,
     },
