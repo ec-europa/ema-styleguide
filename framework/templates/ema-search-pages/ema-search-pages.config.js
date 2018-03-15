@@ -339,7 +339,8 @@ module.exports = {
     _demo: {
       scripts: `document.addEventListener('DOMContentLoaded', function () {
         ECL.megamenu();
-        ECL.initExpandables();
+        ECL.initExpandables('.ecl-file__translations-toggle');
+        ECL.initExpandables('#form-filter-toggle');
 
         const date_from = new Pikaday({
           field: document.getElementById('date-from'),
