@@ -339,6 +339,21 @@ module.exports = {
       scripts: `document.addEventListener('DOMContentLoaded', function () {
         ECL.megamenu();
         ECL.initExpandables('.ecl-file__translations-toggle');
+
+        const date_from = new Pikaday({
+          field: document.getElementById('date-from'),
+          firstDay: 1,
+          maxDate: new Date(2020, 12, 31),
+          theme: 'ecl-pika-theme',
+          yearRange: [2000, 2020],
+        });
+        const date_to = new Pikaday({
+          field: document.getElementById('date-to'),
+          firstDay: 1,
+          maxDate: new Date(2020, 12, 31),
+          theme: 'ecl-pika-theme',
+          yearRange: [2000, 2020],
+        });
       });`,
     },
   },

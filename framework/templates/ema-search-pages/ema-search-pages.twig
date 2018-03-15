@@ -20,7 +20,7 @@
 
     <div class="ecl-row ecl-u-mt-l">
       <aside class="ecl-col-lg-4 ecl-col-xl-3 ecl-u-order-last ecl-u-order-lg-first">
-        Search options
+        <h2 class="ecl-heading ecl-heading--ema-h2">Search options</h2>
 
         <form>
           {# ------- Dates ------- #}
@@ -35,13 +35,15 @@
           }%}
           {% include '@ec-europa/ecl-datepickers' with {
             'value': '01/01/2018',
+            'id': 'date-from'
           }%}
           {% include '@ec-europa/ecl-forms-labels' with {
             'label': 'To',
             'extra_classes': ' ecl-u-mt-xxs'
           }%}
           {% include '@ec-europa/ecl-datepickers' with {
-            'value': '12/02/2018',
+            'value': '02/13/2018',
+            'id': 'date-to'
           }%}
 
           {# ------- Categories ------- #}
@@ -267,7 +269,7 @@
             },
             {
               'label': 'to',
-              'value': '12/02/2018'
+              'value': '13/02/2018'
             },
             {
               'label': 'category',
@@ -289,3 +291,5 @@
 </main>
 
 {% include '@ec-europa/ema-footers' with footer %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
