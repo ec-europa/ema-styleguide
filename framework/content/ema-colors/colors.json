@@ -1,9 +1,10 @@
 {
-  "ema-color-primary": { "code": "#0f3f81", "category": "primary" },
+  "ema-color-primary": { "code": "#003399", "category": "primary" },
 
-  "ema-color-blue-1": { "code": "#13376d", "category": "blue" },
-  "ema-color-blue-2": { "code": "#0b4ba0", "category": "blue" },
-  "ema-color-blue-3": { "code": "#4172b3", "category": "blue" },
+  "ema-color-blue-1": { "code": "#2651a8", "category": "blue" },
+  "ema-color-blue-2": { "code": "#4066b3", "category": "blue" },
+  "ema-color-blue-3": { "code": "#4c70b7", "category": "blue" },
+  "ema-color-blue-4": { "code": "#5275ba", "category": "blue" },
 
   "ema-color-orange-1": { "code": "#f13d23", "category": "orange" },
   "ema-color-orange-2": { "code": "#f48a00", "category": "orange" },
