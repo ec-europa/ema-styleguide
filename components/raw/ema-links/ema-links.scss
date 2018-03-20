@@ -49,15 +49,6 @@
 
 .ecl-link--ema-more {
   @include link();
-  text-transform: uppercase;
-
-  &::after {
-    @extend %ecl-icon--after;
-
-    @include ecl-icon('right');
-
-    font-size: 75%;
-    margin-left: 0.4em;
-    margin-right: 0.2em;
-  }
+  display: block;
+  text-align: right;
 }

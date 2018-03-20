@@ -655,6 +655,30 @@
         </li>
         
     
+        
+        
+        <li class="ecl-navigation-menu__item"  data-role="item">
+          <a href="ema-search-pages" class="ecl-navigation-menu__link ">
+            
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="background-color: #467a39; border-color: #467a39;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            <span>Search pages</span>
+          </a>
+        </li>
+        
+    
 
   </ul>
 </li>
@@ -924,21 +948,38 @@
 * EMA Search form component
 */</span>
 
-<span class="hljs-selector-class">.ecl-search-form--ema</span> {
-  <span class="hljs-selector-class">.ecl-search-form__textfield</span> {
-    <span class="hljs-attribute">padding</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxxs'</span>) map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxs'</span>);
-  }
-
+@<span class="hljs-keyword">mixin</span> ema-search-button() {
   <span class="hljs-selector-class">.ecl-search-form__button</span> {
     <span class="hljs-attribute">background-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'primary'</span>);
     <span class="hljs-attribute">border-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'primary'</span>);
     <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$ema-font-family-base</span>;
   }
 
   <span class="hljs-selector-class">.ecl-search-form__button</span>:hover,
   <span class="hljs-selector-class">.ecl-search-form__button</span>:focus {
     <span class="hljs-attribute">background-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'blue-3'</span>);
     <span class="hljs-attribute">border-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'blue-3'</span>);
+  }
+}
+
+<span class="hljs-selector-class">.ecl-search-form--ema</span> {
+  @<span class="hljs-keyword">include</span> ema-search-button();
+
+  <span class="hljs-selector-class">.ecl-search-form__textfield</span> {
+    <span class="hljs-attribute">padding</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxxs'</span>) map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxs'</span>);
+  }
+}
+
+<span class="hljs-selector-class">.ecl-search-form--ema-internal</span> {
+  @<span class="hljs-keyword">include</span> ema-search-button();
+
+  <span class="hljs-selector-class">.ecl-search-form__textfield</span> {
+    <span class="hljs-attribute">padding</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxs'</span>) map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xs'</span>) map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxs'</span>) map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'l'</span>);
+  }
+
+  <span class="hljs-selector-class">.ecl-search-form__textfield-wrapper</span> {
+    <span class="hljs-attribute">border-width</span>: <span class="hljs-number">2px</span>;
   }
 }
 </pre>
@@ -957,7 +998,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">506 Bytes</span>
+                    <span class="Meta-value">910 Bytes</span>
                 </li>
             </ul>
         </div>

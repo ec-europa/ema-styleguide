@@ -655,6 +655,30 @@
         </li>
         
     
+        
+        
+        <li class="ecl-navigation-menu__item"  data-role="item">
+          <a href="ema-search-pages" class="ecl-navigation-menu__link ">
+            
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="background-color: #467a39; border-color: #467a39;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            <span>Search pages</span>
+          </a>
+        </li>
+        
+    
 
   </ul>
 </li>
@@ -857,7 +881,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-mv-l"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-container"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-row"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-col-md-5 ecl-col-l-4 ecl-col-xl-3 ecl-u-order-last ecl-u-order-md-first"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-col-lg-4 ecl-col-xl-3 ecl-u-order-last ecl-u-order-lg-first"</span>&gt;</span>
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-buttons' with {
           extra_classes: 'ecl-button--<span class="hljs-name">block</span> ecl-u-mb-m',
           label: '&lt;span class="ecl-icon ecl-icon--share"&gt;&lt;/span&gt; Share'
@@ -866,7 +890,7 @@
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-side-navigation' with sideNavigation %}</span><span class="xml">
       <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span>
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-col ecl-offset-xl-1"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-col-lg-8 ecl-offset-xl-1"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-heading ecl-heading--ema-h2"</span>&gt;</span>Transfers of orphan designation<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-paragraph ecl-paragraph--ema"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>A transfer of the orphan designation is the procedure by which the orphan designation is transferred from the currently approved sponsor (orphan designation holder) to a new sponsor which is a different person/legal entity.<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -889,33 +913,7 @@
           title: 'Related documents',
         } %}</span><span class="xml">
 
-        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-listings' with {
-          items: [
-            {
-              title: 'Checklist for sponsors applying for the transfer of orphan medicinal product designation &lt;small class="ema-u-color-grey-2"&gt;(PDF - 230kb)&lt;/small&gt;',
-              detail: '&lt;div class="ema-u-color-grey-2"&gt;&lt;small&gt;Published 15/01/2009&lt;br /&gt;Updated 13/11/2017&lt;/small&gt;&lt;/div&gt;',
-              extra_classes: 'ecl-list-item--ema-pdf',
-
-              translations: [
-                { title: 'Titre du fichier', meta: '230 kB - PDF - 4 pages' },
-                { title: 'Dateititel', meta: '230 kB - PDF - 4 pages' },
-                { title: 'Файл Заглавие', meta: '230 kB - PDF - 4 pages' },
-              ],
-              translations_label: 'Available languages (3)',
-              translations_tooltip: 'Click to see translations',
-            },
-            {
-              title: 'Template 1 - Orphan designation transfer form &lt;small class="ema-u-color-grey-2"&gt;(DOC - 512kb)&lt;/small&gt;',
-              detail: '&lt;div class="ema-u-color-grey-2"&gt;&lt;small&gt;Published 13/04/2016&lt;br /&gt;Updated 13/12/2016&lt;/small&gt;&lt;/div&gt;',
-              extra_classes: 'ecl-list-item--ema-doc',
-            },
-            {
-              title: 'Template 2 - Translations of the active ingredient and indication for transfer of orphan-medicinal-product designation &lt;small class="ema-u-color-grey-2"&gt;(DOCX - 132kb)&lt;/small&gt;',
-              detail: '&lt;div class="ema-u-color-grey-2"&gt;&lt;small&gt;Published 24/11/2008&lt;br /&gt;Updated 04/07/2013&lt;/small&gt;&lt;/div&gt;',
-              extra_classes: 'ecl-list-item--ema-doc',
-            },
-          ]
-        } %}</span><span class="xml">
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-listings' with items %}</span><span class="xml">
 
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-separator' with {
           icon: 'related-links',
@@ -930,7 +928,7 @@
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-mr-md-l ecl-u-mb-s"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-mr-md-l ecl-u-mv-l"</span>&gt;</span>
           </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-rating-form' with ratingForm %}</span><span class="xml">
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
@@ -1362,8 +1360,44 @@
       }
     ]
   },
+  <span class="hljs-attr">"items"</span>: [
+    {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Checklist for sponsors applying for the transfer of orphan medicinal product designation &lt;small class=\"ema-u-color-grey-2\"&gt;(PDF - 230kb)&lt;/small&gt;"</span>,
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"&lt;div class=\"ema-u-color-grey-2\"&gt;&lt;small&gt;Published 15/01/2009&lt;br /&gt;Updated 13/11/2017&lt;/small&gt;&lt;/div&gt;"</span>,
+      <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"pdf"</span>,
+      <span class="hljs-attr">"extra_classes"</span>: <span class="hljs-string">"ema-list-item--file"</span>,
+      <span class="hljs-attr">"translations"</span>: [
+        {
+          <span class="hljs-attr">"title"</span>: <span class="hljs-string">"French"</span>,
+          <span class="hljs-attr">"meta"</span>: <span class="hljs-string">"230 kB - PDF"</span>
+        },
+        {
+          <span class="hljs-attr">"title"</span>: <span class="hljs-string">"German"</span>,
+          <span class="hljs-attr">"meta"</span>: <span class="hljs-string">"230 kB - PDF"</span>
+        },
+        {
+          <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Spanish"</span>,
+          <span class="hljs-attr">"meta"</span>: <span class="hljs-string">"230 kB - PDF"</span>
+        }
+      ],
+      <span class="hljs-attr">"translations_label"</span>: <span class="hljs-string">"Available languages (3)"</span>,
+      <span class="hljs-attr">"translations_tooltip"</span>: <span class="hljs-string">"Click to see translations"</span>
+    },
+    {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Template 1 - Orphan designation transfer form &lt;small class=\"ema-u-color-grey-2\"&gt;(DOC - 512kb)&lt;/small&gt;"</span>,
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"&lt;div class=\"ema-u-color-grey-2\"&gt;&lt;small&gt;Published 13/04/2016&lt;br /&gt;Updated 13/12/2016&lt;/small&gt;&lt;/div&gt;"</span>,
+      <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"word"</span>,
+      <span class="hljs-attr">"extra_classes"</span>: <span class="hljs-string">"ema-list-item--file"</span>
+    },
+    {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Template 2 - Translations of the active ingredient and indication for transfer of orphan-medicinal-product designation &lt;small class=\"ema-u-color-grey-2\"&gt;(DOCX - 132kb)&lt;/small&gt;"</span>,
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"&lt;div class=\"ema-u-color-grey-2\"&gt;&lt;small&gt;Published 24/11/2008&lt;br /&gt;Updated 04/07/2013&lt;/small&gt;&lt;/div&gt;"</span>,
+      <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"word"</span>,
+      <span class="hljs-attr">"extra_classes"</span>: <span class="hljs-string">"ema-list-item--file"</span>
+    }
+  ],
   <span class="hljs-attr">"_demo"</span>: {
-    <span class="hljs-attr">"scripts"</span>: <span class="hljs-string">"document.addEventListener('DOMContentLoaded', function () {\n        ECL.megamenu();\n        ECL.ratingForm(\"ema-rating-form__review\");\n        ECL.initExpandables('#translations-expand-button');\n      });"</span>
+    <span class="hljs-attr">"scripts"</span>: <span class="hljs-string">"document.addEventListener('DOMContentLoaded', function () {\n        ECL.megamenu();\n        ECL.ratingForm(\"ema-rating-form__review\");\n        ECL.initExpandables('.ecl-file__translations-toggle');\n      });"</span>
   }
 }</pre>
             
@@ -1515,7 +1549,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-mv-l"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-container"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-row"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-col-md-5 ecl-col-l-4 ecl-col-xl-3 ecl-u-order-last ecl-u-order-md-first"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-col-lg-4 ecl-col-xl-3 ecl-u-order-last ecl-u-order-lg-first"</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-button ecl-button--default ecl-button--block ecl-u-mb-m"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-icon ecl-icon--share"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Share<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
@@ -1629,7 +1663,7 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span>
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-col ecl-offset-xl-1"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-col-lg-8 ecl-offset-xl-1"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-heading ecl-heading--ema-h2"</span>&gt;</span>Transfers of orphan designation<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-paragraph ecl-paragraph--ema"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>A transfer of the orphan designation is the procedure by which the orphan designation is transferred from the currently approved sponsor (orphan designation holder) to a new sponsor which is a different person/legal entity.<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -1665,15 +1699,16 @@
 
         <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-listings"</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-items--with-translations"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ema-list-item ema-list-item--file ecl-list-items--with-translations"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
 
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-list-items--with-translations"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-list-item ema-list-item--file ecl-list-items--with-translations"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../framework/images/icons/ema-icons.svg#ema-icon-set_pdf"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Checklist for sponsors applying for the transfer of orphan medicinal product designation <span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-u-color-grey-2"</span>&gt;</span>(PDF - 230kb)<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
@@ -1693,48 +1728,49 @@
           <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ema-list-item__translations"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations"</span>&gt;</span>
 
-              <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-button ecl-button--secondary ecl-file__translations-toggle"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"translations-expand"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"translations-expand-button"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Click to see translations"</span>&gt;</span>Available languages (3)<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-button ecl-button--secondary ecl-button--pdf ecl-file__translations-toggle"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"translations-expand"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"translations-expand-button"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Click to see translations"</span>&gt;</span>Available languages (3)<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"translations-expand-button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"translations-expand"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"translations-expand-button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"translations-expand"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-list"</span>&gt;</span>
                   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-item"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-metadata"</span>&gt;</span>
-                      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-title"</span>&gt;</span>Titre du fichier<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-info"</span>&gt;</span>(230 kB - PDF - 4 pages)<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-title"</span>&gt;</span>French<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-info"</span>&gt;</span>(230 kB - PDF)<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-button ecl-button--secondary ecl-file__translations-download"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>(230 kB - PDF - 4 pages)<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-button ecl-button--secondary ecl-button--pdf ecl-file__translations-download"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>(230 kB - PDF)<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-item"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-metadata"</span>&gt;</span>
-                      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-title"</span>&gt;</span>Dateititel<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-info"</span>&gt;</span>(230 kB - PDF - 4 pages)<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-title"</span>&gt;</span>German<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-info"</span>&gt;</span>(230 kB - PDF)<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-button ecl-button--secondary ecl-file__translations-download"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>(230 kB - PDF - 4 pages)<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-button ecl-button--secondary ecl-button--pdf ecl-file__translations-download"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>(230 kB - PDF)<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-item"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-metadata"</span>&gt;</span>
-                      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-title"</span>&gt;</span>Файл Заглавие<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-info"</span>&gt;</span>(230 kB - PDF - 4 pages)<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-title"</span>&gt;</span>Spanish<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__translations-info"</span>&gt;</span>(230 kB - PDF)<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-button ecl-button--secondary ecl-file__translations-download"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>(230 kB - PDF - 4 pages)<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-button ecl-button--secondary ecl-button--pdf ecl-file__translations-download"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>(230 kB - PDF)<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ema-list-item ema-list-item--file"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
 
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-list-item ema-list-item--file"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../framework/images/icons/ema-icons.svg#ema-icon-set_word"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Template 1 - Orphan designation transfer form <span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-u-color-grey-2"</span>&gt;</span>(DOC - 512kb)<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
@@ -1751,15 +1787,16 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ema-list-item ema-list-item--file"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
 
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-list-item ema-list-item--file"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../framework/images/icons/ema-icons.svg#ema-icon-set_word"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Template 2 - Translations of the active ingredient and indication for transfer of orphan-medicinal-product designation <span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-u-color-grey-2"</span>&gt;</span>(DOCX - 132kb)<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
@@ -1798,7 +1835,7 @@
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-mr-md-l ecl-u-mb-s"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-mr-md-l ecl-u-mv-l"</span>&gt;</span>
 
           <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-rating-form"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-d-flex ecl-u-flex-wrap"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">ema-rating-form__review</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">ema-rating-form__review-block</span>&gt;</span>
