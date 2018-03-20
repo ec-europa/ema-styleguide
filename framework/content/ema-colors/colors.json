@@ -9,14 +9,6 @@
   "ema-color-epar-red": { "code": "#e32a0d", "category": "epar" },
   "ema-color-epar-green": { "code": "#06854b", "category": "epar" },
   "ema-color-epar-grey": { "code": "#737373", "category": "epar" },
-  
-  "ema-color-orange-1": { "code": "#f13d23", "category": "orange" },
-  "ema-color-orange-2": { "code": "#f48a00", "category": "orange" },
-  "ema-color-orange-3": { "code": "#f7bb2c", "category": "orange" },
-
-  "ema-color-green-1": { "code": "#06854b", "category": "green" },
-  "ema-color-green-2": { "code": "#13b66d", "category": "green" },
-  "ema-color-green-3": { "code": "#89cdad", "category": "green" },
 
   "ema-color-grey-1": { "code": "#4c4c4c", "category": "grey" },
   "ema-color-grey-2": { "code": "#606060", "category": "grey" },
