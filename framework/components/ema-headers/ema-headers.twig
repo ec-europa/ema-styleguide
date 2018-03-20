@@ -12,6 +12,7 @@
 
 {% set _css_class = 'ema-header' %}
 {% set _extra_attributes = '' %}
+{% set _has_search = has_search|default('true') %}
 
 {# Internal logic - Process properties #}
 
@@ -39,9 +40,11 @@
   <div class="ecl-container ema-header__banner">
     <div class="ema-header__logo"><img src="{{ logo.src }}" alt="{{ logo.alt }}" /></div>
 
+    {% if (_has_search != 'false') %}
     {% include '@ec-europa/ecl-search-forms' with {
       'input': { 'id': 'global-search' },
       'extra_classes': 'ecl-site-header__search ecl-search-form--ema'
     } %}
+    {% endif %}
   </div>
 </header>

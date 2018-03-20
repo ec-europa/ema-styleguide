@@ -1,0 +1,305 @@
+{#
+  This is an example and should not be used as it is.
+#}
+
+{% include '@ec-europa/ecl-skip-links' with {
+    'href': '#main-content',
+    'label': 'Skip to main content'
+} %}
+
+{% include '@ec-europa/ema-headers' with header %}
+
+{% include '@ec-europa/ema-navigation-menus' with menu %}
+
+<main class="ecl-u-mv-l">
+  <div class="ecl-container">
+
+    <div class="ecl-row ecl-u-mb-l">
+      <div class="ecl-col">
+        {% include '@ec-europa/ecl-search-forms' with {
+          'variant': 'internal',
+          'input': { 'id': 'internal-search' },
+          'extra_classes': 'ecl-search-form--ema-internal'
+        } %}
+      </div>
+    </div>
+
+    <div class="ecl-row ecl-u-mt-l">
+      <aside class="ecl-col-lg-3" role="complementary">
+        <div class="ecl-u-d-flex ecl-u-d-lg-none ecl-u-justify-content-between ecl-u-align-items-baseline">
+          <h2 class="ecl-heading ecl-heading--h2">Search results (65)</h2>
+          {% include '@ec-europa/ecl-buttons' with {
+            'modifier': 'primary',
+            'label': 'Refine',
+            'extra_classes': 'ecl-button--ema-primary ecl-u-d-lg-none ecl-expandable__button',
+            'extra_attributes': [
+              { 'name': 'aria-controls', 'value': 'form-filter' },
+              { 'name': 'aria-expanded', 'value': 'true' },
+              { 'name': 'id', 'value': 'form-filter-toggle' },
+              { 'name': 'type', 'value': 'button' }
+            ]
+          } %}
+        </div>
+
+        {% embed '@ec-europa/ecl-forms-forms' with { 'extra_class': 'ecl-u-d-lg-block ecl-u-mb-m', 'extra_attributes': [{ 'name': 'aria-hidden', 'value': 'false' }, { 'name': 'method', 'value': 'get' }, { 'name': 'id', 'value': 'form-filter' } ] } %}
+          {% block form %}
+            {% embed '@ec-europa/ecl-forms-fieldsets' only %}
+              {% block fieldset %}
+                {% include '@ec-europa/ecl-forms-legends' with { content: 'Search options', level: 1 } only %}
+
+                {# ------- Dates ------- #}
+                {% embed '@ec-europa/ecl-forms-form-groups' %}
+                  {% block form_group %}
+                    {% include '@ec-europa/ecl-forms-labels' with { 'label': 'Date', 'for_attribute': 'search-option-date' } %}
+                    <div class="ecl-row ecl-u-mt-xxs ecl-u-align-items-center">
+                      <div class="ecl-col-3">
+                        From
+                      </div>
+                      <div class="ecl-col-9">
+                        {% include '@ec-europa/ecl-datepickers' with {
+                          'value': '01/01/2018',
+                          'id': 'date-from'
+                        }%}
+                      </div>
+                    </div>
+
+                    <div class="ecl-row ecl-u-mt-xxs ecl-u-align-items-center">
+                      <div class="ecl-col-3">
+                        To
+                      </div>
+                      <div class="ecl-col-9">
+                        {% include '@ec-europa/ecl-datepickers' with {
+                          'value': '13/02/2018',
+                          'id': 'date-to'
+                        }%}
+                      </div>
+                    </div>
+                  {% endblock %}
+                {% endembed %}
+
+                {# ------- Categories ------- #}
+                {% embed '@ec-europa/ecl-forms-form-groups' %}
+                  {% block form_group %}
+                    {% include '@ec-europa/ecl-forms-labels' with { 'label': 'Category', 'for_attribute': 'search-option-category' } %}
+                    {% embed '@ec-europa/ecl-forms-selects' with { 'name': 'category', 'id': 'search-option-category' } %}
+                      {% block options %}
+                        <option value="all">All categories</option>
+                        <option value="1" selected>Contact listing page (75)</option>
+                        <option value="1">Document (20)</option>
+                        <option value="1">Expert (2932)</option>
+                        <option value="1">General (1)</option>
+                        <option value="1">Herbal (1)</option>
+                        <option value="1">Medicine (22)</option>
+                        <option value="1">PIP (22)</option>
+                        <option value="1">Questions and answers (179)</option>
+                        <option value="1">Withdrawn applications (1)</option>
+                      {% endblock %}
+                    {% endembed %}
+                  {% endblock %}
+                {% endembed %}
+
+                {# ------- Commitees ------- #}
+                {% embed '@ec-europa/ecl-forms-form-groups' %}
+                  {% block form_group %}
+                    {% include '@ec-europa/ecl-forms-labels' with { 'label': 'Commitees', 'for_attribute': 'search-option-commitee', 'extra_classes': 'ecl-u-mb-xxs' } %}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'CHMP (44)',
+                      'id': 'search-filter-comitees-1',
+                      'name': 'search-filter-comitees-1',
+                      'value': '1'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'CVMP (13)',
+                      'id': 'search-filter-comitees-2',
+                      'name': 'search-filter-comitees-2',
+                      'value': '2'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'HMPC (5)',
+                      'id': 'search-filter-comitees-3',
+                      'name': 'search-filter-comitees-3',
+                      'value': '3'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'CAT (4)',
+                      'id': 'search-filter-comitees-4',
+                      'name': 'search-filter-comitees-4',
+                      'value': '4'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'PDCO (3)',
+                      'id': 'search-filter-comitees-5',
+                      'name': 'search-filter-comitees-5',
+                      'value': '5'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'COMP (2)',
+                      'id': 'search-filter-comitees-6',
+                      'name': 'search-filter-comitees-6',
+                      'value': '6'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'PRAC (2)',
+                      'id': 'search-filter-comitees-7',
+                      'name': 'search-filter-comitees-7',
+                      'value': '7'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'MB (1)',
+                      'id': 'search-filter-comitees-8',
+                      'name': 'search-filter-comitees-8',
+                      'value': '8'
+                    }%}
+                  {% endblock %}
+                {% endembed %}
+
+                {# ------- Sub commitees ------- #}
+                {% embed '@ec-europa/ecl-forms-form-groups' %}
+                  {% block form_group %}
+                    {% include '@ec-europa/ecl-forms-labels' with { 'label': 'Sub Commitees', 'for_attribute': 'search-option-sub-commitee' } %}
+                    {% include '@ec-europa/ecl-forms-text-inputs' with {
+                      'id': 'search-filter-sub-comitees',
+                      'extraAttributes': [
+                        {
+                          'name': 'placeholder',
+                          'value': 'Search for a sub commitee'
+                        }
+                      ],
+                      'extraClass': 'ecl-u-mb-xxs'
+                    } %}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'PCWP (3)',
+                      'id': 'search-filter-sub-comitees-1',
+                      'name': 'search-filter-sub-comitees-1',
+                      'value': '1'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'ASMF-WP (2)',
+                      'id': 'search-filter-sub-comitees-2',
+                      'name': 'search-filter-sub-comitees-2',
+                      'value': '2'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'JAHEG-3Rs (2)',
+                      'id': 'search-filter-sub-comitees-3',
+                      'name': 'search-filter-sub-comitees-3',
+                      'value': '3'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'QRD (2)',
+                      'id': 'search-filter-sub-comitees-4',
+                      'name': 'search-filter-sub-comitees-4',
+                      'value': '4'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'QWP (3)',
+                      'id': 'search-filter-sub-comitees-5',
+                      'name': 'search-filter-sub-comitees-5',
+                      'value': '5'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'ADVENT (1)',
+                      'id': 'search-filter-sub-comitees-6',
+                      'name': 'search-filter-sub-comitees-6',
+                      'value': '6'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'AWP (1)',
+                      'id': 'search-filter-sub-comitees-7',
+                      'name': 'search-filter-sub-comitees-7',
+                      'value': '7'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'BMWP (1)',
+                      'id': 'search-filter-sub-comitees-8',
+                      'name': 'search-filter-sub-comitees-8',
+                      'value': '8'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'BSWP (1)',
+                      'id': 'search-filter-sub-comitees-9',
+                      'name': 'search-filter-sub-comitees-9',
+                      'value': '9'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'BWP (1)',
+                      'id': 'search-filter-sub-comitees-10',
+                      'name': 'search-filter-sub-comitees-10',
+                      'value': '10'
+                    }%}
+                    <a class="ecl-link--ema-more" href="#">See more</a>
+                  {% endblock %}
+                {% endembed %}
+              {% endblock %}
+            {% endembed %}
+
+            {% include '@ec-europa/ema-buttons' with {
+              'modifier': 'primary',
+              'label': 'Refine results',
+              'extra_classes': 'ecl-button--ema-primary ema-u-width-100 ecl-u-mt-m'
+            } %}
+
+            {% include '@ec-europa/ema-buttons' with {
+              'modifier': 'tag',
+              'label': 'Clear all',
+              'extra_classes': 'ecl-button--ema-tag ema-u-width-100 ecl-u-mt-s'
+            } %}
+          {% endblock %}
+        {% endembed %}
+      </aside>
+
+      <section class="ecl-col-lg-9">
+        <h2 class="ecl-heading ecl-heading--h2 ecl-u-d-none ecl-u-d-lg-block">Search results (65)</h2>
+
+        <div class="ecl-u-d-flex ecl-u-align-items-center ecl-u-flex-wrap ecl-u-mb-s">
+          <h3 class="ecl-heading ecl-heading--h3 ema-u-width-grow-1 ecl-u-mb-md-none">Showing results 11 to 20</h3>
+          <div class="ecl-u-d-flex ecl-u-align-items-center">
+            <label class="ema-u-width-nowrap ecl-u-mr-s" for="search-sort">Sort by</label>
+            {% include '@ec-europa/ecl-forms-selects' with {
+              'id': 'search-sort',
+              'name': 'search-sort',
+              'extra_classes': 'ecl-u-mt-none',
+              'options': [
+                { value: '1', label: 'Publication date' },
+                { value: '2', label: 'Last update date' },
+              ]
+            }%}
+          </div>
+        </div>
+
+        <div class="ecl-u-d-flex ecl-u-align-items-center ecl-u-flex-wrap ecl-u-mb-s">
+          {% include '@ec-europa/ecl-tags' with {
+            'modifier': 'facet-close',
+            'label': 'From',
+            'tags': [{ 'value': '01/01/2018' }],
+            'extra_classes': 'ecl-u-mv-xxxs'
+          } %}
+          {% include '@ec-europa/ecl-tags' with {
+            'modifier': 'facet-close',
+            'label': 'To',
+            'tags': [{ 'value': '13/02/2018' }],
+            'extra_classes': 'ecl-u-mv-xxxs'
+          } %}
+          {% include '@ec-europa/ecl-tags' with {
+            'modifier': 'facet-close',
+            'label': 'Category',
+            'tags': [{ 'value': 'Contact listing page' }],
+            'extra_classes': 'ecl-u-mv-xxxs'
+          } %}
+        </div>
+
+        {% include '@ec-europa/ema-listings' with items %}
+
+        {% include '@ec-europa/ecl-pagers' with {
+          'current_page': 2,
+          'max_page': 7
+        } %}
+      </section>
+    </div>
+  </div>
+</main>
+
+{% include '@ec-europa/ema-footers' with footer %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>

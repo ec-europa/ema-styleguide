@@ -14,5 +14,17 @@
     .ema-u-width#{$infix}-100 {
       width: 100%;
     }
+
+    .ema-u-width#{$infix}-grow-1 {
+      flex-grow: 1;
+    }
+
+    .ema-u-width#{$infix}-grow-0 {
+      flex-grow: 0;
+    }
+
+    .ema-u-width#{$infix}-nowrap {
+      white-space: nowrap;
+    }
   }
 }
