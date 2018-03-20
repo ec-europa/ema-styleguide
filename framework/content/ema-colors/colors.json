@@ -6,6 +6,10 @@
   "ema-color-blue-3": { "code": "#4c70b7", "category": "blue" },
   "ema-color-blue-4": { "code": "#5275ba", "category": "blue" },
 
+  "ema-color-epar-red": { "code": "#e32a0d", "category": "epar" },
+  "ema-color-epar-green": { "code": "#06854b", "category": "epar" },
+  "ema-color-epar-grey": { "code": "#737373", "category": "epar" },
+  
   "ema-color-orange-1": { "code": "#f13d23", "category": "orange" },
   "ema-color-orange-2": { "code": "#f48a00", "category": "orange" },
   "ema-color-orange-3": { "code": "#f7bb2c", "category": "orange" },
