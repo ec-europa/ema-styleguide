@@ -1,36 +1,35 @@
 /**
 * EMA List item component
 */
+.ema-list-item {
+  .ecl-list-item__title {
+    font-weight: normal;
+  }
 
-.ecl-list-item__title {
-  font-weight: normal;
+  .ecl-file__translations-title {
+    font-weight: normal;
+  }
+
+  .ecl-list-item__meta {
+    left: 0;
+    position: absolute;
+    top: map-get($ecl-spacing, 'l');
+  }
+
+  .ema-icon {
+    fill: map-get($ema-colors, 'grey-2');
+    height: map-get($ecl-spacing, 'l');
+    width: map-get($ecl-spacing, 'l');
+  }
 }
 
-.ecl-file__translations-title {
-  font-weight: normal;
-}
-
-%ema-file {
+.ema-list-item--file {
   .ecl-list-item__link {
     position: relative;
   }
 
   .ecl-list-item__body {
     padding-left: map-get($ecl-spacing, 'xl');
-  }
-
-  .ecl-list-item__body::before {
-    @extend %ecl-icon;
-
-    color: map-get($ema-colors, 'grey-2');
-    font-size: map-get($ecl-font-size, 'xl');
-    left: map-get($ecl-spacing, 'xxs');
-    position: absolute;
-    top: map-get($ecl-spacing, 'l');
-  }
-
-  .ecl-list-item__title {
-    font-weight: normal;
   }
 }
 
@@ -41,49 +40,9 @@
 .ema-list-item__translations .ecl-file__translations-item:first-child {
   border-top: 0;
 }
-.ecl-list-items__with-translations {
+.ecl-list-items--with-translations {
   border-bottom: 0;
   .ecl-link {
     padding-bottom: 0;
-  }
-}
-
-.ecl-list-item--ema-pdf {
-  @extend %ema-file;
-
-  .ecl-list-item__body::before {
-    @include ecl-icon('file');
-  }
-}
-
-.ecl-list-item--ema-doc {
-  @extend %ema-file;
-
-  .ecl-list-item__body::before {
-    @include ecl-icon('edit');
-  }
-}
-
-.ecl-list-item--ema-xls {
-  @extend %ema-file;
-
-  .ecl-list-item__body::before {
-    @include ecl-icon('spreadsheet');
-  }
-}
-
-.ecl-list-item--ema-ppt {
-  @extend %ema-file;
-
-  .ecl-list-item__body::before {
-    @include ecl-icon('slides');
-  }
-}
-
-.ecl-list-item--ema-zip {
-  @extend %ema-file;
-
-  .ecl-list-item__body::before {
-    @include ecl-icon('package');
   }
 }
