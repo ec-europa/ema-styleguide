@@ -11,7 +11,7 @@ module.exports = {
   label: 'Ratings',
   status: 'ready',
   context: {
-    title: 'Your rating',
+    title: 'Add your rating',
     name: 'ema-rating',
     feedback,
   },
