@@ -400,7 +400,7 @@ module.exports = {
       ratings: [
         {
           feedback,
-          title: 'Your rating',
+          title: 'Add your rating',
           name: 'ema-rating1',
         },
         {
