@@ -1,0 +1,51 @@
+{#
+  - "sections" (array): [{
+    - "label" (string): title of the section (default: '')
+    - "links" (array): array of links components
+  }]
+  - "hotline" (object): {
+    - "href" (string): link of the hotline (default: '#')
+    - "title" (string): hotline title (default: '')
+    - "description" (string): hotline description (default: '')
+  }
+  - "copyright" (string): copyright text (default: '')
+  - "description" (string): description text (default: '')
+  - "logo" (object): {
+    - "src" (string): source of the image (default: '')
+    - "alt" (string): alt text of the image (default: '')
+  }
+  - "extra_classes" (string): extra CSS classes to be added
+  - "extra_attributes" (array): extra attributes classes (optional, format: [{ 'name': 'name_of_the_attribute', 'value': 'value_of_the_attribute'}])
+#}
+
+{# Internal properties #}
+
+{% set _copyright = copyright|default('') %}
+{% set _description = description|default('') %}
+{% set _css_class = 'ema-status' %}
+{% set _extra_attributes = '' %}
+{% set _icon_path = icon_path|default('../../framework/images/icons/ema-icons.svg') %}
+
+{# Internal logic - Process properties #}
+
+{% if extra_class is defined %}
+  {% set _css_class = _css_class ~ ' ' ~ extra_class %}
+{% endif %}
+
+{% if extra_attributes is defined %}
+  {% for attr in extra_attributes %}
+    {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name ~ '="' ~ attr.value ~'"' %}
+  {% endfor %}
+{% endif %}
+
+{# Print the result  #}
+
+<div class="{{ _css_class }}" {{ _extra_attributes }}">
+  <svg class="ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs" {{ _extra_attributes }}>
+    <use xlink:href="{{ _icon_path }}#ema-icon-set_{{ icon }}" />
+  </svg>
+  <span class="ema-status-text">
+    <div class="ema-status-title">{{ status }}</div>
+    <div class="ema-status-desc">{{ description }}</div>
+  </span>
+</div>
