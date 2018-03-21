@@ -1,0 +1,55 @@
+{#
+  - "variant" (string): can be empty, 'info', 'authorized', 'refused' (default: '')
+  - "status" (string): copyright text (default: '')
+  - "description" (string): description text (default: '')
+  - "extra_classes" (string): extra CSS classes to be added
+  - "extra_attributes" (array): extra attributes classes (optional, format: [{ 'name': 'name_of_the_attribute', 'value': 'value_of_the_attribute'}])
+#}
+
+{# Internal properties #}
+
+{% set _status = status|default('') %}
+{% set _description = description|default('') %}
+{% set _icon = 'info' %}
+{% set _css_class = 'ema-status' %}
+{% set _extra_attributes = '' %}
+{% set _icon_path = icon_path|default('../../framework/images/icons/ema-icons.svg') %}
+
+{# Internal properties #}
+
+{% set _css_class = 'ema-status' %}
+{% set _extra_attributes = '' %}
+
+{# Internal logic - Process properties #}
+
+{% if variant is defined and variant is not empty %}
+  {% set _css_class = _css_class ~ ' ' ~ 'ema-status--' ~ variant %}
+  {% if variant == 'authorized' %}
+    {% set _icon = 'select' %}
+  {% elseif variant == 'refused' %}
+    {% set _icon = 'close' %}
+  {% endif %}
+
+{% endif %}
+
+{% if extra_classes is defined and extra_classes is not empty %}
+  {% set _css_class = _css_class ~ ' ' ~ extra_classes %}
+{% endif %}
+
+{% if extra_attributes is defined and extra_attributes is not empty %}
+  {% for attr in extra_attributes %}
+    {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name ~ '="' ~ attr.value ~ '"' %}
+  {% endfor %}
+{% endif %}
+
+{# Print result #}
+
+<div class="{{ _css_class }}" {{ _extra_attributes }}">
+  <svg class="ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs" {{ _extra_attributes }}>
+    <use xlink:href="{{ _icon_path }}#ema-icon-set_{{ _icon }}" />
+  </svg>
+  <span class="ema-status-text">
+    <div class="ema-status-title">{{ status }}</div>
+    <div class="ema-status-desc">{{ description }}</div>
+  </span>
+</div>

@@ -1,0 +1,37 @@
+/**
+ * Status component
+ */
+
+.ema-status {
+  border: 1px solid map-get($ema-colors, 'grey-3');
+  color: #fff;
+  display: flex;
+  font-size: map-get($ecl-font-size, 's');
+  margin: 0;
+  padding: map-get($ecl-spacing, 'm') map-get($ecl-spacing, 'xs');
+}
+
+.ema-status--info {
+  background-color: map-get($ema-colors, 'epar-grey');
+}
+.ema-status--authorized {
+  background-color: map-get($ema-colors, 'epar-green');
+}
+.ema-status--refused {
+  background-color: map-get($ema-colors, 'epar-red');
+}
+
+.ema-status-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ema-status-title {
+  text-transform: uppercase;
+}
+
+.ema-status-desc {
+  font-size: map-get($ecl-font-size, 'xs');
+  margin-top: map-get($ecl-spacing, 'xxxs');
+}
