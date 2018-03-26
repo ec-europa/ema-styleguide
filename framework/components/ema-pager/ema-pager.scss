@@ -9,13 +9,13 @@
   font-size: map-get($ecl-font-size, 'xl');
   line-height: 3;
   padding: map-get($ecl-spacing, 's');
-  padding: 1rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.ema-pager:hover {
+.ema-pager:hover,
+.ema-pager:focus {
   color: map-get($ema-colors, 'grey-2');
   text-decoration: underline;
 }

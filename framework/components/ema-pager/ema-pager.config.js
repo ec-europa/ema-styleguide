@@ -2,5 +2,8 @@ module.exports = {
   title: 'Pager',
   label: 'Pager',
   status: 'ready',
-  context: {},
+  context: {
+    href: '#',
+    label: 'Load more',
+  },
 };

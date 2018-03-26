@@ -1,7 +1,7 @@
 {#
   Accepts:
-    - title (string): title of the panel (default: '')
-    - icon (string): name of the ECL-icons class to be used in the heading
+    - href (string): link of the next page (default: '')
+    - label (string): label of the pager
     - extra_classes (string): additional classes to add to the component
     - extra_attributes (array of { name: '', value: '' })
 #}
@@ -22,6 +22,6 @@
 {% endif %}
 
 {# Print result #}
-<a href="#" class="{{ _css_class }}"{{ _extra_attributes }}>
-Load more
+<a href="{{href}}" class="{{ _css_class }}"{{ _extra_attributes }}>
+{{label}}
 </a>
