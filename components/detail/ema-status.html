@@ -917,9 +917,9 @@
 
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> variant is defined and variant is not empty %}</span><span class="xml">
   </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _css_class = _css_class ~ ' ' ~ 'ema-status--' ~ variant %}</span><span class="xml">
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> variant == 'authorized' %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> variant == 'authorised' %}</span><span class="xml">
     </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _icon = 'select' %}</span><span class="xml">
-  </span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> variant == 'refused' %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> (variant == 'refused') or (variant == 'withdrawn') or (variant == 'suspended') %}</span><span class="xml">
     </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _icon = 'close' %}</span><span class="xml">
   </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
 
@@ -938,7 +938,7 @@
 </span><span class="hljs-comment">{# Print result #}</span><span class="xml">
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _css_class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> </span></span><span class="hljs-template-variable">{{ _extra_attributes }}</span><span class="xml"><span class="hljs-tag">"&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs"</span> </span></span><span class="hljs-template-variable">{{ _extra_attributes }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs ema-status-icon"</span> </span></span><span class="hljs-template-variable">{{ _extra_attributes }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _icon_path }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">#ema-icon-set_</span></span></span><span class="hljs-template-variable">{{ _icon }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-text"</span>&gt;</span>
@@ -965,11 +965,11 @@
 </pre>
         
             <pre>
-<span class="hljs-comment">/* Authorized */</span>
+<span class="hljs-comment">/* Authorised */</span>
 {
-  <span class="hljs-attr">"variant"</span>: <span class="hljs-string">"authorized"</span>,
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Authorized"</span>,
-  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"This medicine is approved for use in the European Union"</span>
+  <span class="hljs-attr">"variant"</span>: <span class="hljs-string">"authorised"</span>,
+  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Authorised"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"This medicine is authorised for use in the European Union"</span>
 }
 
 </pre>
@@ -979,7 +979,27 @@
 {
   <span class="hljs-attr">"variant"</span>: <span class="hljs-string">"refused"</span>,
   <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Refused"</span>,
-  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"This medicinal product has been refused"</span>
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"This medicine was refused for use in the European Union"</span>
+}
+
+</pre>
+        
+            <pre>
+<span class="hljs-comment">/* Withdrawn */</span>
+{
+  <span class="hljs-attr">"variant"</span>: <span class="hljs-string">"withdrawn"</span>,
+  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Withdrawn"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"This medicine is now withdrawn from use in the European Union"</span>
+}
+
+</pre>
+        
+            <pre>
+<span class="hljs-comment">/* Suspended */</span>
+{
+  <span class="hljs-attr">"variant"</span>: <span class="hljs-string">"suspended"</span>,
+  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Suspended"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"This medicine is currently suspended from use in the European Union"</span>
 }
 
 </pre>
@@ -996,7 +1016,7 @@
         
             <pre><span class="hljs-comment">&lt;!-- Info --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status ema-status--info"</span> "&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs "</span> &gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs ema-status-icon "</span> &gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../framework/images/icons/ema-icons.svg#ema-icon-set_info "</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-text "</span>&gt;</span>
@@ -1007,14 +1027,14 @@
 
 </pre>
         
-            <pre><span class="hljs-comment">&lt;!-- Authorized --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status ema-status--authorized"</span> "&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs "</span> &gt;</span>
+            <pre><span class="hljs-comment">&lt;!-- Authorised --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status ema-status--authorised"</span> "&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs ema-status-icon "</span> &gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../framework/images/icons/ema-icons.svg#ema-icon-set_select "</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-text "</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-title "</span>&gt;</span>Authorized<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-desc "</span>&gt;</span>This medicine is approved for use in the European Union<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-title "</span>&gt;</span>Authorised<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-desc "</span>&gt;</span>This medicine is authorised for use in the European Union<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -1022,12 +1042,38 @@
         
             <pre><span class="hljs-comment">&lt;!-- Refused --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status ema-status--refused"</span> "&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs "</span> &gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs ema-status-icon "</span> &gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../framework/images/icons/ema-icons.svg#ema-icon-set_close "</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-text "</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-title "</span>&gt;</span>Refused<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-desc "</span>&gt;</span>This medicinal product has been refused<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-desc "</span>&gt;</span>This medicine was refused for use in the European Union<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+</pre>
+        
+            <pre><span class="hljs-comment">&lt;!-- Withdrawn --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status ema-status--withdrawn"</span> "&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs ema-status-icon "</span> &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../framework/images/icons/ema-icons.svg#ema-icon-set_close "</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-text "</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-title "</span>&gt;</span>Withdrawn<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-desc "</span>&gt;</span>This medicine is now withdrawn from use in the European Union<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+</pre>
+        
+            <pre><span class="hljs-comment">&lt;!-- Suspended --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status ema-status--suspended"</span> "&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs ema-status-icon "</span> &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../framework/images/icons/ema-icons.svg#ema-icon-set_close "</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-text "</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-title "</span>&gt;</span>Suspended<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-desc "</span>&gt;</span>This medicine is currently suspended from use in the European Union<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -1075,13 +1121,19 @@
   <span class="hljs-attribute">padding</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'m'</span>) map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xs'</span>);
 }
 
+<span class="hljs-selector-class">.ema-status-icon</span> {
+  <span class="hljs-attribute">flex-shrink</span>: <span class="hljs-number">0</span>;
+}
+
 <span class="hljs-selector-class">.ema-status--info</span> {
   <span class="hljs-attribute">background-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'epar-grey'</span>);
 }
-<span class="hljs-selector-class">.ema-status--authorized</span> {
+<span class="hljs-selector-class">.ema-status--authorised</span> {
   <span class="hljs-attribute">background-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'epar-green'</span>);
 }
-<span class="hljs-selector-class">.ema-status--refused</span> {
+<span class="hljs-selector-class">.ema-status--refused</span>,
+<span class="hljs-selector-class">.ema-status--withdrawn</span>,
+<span class="hljs-selector-class">.ema-status--suspended</span> {
   <span class="hljs-attribute">background-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'epar-red'</span>);
 }
 
@@ -1115,7 +1167,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">748 Bytes</span>
+                    <span class="Meta-value">836 Bytes</span>
                 </li>
             </ul>
         </div>
