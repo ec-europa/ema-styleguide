@@ -11,13 +11,19 @@
   padding: map-get($ecl-spacing, 'm') map-get($ecl-spacing, 'xs');
 }
 
+.ema-status-icon {
+  flex-shrink: 0;
+}
+
 .ema-status--info {
   background-color: map-get($ema-colors, 'epar-grey');
 }
-.ema-status--authorized {
+.ema-status--authorised {
   background-color: map-get($ema-colors, 'epar-green');
 }
-.ema-status--refused {
+.ema-status--refused,
+.ema-status--withdrawn,
+.ema-status--suspended {
   background-color: map-get($ema-colors, 'epar-red');
 }
 

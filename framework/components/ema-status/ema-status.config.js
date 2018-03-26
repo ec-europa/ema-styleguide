@@ -21,12 +21,13 @@ module.exports = {
       },
     },
     {
-      name: 'authorized',
-      label: 'Authorized',
+      name: 'authorised',
+      label: 'Authorised',
       context: {
-        variant: 'authorized',
-        status: 'Authorized',
-        description: 'This medicine is approved for use in the European Union',
+        variant: 'authorised',
+        status: 'Authorised',
+        description:
+          'This medicine is authorised for use in the European Union',
       },
     },
     {
@@ -35,7 +36,27 @@ module.exports = {
       context: {
         variant: 'refused',
         status: 'Refused',
-        description: 'This medicinal product has been refused',
+        description: 'This medicine was refused for use in the European Union',
+      },
+    },
+    {
+      name: 'withdrawn',
+      label: 'Withdrawn',
+      context: {
+        variant: 'withdrawn',
+        status: 'Withdrawn',
+        description:
+          'This medicine is now withdrawn from use in the European Union',
+      },
+    },
+    {
+      name: 'suspended',
+      label: 'Suspended',
+      context: {
+        variant: 'suspended',
+        status: 'Suspended',
+        description:
+          'This medicine is currently suspended from use in the European Union',
       },
     },
   ],
