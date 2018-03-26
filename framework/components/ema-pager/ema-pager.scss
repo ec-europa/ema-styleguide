@@ -1,0 +1,21 @@
+/**
+* EMA Separator component
+*/
+
+.ema-pager {
+  background-color: map-get($ema-colors, 'light-grey-2');
+  color: map-get($ema-colors, 'grey-3');
+  display: block;
+  font-size: map-get($ecl-font-size, 'xl');
+  line-height: 3;
+  padding: map-get($ecl-spacing, 's');
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.ema-pager:hover {
+  color: map-get($ema-colors, 'grey-2');
+  text-decoration: underline;
+}
