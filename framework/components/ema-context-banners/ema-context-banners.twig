@@ -1,4 +1,5 @@
 {#
+  - "href" (string): url of the landing page (default: '#')
   - "links" (array): array of links components
   - "title" (string): section title (default: '')
   - "description" (string): description text (default: '')
@@ -8,6 +9,7 @@
 
 {# Internal properties #}
 
+{% set _href = href|default('#') %}
 {% set _title = title|default('') %}
 {% set _description = description|default('') %}
 {% set _css_class = 'ema-context-banner' %}
@@ -31,7 +33,7 @@
   <div class="ecl-container">
     <div class="ema-context-banner__wrapper">
       {% if _title is defined and _title is not empty %}
-      <div class="ema-context-banner__title">{{ _title }}</div>
+      <a href="{{_href}}" class="ema-context-banner__title">{{ _title }}</a>
       {% endif %}
 
       {% if _description is defined and _description is not empty %}
