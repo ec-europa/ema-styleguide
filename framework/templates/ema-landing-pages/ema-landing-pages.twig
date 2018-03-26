@@ -1,0 +1,67 @@
+{#
+  This is an example and should not be used as it is.
+#}
+
+{% include '@ec-europa/ecl-skip-links' with {
+    'href': '#main-content',
+    'label': 'Skip to main content'
+} %}
+
+{% include '@ec-europa/ema-headers' with header %}
+
+{% include '@ec-europa/ema-navigation-menus' with menu %}
+
+{% include '@ec-europa/ema-context-banners' with banner %}
+
+<main class="ecl-u-mv-l">
+  <div class="ecl-container">
+  <div class="ecl-row">
+    <section class="ecl-col-lg-12">
+      <h2 class="ecl-heading ecl-heading--ema-h2">What's new</h2>
+      <section>
+        {% include '@ec-europa/ecl-listings' with {
+          variant: 'two-columns',
+          items: items_news
+        } %}
+      </section>
+    </div>
+    <div class="ecl-row">
+      <section class="ecl-col-lg-12">
+        <h2 class="ecl-heading ecl-heading--ema-h2">Browse our partners</h2>
+
+        {% include '@ec-europa/ema-separator' with {
+          icon: 'group',
+          title: 'EU partners',
+        } %}
+
+        {% include '@ec-europa/ecl-listings' with {
+          variant: 'two-columns',
+          items: items_eu_partners
+        } %}
+
+        {% include '@ec-europa/ema-separator' with {
+          icon: 'group',
+          title: 'Regulators outside the EU',
+        } %}
+
+        {% include '@ec-europa/ecl-listings' with {
+          variant: 'three-columns',
+          items: items_regulators,
+        } %}
+
+        {% include '@ec-europa/ema-separator' with {
+          icon: 'group',
+          title: 'Patients and Consumers',
+        } %}
+
+        {% include '@ec-europa/ecl-listings' with {
+          variant: 'three-columns',
+          items: items_patients
+        } %}
+
+      </section>
+  </div>
+  </div>
+</main>
+
+{% include '@ec-europa/ema-footers' with footer %}
