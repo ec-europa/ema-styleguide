@@ -24,9 +24,9 @@
 
 {% if variant is defined and variant is not empty %}
   {% set _css_class = _css_class ~ ' ' ~ 'ema-status--' ~ variant %}
-  {% if variant == 'authorized' %}
+  {% if variant == 'authorised' %}
     {% set _icon = 'select' %}
-  {% elseif variant == 'refused' %}
+  {% elseif (variant == 'refused') or (variant == 'withdrawn') or (variant == 'suspended') %}
     {% set _icon = 'close' %}
   {% endif %}
 
@@ -45,7 +45,7 @@
 {# Print result #}
 
 <div class="{{ _css_class }}" {{ _extra_attributes }}">
-  <svg class="ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs" {{ _extra_attributes }}>
+  <svg class="ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs ema-status-icon" {{ _extra_attributes }}>
     <use xlink:href="{{ _icon_path }}#ema-icon-set_{{ _icon }}" />
   </svg>
   <span class="ema-status-text">
