@@ -706,6 +706,30 @@
         
         
         <li class="ecl-navigation-menu__item"  data-role="item">
+          <a href="ema-landing-pages" class="ecl-navigation-menu__link ">
+            
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="background-color: #467a39; border-color: #467a39;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            <span>Landing pages</span>
+          </a>
+        </li>
+        
+    
+        
+        
+        <li class="ecl-navigation-menu__item"  data-role="item">
           <a href="ema-search-pages" class="ecl-navigation-menu__link ">
             
 
@@ -916,6 +940,7 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-736ba5c08581f9835c76983385c05dd0-panel-view">
     <code class="Code Code--lang-twig">
         <pre><span class="xml"></span><span class="hljs-comment">{#
+  - "href" (string): url of the landing page (default: '#')
   - "links" (array): array of links components
   - "title" (string): section title (default: '')
   - "description" (string): description text (default: '')
@@ -925,6 +950,7 @@
 
 </span><span class="hljs-comment">{# Internal properties #}</span><span class="xml">
 
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _href = href|<span class="hljs-keyword">default</span>('#') %}</span><span class="xml">
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _title = title|<span class="hljs-keyword">default</span>('') %}</span><span class="xml">
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _description = description|<span class="hljs-keyword">default</span>('') %}</span><span class="xml">
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> _css_class = 'ema-context-banner' %}</span><span class="xml">
@@ -948,7 +974,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-container"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__wrapper"</span>&gt;</span>
       </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> _title is defined and _title is not empty %}</span><span class="xml">
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__title"</span>&gt;</span></span><span class="hljs-template-variable">{{ _title }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{_href}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__title"</span>&gt;</span></span><span class="hljs-template-variable">{{ _title }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
       </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
 
       </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> _description is defined and _description is not empty %}</span><span class="xml">
@@ -1014,7 +1040,7 @@
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-container"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__wrapper"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__title"</span>&gt;</span>Human regulatory<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__title"</span>&gt;</span>Human regulatory<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
       <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-paragraph ecl-paragraph--ema ecl-paragraph--l"</span>&gt;</span>This section of the website provides information on the regulation of medicines for human use in the European Union (EU). It particularly concerns the centralised procedure, where the European Medicines Agency (EMA) plays a key role.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
@@ -1081,10 +1107,17 @@
 }
 
 <span class="hljs-selector-class">.ema-context-banner__title</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>;
   <span class="hljs-attribute">font-size</span>: map-get(<span class="hljs-variable">$ecl-font-size</span>, <span class="hljs-string">'xxl'</span>);
   <span class="hljs-attribute">font-weight</span>: normal;
   <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.1</span>;
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1.66rem</span>;
+  <span class="hljs-attribute">text-decoration</span>: none;
+
+  &amp;:hover,
+  &amp;:focus {
+    <span class="hljs-attribute">text-decoration</span>: underline;
+  }
 }
 
 <span class="hljs-selector-class">.ema-context-banner__links</span> {
@@ -1143,7 +1176,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.1 KB</span>
+                    <span class="Meta-value">1.2 KB</span>
                 </li>
             </ul>
         </div>
