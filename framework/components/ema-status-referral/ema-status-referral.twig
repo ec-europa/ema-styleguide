@@ -28,9 +28,9 @@
 
     {% set _active = '' %}
     {% if item.active %}
-      {% set _active = 'ema-status-referral-step--active' %}
+      {% set _active = 'ema-status-referral__step--active' %}
     {% endif %}
-    <li class="ema-status-referral-step {{_active}}">{{item.title}}</li>
+    <li class="ema-status-referral__step {{_active}}">{{item.title}}</li>
 
   {% endfor %}
 </ul>

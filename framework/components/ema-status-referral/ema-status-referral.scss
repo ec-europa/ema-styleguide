@@ -12,7 +12,7 @@
   padding: 0;
 }
 
-.ema-status-referral-step {
+.ema-status-referral__step {
   border-top: solid map-get($ecl-spacing, 'xxxs') map-get($ema-colors, 'grey-3');
   color: map-get($ema-colors, 'grey-3');
   margin-top: map-get($ecl-spacing, 'm');
@@ -21,7 +21,7 @@
   text-align: center;
 }
 
-.ema-status-referral-step::before {
+.ema-status-referral__step::before {
   background-color: map-get($ema-colors, 'grey-3');
   border-radius: map-get($ecl-spacing, 'm');
   content: '';
@@ -33,10 +33,10 @@
   z-index: 2;
 }
 
-.ema-status-referral-step--active {
+.ema-status-referral__step--active {
   border-color: map-get($ema-colors, 'primary');
   color: map-get($ema-colors, 'primary');
 }
-.ema-status-referral-step--active::before {
+.ema-status-referral__step--active::before {
   background-color: map-get($ema-colors, 'primary');
 }
