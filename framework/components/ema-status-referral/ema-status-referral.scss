@@ -1,0 +1,42 @@
+/**
+ * Status referral component
+ */
+
+.ema-status-referral {
+  display: flex;
+  flex-flow: row wrap;
+  flex-wrap: nowrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ema-status-referral__step {
+  border-top: solid map-get($ecl-spacing, 'xxxs') map-get($ema-colors, 'grey-3');
+  color: map-get($ema-colors, 'grey-3');
+  margin-top: map-get($ecl-spacing, 'm');
+  padding-left: map-get($ecl-spacing, 'xs');
+  padding-right: map-get($ecl-spacing, 'xs');
+  text-align: center;
+}
+
+.ema-status-referral__step::before {
+  background-color: map-get($ema-colors, 'grey-3');
+  border-radius: map-get($ecl-spacing, 'm');
+  content: '';
+  display: block;
+  height: map-get($ecl-spacing, 'm');
+  margin: - map-get($ecl-spacing, 's') auto map-get($ecl-spacing, 's') auto;
+  position: relative;
+  width: map-get($ecl-spacing, 'm');
+  z-index: 2;
+}
+
+.ema-status-referral__step--active {
+  border-color: map-get($ema-colors, 'primary');
+  color: map-get($ema-colors, 'primary');
+}
+.ema-status-referral__step--active::before {
+  background-color: map-get($ema-colors, 'primary');
+}
