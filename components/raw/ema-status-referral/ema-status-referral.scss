@@ -15,6 +15,7 @@
 .ema-status-referral__step {
   border-top: solid map-get($ecl-spacing, 'xxxs') map-get($ema-colors, 'grey-3');
   color: map-get($ema-colors, 'grey-3');
+  flex-basis: 20%;
   margin-top: map-get($ecl-spacing, 'm');
   padding-left: map-get($ecl-spacing, 'xs');
   padding-right: map-get($ecl-spacing, 'xs');
