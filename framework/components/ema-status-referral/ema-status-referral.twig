@@ -1,0 +1,36 @@
+{#
+  - "items" (array): array of steps (default: '')
+  - "extra_classes" (string): extra CSS classes to be added
+  - "extra_attributes" (array): extra attributes classes (optional, format: [{ 'name': 'name_of_the_attribute', 'value': 'value_of_the_attribute'}])
+#}
+
+{# Internal properties #}
+
+{% set _css_class = 'ema-status-referral' %}
+{% set _extra_attributes = '' %}
+
+{# Internal logic - Process properties #}
+
+{% if extra_classes is defined and extra_classes is not empty %}
+  {% set _css_class = _css_class ~ ' ' ~ extra_classes %}
+{% endif %}
+
+{% if extra_attributes is defined and extra_attributes is not empty %}
+  {% for attr in extra_attributes %}
+    {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name ~ '="' ~ attr.value ~ '"' %}
+  {% endfor %}
+{% endif %}
+
+{# Print result #}
+
+<ul class="{{ _css_class }}" {{ _extra_attributes }}">
+  {% for item in items %}
+
+    {% set _active = '' %}
+    {% if item.active %}
+      {% set _active = 'ema-status-referral__step--active' %}
+    {% endif %}
+    <li class="ema-status-referral__step {{_active}}">{{item.title}}</li>
+
+  {% endfor %}
+</ul>
