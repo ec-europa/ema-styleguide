@@ -972,52 +972,103 @@
 
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-navigation-menus' with menu %}</span><span class="xml">
 
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-context-banners' with banner %}</span><span class="xml">
+
 
 <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-mv-l"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-container"</span>&gt;</span>
+
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-row"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-col-lg-12"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-heading ecl-heading--ema-h2"</span>&gt;</span>Healthcare Professionals<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-paragraph ecl-paragraph--ema"</span>&gt;</span>
+          On this page, you will find information on the Agency’s activities that are most relevant to healthcare professionals, including news, and events. You can contribute to the Agency’s work by responding to public consultations. Learn more about how Healthcare Professionals are actively involved in the work of the Agency.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-row"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-col-lg-12"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-heading ecl-heading--ema-h2"</span>&gt;</span>What's new<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+
+      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-separator' with {
+        icon: 'news',
+        title: 'Featured information',
+      } %}</span><span class="xml">
+
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-listings' with {
           variant: 'two-columns',
-          items: items_news,
+          items: items_featured,
         } %}</span><span class="xml">
-      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-row"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-col-lg-12"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-heading ecl-heading--ema-h2"</span>&gt;</span>Browse our partners<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-separator' with {
-          icon: 'group',
-          title: 'EU partners',
+          icon: 'news',
+          title: 'News for healthcare professionals',
+        } %}</span><span class="xml">
+
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-listings' with {
+          variant: 'three-columns',
+          items: items_news,
+        } %}</span><span class="xml">
+
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-separator' with {
+          icon: 'calendar-datepicker',
+          title: 'Events of interest',
         } %}</span><span class="xml">
 
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-listings' with {
           variant: 'two-columns',
-          items: items_eu_partners,
+          items: items_events,
         } %}</span><span class="xml">
 
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-separator' with {
           icon: 'group',
-          title: 'Regulators outside the EU',
+          title: 'Information for',
         } %}</span><span class="xml">
 
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-listings' with {
           variant: 'three-columns',
-          items: items_regulators,
+          items: items_audience,
         } %}</span><span class="xml">
 
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-separator' with {
-          icon: 'group',
-          title: 'Patients and Consumers',
+          icon: 'play',
+          title: 'Media',
+          extra_classes: 'ecl-u-pv-l',
+        } %}</span><span class="xml">
+
+
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-d-flex ecl-u-align-itmes-baseline ecl-u-justify-content-around"</span>&gt;</span>
+          </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-files' with {
+            variant: 'image',
+            title: 'Media',
+            src: 'http://www.ema.europa.eu/ema/images/SL_Working_with_HCP.jpg',
+            alt: 'alt',
+            caption: 'Working with healthcare professionals',
+          } %}</span><span class="xml">
+
+          </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-files' with {
+            variant: 'video',
+            title: 'Media',
+            src: 'https://www.youtube.com/embed/ShezrN2gs_8?rel=0',
+            alt: 'alt',
+            is_iframe: true,
+            caption: 'Working for every patient in Europe',
+          } %}</span><span class="xml">
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ema-separator' with {
+          icon: 'news',
+          title: 'Contextual links',
+          extra_classes: 'ecl-u-pv-l',
         } %}</span><span class="xml">
 
         </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> '@ec-europa/ecl-listings' with {
           variant: 'three-columns',
-          items: items_patients,
+          items: items_area,
         } %}</span><span class="xml">
 
       <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
@@ -1239,7 +1290,6 @@
         <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#item1"</span>,
         <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Human regulatory"</span>,
         <span class="hljs-attr">"description"</span>: <span class="hljs-string">"This section of the website provides information on the regulation of medicines for human use in the European Union (EU). It particularly concerns the centralised procedure, where the European Medicines Agency (EMA) plays a key role."</span>,
-        <span class="hljs-attr">"is_active"</span>: <span class="hljs-literal">true</span>,
         <span class="hljs-attr">"children_links"</span>: [
           {
             <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Overview"</span>,
@@ -1303,142 +1353,240 @@
     ]
   },
   <span class="hljs-attr">"banner"</span>: {
-    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Human regulatory"</span>,
-    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"This section of the website provides information on the regulation of medicines for human use in the European Union (EU). It particularly concerns the centralised procedure, where the European Medicines Agency (EMA) plays a key role."</span>,
-    <span class="hljs-attr">"links"</span>: [
-      {
-        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Overview"</span>,
-        <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#item1-1"</span>
-      },
-      {
-        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Marketing authorisation"</span>,
-        <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#item1-4"</span>
-      },
-      {
-        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Research and development"</span>,
-        <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#item1-2"</span>
-      },
-      {
-        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Post authorisation"</span>,
-        <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#item1-5"</span>
-      },
-      {
-        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Herbal products"</span>,
-        <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#item1-3"</span>
-      }
-    ]
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Healthcare Professionals"</span>,
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"On this page, you will find information on the Agency’s activities that are most relevant to healthcare professionals, including news, and events. You can contribute to the Agency’s work by responding to public consultations. Learn more about how Healthcare Professionals are actively involved in the work of the Agency."</span>,
+    <span class="hljs-attr">"links"</span>: []
   },
+  <span class="hljs-attr">"items_featured"</span>: [
+    {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Orphan medicines: getting the facts straight"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-thumbnail"</span>,
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"EMA has published a question-and-answer document addressing common misunderstandings about the meaning of orphan designation and other aspects pertaining to orphan medicines, including significant benefit and market exclusivity. For more information, see Orphan designation."</span>,
+      <span class="hljs-attr">"primary_image"</span>: {
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"http://www.ema.europa.eu/ema/images/features/rare_diseases_q_a.jpg"</span>,
+        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"news alt text"</span>
+      }
+    },
+    {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Human medicines highlights 2017"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-thumbnail"</span>,
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"EMA has released an overview of its key recommendations in 2017 on the authorisation of new medicines. EMA recommended 92 medicines for marketing authorisation. This includes recommendations for 35 new active substances."</span>,
+      <span class="hljs-attr">"primary_image"</span>: {
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"http://www.ema.europa.eu/ema/images/leaflet_highlights_2017.jpg"</span>,
+        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"news alt text"</span>
+      }
+    },
+    {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"New orphan maintenance assessment reports"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-thumbnail"</span>,
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"As of 17 January 2018, the European Public Assessment Report (EPAR) for every newly-authorised medicine contains an orphan maintenance assessment report if it was granted orphan-designation during the development phase. This report reflects the Agency’s Committee for Orphan Medicinal Products (COMP) opinion on whether a medicine continues to meet the orphan designation criteria when it is authorised, and will be published for all positive and negative COMP opinions, as well as withdrawals. This determines whether it benefits from ten years market exclusivity, a key incentive to stimulate the development of medicines to treat rare diseases."</span>,
+      <span class="hljs-attr">"primary_image"</span>: {
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"http://www.ema.europa.eu/ema/images/OMAR2.jpg"</span>,
+        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"news alt text"</span>
+      }
+    },
+    {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Ten-year report on implementation of the Paediatric Regulation"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-thumbnail"</span>,
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"In October 2017, the European Commission published a report on progress made in children s medicinesExternal link icon since the Paediatric Regulation came into force 10 years ago. The report shows an increase in medicines for children in many therapeutic areas in the last ten years, most notably in rheumatology and infectious diseases. However, it also shows that little progress has been made in diseases that only affect children or where the disease shows biological differences between adults and children, particularly rare diseases. The Commission and EMA and its Paediatric Committee will develop an action plan to improve the implementation of the Regulation."</span>,
+      <span class="hljs-attr">"primary_image"</span>: {
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"http://www.ema.europa.eu/ema/images/features/EC_paediatric_report.jpg"</span>,
+        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"news alt text"</span>
+      }
+    }
+  ],
   <span class="hljs-attr">"items_news"</span>: [
     {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"News title"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-thumbnail-two-1"</span>,
-      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur."</span>,
-      <span class="hljs-attr">"primary_image"</span>: {
-        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"https://picsum.photos/100/100/?random"</span>,
-        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"news alt text"</span>
-      }
-    },
-    {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"News title"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-thumbnail-two-1"</span>,
-      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur."</span>,
-      <span class="hljs-attr">"primary_image"</span>: {
-        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"https://picsum.photos/100/100/?random"</span>,
-        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"news alt text"</span>
-      }
-    },
-    {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"News title"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-thumbnail-two-1"</span>,
-      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur."</span>,
-      <span class="hljs-attr">"primary_image"</span>: {
-        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"https://picsum.photos/100/100/?random"</span>,
-        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"news alt text"</span>
-      }
-    },
-    {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"News title"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-thumbnail-two-1"</span>,
-      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur."</span>,
-      <span class="hljs-attr">"primary_image"</span>: {
-        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"https://picsum.photos/100/100/?random"</span>,
-        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"news alt text"</span>
-      }
-    }
-  ],
-  <span class="hljs-attr">"items_eu_partners"</span>: [
-    {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"EU institutions"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Updated measures for pregnancy prevention during retinoid use"</span>,
       <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-1"</span>,
-      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur."</span>
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Warning on possible risk of neuropsychiatric disorders also to be included for oral retinoids ... Read more"</span>,
+      <span class="hljs-attr">"metas"</span>: [
+        <span class="hljs-string">"23/03/2018"</span>
+      ]
     },
     {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"EU agencies"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-2"</span>,
-      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur."</span>
-    },
-    {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"EU member states"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-3"</span>,
-      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur."</span>
-    },
-    {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"EU enlargement"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-4"</span>,
-      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur."</span>
-    }
-  ],
-  <span class="hljs-attr">"items_regulators"</span>: [
-    {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"United states"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-1"</span>
-    },
-    {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Canada"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-2"</span>
-    },
-    {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Japan"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-3"</span>
-    },
-    {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Switzerland"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-4"</span>
-    },
-    {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Australia"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-5"</span>
-    },
-    {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"New Zealand"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-6"</span>
-    }
-  ],
-  <span class="hljs-attr">"items_patients"</span>: [
-    {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Getting involved"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Withdrawal of pain medicine flupirtine endorsed"</span>,
       <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-1"</span>,
-      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur."</span>
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Serious liver problems continued to be reported despite previous restrictions in use ... Read more"</span>,
+      <span class="hljs-attr">"metas"</span>: [
+        <span class="hljs-string">"23/03/2018"</span>
+      ]
     },
     {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Eligible organisations"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-2"</span>,
-      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur."</span>
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Workshop on Paediatric Regulation – stakeholders to discuss how to boost development of medicines for children"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-1"</span>,
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Event to be broadcast live on 20 March ... Read more"</span>,
+      <span class="hljs-attr">"metas"</span>: [
+        <span class="hljs-string">"19/03/2018"</span>
+      ]
     },
     {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Patients and Consumers working party"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-3"</span>,
-      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur."</span>
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"EMA Management Board: highlights of March 2018 meeting"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-1"</span>,
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Board adopts 2017 report on veterinary medicines for minor use minor species and hears update on clinical trial portal and database ... Read more"</span>,
+      <span class="hljs-attr">"metas"</span>: [
+        <span class="hljs-string">"16/03/2018"</span>
+      ]
     },
     {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Training &amp; resources"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-4"</span>,
-      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur."</span>
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Meeting highlights from the Pharmacovigilance Risk Assessment Committee (PRAC) 5-8 March 2018"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-1"</span>,
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Immediate measures agreed for Zinbryta and Xofigo while reviews are ongoing; public hearing decided for quinolone and fluoroquinolone antibiotics ... Read more"</span>,
+      <span class="hljs-attr">"metas"</span>: [
+        <span class="hljs-string">"09/03/2018"</span>
+      ]
     },
     {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Key documents"</span>,
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-4"</span>,
-      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur."</span>
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Meeting highlights from the Pharmacovigilance Risk Assessment Committee (PRAC) 5-8 March 2018"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-1"</span>,
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Immediate measures agreed for Zinbryta and Xofigo while reviews are ongoing; public hearing decided for quinolone and fluoroquinolone antibiotics ... Read more"</span>,
+      <span class="hljs-attr">"metas"</span>: [
+        <span class="hljs-string">"09/03/2018"</span>
+      ]
+    }
+  ],
+  <span class="hljs-attr">"items_events"</span>: [
+    {
+      <span class="hljs-attr">"variant"</span>: <span class="hljs-string">"date"</span>,
+      <span class="hljs-attr">"date"</span>: {
+        <span class="hljs-attr">"week_day"</span>: <span class="hljs-string">"Tue-Fri"</span>,
+        <span class="hljs-attr">"day"</span>: <span class="hljs-string">"05-08"</span>,
+        <span class="hljs-attr">"month"</span>: <span class="hljs-string">"Mar"</span>
+      },
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Pharmacovigilance Risk Assessment Committee (PRAC): 5-8 March 2018"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-1"</span>,
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"The Pharmacovigilance Risk Assessment Committee (PRAC) is the committee that is responsible for assessing all aspects of the risk management of medicines for human use. ... Read more"</span>,
+      <span class="hljs-attr">"metas"</span>: [
+        <span class="hljs-string">"05/03/2018 - 08/03/2018"</span>,
+        <span class="hljs-string">"PRAC"</span>
+      ]
+    },
+    {
+      <span class="hljs-attr">"variant"</span>: <span class="hljs-string">"date"</span>,
+      <span class="hljs-attr">"date"</span>: {
+        <span class="hljs-attr">"week_day"</span>: <span class="hljs-string">"Wed"</span>,
+        <span class="hljs-attr">"day"</span>: <span class="hljs-string">"28"</span>,
+        <span class="hljs-attr">"month"</span>: <span class="hljs-string">"Feb"</span>
+      },
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Extraordinary Management Board meeting: 28 February 2018"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-1"</span>,
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"This extraordinary Management Board meeting is to consider the building approval process for EMA’s premises in Amsterdam. The Management Board is an integral governance body of the Agency. It has a supervisory role with general responsibility for budgetary and planning matters, the appointment of the Executive Director and the monitoring of the Agency’s performance. ... Read more"</span>,
+      <span class="hljs-attr">"metas"</span>: [
+        <span class="hljs-string">"28/02/2018"</span>,
+        <span class="hljs-string">"MB"</span>
+      ]
+    },
+    {
+      <span class="hljs-attr">"variant"</span>: <span class="hljs-string">"date"</span>,
+      <span class="hljs-attr">"date"</span>: {
+        <span class="hljs-attr">"week_day"</span>: <span class="hljs-string">"Mon"</span>,
+        <span class="hljs-attr">"day"</span>: <span class="hljs-string">"12"</span>,
+        <span class="hljs-attr">"month"</span>: <span class="hljs-string">"Feb"</span>
+      },
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Submission of referentials management services (RMS) and organisations management services (OMS) change requests"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-1"</span>,
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"The European Medicines Agency’s (EMA) programme for substance, product, organisation and referential (SPOR) data services held a webinar with industry stakeholders to summarise the milestones and impacts on industry of the referentials management services (RMS) and organisations management services (OMS). The webinar focused on the submission of RMS and OMS change requests relating to referential and organisation data. ... Read more"</span>,
+      <span class="hljs-attr">"metas"</span>: [
+        <span class="hljs-string">"12/02/2018"</span>,
+        <span class="hljs-string">"EMA"</span>
+      ]
+    },
+    {
+      <span class="hljs-attr">"variant"</span>: <span class="hljs-string">"date"</span>,
+      <span class="hljs-attr">"date"</span>: {
+        <span class="hljs-attr">"week_day"</span>: <span class="hljs-string">"Tue-Fri"</span>,
+        <span class="hljs-attr">"day"</span>: <span class="hljs-string">"14-15"</span>,
+        <span class="hljs-attr">"month"</span>: <span class="hljs-string">"Dec"</span>
+      },
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Workshop on site and histology - Independent indications in oncology"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#listing-default-two-1"</span>,
+      <span class="hljs-attr">"detail"</span>: <span class="hljs-string">"Biological drivers that define cancer course across anatomical sites and histologies offer an opportunity to select populations sensitive to specific drugs based on those drivers, independently of the specific site or histology. This workshop aims to provide an exchange of views from different stakeholders about situations where a site and histology-independent clinical development might be a viable option and the associated challenges in terms of drug development, benefit-risk evaluation and health-technology assessment. ... Read more"</span>,
+      <span class="hljs-attr">"metas"</span>: [
+        <span class="hljs-string">"14/12/2017 - 15/12/2017"</span>,
+        <span class="hljs-string">"CHMP"</span>
+      ]
+    }
+  ],
+  <span class="hljs-attr">"items_audience"</span>: [
+    {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Healthcare professionals"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#list-item-4"</span>
+    },
+    {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Patients and careers"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#list-item-4"</span>
+    },
+    {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Animal health professionals"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#list-item-4"</span>
+    },
+    {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Pharmaceutical industry"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#list-item-4"</span>
+    },
+    {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Media"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#list-item-4"</span>
+    },
+    {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Academia"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#list-item-4"</span>
+    }
+  ],
+  <span class="hljs-attr">"items_area"</span>: [
+    {
+      <span class="hljs-attr">"variant"</span>: <span class="hljs-string">"highlight"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Medicine and emerging science"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#list-item-4"</span>,
+      <span class="hljs-attr">"primary_image"</span>: {
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"https://picsum.photos/200/200"</span>,
+        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"Highlighted image"</span>
+      }
+    },
+    {
+      <span class="hljs-attr">"variant"</span>: <span class="hljs-string">"highlight"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"EU clinical trials register"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#list-item-4"</span>,
+      <span class="hljs-attr">"primary_image"</span>: {
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"https://picsum.photos/200/200"</span>,
+        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"Highlighted image"</span>
+      }
+    },
+    {
+      <span class="hljs-attr">"variant"</span>: <span class="hljs-string">"highlight"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Medicine for children"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#list-item-4"</span>,
+      <span class="hljs-attr">"primary_image"</span>: {
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"https://picsum.photos/200/200"</span>,
+        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"Highlighted image"</span>
+      }
+    },
+    {
+      <span class="hljs-attr">"variant"</span>: <span class="hljs-string">"highlight"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Medicine for older people"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#list-item-4"</span>,
+      <span class="hljs-attr">"primary_image"</span>: {
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"https://picsum.photos/200/200"</span>,
+        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"Highlighted image"</span>
+      }
+    },
+    {
+      <span class="hljs-attr">"variant"</span>: <span class="hljs-string">"highlight"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Side effects reports"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#list-item-4"</span>,
+      <span class="hljs-attr">"primary_image"</span>: {
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"https://picsum.photos/200/200"</span>,
+        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"Highlighted image"</span>
+      }
+    },
+    {
+      <span class="hljs-attr">"variant"</span>: <span class="hljs-string">"highlight"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"FAQs about the agency"</span>,
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#list-item-4"</span>,
+      <span class="hljs-attr">"primary_image"</span>: {
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"https://picsum.photos/200/200"</span>,
+        <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"Highlighted image"</span>
+      }
     }
   ],
   <span class="hljs-attr">"_demo"</span>: {
@@ -1515,8 +1663,39 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-navigation-menu__item"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#home"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-navigation-menu__link"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-navigation-menu__item ecl-navigation-menu__item--active"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#item1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-navigation-menu__link"</span>&gt;</span>Human regulatory<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-navigation-menu__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#item1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-navigation-menu__link"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"nav-menu-expandable-group-2"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">"true"</span>&gt;</span>Human regulatory<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-navigation-menu__group"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"nav-menu-expandable-group-2"</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-container"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__wrapper"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__title"</span>&gt;</span>Human regulatory<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-paragraph ecl-paragraph--ema ecl-paragraph--l"</span>&gt;</span>This section of the website provides information on the regulation of medicines for human use in the European Union (EU). It particularly concerns the centralised procedure, where the European Medicines Agency (EMA) plays a key role.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__links"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__item"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#item1-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__link"</span>&gt;</span>Overview<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__item"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#item1-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__link"</span>&gt;</span>Marketing authorisation<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__item"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#item1-2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__link ema-context-banner__link--active"</span>&gt;</span>Research and development<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__item"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#item1-5"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__link"</span>&gt;</span>Post authorisation<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__item"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#item1-3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__link"</span>&gt;</span>Herbal products<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-navigation-menu__item"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#item2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-navigation-menu__link"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"nav-menu-expandable-group-3"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">"true"</span>&gt;</span>Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -1563,186 +1742,29 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-container"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__wrapper"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__title"</span>&gt;</span>Human regulatory<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-paragraph ecl-paragraph--ema ecl-paragraph--l"</span>&gt;</span>This section of the website provides information on the regulation of medicines for human use in the European Union (EU). It particularly concerns the centralised procedure, where the European Medicines Agency (EMA) plays a key role.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__links"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__item"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#item1-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__link"</span>&gt;</span>Overview<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__item"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#item1-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__link"</span>&gt;</span>Marketing authorisation<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__item"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#item1-2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__link"</span>&gt;</span>Research and development<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__item"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#item1-5"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__link"</span>&gt;</span>Post authorisation<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__item"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#item1-3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-context-banner__link"</span>&gt;</span>Herbal products<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
 <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-mv-l"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-container"</span>&gt;</span>
+
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-row"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-col-lg-12"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-heading ecl-heading--ema-h2"</span>&gt;</span>What's new<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
-
-          <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-listing ecl-listing--two-columns"</span>&gt;</span>
-
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--two-columns"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-thumbnail-two-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"news alt text"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/100/100/?random"</span> /&gt;</span>
-
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
-
-                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--two-columns"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>News title<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur
-                    eleifend elit ac pulvinar consectetur.
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-              <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--two-columns"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-thumbnail-two-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"news alt text"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/100/100/?random"</span> /&gt;</span>
-
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
-
-                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--two-columns"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>News title<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur
-                    eleifend elit ac pulvinar consectetur.
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-              <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--two-columns"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-thumbnail-two-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"news alt text"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/100/100/?random"</span> /&gt;</span>
-
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
-
-                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--two-columns"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>News title<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur
-                    eleifend elit ac pulvinar consectetur.
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-              <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--two-columns"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-thumbnail-two-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"news alt text"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/100/100/?random"</span> /&gt;</span>
-
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
-
-                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--two-columns"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>News title<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur
-                    eleifend elit ac pulvinar consectetur.
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-              <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-
-          <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-heading ecl-heading--ema-h2"</span>&gt;</span>Healthcare Professionals<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-paragraph ecl-paragraph--ema"</span>&gt;</span>
+          On this page, you will find information on the Agency’s activities that are most relevant to healthcare professionals, including news, and events. You can contribute to the Agency’s work by responding to public consultations. Learn more about how Healthcare
+          Professionals are actively involved in the work of the Agency.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-row"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-col-lg-12"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-heading ecl-heading--ema-h2"</span>&gt;</span>Browse our partners<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator__heading"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator__heading--title ecl-heading ecl-heading--ema-h3"</span>&gt;</span>
-              EU partners
+              Featured information
             <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
             <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-separator__heading--icon"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../framework/images/icons/ema-icons.svg#ema-icon-set_group"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../framework/images/icons/ema-icons.svg#ema-icon-set_news"</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -1750,21 +1772,172 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-listing ecl-listing--two-columns"</span>&gt;</span>
 
           <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--two-columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-thumbnail"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"news alt text"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://www.ema.europa.eu/ema/images/features/rare_diseases_q_a.jpg"</span> /&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--two-columns"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Orphan medicines: getting the facts straight<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
+                  EMA has published a question-and-answer document addressing common misunderstandings about the meaning of orphan designation and other aspects pertaining to orphan medicines, including significant benefit and market exclusivity. For more information,
+                  see Orphan designation.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--two-columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-thumbnail"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"news alt text"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://www.ema.europa.eu/ema/images/leaflet_highlights_2017.jpg"</span> /&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--two-columns"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Human medicines highlights 2017<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
+                  EMA has released an overview of its key recommendations in 2017 on the authorisation of new medicines. EMA recommended 92 medicines for marketing authorisation. This includes recommendations for 35 new active substances.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--two-columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-thumbnail"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"news alt text"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://www.ema.europa.eu/ema/images/OMAR2.jpg"</span> /&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--two-columns"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>New orphan maintenance assessment reports<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
+                  As of 17 January 2018, the European Public Assessment Report (EPAR) for every newly-authorised medicine contains an orphan maintenance assessment report if it was granted orphan-designation during the development phase. This report reflects the Agency’s
+                  Committee for Orphan Medicinal Products (COMP) opinion on whether a medicine continues to meet the orphan designation criteria when it is authorised, and will be published for all positive and negative COMP opinions, as well as withdrawals.
+                  This determines whether it benefits from ten years market exclusivity, a key incentive to stimulate the development of medicines to treat rare diseases.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--two-columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-thumbnail"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"news alt text"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://www.ema.europa.eu/ema/images/features/EC_paediatric_report.jpg"</span> /&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--two-columns"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Ten-year report on implementation of the Paediatric Regulation<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
+                  In October 2017, the European Commission published a report on progress made in children s medicinesExternal link icon since the Paediatric Regulation came into force 10 years ago. The report shows an increase in medicines for children in many therapeutic
+                  areas in the last ten years, most notably in rheumatology and infectious diseases. However, it also shows that little progress has been made in diseases that only affect children or where the disease shows biological differences between
+                  adults and children, particularly rare diseases. The Commission and EMA and its Paediatric Committee will develop an action plan to improve the implementation of the Regulation.
+                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-row"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-col-lg-12"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator__heading"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator__heading--title ecl-heading ecl-heading--ema-h3"</span>&gt;</span>
+              News for healthcare professionals
+            <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-separator__heading--icon"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../framework/images/icons/ema-icons.svg#ema-icon-set_news"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-listing ecl-listing--three-columns"</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
 
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--two-columns"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--three-columns"</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta__item"</span>&gt;</span>23/03/2018<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
                   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>EU institutions<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Updated measures for pregnancy prevention during retinoid use<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur
-                  eleifend elit ac pulvinar consectetur.
+                  Warning on possible risk of neuropsychiatric disorders also to be included for oral retinoids ... Read more
                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
@@ -1775,22 +1948,24 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--two-columns"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
 
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--two-columns"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--three-columns"</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta__item"</span>&gt;</span>23/03/2018<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
                   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>EU agencies<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Withdrawal of pain medicine flupirtine endorsed<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur
-                  eleifend elit ac pulvinar consectetur.
+                  Serious liver problems continued to be reported despite previous restrictions in use ... Read more
                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
@@ -1801,22 +1976,24 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--two-columns"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
 
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--two-columns"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--three-columns"</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta__item"</span>&gt;</span>19/03/2018<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
                   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>EU member states<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Workshop on Paediatric Regulation – stakeholders to discuss how to boost development of medicines for children<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur
-                  eleifend elit ac pulvinar consectetur.
+                  Event to be broadcast live on 20 March ... Read more
                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
@@ -1827,22 +2004,80 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--two-columns"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
 
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--two-columns"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--three-columns"</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta__item"</span>&gt;</span>16/03/2018<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
                   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>EU enlargement<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>EMA Management Board: highlights of March 2018 meeting<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur
-                  eleifend elit ac pulvinar consectetur.
+                  Board adopts 2017 report on veterinary medicines for minor use minor species and hears update on clinical trial portal and database ... Read more
+                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--three-columns"</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta__item"</span>&gt;</span>09/03/2018<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Meeting highlights from the Pharmacovigilance Risk Assessment Committee (PRAC) 5-8 March 2018<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
+                  Immediate measures agreed for Zinbryta and Xofigo while reviews are ongoing; public hearing decided for quinolone and fluoroquinolone antibiotics ... Read more
+                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--three-columns"</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta__item"</span>&gt;</span>09/03/2018<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Meeting highlights from the Pharmacovigilance Risk Assessment Committee (PRAC) 5-8 March 2018<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
+                  Immediate measures agreed for Zinbryta and Xofigo while reviews are ongoing; public hearing decided for quinolone and fluoroquinolone antibiotics ... Read more
                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
@@ -1858,32 +2093,51 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator__heading"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator__heading--title ecl-heading ecl-heading--ema-h3"</span>&gt;</span>
-              Regulators outside the EU
+              Events of interest
             <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
             <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-separator__heading--icon"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../framework/images/icons/ema-icons.svg#ema-icon-set_group"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../framework/images/icons/ema-icons.svg#ema-icon-set_calendar-datepicker"</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-listing ecl-listing--three-columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-listing ecl-listing--two-columns"</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--date"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block ecl-date-block--date"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block__body"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block__week-day"</span>&gt;</span>Tue-Fri<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block__day"</span>&gt;</span>05-08<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block__month"</span>&gt;</span>Mar<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
 
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--three-columns"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--date"</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta__item"</span>&gt;</span>05/03/2018 - 08/03/2018<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta__item"</span>&gt;</span>PRAC<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
                   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>United states<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Pharmacovigilance Risk Assessment Committee (PRAC): 5-8 March 2018<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-
+                  The Pharmacovigilance Risk Assessment Committee (PRAC) is the committee that is responsible for assessing all aspects of the risk management of medicines for human use. ... Read more
                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
@@ -1894,21 +2148,41 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--date"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block ecl-date-block--date"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block__body"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block__week-day"</span>&gt;</span>Wed<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block__day"</span>&gt;</span>28<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block__month"</span>&gt;</span>Feb<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
 
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--three-columns"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--date"</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta__item"</span>&gt;</span>28/02/2018<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta__item"</span>&gt;</span>MB<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
                   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Canada<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Extraordinary Management Board meeting: 28 February 2018<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-
+                  This extraordinary Management Board meeting is to consider the building approval process for EMA’s premises in Amsterdam. The Management Board is an integral governance body of the Agency. It has a supervisory role with general responsibility for budgetary
+                  and planning matters, the appointment of the Executive Director and the monitoring of the Agency’s performance. ... Read more
                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
@@ -1919,21 +2193,41 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--date"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block ecl-date-block--date"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block__body"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block__week-day"</span>&gt;</span>Mon<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block__day"</span>&gt;</span>12<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block__month"</span>&gt;</span>Feb<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
 
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--three-columns"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--date"</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta__item"</span>&gt;</span>12/02/2018<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta__item"</span>&gt;</span>EMA<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
                   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Japan<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Submission of referentials management services (RMS) and organisations management services (OMS) change requests<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-
+                  The European Medicines Agency’s (EMA) programme for substance, product, organisation and referential (SPOR) data services held a webinar with industry stakeholders to summarise the milestones and impacts on industry of the referentials management services
+                  (RMS) and organisations management services (OMS). The webinar focused on the submission of RMS and OMS change requests relating to referential and organisation data. ... Read more
                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
@@ -1944,71 +2238,42 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--date"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
 
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--three-columns"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block ecl-date-block--date"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block__body"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block__week-day"</span>&gt;</span>Tue-Fri<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block__day"</span>&gt;</span>14-15<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-date-block__month"</span>&gt;</span>Dec<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
                   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Switzerland<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
-
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-
-          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-5"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
 
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--three-columns"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--date"</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta__item"</span>&gt;</span>14/12/2017 - 15/12/2017<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta__item"</span>&gt;</span>CHMP<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
                   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Australia<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Workshop on site and histology - Independent indications in oncology<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-
-          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-6"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
-
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--three-columns"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>New Zealand<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-
+                  Biological drivers that define cancer course across anatomical sites and histologies offer an opportunity to select populations sensitive to specific drugs based on those drivers, independently of the specific site or histology. This workshop aims to
+                  provide an exchange of views from different stakeholders about situations where a site and histology-independent clinical development might be a viable option and the associated challenges in terms of drug development, benefit-risk evaluation
+                  and health-technology assessment. ... Read more
                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
@@ -2024,7 +2289,7 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator__heading"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator__heading--title ecl-heading ecl-heading--ema-h3"</span>&gt;</span>
-              Patients and Consumers
+              Information for
             <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
             <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-separator__heading--icon"</span>&gt;</span>
@@ -2036,7 +2301,7 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-listing ecl-listing--three-columns"</span>&gt;</span>
 
           <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#list-item-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
@@ -2046,11 +2311,10 @@
                   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Getting involved<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Healthcare professionals<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur
-                  eleifend elit ac pulvinar consectetur.
+
                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
@@ -2062,7 +2326,7 @@
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
           <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#list-item-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
@@ -2072,11 +2336,10 @@
                   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Eligible organisations<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Patients and careers<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur
-                  eleifend elit ac pulvinar consectetur.
+
                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
@@ -2088,7 +2351,7 @@
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
           <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#list-item-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
@@ -2098,11 +2361,10 @@
                   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Patients and Consumers working party<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Animal health professionals<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur
-                  eleifend elit ac pulvinar consectetur.
+
                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
@@ -2114,7 +2376,7 @@
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
           <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#list-item-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
@@ -2124,11 +2386,10 @@
                   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Training &amp; resources<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Pharmaceutical industry<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur
-                  eleifend elit ac pulvinar consectetur.
+
                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
@@ -2140,7 +2401,7 @@
           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 
           <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#listing-default-two-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#list-item-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
@@ -2150,11 +2411,267 @@
                   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Key documents<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Media<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur
-                  eleifend elit ac pulvinar consectetur.
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--three-columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#list-item-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--three-columns"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Academia<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator ecl-u-pv-l"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator__heading"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator__heading--title ecl-heading ecl-heading--ema-h3"</span>&gt;</span>
+              Media
+            <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-separator__heading--icon"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../framework/images/icons/ema-icons.svg#ema-icon-set_play"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-d-flex ecl-u-align-itmes-baseline ecl-u-justify-content-around"</span>&gt;</span>
+
+          <span class="hljs-comment">&lt;!-- Images --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file ecl-file--image"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://www.ema.europa.eu/ema/images/SL_Working_with_HCP.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"alt"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__caption"</span>&gt;</span>Working with healthcare professionals<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+          <span class="hljs-comment">&lt;!-- Videos --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file ecl-file--video"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__video"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://www.youtube.com/embed/ShezrN2gs_8?rel=0"</span> <span class="hljs-attr">allowfullscreen</span>=<span class="hljs-string">"allowfullscreen"</span> <span class="hljs-attr">scrolling</span>=<span class="hljs-string">"no"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-file__caption"</span>&gt;</span>Working for every patient in Europe<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator ecl-u-pv-l"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator__heading"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-separator__heading--title ecl-heading ecl-heading--ema-h3"</span>&gt;</span>
+              Contextual links
+            <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-separator__heading--icon"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../framework/images/icons/ema-icons.svg#ema-icon-set_news"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-listing ecl-listing--three-columns"</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--highlight"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#list-item-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Highlighted image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/200/200"</span> /&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--highlight"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Medicine and emerging science<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--highlight"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#list-item-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Highlighted image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/200/200"</span> /&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--highlight"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>EU clinical trials register<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--highlight"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#list-item-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Highlighted image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/200/200"</span> /&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--highlight"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Medicine for children<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--highlight"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#list-item-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Highlighted image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/200/200"</span> /&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--highlight"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Medicine for older people<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--highlight"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#list-item-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Highlighted image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/200/200"</span> /&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--highlight"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>Side effects reports<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item ecl-list-item--highlight"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#list-item-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-link ecl-list-item__link"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-u-sr-only"</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__primary"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Highlighted image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/200/200"</span> /&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__body"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__meta"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-meta ecl-meta--highlight"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__title ecl-heading ecl-heading--h3"</span>&gt;</span>FAQs about the agency<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__detail ecl-paragraph"</span>&gt;</span>
+
                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ecl-list-item__action"</span>&gt;</span>
