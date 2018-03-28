@@ -196,7 +196,6 @@ module.exports = {
           title: 'Human regulatory',
           description:
             'This section of the website provides information on the regulation of medicines for human use in the European Union (EU). It particularly concerns the centralised procedure, where the European Medicines Agency (EMA) plays a key role.',
-          is_active: true,
           children_links: [
             {
               label: 'Overview',
@@ -261,156 +260,239 @@ module.exports = {
       ],
     },
     banner: {
-      title: 'Human regulatory',
+      title: 'Healthcare Professionals',
       description:
-        'This section of the website provides information on the regulation of medicines for human use in the European Union (EU). It particularly concerns the centralised procedure, where the European Medicines Agency (EMA) plays a key role.',
-      links: [
-        {
-          label: 'Overview',
-          href: '#item1-1',
-        },
-        {
-          label: 'Marketing authorisation',
-          href: '#item1-4',
-        },
-        {
-          label: 'Research and development',
-          href: '#item1-2',
-        },
-        {
-          label: 'Post authorisation',
-          href: '#item1-5',
-        },
-        {
-          label: 'Herbal products',
-          href: '#item1-3',
-        },
-      ],
+        'On this page, you will find information on the Agency’s activities that are most relevant to healthcare professionals, including news, and events. You can contribute to the Agency’s work by responding to public consultations. Learn more about how Healthcare Professionals are actively involved in the work of the Agency.',
+      links: [],
     },
+    items_featured: [
+      {
+        title: 'Orphan medicines: getting the facts straight',
+        href: '#listing-thumbnail',
+        detail:
+          'EMA has published a question-and-answer document addressing common misunderstandings about the meaning of orphan designation and other aspects pertaining to orphan medicines, including significant benefit and market exclusivity. For more information, see Orphan designation.',
+        primary_image: {
+          src:
+            'http://www.ema.europa.eu/ema/images/features/rare_diseases_q_a.jpg',
+          alt: 'news alt text',
+        },
+      },
+      {
+        title: 'Human medicines highlights 2017',
+        href: '#listing-thumbnail',
+        detail:
+          'EMA has released an overview of its key recommendations in 2017 on the authorisation of new medicines. EMA recommended 92 medicines for marketing authorisation. This includes recommendations for 35 new active substances.',
+        primary_image: {
+          src:
+            'http://www.ema.europa.eu/ema/images/leaflet_highlights_2017.jpg',
+          alt: 'news alt text',
+        },
+      },
+      {
+        title: 'New orphan maintenance assessment reports',
+        href: '#listing-thumbnail',
+        detail:
+          'As of 17 January 2018, the European Public Assessment Report (EPAR) for every newly-authorised medicine contains an orphan maintenance assessment report if it was granted orphan-designation during the development phase. This report reflects the Agency’s Committee for Orphan Medicinal Products (COMP) opinion on whether a medicine continues to meet the orphan designation criteria when it is authorised, and will be published for all positive and negative COMP opinions, as well as withdrawals. This determines whether it benefits from ten years market exclusivity, a key incentive to stimulate the development of medicines to treat rare diseases.',
+        primary_image: {
+          src: 'http://www.ema.europa.eu/ema/images/OMAR2.jpg',
+          alt: 'news alt text',
+        },
+      },
+      {
+        title: 'Ten-year report on implementation of the Paediatric Regulation',
+        href: '#listing-thumbnail',
+        detail:
+          'In October 2017, the European Commission published a report on progress made in children s medicinesExternal link icon since the Paediatric Regulation came into force 10 years ago. The report shows an increase in medicines for children in many therapeutic areas in the last ten years, most notably in rheumatology and infectious diseases. However, it also shows that little progress has been made in diseases that only affect children or where the disease shows biological differences between adults and children, particularly rare diseases. The Commission and EMA and its Paediatric Committee will develop an action plan to improve the implementation of the Regulation.',
+        primary_image: {
+          src:
+            'http://www.ema.europa.eu/ema/images/features/EC_paediatric_report.jpg',
+          alt: 'news alt text',
+        },
+      },
+    ],
     items_news: [
       {
-        title: 'News title',
-        href: '#listing-thumbnail-two-1',
-        detail:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur.',
-        primary_image: {
-          src: 'https://picsum.photos/100/100/?random',
-          alt: 'news alt text',
-        },
-      },
-      {
-        title: 'News title',
-        href: '#listing-thumbnail-two-1',
-        detail:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur.',
-        primary_image: {
-          src: 'https://picsum.photos/100/100/?random',
-          alt: 'news alt text',
-        },
-      },
-      {
-        title: 'News title',
-        href: '#listing-thumbnail-two-1',
-        detail:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur.',
-        primary_image: {
-          src: 'https://picsum.photos/100/100/?random',
-          alt: 'news alt text',
-        },
-      },
-      {
-        title: 'News title',
-        href: '#listing-thumbnail-two-1',
-        detail:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur.',
-        primary_image: {
-          src: 'https://picsum.photos/100/100/?random',
-          alt: 'news alt text',
-        },
-      },
-    ],
-    items_eu_partners: [
-      {
-        title: 'EU institutions',
+        title: 'Updated measures for pregnancy prevention during retinoid use',
         href: '#listing-default-two-1',
         detail:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur.',
+          'Warning on possible risk of neuropsychiatric disorders also to be included for oral retinoids ... Read more',
+        metas: ['23/03/2018'],
       },
       {
-        title: 'EU agencies',
-        href: '#listing-default-two-2',
-        detail:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur.',
-      },
-      {
-        title: 'EU member states',
-        href: '#listing-default-two-3',
-        detail:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur.',
-      },
-      {
-        title: 'EU enlargement',
-        href: '#listing-default-two-4',
-        detail:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur.',
-      },
-    ],
-    items_regulators: [
-      {
-        title: 'United states',
-        href: '#listing-default-two-1',
-      },
-      {
-        title: 'Canada',
-        href: '#listing-default-two-2',
-      },
-      {
-        title: 'Japan',
-        href: '#listing-default-two-3',
-      },
-      {
-        title: 'Switzerland',
-        href: '#listing-default-two-4',
-      },
-      {
-        title: 'Australia',
-        href: '#listing-default-two-5',
-      },
-      {
-        title: 'New Zealand',
-        href: '#listing-default-two-6',
-      },
-    ],
-    items_patients: [
-      {
-        title: 'Getting involved',
+        title: 'Withdrawal of pain medicine flupirtine endorsed',
         href: '#listing-default-two-1',
         detail:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur.',
+          'Serious liver problems continued to be reported despite previous restrictions in use ... Read more',
+        metas: ['23/03/2018'],
       },
       {
-        title: 'Eligible organisations',
-        href: '#listing-default-two-2',
-        detail:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur.',
+        title:
+          'Workshop on Paediatric Regulation – stakeholders to discuss how to boost development of medicines for children',
+        href: '#listing-default-two-1',
+        detail: 'Event to be broadcast live on 20 March ... Read more',
+        metas: ['19/03/2018'],
       },
       {
-        title: 'Patients and Consumers working party',
-        href: '#listing-default-two-3',
+        title: 'EMA Management Board: highlights of March 2018 meeting',
+        href: '#listing-default-two-1',
         detail:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur.',
+          'Board adopts 2017 report on veterinary medicines for minor use minor species and hears update on clinical trial portal and database ... Read more',
+        metas: ['16/03/2018'],
       },
       {
-        title: 'Training & resources',
-        href: '#listing-default-two-4',
+        title:
+          'Meeting highlights from the Pharmacovigilance Risk Assessment Committee (PRAC) 5-8 March 2018',
+        href: '#listing-default-two-1',
         detail:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur.',
+          'Immediate measures agreed for Zinbryta and Xofigo while reviews are ongoing; public hearing decided for quinolone and fluoroquinolone antibiotics ... Read more',
+        metas: ['09/03/2018'],
       },
       {
-        title: 'Key documents',
-        href: '#listing-default-two-4',
+        title:
+          'Meeting highlights from the Pharmacovigilance Risk Assessment Committee (PRAC) 5-8 March 2018',
+        href: '#listing-default-two-1',
         detail:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ligula in justo sagittis porta. Quisque tincidunt euismod eleifend. Donec est ex, ultrices quis velit a, consequat congue ipsum. Duis ac efficitur eros, at finibus lorem. Curabitur eleifend elit ac pulvinar consectetur.',
+          'Immediate measures agreed for Zinbryta and Xofigo while reviews are ongoing; public hearing decided for quinolone and fluoroquinolone antibiotics ... Read more',
+        metas: ['09/03/2018'],
+      },
+    ],
+    items_events: [
+      {
+        variant: 'date',
+        date: {
+          week_day: 'Tue-Fri',
+          day: '05-08',
+          month: 'Mar',
+        },
+        title:
+          'Pharmacovigilance Risk Assessment Committee (PRAC): 5-8 March 2018',
+        href: '#listing-default-two-1',
+        detail:
+          'The Pharmacovigilance Risk Assessment Committee (PRAC) is the committee that is responsible for assessing all aspects of the risk management of medicines for human use. ... Read more',
+        metas: ['05/03/2018 - 08/03/2018', 'PRAC'],
+      },
+      {
+        variant: 'date',
+        date: {
+          week_day: 'Wed',
+          day: '28',
+          month: 'Feb',
+        },
+        title: 'Extraordinary Management Board meeting: 28 February 2018',
+        href: '#listing-default-two-1',
+        detail:
+          'This extraordinary Management Board meeting is to consider the building approval process for EMA’s premises in Amsterdam. The Management Board is an integral governance body of the Agency. It has a supervisory role with general responsibility for budgetary and planning matters, the appointment of the Executive Director and the monitoring of the Agency’s performance. ... Read more',
+        metas: ['28/02/2018', 'MB'],
+      },
+      {
+        variant: 'date',
+        date: {
+          week_day: 'Mon',
+          day: '12',
+          month: 'Feb',
+        },
+        title:
+          'Submission of referentials management services (RMS) and organisations management services (OMS) change requests',
+        href: '#listing-default-two-1',
+        detail:
+          'The European Medicines Agency’s (EMA) programme for substance, product, organisation and referential (SPOR) data services held a webinar with industry stakeholders to summarise the milestones and impacts on industry of the referentials management services (RMS) and organisations management services (OMS). The webinar focused on the submission of RMS and OMS change requests relating to referential and organisation data. ... Read more',
+        metas: ['12/02/2018', 'EMA'],
+      },
+      {
+        variant: 'date',
+        date: {
+          week_day: 'Tue-Fri',
+          day: '14-15',
+          month: 'Dec',
+        },
+        title:
+          'Workshop on site and histology - Independent indications in oncology',
+        href: '#listing-default-two-1',
+        detail:
+          'Biological drivers that define cancer course across anatomical sites and histologies offer an opportunity to select populations sensitive to specific drugs based on those drivers, independently of the specific site or histology. This workshop aims to provide an exchange of views from different stakeholders about situations where a site and histology-independent clinical development might be a viable option and the associated challenges in terms of drug development, benefit-risk evaluation and health-technology assessment. ... Read more',
+        metas: ['14/12/2017 - 15/12/2017', 'CHMP'],
+      },
+    ],
+    items_audience: [
+      {
+        title: 'Healthcare professionals',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Patients and careers',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Animal health professionals',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Pharmaceutical industry',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Media',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Academia',
+        href: '#list-item-4',
+      },
+    ],
+    items_area: [
+      {
+        variant: 'highlight',
+        title: 'Medicine and emerging science',
+        href: '#list-item-4',
+        primary_image: {
+          src: 'https://picsum.photos/200/200',
+          alt: 'Highlighted image',
+        },
+      },
+      {
+        variant: 'highlight',
+        title: 'EU clinical trials register',
+        href: '#list-item-4',
+        primary_image: {
+          src: 'https://picsum.photos/200/200',
+          alt: 'Highlighted image',
+        },
+      },
+      {
+        variant: 'highlight',
+        title: 'Medicine for children',
+        href: '#list-item-4',
+        primary_image: {
+          src: 'https://picsum.photos/200/200',
+          alt: 'Highlighted image',
+        },
+      },
+      {
+        variant: 'highlight',
+        title: 'Medicine for older people',
+        href: '#list-item-4',
+        primary_image: {
+          src: 'https://picsum.photos/200/200',
+          alt: 'Highlighted image',
+        },
+      },
+      {
+        variant: 'highlight',
+        title: 'Side effects reports',
+        href: '#list-item-4',
+        primary_image: {
+          src: 'https://picsum.photos/200/200',
+          alt: 'Highlighted image',
+        },
+      },
+      {
+        variant: 'highlight',
+        title: 'FAQs about the agency',
+        href: '#list-item-4',
+        primary_image: {
+          src: 'https://picsum.photos/200/200',
+          alt: 'Highlighted image',
+        },
       },
     ],
     _demo: {
