@@ -17,6 +17,7 @@
 
 .ema-footer__section {
   flex-basis: 100%;
+  padding-right: map-get($ecl-spacing, 'xxs');
 
   @include ecl-media-breakpoint-up(sm) {
     flex-basis: 50%;
@@ -41,7 +42,7 @@
   border: 1px solid map-get($ema-colors, 'grey-3');
   display: flex;
   margin-bottom: map-get($ecl-spacing, 's');
-  margin-right: map-get($ecl-spacing, 'xs');
+  margin-right: map-get($ecl-spacing, 'xxs');
   padding: map-get($ecl-spacing, 'xxs');
 }
 
@@ -49,6 +50,15 @@
   font-size: map-get($ecl-font-size, 'xs');
   margin-top: map-get($ecl-spacing, 'xxxs');
   text-transform: uppercase;
+}
+
+.ema-footer__links {
+  line-height: 1.2;
+
+  .ecl-link {
+    display: block;
+    padding: map-get($ecl-spacing, 'xxxs') 0;
+  }
 }
 
 .ema-footer__social {
