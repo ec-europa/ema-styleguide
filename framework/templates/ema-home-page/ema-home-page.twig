@@ -1,0 +1,124 @@
+{#
+  This is an example and should not be used as it is.
+#}
+
+{% include '@ec-europa/ecl-skip-links' with {
+    'href': '#main-content',
+    'label': 'Skip to main content'
+} %}
+
+{% include '@ec-europa/ema-headers' with header %}
+
+{% include '@ec-europa/ema-navigation-menus' with menu %}
+
+
+<main class="ecl-u-mv-l">
+  <div class="ecl-container">
+
+  <div class="ecl-row">
+    <section class="ecl-col-lg-12">
+      <h1 class="ecl-heading ecl-heading--ema-h2">Homepage title</h1>
+      <p class="ecl-paragraph ecl-paragraph--ema">
+        Homepage abstract.
+      </p>
+    </section>
+  </div>
+
+  <div class="ecl-row">
+    <section class="ecl-col-lg-12">
+    {% include '@ec-europa/ema-content-slider' with slider %}
+    </section>
+  </div>
+
+  <div class="ecl-row">
+    <section class="ecl-col-lg-12">
+
+      {% include '@ec-europa/ema-separator' with {
+        icon: 'news',
+        title: 'Featured information',
+        extra_classes: 'ecl-u-pt-m',
+      } %}
+
+        {% include '@ec-europa/ecl-listings' with {
+          variant: 'two-columns',
+          items: items_featured,
+        } %}
+
+    </div>
+    <div class="ecl-row">
+      <section class="ecl-col-lg-12">
+
+        {% include '@ec-europa/ema-separator' with {
+          icon: 'news',
+          title: 'News for healthcare professionals',
+        } %}
+
+        {% include '@ec-europa/ecl-listings' with {
+          variant: 'three-columns',
+          items: items_news,
+        } %}
+
+        {% include '@ec-europa/ema-separator' with {
+          icon: 'calendar-datepicker',
+          title: 'Events of interest',
+        } %}
+
+        {% include '@ec-europa/ecl-listings' with {
+          variant: 'two-columns',
+          items: items_events,
+        } %}
+
+        {% include '@ec-europa/ema-separator' with {
+          icon: 'group',
+          title: 'Information for',
+        } %}
+
+        {% include '@ec-europa/ecl-listings' with {
+          variant: 'three-columns',
+          items: items_audience,
+        } %}
+
+        {% include '@ec-europa/ema-separator' with {
+          icon: 'play',
+          title: 'Media',
+          extra_classes: 'ecl-u-pv-l',
+        } %}
+
+
+
+        <div class="ecl-u-d-flex ecl-u-align-items-baseline ecl-u-justify-content-around">
+          {% include '@ec-europa/ecl-files' with {
+            variant: 'image',
+            title: 'Media',
+            src: 'http://www.ema.europa.eu/ema/images/SL_Working_with_HCP.jpg',
+            alt: 'alt',
+            caption: 'Working with healthcare professionals',
+          } %}
+
+          {% include '@ec-europa/ecl-files' with {
+            variant: 'video',
+            title: 'Media',
+            src: 'https://www.youtube.com/embed/ShezrN2gs_8?rel=0',
+            alt: 'alt',
+            is_iframe: true,
+            caption: 'Working for every patient in Europe',
+          } %}
+        </div>
+
+        {% include '@ec-europa/ema-separator' with {
+          icon: 'news',
+          title: 'Contextual links',
+          extra_classes: 'ecl-u-pv-l',
+        } %}
+
+        {% include '@ec-europa/ecl-listings' with {
+          variant: 'three-columns',
+          items: items_area,
+        } %}
+
+      </section>
+  </div>
+  </div>
+</main>
+
+{% include '@ec-europa/ema-footers' with footer %}
