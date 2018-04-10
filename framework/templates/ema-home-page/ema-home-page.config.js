@@ -396,70 +396,112 @@ module.exports = {
         metas: ['09/03/2018'],
       },
     ],
-    items_events: [
+    items_how_ema_work: [
       {
-        variant: 'date',
-        date: {
-          week_day: 'Tue-Fri',
-          day: '05-08',
-          month: 'Mar',
-        },
-        title:
-          'Pharmacovigilance Risk Assessment Committee (PRAC): 5-8 March 2018',
-        href: '#listing-default-two-1',
-        detail:
-          'The Pharmacovigilance Risk Assessment Committee (PRAC) is the committee that is responsible for assessing all aspects of the risk management of medicines for human use. ... Read more',
-        metas: ['05/03/2018 - 08/03/2018', 'PRAC'],
-      },
-      {
-        variant: 'date',
-        date: {
-          week_day: 'Wed',
-          day: '28',
-          month: 'Feb',
-        },
-        title: 'Extraordinary Management Board meeting: 28 February 2018',
-        href: '#listing-default-two-1',
-        detail:
-          'This extraordinary Management Board meeting is to consider the building approval process for EMA’s premises in Amsterdam. The Management Board is an integral governance body of the Agency. It has a supervisory role with general responsibility for budgetary and planning matters, the appointment of the Executive Director and the monitoring of the Agency’s performance. ... Read more',
-        metas: ['28/02/2018', 'MB'],
-      },
-      {
-        variant: 'date',
-        date: {
-          week_day: 'Mon',
-          day: '12',
-          month: 'Feb',
-        },
-        title:
-          'Submission of referentials management services (RMS) and organisations management services (OMS) change requests',
-        href: '#listing-default-two-1',
-        detail:
-          'The European Medicines Agency’s (EMA) programme for substance, product, organisation and referential (SPOR) data services held a webinar with industry stakeholders to summarise the milestones and impacts on industry of the referentials management services (RMS) and organisations management services (OMS). The webinar focused on the submission of RMS and OMS change requests relating to referential and organisation data. ... Read more',
-        metas: ['12/02/2018', 'EMA'],
-      },
-      {
-        variant: 'date',
-        date: {
-          week_day: 'Tue-Fri',
-          day: '14-15',
-          month: 'Dec',
-        },
-        title:
-          'Workshop on site and histology - Independent indications in oncology',
-        href: '#listing-default-two-1',
-        detail:
-          'Biological drivers that define cancer course across anatomical sites and histologies offer an opportunity to select populations sensitive to specific drugs based on those drivers, independently of the specific site or histology. This workshop aims to provide an exchange of views from different stakeholders about situations where a site and histology-independent clinical development might be a viable option and the associated challenges in terms of drug development, benefit-risk evaluation and health-technology assessment. ... Read more',
-        metas: ['14/12/2017 - 15/12/2017', 'CHMP'],
-      },
-    ],
-    items_audience: [
-      {
-        title: 'Healthcare professionals',
+        title: 'How we regulate pharmaceutical research and development',
         href: '#list-item-4',
       },
       {
-        title: 'Patients and careers',
+        title: 'Our role in authorisation of medicines in the EU',
+        href: '#list-item-4',
+      },
+      {
+        title: 'How the safety of medicines is monitored and controlled',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Who are EMAs scientific experts?',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Ensuring independence and transparency',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Another one',
+        href: '#list-item-4',
+      },
+    ],
+    items_key_content: [
+      {
+        title: 'CHMP highlights, December 2012',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Guidance for good clinical practice',
+        href: '#list-item-4',
+      },
+      {
+        title: 'European Public Assessment Reports(Human)',
+        href: '#list-item-4',
+      },
+      {
+        title: 'European Public Assessment Reports(Veterinary)',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Pharmacovigilance legislation',
+        href: '#list-item-4',
+      },
+    ],
+    items_services: [
+      {
+        title: 'Suspected ADR reports',
+        href: '#list-item-4',
+      },
+      {
+        title: 'EU Clinical Trials Register',
+        href: '#list-item-4',
+      },
+      {
+        title: 'eSubmission services',
+        href: '#list-item-4',
+      },
+      {
+        title: 'U Telematics services',
+        href: '#list-item-4',
+      },
+    ],
+    items_area: [
+      {
+        variant: 'highlight',
+        title: 'Find medecine',
+        href: '#list-item-4',
+        primary_image: {
+          src: 'https://picsum.photos/200/200',
+          alt: 'Highlighted image',
+        },
+      },
+      {
+        variant: 'highlight',
+        title: 'What s new',
+        href: '#list-item-4',
+        primary_image: {
+          src: 'https://picsum.photos/200/200',
+          alt: 'Highlighted image',
+        },
+      },
+      {
+        variant: 'highlight',
+        title: 'Ask EMA',
+        href: '#list-item-4',
+        primary_image: {
+          src: 'https://picsum.photos/200/200',
+          alt: 'Highlighted image',
+        },
+      },
+    ],
+    items_informations: [
+      {
+        title: 'Human pharmaceutical industry',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Veterinary pharmaceutical industry',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Human healthcare professionals',
         href: '#list-item-4',
       },
       {
@@ -467,72 +509,66 @@ module.exports = {
         href: '#list-item-4',
       },
       {
-        title: 'Pharmaceutical industry',
+        title: 'Patients and careers',
         href: '#list-item-4',
       },
       {
-        title: 'Media',
+        title: 'SMEs',
         href: '#list-item-4',
       },
       {
-        title: 'Academia',
+        title: 'Press and media',
         href: '#list-item-4',
       },
     ],
-    items_area: [
+    items_topics: [
       {
-        variant: 'highlight',
-        title: 'Medicine and emerging science',
+        title: 'HIV and AIDS',
         href: '#list-item-4',
-        primary_image: {
-          src: 'https://picsum.photos/200/200',
-          alt: 'Highlighted image',
-        },
       },
       {
-        variant: 'highlight',
-        title: 'EU clinical trials register',
+        title: 'Cancer',
         href: '#list-item-4',
-        primary_image: {
-          src: 'https://picsum.photos/200/200',
-          alt: 'Highlighted image',
-        },
       },
       {
-        variant: 'highlight',
-        title: 'Medicine for children',
+        title: 'Cardiovascular diseases',
         href: '#list-item-4',
-        primary_image: {
-          src: 'https://picsum.photos/200/200',
-          alt: 'Highlighted image',
-        },
       },
       {
-        variant: 'highlight',
-        title: 'Medicine for older people',
+        title: 'Diabetes',
         href: '#list-item-4',
-        primary_image: {
-          src: 'https://picsum.photos/200/200',
-          alt: 'Highlighted image',
-        },
       },
       {
-        variant: 'highlight',
-        title: 'Side effects reports',
+        title: 'Neurodegenerative diseases',
         href: '#list-item-4',
-        primary_image: {
-          src: 'https://picsum.photos/200/200',
-          alt: 'Highlighted image',
-        },
       },
       {
-        variant: 'highlight',
-        title: 'FAQs about the agency',
+        title: 'Immune-system diseases',
         href: '#list-item-4',
-        primary_image: {
-          src: 'https://picsum.photos/200/200',
-          alt: 'Highlighted image',
-        },
+      },
+      {
+        title: 'Viral diseases',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Transparency',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Releasing clinical-trial data',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Antimicrobial resistance',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Safety monitoring of medicines',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Medicines for children',
+        href: '#list-item-4',
       },
     ],
     _demo: {
