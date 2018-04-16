@@ -30,17 +30,17 @@
 }
 
 .ema-side-navigation__link--depth-2 {
-  background-color: map-get($ema-colors, 'primary');
+  background-color: map-get($ema-colors, 'blue-1');
   padding-left: map-get($ecl-spacing, 'm');
 }
 
 .ema-side-navigation__link--depth-3 {
-  background-color: map-get($ema-colors, 'blue-1');
+  background-color: map-get($ema-colors, 'blue-2');
   padding-left: map-get($ecl-spacing, 'l');
 }
 
 .ema-side-navigation__link--depth-4 {
-  background-color: map-get($ema-colors, 'blue-2');
+  background-color: map-get($ema-colors, 'blue-3');
   padding-left: map-get($ecl-spacing, 'xl');
 }
 
