@@ -24,11 +24,11 @@
   }
 
   @include ecl-media-breakpoint-up(md) {
-    flex-basis: 33%;
+    flex-basis: 50%;
   }
 
   @include ecl-media-breakpoint-up(xl) {
-    flex-basis: 20%;
+    flex-basis: 25%;
   }
 }
 
