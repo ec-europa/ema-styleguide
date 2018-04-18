@@ -21,6 +21,15 @@
     </section>
   </div>
 
+  <div class="ecl-row ecl-u-pt-m">
+    <section class="ecl-col-lg-12">
+    {% include '@ec-europa/ecl-listings' with {
+      variant: 'three-columns',
+      items: items_area,
+    } %}
+    </section>
+  </div>
+
   <div class="ecl-row">
     <section class="ecl-col-lg-12">
 
@@ -45,11 +54,6 @@
       {% include '@ec-europa/ecl-listings' with {
         variant: 'three-columns',
         items: items_how_ema_work,
-      } %}
-
-      {% include '@ec-europa/ecl-listings' with {
-        variant: 'three-columns',
-        items: items_area,
       } %}
 
     </div>
