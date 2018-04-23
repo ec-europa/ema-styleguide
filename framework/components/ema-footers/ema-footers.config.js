@@ -145,12 +145,22 @@ module.exports = {
         icon: 'twitter',
         extra_classes: 'ecl-link--ema-inverted ecl-u-mr-xs',
       },
+      {
+        label: 'Youtube',
+        href: '#',
+        icon: 'video',
+        extra_classes: 'ecl-link--ema-inverted ecl-u-mr-xs',
+      },
     ],
     copyright: '&copy; 1995-2016 European Medicines Agency',
     description: 'An agency of the European Union',
     logo: {
       src: '../../framework/images/eu.png',
       alt: 'European Union flag',
+    },
+    logo_network: {
+      src: '../../framework/images/euan.png',
+      alt: 'European Union agencies network',
     },
   },
 };

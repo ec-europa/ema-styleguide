@@ -43,7 +43,10 @@
   <div class="ecl-container ema-footer__content">
     <div class="ema-footer__section">
       <div class="ema-footer__hotline">
-        <span class="ecl-icon ecl-icon--language ecl-u-fs-xxl ecl-u-mr-xxs"></span>
+      {% include '@ec-europa/ema-icons' with {
+        'icon': 'phone',
+        'extra_classes': 'ecl-u-fs-xxl ecl-u-mr-xxs ema-icon--l'
+      }  only %}
         <a class="ecl-link--ema-inverted" href="{{ hotline.href }}">
           <div class="ema-footer__hotline-title">{{ hotline.title }}</div>
           <div class="ema-footer__hotline-desc">{{ hotline.description }}</div>
@@ -69,7 +72,7 @@
     {% endfor %}
   </div>
 
-  <div class="ecl-container ">
+  <div class="ecl-container">
     <div class="ema-footer__social">
       {% for link in social %}
         <span class="ecl-icon ecl-icon--{{ link.icon }}"></span>
@@ -80,6 +83,11 @@
 
   <div class="ecl-container ema-footer__content">
     <div class="ema-footer__copyright">{{ copyright }}</div>
+    <div class="ema-footer__description">
+      {{ logo_network.alt }}
+      <div class="ema-footer__logo">
+      <img src="{{ logo_network.src }}" alt="{{ logo_network.alt }}" /></img>
+    </div></div>
     <div class="ema-footer__description">
       {{ description }}
       <div class="ema-footer__logo"><img src="{{ logo.src }}" alt="{{ logo.alt }}" /></div>
