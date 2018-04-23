@@ -14,7 +14,8 @@
   text-decoration: none;
 
   &:hover {
-    background-color: map-get($ema-colors, 'blue-4');
+    background-color: #fff;
+    color: map-get($ema-colors, 'primary');
     text-decoration: underline;
   }
 
@@ -45,6 +46,7 @@
 }
 
 .ema-side-navigation__link--active {
-  background-color: map-get($ema-colors, 'blue-4');
+  background-color: #fff;
+  color: map-get($ema-colors, 'primary');
   text-decoration: underline;
 }
