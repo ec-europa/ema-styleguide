@@ -24,11 +24,11 @@
   }
 
   @include ecl-media-breakpoint-up(md) {
-    flex-basis: 33%;
+    flex-basis: 50%;
   }
 
   @include ecl-media-breakpoint-up(xl) {
-    flex-basis: 20%;
+    flex-basis: 25%;
   }
 }
 
@@ -41,7 +41,7 @@
 .ema-footer__hotline {
   border: 1px solid map-get($ema-colors, 'grey-3');
   display: flex;
-  margin-bottom: map-get($ecl-spacing, 's');
+  margin-bottom: map-get($ecl-spacing, 'l');
   margin-right: map-get($ecl-spacing, 'xxs');
   padding: map-get($ecl-spacing, 'xxs');
 }
