@@ -18,9 +18,13 @@
 .ema-content-slider .ecl-list-item.ema-content-slider__list-item--highlight {
   background-color: map-get($ecl-colors, 'grey-10');
   margin: map-get($ecl-spacing, 'xs');
+  position: relative;
 
   .ecl-list-item__body {
-    margin-top: map-get($ecl-spacing, 's');
+    bottom: 0;
+    padding-top: 1rem;
+    position: absolute;
+    width: 100%;
   }
 }
 
