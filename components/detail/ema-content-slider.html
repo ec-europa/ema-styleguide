@@ -1552,9 +1552,24 @@
 <span class="hljs-selector-class">.ema-content-slider</span> <span class="hljs-selector-class">.ecl-list-item</span><span class="hljs-selector-class">.ema-content-slider__list-item--highlight</span> {
   <span class="hljs-attribute">background-color</span>: map-get(<span class="hljs-variable">$ecl-colors</span>, <span class="hljs-string">'grey-10'</span>);
   <span class="hljs-attribute">margin</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xs'</span>);
+  <span class="hljs-attribute">position</span>: relative;
+
+  <span class="hljs-selector-class">.ecl-list-item__link</span> {
+    <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  }
+
+  <span class="hljs-selector-class">.ecl-list-item__primary</span> {
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.4</span>;
+  }
 
   <span class="hljs-selector-class">.ecl-list-item__body</span> {
-    <span class="hljs-attribute">margin-top</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'s'</span>);
+    <span class="hljs-attribute">background-color</span>: transparent;
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">1rem</span>;
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
   }
 }
 
@@ -1593,7 +1608,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.1 KB</span>
+                    <span class="Meta-value">1.4 KB</span>
                 </li>
             </ul>
         </div>
