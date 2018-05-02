@@ -357,6 +357,7 @@ module.exports = {
         detail:
           'Warning on possible risk of neuropsychiatric disorders also to be included for oral retinoids ... Read more',
         metas: ['23/03/2018'],
+        extra_classes: 'ecl-paragraph--ema',
       },
       {
         title: 'Withdrawal of pain medicine flupirtine endorsed',
