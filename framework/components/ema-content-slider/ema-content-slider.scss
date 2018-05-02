@@ -20,7 +20,25 @@
   margin: map-get($ecl-spacing, 'xs');
   position: relative;
 
+  .ecl-list-item__link {
+    padding-bottom: 0;
+  }
+
+  .ecl-list-item__primary {
+    opacity: 0.4;
+    // &:after {
+    //   content: '';
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: rgba(0, 0, 0, 0.4);
+    //   position: absolute;
+    //   top: 0;
+    //   bottom: 0;
+    // }
+  }
+
   .ecl-list-item__body {
+    background-color: transparent;
     bottom: 0;
     padding-top: 1rem;
     position: absolute;
