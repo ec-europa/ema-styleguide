@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Find medecine pages',
-  label: 'Find medecine pages',
+  title: 'Medecines pages',
+  label: 'Medecines pages',
   status: 'ready',
   tags: ['template'],
   preview: '@preview-website',
@@ -254,7 +254,7 @@ module.exports = {
           ],
         },
         {
-          label: 'Find medicines',
+          label: 'Medicines',
           href: '#item3',
           is_active: true,
         },

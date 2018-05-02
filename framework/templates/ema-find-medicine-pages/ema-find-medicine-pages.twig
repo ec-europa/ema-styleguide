@@ -47,6 +47,31 @@
               {% block fieldset %}
                 {% include '@ec-europa/ecl-forms-legends' with { content: 'Search options', level: 1 } only %}
 
+                {# ------- Categories ------- #}
+                {% embed '@ec-europa/ecl-forms-form-groups' %}
+                  {% block form_group %}
+                    {% include '@ec-europa/ecl-forms-labels' with { 'label': 'Categories', 'for_attribute': 'search-option-category', 'extra_classes': 'ecl-u-mb-xxs' } %}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'Human (4457)',
+                      'id': 'search-filter-comitees-1',
+                      'name': 'search-filter-comitees-1',
+                      'value': '1'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'Veterinary (3402)',
+                      'id': 'search-filter-comitees-1',
+                      'name': 'search-filter-comitees-1',
+                      'value': '2'
+                    }%}
+                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                      'label': 'Herbal (873)',
+                      'id': 'search-filter-comitees-1',
+                      'name': 'search-filter-comitees-1',
+                      'value': '3'
+                    }%}
+                  {% endblock %}
+                {% endembed %}
+
                 {# ------- Dates ------- #}
                 {% embed '@ec-europa/ecl-forms-form-groups' %}
                   {% block form_group %}
@@ -106,30 +131,6 @@
                   {% endblock %}
                 {% endembed %}
 
-                {# ------- Categories ------- #}
-                {% embed '@ec-europa/ecl-forms-form-groups' %}
-                  {% block form_group %}
-                    {% include '@ec-europa/ecl-forms-labels' with { 'label': 'Categories', 'for_attribute': 'search-option-category', 'extra_classes': 'ecl-u-mb-xxs' } %}
-                    {% include '@ec-europa/ecl-forms-checkboxes' with {
-                      'label': 'Human (4457)',
-                      'id': 'search-filter-comitees-1',
-                      'name': 'search-filter-comitees-1',
-                      'value': '1'
-                    }%}
-                    {% include '@ec-europa/ecl-forms-checkboxes' with {
-                      'label': 'Veterinary (3402)',
-                      'id': 'search-filter-comitees-1',
-                      'name': 'search-filter-comitees-1',
-                      'value': '2'
-                    }%}
-                    {% include '@ec-europa/ecl-forms-checkboxes' with {
-                      'label': 'Herbal (873)',
-                      'id': 'search-filter-comitees-1',
-                      'name': 'search-filter-comitees-1',
-                      'value': '3'
-                    }%}
-                  {% endblock %}
-                {% endembed %}
               {% endblock %}
             {% endembed %}
 
@@ -149,10 +150,10 @@
       </aside>
 
       <section class="ecl-col-lg-9">
-        <h2 class="ecl-heading ecl-heading--h2 ecl-u-d-none ecl-u-d-lg-block">Find medicine </h2>
+        <h2 class="ecl-heading ecl-heading--h2 ecl-u-d-none ecl-u-d-lg-block">Medicines</h2>
 
         <div class="ecl-u-d-flex ecl-u-align-items-center ecl-u-flex-wrap ecl-u-mb-s">
-          <h3 class="ecl-heading ecl-heading--h3 ema-u-width-grow-1 ecl-u-mb-md-none">Showing results 1 to 10 on 7665</h3>
+          <h3 class="ecl-heading ecl-heading--h3 ema-u-width-grow-1 ecl-u-mb-md-none"> 7665 results </h3>
           <div class="ecl-u-d-flex ecl-u-align-items-center">
             <label class="ema-u-width-nowrap ecl-u-mr-s" for="search-sort">Sort by</label>
             {% include '@ec-europa/ecl-forms-selects' with {
