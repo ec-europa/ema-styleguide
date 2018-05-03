@@ -22,11 +22,47 @@
   </div>
 
   <div class="ecl-row ecl-u-pt-m">
-    <section class="ecl-col-lg-12">
-    {% include '@ec-europa/ecl-listings' with {
-      variant: 'three-columns',
-      items: items_area,
-    } %}
+    <section class="ecl-col-lg-4">
+
+    {% embed '@ec-europa/ecl-forms-forms'  with { 'extra_class':'ecl-u-pa-s ema-u-bg-light-grey-2'} only %}
+        {% block form %}
+          {% embed '@ec-europa/ecl-forms-fieldsets'  with {} only %}
+            {% block fieldset %}
+              {% include '@ec-europa/ecl-forms-legends' with { 'extra_class': 'ecl-form-legend--level-1', 'content': 'Search for medicines' } only %}
+              <p class="ecl-paragraph--ema">Search our database of medicines - including human medicines, veterinary medicines and herbal medicines.</p>
+              {% embed '@ec-europa/ecl-forms-form-groups' %}
+                {% block form_group %}
+                  {% include '@ec-europa/ecl-forms-text-inputs' with {
+                    'id' : 'field-ID-1',
+                    'name': 'field-name-1',
+                    'type': 'text',
+                    'extraAttributes': [
+                      { 'name': 'placeholder', 'value': 'Medicine name, active substance...' }
+                    ]
+                  } only %}
+                {% endblock %}
+              {% endembed %}
+
+              {% include '@ec-europa/ecl-buttons' with {
+                'modifier': 'primary',
+                'label': 'Search',
+                'extra_classes': 'ecl-button--ema-primary ecl-u-mt-s',
+                'extra_attributes': [
+                  { 'name': 'value', 'value': 'search'},
+                  { 'name': 'type', 'value': 'submit'}
+                ]
+              } only %}
+            {% endblock %}
+          {% endembed %}
+        {% endblock %}
+      {% endembed %}
+
+    </section>
+    <section class="ecl-col-lg-4 ">
+      <div class='ecl-u-pa-s ema-u-bg-light-grey-2'>What's new</div>
+    </section>
+    <section class="ecl-col-lg-4 ">
+      <div class='ecl-u-pa-s ema-u-bg-light-grey-2'>Ask ema</div>
     </section>
   </div>
 

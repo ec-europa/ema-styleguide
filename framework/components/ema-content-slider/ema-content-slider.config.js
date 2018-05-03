@@ -14,7 +14,7 @@ module.exports = {
         href: '#content-slider-1',
         title: 'Labore nulla quis irure labore.',
         primary_image: {
-          src: 'https://unsplash.it/640/280?image=222',
+          src: 'https://unsplash.it/640/480?image=222',
           alt: 'sky',
         },
       },
@@ -23,7 +23,7 @@ module.exports = {
         href: '#content-slider-2',
         title: 'Velit mollit in sunt dolor exercitation elit nostrud do.',
         primary_image: {
-          src: 'https://unsplash.it/640/280?image=223',
+          src: 'https://unsplash.it/640/480?image=223',
           alt: 'street',
         },
       },
@@ -32,7 +32,7 @@ module.exports = {
         href: '#content-slider-3',
         title: 'Cupidatat commodo reprehenderit excepteur esse.',
         primary_image: {
-          src: 'https://unsplash.it/640/280?image=221',
+          src: 'https://unsplash.it/640/480?image=221',
           alt: 'buildings',
         },
       },
@@ -41,7 +41,7 @@ module.exports = {
         href: '#content-slider-4',
         title: 'Excepteur ex dolore.',
         primary_image: {
-          src: 'https://unsplash.it/640/280?image=225',
+          src: 'https://unsplash.it/640/480?image=225',
           alt: 'tea',
         },
       },

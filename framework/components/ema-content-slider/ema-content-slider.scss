@@ -27,14 +27,10 @@
     top: 0;
   }
 
-  .ecl-list-item__primary {
-    opacity: 0.4;
-  }
-
   .ecl-list-item__body {
-    background-color: transparent;
+    background-color: #ffffffaa;
     bottom: 0;
-    padding-top: 1rem;
+    padding-top: map-get($ecl-spacing, 's');
     position: absolute;
     width: 100%;
   }
@@ -43,7 +39,7 @@
 @media (min-width: map-get($ecl-grid-breakpoints, 'md')) {
   .ema-content-slider {
     display: grid;
-    grid-template-columns: 45% 55%;
+    grid-template-columns: 60% 40%;
   }
   .ema-content-slider .ecl-list-item {
     align-items: center;

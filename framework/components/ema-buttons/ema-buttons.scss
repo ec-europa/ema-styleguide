@@ -10,3 +10,8 @@
   color: map-get($ema-colors, 'primary');
   font-family: $ema-font-family-base;
 }
+
+.ecl-button--ema-tag:focus,
+.ecl-button--ema-primary:focus {
+  outline-color: map-get($ema-colors, 'primary');
+}
