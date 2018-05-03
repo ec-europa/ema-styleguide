@@ -11,6 +11,10 @@
 {% set _extra_attributes = '' %}
 {% set _title = title|default('') %}
 
+{% if modifier is defined and modifier is not empty %}
+  {% set _modifier = 'ema-separator--' ~ modifier %}
+{% endif %}
+
 {% if extra_classes is defined and extra_classes is not empty %}
   {% set _css_class = _css_class ~ ' ' ~ extra_classes %}
 {% endif %}
@@ -22,12 +26,12 @@
 {% endif %}
 
 {# Print result #}
-<div class="{{ _css_class }}"{{ _extra_attributes }}>
+<div class="{{ _css_class }} {{ _modifier }}"{{ _extra_attributes }}>
   <div class="ema-separator__heading">
     <h3 class="ema-separator__heading--title ecl-heading ecl-heading--ema-h3">
       {{_title}}
     </h3>
-    
+
     {% include '@ec-europa/ema-icons' with {
       'icon': icon,
       'extra_classes': 'ema-separator__heading--icon'

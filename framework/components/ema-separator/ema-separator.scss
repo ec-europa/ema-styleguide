@@ -7,13 +7,14 @@
 }
 
 .ema-separator__heading {
-  background-color: map-get($ema-colors, 'light-grey-2');
+  background-color: map-get($ema-colors, 'blue-1');
   display: flex;
   line-height: 1.1;
   padding: map-get($ecl-spacing, 's');
 }
 
 .ema-separator__heading--title {
+  color: #fff;
   flex-grow: 1;
   margin: 0;
   max-width: none;
@@ -21,4 +22,12 @@
 
 .ema-separator__heading--icon {
   fill: map-get($ema-colors, 'grey-3');
+}
+
+.ema-separator--secondary .ema-separator__heading {
+  background-color: map-get($ema-colors, 'light-grey-2');
+}
+
+.ema-separator--secondary .ema-separator__heading--title {
+  color: initial;
 }
