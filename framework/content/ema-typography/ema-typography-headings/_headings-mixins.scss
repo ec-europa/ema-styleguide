@@ -1,4 +1,8 @@
 @mixin heading() {
+  color: rgb(64, 64, 64);
+  font-size: 1.22rem;
+  font-weight: 600;
+  line-height: 1.1;
   margin: 0;
   padding: 0;
 }
@@ -22,7 +26,6 @@
   font-size: map-get($ecl-font-size, 'l');
   font-weight: normal;
   line-height: 1.1;
-  max-width: 32em;
 }
 
 @mixin heading-4() {
@@ -30,5 +33,4 @@
   font-size: map-get($ecl-font-size, 'm');
   font-weight: bold;
   line-height: 1.1;
-  max-width: 32em;
 }
