@@ -730,6 +730,30 @@
         
         
         <li class="ecl-navigation-menu__item"  data-role="item">
+          <a href="ema-home-page" class="ecl-navigation-menu__link ">
+            
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="background-color: #467a39; border-color: #467a39;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            <span>Home page</span>
+          </a>
+        </li>
+        
+    
+        
+        
+        <li class="ecl-navigation-menu__item"  data-role="item">
           <a href="ema-landing-pages" class="ecl-navigation-menu__link ">
             
 
@@ -1542,7 +1566,8 @@
 
 <span class="hljs-selector-class">.ema-content-slider</span> <span class="hljs-selector-class">.ecl-list-item</span><span class="hljs-selector-class">.ema-content-slider__list-item--default</span> {
   <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid transparent;
-  <span class="hljs-attribute">padding</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xs'</span>);
+  <span class="hljs-attribute">padding-left</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xs'</span>);
+  <span class="hljs-attribute">padding-right</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xs'</span>);
 }
 
 <span class="hljs-selector-class">.ema-content-slider</span> <span class="hljs-selector-class">.ecl-list-item</span><span class="hljs-selector-class">.ema-content-slider__list-item--active</span> {
@@ -1560,14 +1585,10 @@
     <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
   }
 
-  <span class="hljs-selector-class">.ecl-list-item__primary</span> {
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.4</span>;
-  }
-
   <span class="hljs-selector-class">.ecl-list-item__body</span> {
-    <span class="hljs-attribute">background-color</span>: transparent;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#fffa</span>;
     <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">1rem</span>;
+    <span class="hljs-attribute">padding-top</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'s'</span>);
     <span class="hljs-attribute">position</span>: absolute;
     <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
   }
