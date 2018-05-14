@@ -46,7 +46,7 @@
               {% include '@ec-europa/ecl-buttons' with {
                 'modifier': 'primary',
                 'label': 'Search',
-                'extra_classes': 'ecl-button--ema-primary ecl-u-mt-s',
+                'extra_classes': 'ecl-button--ema-primary ecl-u-mt-s ecl-u-f-r',
                 'extra_attributes': [
                   { 'name': 'value', 'value': 'search'},
                   { 'name': 'type', 'value': 'submit'}
@@ -73,24 +73,24 @@
       icon: 'news',
       title: 'News and medicinal product announcements',
       extra_classes: 'ecl-u-pt-m',
-    } %}
+    } only %}
 
     {% include '@ec-europa/ecl-listings' with {
       variant: 'one-columns',
       items: items_news,
-    } %}
+    } only %}
 
-      {% include '@ec-europa/ema-separator' with {
-        icon: 'info',
-        title: 'How does EMA work?',
-      } %}
+    {% include '@ec-europa/ema-separator' with {
+      icon: 'info',
+      title: 'How does EMA work?',
+    } only %}
 
-      <p class="ecl-paragraph--ema">Lorem ipsum...</p>
+    <p class="ecl-paragraph--ema">Lorem ipsum...</p>
 
-      {% include '@ec-europa/ecl-listings' with {
-        variant: 'three-columns',
-        items: items_how_ema_work,
-      } %}
+    {% include '@ec-europa/ecl-listings' with {
+      variant: 'three-columns',
+      items: items_how_ema_work,
+    } only %}
 
     </div>
 
