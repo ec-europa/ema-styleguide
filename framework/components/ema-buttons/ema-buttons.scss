@@ -3,10 +3,18 @@
   border-color: map-get($ema-colors, 'primary');
   color: #fff;
   font-family: $ema-font-family-base;
+  &:focus {
+    border-color: map-get($ema-colors, 'blue-1');
+    outline: 3px solid map-get($ema-colors, 'blue-1');
+  }
 }
 
 .ecl-button--ema-tag {
   background-color: map-get($ema-colors, 'light-grey-2');
   color: map-get($ema-colors, 'primary');
   font-family: $ema-font-family-base;
+  &:focus {
+    border-color: map-get($ema-colors, 'blue-1');
+    outline: 3px solid map-get($ema-colors, 'blue-1');
+  }
 }

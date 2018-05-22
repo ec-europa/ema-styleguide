@@ -29,10 +29,16 @@
   @include ema-search-button();
 
   .ecl-search-form__textfield {
-    padding: map-get($ecl-spacing, 'xxs') map-get($ecl-spacing, 'xs') map-get($ecl-spacing, 'xxs') map-get($ecl-spacing, 'l');
+    padding: map-get($ecl-spacing, 'xxs') map-get($ecl-spacing, 'xs')
+      map-get($ecl-spacing, 'xxs') map-get($ecl-spacing, 'l');
   }
 
   .ecl-search-form__textfield-wrapper {
     border-width: 2px;
+  }
+
+  .ecl-text-input:focus {
+    border-color: map-get($ema-colors, 'blue-1');
+    outline: 3px solid map-get($ema-colors, 'blue-1');
   }
 }
