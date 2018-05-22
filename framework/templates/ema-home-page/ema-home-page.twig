@@ -1,0 +1,145 @@
+{#
+  This is an example and should not be used as it is.
+#}
+
+{% include '@ec-europa/ecl-skip-links' with {
+    'href': '#main-content',
+    'label': 'Skip to main content'
+} %}
+
+{% include '@ec-europa/ema-headers' with header %}
+
+{% include '@ec-europa/ema-navigation-menus' with menu %}
+
+
+<main class="ecl-u-mv-l">
+  <div class="ecl-container">
+
+  <div class="ecl-row">
+    <section class="ecl-col-lg-12">
+    {% include '@ec-europa/ema-content-slider' with slider %}
+    </section>
+  </div>
+
+  <div class="ecl-row ecl-u-pt-m">
+    <section class="ecl-col-lg-4">
+
+    {% embed '@ec-europa/ecl-forms-forms'  with { 'extra_class':'ecl-u-pa-s ema-u-bg-light-grey-2'} only %}
+        {% block form %}
+          {% embed '@ec-europa/ecl-forms-fieldsets'  with {} only %}
+            {% block fieldset %}
+              {% include '@ec-europa/ecl-forms-legends' with { 'extra_class': 'ecl-form-legend--level-1', 'content': 'Search for medicines' } only %}
+              <p class="ecl-paragraph--ema">Search our database of medicines - including human medicines, veterinary medicines and herbal medicines.</p>
+              {% embed '@ec-europa/ecl-forms-form-groups' %}
+                {% block form_group %}
+                  {% include '@ec-europa/ecl-forms-text-inputs' with {
+                    'id' : 'field-ID-1',
+                    'name': 'field-name-1',
+                    'type': 'text',
+                    'extraAttributes': [
+                      { 'name': 'placeholder', 'value': 'Medicine name, active substance...' }
+                    ]
+                  } only %}
+                {% endblock %}
+              {% endembed %}
+
+              {% include '@ec-europa/ecl-buttons' with {
+                'modifier': 'primary',
+                'label': 'Search',
+                'extra_classes': 'ecl-button--ema-primary ecl-u-mt-s ecl-u-f-r',
+                'extra_attributes': [
+                  { 'name': 'value', 'value': 'search'},
+                  { 'name': 'type', 'value': 'submit'}
+                ]
+              } only %}
+            {% endblock %}
+          {% endembed %}
+        {% endblock %}
+      {% endembed %}
+
+    </section>
+    <section class="ecl-col-lg-4 ">
+      <div class='ecl-u-pa-s ema-u-bg-light-grey-2'>What's new</div>
+    </section>
+    <section class="ecl-col-lg-4 ">
+      <div class='ecl-u-pa-s ema-u-bg-light-grey-2'>Ask ema</div>
+    </section>
+  </div>
+
+  <div class="ecl-row">
+    <section class="ecl-col-lg-12">
+
+    {% include '@ec-europa/ema-separator' with {
+      title: 'News and medicinal product announcements',
+      extra_classes: 'ecl-u-pt-m',
+    } only %}
+
+    {% include '@ec-europa/ecl-listings' with {
+      variant: 'one-columns',
+      items: items_news,
+    } only %}
+
+    {% include '@ec-europa/ema-separator' with {
+      title: 'How does EMA work?',
+    } only %}
+
+    <p class="ecl-paragraph--ema">Lorem ipsum...</p>
+
+    {% include '@ec-europa/ecl-listings' with {
+      variant: 'three-columns',
+      items: items_how_ema_work,
+    } only %}
+
+    </div>
+
+  <div class="ecl-row">
+    <section class="ecl-col-lg-4">
+      {% include '@ec-europa/ema-separator' with {
+        title: 'Key content',
+      } %}
+
+      {% include '@ec-europa/ecl-listings' with {
+        items: items_key_content,
+      } %}
+    </section>
+
+    <section class="ecl-col-lg-4">
+      {% include '@ec-europa/ema-separator' with {
+        title: 'Services & databases',
+      } %}
+
+      {% include '@ec-europa/ecl-listings' with {
+        items: items_services,
+      } %}
+    </section>
+
+    <section class="ecl-col-lg-4">
+      {% include '@ec-europa/ema-separator' with {
+        title: 'Information for',
+      } %}
+
+      {% include '@ec-europa/ecl-listings' with {
+        items: items_informations,
+      } %}
+    </section>
+</div>
+
+<div class="ecl-row">
+  <section class="ecl-col-lg-12">
+
+  {% include '@ec-europa/ema-separator' with {
+    title: 'Topics we cover',
+  } %}
+
+  {% include '@ec-europa/ecl-listings' with {
+    variant: 'three-columns',
+    items: items_topics,
+  } %}
+
+  </section>
+</div>
+
+  </div>
+</main>
+
+{% include '@ec-europa/ema-footers' with footer %}

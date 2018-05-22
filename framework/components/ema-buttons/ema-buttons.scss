@@ -18,3 +18,8 @@
     outline: 3px solid map-get($ema-colors, 'blue-1');
   }
 }
+
+.ecl-button--ema-tag:focus,
+.ecl-button--ema-primary:focus {
+  outline-color: map-get($ema-colors, 'primary');
+}
