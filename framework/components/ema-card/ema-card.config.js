@@ -15,18 +15,8 @@ module.exports = {
       name: 'info',
       label: 'Info',
       context: {
-        variant: 'cta',
+        extra_classes: '',
         title: "What's new",
-        content:
-          'Find all the latest news and updates published on this website in one place.',
-      },
-    },
-    {
-      name: 'authorised',
-      label: 'Authorised',
-      context: {
-        title: 'Authorised',
-        content: 'This medicine is authorised for use in the European Union',
       },
     },
   ],

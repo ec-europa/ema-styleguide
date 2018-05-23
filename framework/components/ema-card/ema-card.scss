@@ -3,30 +3,36 @@
  */
 
 .ema-card {
-  background-color: map-get($ema-colors, 'light-grey-2');
-  border: 1px solid map-get($ema-colors, 'grey-3');
+  background-color: map-get($ema-colors, 'light-grey-3');
   display: flex;
-  font-size: map-get($ecl-font-size, 's');
+  height: 100%;
   margin: 0;
-  padding: map-get($ecl-spacing, 'm') map-get($ecl-spacing, 'xs');
+  padding: map-get($ecl-spacing, 'xs') map-get($ecl-spacing, 'xs');
+
+  &:hover {
+    background-color: map-get($ema-colors, 'light-grey-2');
+  }
 }
 
-.ema-card--cta:hover {
-  background-color: map-get($ema-colors, 'grey-3');
-  color: #000;
+.ema-card--- {
+  background-image: url('../../framework/images/icons/ema-icons.svg#ema-icon-set_doi');
+  background-size: 100px 82px;
 }
 
 .ema-card-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
 }
 
 .ema-card-title {
-  text-transform: uppercase;
+  border-bottom: 1px solid #9f9f9f;
+  font-weight: 600;
+  line-height: 1.66;
+  margin-bottom: map-get($ecl-spacing, 's');
 }
 
 .ema-card-content {
-  font-size: map-get($ecl-font-size, 'xs');
+  line-height: 1.66;
   margin-top: map-get($ecl-spacing, 'xxxs');
 }

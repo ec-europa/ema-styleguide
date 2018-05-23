@@ -29,7 +29,6 @@
     <section class="ecl-col-lg-12">
 
       {% include '@ec-europa/ema-separator' with {
-        icon: 'news',
         title: 'Featured information',
       } %}
 
@@ -39,21 +38,20 @@
         } %}
 
     </div>
+
     <div class="ecl-row">
       <section class="ecl-col-lg-12">
 
         {% include '@ec-europa/ema-separator' with {
-          icon: 'news',
           title: 'News for healthcare professionals',
         } %}
 
         {% include '@ec-europa/ecl-listings' with {
-          variant: 'three-columns',
+          variant: 'two-columns',
           items: items_news,
         } %}
 
         {% include '@ec-europa/ema-separator' with {
-          icon: 'calendar-datepicker',
           title: 'Events of interest',
         } %}
 
@@ -63,17 +61,6 @@
         } %}
 
         {% include '@ec-europa/ema-separator' with {
-          icon: 'group',
-          title: 'Information for',
-        } %}
-
-        {% include '@ec-europa/ecl-listings' with {
-          variant: 'three-columns',
-          items: items_audience,
-        } %}
-
-        {% include '@ec-europa/ema-separator' with {
-          icon: 'play',
           title: 'Media',
           extra_classes: 'ecl-u-pv-l',
         } %}
@@ -98,20 +85,90 @@
             caption: 'Working for every patient in Europe',
           } %}
         </div>
+      </section>
+  </div>
 
+
+
+    <div class="ecl-row ecl-u-mt-lg-m">
+      <section class="ecl-col-lg-4">
         {% include '@ec-europa/ema-separator' with {
-          icon: 'news',
-          title: 'Contextual links',
-          extra_classes: 'ecl-u-pv-l',
+          modifier: 'secondary',
+          title: 'Key content',
         } %}
 
         {% include '@ec-europa/ecl-listings' with {
-          variant: 'three-columns',
-          items: items_area,
+          items: items_key_content,
+        } %}
+      </section>
+
+      <section class="ecl-col-lg-4">
+        {% include '@ec-europa/ema-separator' with {
+          modifier: 'secondary',
+          title: 'Services & databases',
         } %}
 
+        {% include '@ec-europa/ecl-listings' with {
+          items: items_services,
+        } %}
+      </section>
+
+      <section class="ecl-col-lg-4">
+        {% include '@ec-europa/ema-separator' with {
+          modifier: 'secondary',
+          title: 'How does EMA work?',
+        } %}
+
+        {% include '@ec-europa/ecl-listings' with {
+          items: items_how_ema_work,
+        } %}
       </section>
   </div>
+
+  <div class="ecl-row">
+    <section class="ecl-col-lg-12 ecl-u-pa-s">
+    {% include '@ec-europa/ema-separator' with {
+      modifier: 'secondary',
+      title: 'Information for',
+    } %}
+    </section>
+
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Human pharmaceutical industry",
+        content:'Use our online form to ask us a question or request access to unpublished documents.',
+    } only %}
+    </section>
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Veterinary pharmaceutical industry",
+        content:'Use our online form to ask us a question or request access to unpublished documents.',
+    } only %}
+    </section>
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Human healthcare professionals",
+        content:'Use our online form to ask us a question or request access to unpublished documents.',
+    } only %}
+    </section>
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Animal health professionals",
+        content:'Use our online form to ask us a question or request access to unpublished documents.',
+    } only %}
+    </section>
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Patients and careers",
+        content:'Use our online form to ask us a question or request access to unpublished documents.',
+    } only %}
+    </section>
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Press and media",
+        content:'Use our online form to ask us a question or request access to unpublished documents.',
+    } only %}
+    </section>
   </div>
 </main>
 

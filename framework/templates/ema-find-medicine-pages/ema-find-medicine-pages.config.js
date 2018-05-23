@@ -32,6 +32,11 @@ module.exports = {
         },
       ],
     },
+    banner: {
+      title: 'Medicines',
+      description:
+        'This section of the website provides information on the regulation of medicines for human use in the European Union (EU). It particularly concerns the centralised procedure, where the European Medicines Agency (EMA) plays a key role.',
+    },
     footer: {
       sections: [
         {

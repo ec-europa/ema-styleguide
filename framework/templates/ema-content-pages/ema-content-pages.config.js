@@ -189,6 +189,10 @@ module.exports = {
         src: '../../framework/images/eu.png',
         alt: 'European Union flag',
       },
+      logo_network: {
+        src: '../../framework/images/euan.png',
+        alt: 'European Union agencies network',
+      },
     },
     menu: {
       menu_label: 'Menu',
