@@ -59,5 +59,14 @@ module.exports = {
           'This medicine is currently suspended from use in the European Union',
       },
     },
+    {
+      name: 'patient-safety',
+      label: 'Patient safety',
+      context: {
+        variant: 'patient-safety',
+        status: 'Patient safety',
+        description: 'Patient safety informations',
+      },
+    },
   ],
 };

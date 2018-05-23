@@ -51,19 +51,22 @@
                 {% embed '@ec-europa/ecl-forms-form-groups' %}
                   {% block form_group %}
                     {% include '@ec-europa/ecl-forms-labels' with { 'label': 'Categories', 'for_attribute': 'search-option-category', 'extra_classes': 'ecl-u-mb-xxs' } %}
-                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                    {% include '@ec-europa/ema-forms-checkboxes' with {
+                      'extra_classes': 'ecl-checkbox--ema',
                       'label': 'Human (4457)',
                       'id': 'search-filter-comitees-1',
                       'name': 'search-filter-comitees-1',
                       'value': '1'
                     }%}
-                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                    {% include '@ec-europa/ema-forms-checkboxes' with {
+                      'extra_classes': 'ecl-checkbox--ema',
                       'label': 'Veterinary (3402)',
                       'id': 'search-filter-comitees-1',
                       'name': 'search-filter-comitees-1',
                       'value': '2'
                     }%}
-                    {% include '@ec-europa/ecl-forms-checkboxes' with {
+                    {% include '@ec-europa/ema-forms-checkboxes' with {
+                      'extra_classes': 'ecl-checkbox--ema',
                       'label': 'Herbal (873)',
                       'id': 'search-filter-comitees-1',
                       'name': 'search-filter-comitees-1',
@@ -156,10 +159,10 @@
           <h3 class="ecl-heading ecl-heading--h3 ema-u-width-grow-1 ecl-u-mb-md-none"> 7665 results </h3>
           <div class="ecl-u-d-flex ecl-u-align-items-center">
             <label class="ema-u-width-nowrap ecl-u-mr-s" for="search-sort">Sort by</label>
-            {% include '@ec-europa/ecl-forms-selects' with {
+            {% include '@ec-europa/ema-forms-selects' with {
               'id': 'search-sort',
               'name': 'search-sort',
-              'extra_classes': 'ecl-u-mt-none',
+              'extra_classes': 'ecl-u-mt-none ecl-select--ema',
               'options': [
                 { value: '1', label: 'Publication date' },
                 { value: '2', label: 'Last update date' },

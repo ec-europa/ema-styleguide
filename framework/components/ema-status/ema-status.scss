@@ -15,7 +15,8 @@
   flex-shrink: 0;
 }
 
-.ema-status--info {
+.ema-status--info,
+.ema-status--patient-safety {
   background-color: map-get($ema-colors, 'epar-grey');
 }
 .ema-status--authorised {

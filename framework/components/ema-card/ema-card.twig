@@ -1,0 +1,46 @@
+{#
+  - "variant" (string): can be empty, 'info', 'authorized', 'refused' (default: '')
+  - "title" (string): copyright text (default: '')
+  - "content" (string): content text (default: '')
+  - "extra_classes" (string): extra CSS classes to be added
+  - "extra_attributes" (array): extra attributes classes (optional, format: [{ 'name': 'name_of_the_attribute', 'value': 'value_of_the_attribute'}])
+#}
+
+{# Internal properties #}
+
+{% set _title = title|default('') %}
+{% set _content = content|default('') %}
+{% set _icon = 'info' %}
+{% set _css_class = 'ema-card' %}
+{% set _extra_attributes = '' %}
+{% set _icon_path = icon_path|default('../../framework/images/icons/ema-icons.svg') %}
+
+{# Internal properties #}
+
+{% set _css_class = 'ema-card' %}
+{% set _extra_attributes = '' %}
+
+{# Internal logic - Process properties #}
+
+{% if variant is defined and variant is not empty %}
+  {% set _css_class = _css_class ~ ' ' ~ 'ema-card--' ~ variant %}
+{% endif %}
+
+{% if extra_classes is defined and extra_classes is not empty %}
+  {% set _css_class = _css_class ~ ' ' ~ extra_classes %}
+{% endif %}
+
+{% if extra_attributes is defined and extra_attributes is not empty %}
+  {% for attr in extra_attributes %}
+    {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name ~ '="' ~ attr.value ~ '"' %}
+  {% endfor %}
+{% endif %}
+
+{# Print result #}
+
+<div class="{{ _css_class }}" {{ _extra_attributes }}">
+  <span class="ema-card-text">
+    <div class="ema-card-title">{{ title }}</div>
+    <div class="ema-card-content">{{ content }}</div>
+  </span>
+</div>
