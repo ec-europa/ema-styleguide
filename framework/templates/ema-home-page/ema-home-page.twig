@@ -88,6 +88,53 @@
     </section>
   </div>
 
+
+  <div class="ecl-row">
+    <section class="ecl-col-lg-12 ecl-u-pa-s">
+    {% include '@ec-europa/ema-separator' with {
+      title: 'Information for',
+    } %}
+    </section>
+
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Patients and careers",
+        content:'Featured news and updates for patients and carers',
+    } only %}
+    </section>
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Healthcare professionals",
+        content:'Featured news and updates for healthcare professionals, including doctors, nurses and pharmacists',
+    } only %}
+    </section>
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Animals health professionals",
+        content:'Featured news and updates for animal health professionals and users of veterinary medicines such as pet owners',
+    } only %}
+    </section>
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Pharmaceutical industry",
+        content:'Featured news and updates for pharmaceutical industry stakeholders active in the human and veterinary medicines fields',
+    } only %}
+    </section>
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Media",
+        content:'Featured news and updates for journalists with a professional interest in the development and availability of medicines in the European Union',
+    } only %}
+    </section>
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Academia",
+        content:'Featured news and updates for European academics and researchers in the field of medicine development',
+    } only %}
+    </section>
+  </div>
+
+
   <div class="ecl-row">
     <section class="ecl-col-lg-4">
       {% include '@ec-europa/ema-separator' with {
@@ -121,52 +168,6 @@
         items: items_how_ema_work,
       } %}
     </section>
-</div>
-
-<div class="ecl-row">
-  <section class="ecl-col-lg-12 ecl-u-pa-s">
-  {% include '@ec-europa/ema-separator' with {
-    modifier: 'secondary',
-    title: 'Information for',
-  } %}
-  </section>
-
-  <section class="ecl-col-lg-4 ecl-u-pa-s">
-  {% include '@ec-europa/ema-card' with {
-      title: "Human pharmaceutical industry",
-      content:'Use our online form to ask us a question or request access to unpublished documents.',
-  } only %}
-  </section>
-  <section class="ecl-col-lg-4 ecl-u-pa-s">
-  {% include '@ec-europa/ema-card' with {
-      title: "Veterinary pharmaceutical industry",
-      content:'Use our online form to ask us a question or request access to unpublished documents.',
-  } only %}
-  </section>
-  <section class="ecl-col-lg-4 ecl-u-pa-s">
-  {% include '@ec-europa/ema-card' with {
-      title: "Human healthcare professionals",
-      content:'Use our online form to ask us a question or request access to unpublished documents.',
-  } only %}
-  </section>
-  <section class="ecl-col-lg-4 ecl-u-pa-s">
-  {% include '@ec-europa/ema-card' with {
-      title: "Animal health professionals",
-      content:'Use our online form to ask us a question or request access to unpublished documents.',
-  } only %}
-  </section>
-  <section class="ecl-col-lg-4 ecl-u-pa-s">
-  {% include '@ec-europa/ema-card' with {
-      title: "Patients and careers",
-      content:'Use our online form to ask us a question or request access to unpublished documents.',
-  } only %}
-  </section>
-  <section class="ecl-col-lg-4 ecl-u-pa-s">
-  {% include '@ec-europa/ema-card' with {
-      title: "Press and media",
-      content:'Use our online form to ask us a question or request access to unpublished documents.',
-  } only %}
-  </section>
 </div>
 
   </div>

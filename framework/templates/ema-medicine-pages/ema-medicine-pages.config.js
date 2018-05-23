@@ -8,8 +8,8 @@ const feedback = [
 const selector = 'ema-rating-form__review';
 
 module.exports = {
-  title: 'Content pages',
-  label: 'Content pages',
+  title: 'Medicine content pages',
+  label: 'Medicine content pages',
   status: 'ready',
   tags: ['template'],
   preview: '@preview-website',
@@ -255,130 +255,19 @@ module.exports = {
       ],
     },
     banner: {
-      title: 'Human regulatory',
+      title: 'Medicines',
       description:
         'This section of the website provides information on the regulation of medicines for human use in the European Union (EU). It particularly concerns the centralised procedure, where the European Medicines Agency (EMA) plays a key role.',
-      links: [
-        {
-          label: 'Overview',
-          href: '#item1-1',
-        },
-        {
-          label: 'Marketing authorisation',
-          href: '#item1-4',
-        },
-        {
-          label: 'Research and development',
-          href: '#item1-2',
-          is_active: true,
-        },
-        {
-          label: 'Post authorisation',
-          href: '#item1-5',
-        },
-        {
-          label: 'Herbal products',
-          href: '#item1-3',
-        },
-      ],
     },
-    sideNavigation: {
-      list: [
-        {
-          label: 'Adaptive pathways',
-          link: '#',
-        },
-        {
-          label: 'Advanced therapies',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Clinical trials',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Compassionate use',
-          link: '#',
-        },
-        {
-          label: 'Compliance',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Data on medicines (ISO IDMP standards)',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Geriatric medicine',
-          link: '#',
-        },
-        {
-          label: 'Innovation in medicines',
-          link: '#',
-        },
-        {
-          label: 'Non-pharmaceutical products',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Orphan designation',
-          link: '#',
-          list: [
-            {
-              label: 'Annual report',
-              link: '#',
-            },
-            {
-              label: 'How to apply',
-              link: '#',
-              canExpand: true,
-            },
-            {
-              label: 'Incentives',
-              link: '#',
-            },
-            {
-              label: 'Transfers',
-              link: '#',
-              active: true,
-            },
-          ],
-        },
-        {
-          label: 'Paediatric medicines',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Pharmacovigilance',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'PRIME: priority medicines',
-          link: '#',
-        },
-        {
-          label: 'Quality by design',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Scientific advice and protocol assistance',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Scientific guidelines',
-          link: '#',
-          canExpand: true,
-        },
-      ],
+    status: {
+      variant: 'authorised',
+      status: 'Authorised',
+      description: 'This medicine is authorised for use in the European Union',
+    },
+    safety: {
+      variant: 'patient-safety',
+      status: 'Patient safety',
+      description: 'Patient safety informations',
     },
     ratingForm: {
       message: 'Tell us more',

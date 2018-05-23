@@ -1,0 +1,78 @@
+{#
+  This is an example and should not be used as it is.
+#}
+
+{% include '@ec-europa/ecl-skip-links' with {
+    'href': '#main-content',
+    'label': 'Skip to main content'
+} %}
+
+{% include '@ec-europa/ema-headers' with header %}
+
+{% include '@ec-europa/ema-navigation-menus' with menu %}
+
+{% include '@ec-europa/ema-context-banners' with banner %}
+
+<main class="ecl-u-mv-l">
+  <div class="ecl-container">
+  <div class="ecl-row">
+    <section class="ecl-col-lg-7">
+      <h2 class="ecl-heading ecl-heading--ema-h2 ecl-u-d-inline">Zydelig</h2>
+      <button class="ecl-button--default ecl-button--default ecl-u-fs-xs ecl-u-ml-lg-xxs ecl-u-pa-xxxs"><span class="ecl-icon ecl-icon--share"></span> Share</button>
+      <p><em>active substance 1 / active substance 2 / active substance 3</em></p>
+    </section>
+    <section class="ecl-col-lg-5">
+{% include '@ec-europa/ema-status' with status %}
+{% include '@ec-europa/ema-status' with safety %}
+    </section>
+   </div>
+
+    <div class="ecl-row">
+      <section class="ecl-col-lg-12">
+
+        <p class="ecl-paragraph ecl-paragraph--ema"><strong>A transfer of the orphan designation is the procedure by which the orphan designation is transferred from the currently approved sponsor (orphan designation holder) to a new sponsor which is a different person/legal entity.</strong></p>
+        <p class="ecl-paragraph ecl-paragraph--ema">Such a transfer may result from the designation holder’s commercial decision to divest the orphan designation or be needed in anticipation of the designation holder ceasing to exist as a legal entity and orphan designation being taken over by another legal entity.</p>
+        <p class="ecl-paragraph ecl-paragraph--ema">A transfer of the orphan designation can only be initiated once a designation has been granted by the European Commission. In case there is a need to change the sponsor during validation or evaluation of the application for orphan designation, the applicant who initially applied for the orphan designation is advised to contact the Agency at <a class="ecl-link--ema-default" href="#">orphandrugs@ema.europa.eu</a>.</p>
+        <p class="ecl-paragraph ecl-paragraph--ema">Transfers of orphan designations are free of charge. In case a transfer is sought for several orphan designations, an application must be submitted for each designation (i.e. one application per designation).</p>
+        <p class="ecl-paragraph ecl-paragraph--ema">A transfer of an orphan designation does not include a transfer of marketing authorisation as this is subject to a different procedure (see: <a class="ecl-link--ema-default" href="#">Transfer of marketing authorisation: questions and answers</a>).</p>
+        <p class="ecl-paragraph ecl-paragraph--ema"><strong>To transfer an orphan designation</strong>, the sponsor needs to submit an application to <a class="ecl-link--ema-default" href="#">orphandrugs@ema.europa.eu</a>, together with the documents described in the '<a class="ecl-link--ema-default" href="#">Checklist for sponsors applying for the transfer of orphan medicinal product designation</a>'.</p>
+        <p class="ecl-paragraph ecl-paragraph--ema">The Agency can only provide an opinion on the transfer if all of the documentation required is complete and satisfactory. The Agency will issue an opinion within 30 days of submission of the documentation and the opinion will be forwarded to:</p>
+        <ul class="ecl-list">
+          <li>the existing sponsor</li>
+          <li>the sponsor to whom the designation will be transferred</li>
+          <li>the European Commission.</li>
+        </ul>
+        <p class="ecl-paragraph ecl-paragraph--ema">If the European Commission agrees to the transfer, it will amend the decision granting the orphan designation. The transfer is accepted from the date of the notification of the amended decision.</p>
+        <p class="ecl-paragraph ecl-paragraph--ema">A change of name and/or address of the orphan designation holder are not considered a transfer if the holder remains the same person/legal entity and is subject to a different procedure. Such change should be notified through a change of name and/or address of the orphan designation holder procedure.</p>
+
+        {% include '@ec-europa/ema-separator' with {
+          icon: 'related-documents',
+          modifier: 'secondary',
+          title: 'Related documents',
+        } %}
+
+        {% include '@ec-europa/ema-listings' with items %}
+
+        {% include '@ec-europa/ema-separator' with {
+          icon: 'related-links',
+          modifier: 'secondary',
+          title: 'Related links',
+        } %}
+
+        <ul class="ecl-list ecl-list--unstyled">
+          <li>
+            <a class="ecl-link--ema-default" href="#">
+              Guideline on the format and content of applications for designation as orphan medicinal products and on the transfer of designation from one sponsor to another
+            </a>
+          </li>
+        </ul>
+
+        <div class="ecl-u-mr-md-l ecl-u-mv-l">
+          {% include '@ec-europa/ema-rating-form' with ratingForm %}
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+{% include '@ec-europa/ema-footers' with footer %}
