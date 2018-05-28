@@ -3,7 +3,7 @@
 */
 
 .ema-pager {
-  background-color: map-get($ema-colors, 'light-grey-2');
+  background-color: map-get($ema-colors, 'light-grey-3');
   color: map-get($ema-colors, 'grey-3');
   display: block;
   font-size: map-get($ecl-font-size, 'xl');
@@ -16,6 +16,7 @@
 
 .ema-pager:hover,
 .ema-pager:focus {
+  background-color: map-get($ema-colors, 'light-grey-2');
   color: map-get($ema-colors, 'grey-2');
   text-decoration: underline;
 }

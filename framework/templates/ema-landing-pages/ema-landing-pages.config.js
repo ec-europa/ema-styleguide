@@ -241,6 +241,7 @@ module.exports = {
       ],
     },
     banner: {
+      extra_classes: 'ema-context-banner--standalone',
       title: 'Healthcare Professionals',
       description:
         'On this page, you will find information on the Agency’s activities that are most relevant to healthcare professionals, including news, and events. You can contribute to the Agency’s work by responding to public consultations. Learn more about how Healthcare Professionals are actively involved in the work of the Agency.',

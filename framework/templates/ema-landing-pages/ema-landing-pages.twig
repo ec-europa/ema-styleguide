@@ -45,13 +45,17 @@ extra_classes: 'ecl-u-pv-l',
 
         {% include '@ec-europa/ema-separator' with {
           extra_classes: 'ecl-u-pv-l',
-          title: 'News for healthcare professionals',
+          title: 'Latest news for healthcare professionals',
         } %}
 
         {% include '@ec-europa/ecl-listings' with {
           variant: 'two-columns',
           items: items_news,
         } %}
+
+        {% include '@ec-europa/ema-pager' with {
+          label: 'Load more news',
+        } only %}
 
         {% include '@ec-europa/ema-separator' with {
           extra_classes: 'ecl-u-pv-l',
@@ -64,11 +68,9 @@ extra_classes: 'ecl-u-pv-l',
         } %}
 
         {% include '@ec-europa/ema-separator' with {
-          title: 'Media',
+          title: 'Publications',
           extra_classes: 'ecl-u-pv-l',
         } %}
-
-
 
         <div class="ecl-u-d-flex ecl-u-align-items-baseline ecl-u-justify-content-around">
           {% include '@ec-europa/ecl-files' with {

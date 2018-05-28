@@ -7,6 +7,10 @@
   margin: 0;
 }
 
+.ema-context-banner--standalone {
+  background-color: map-get($ema-colors, 'light-grey-2');
+}
+
 .ema-context-banner__wrapper {
   background-color: map-get($ema-colors, 'light-grey-2');
   padding: map-get($ecl-spacing, 's');
