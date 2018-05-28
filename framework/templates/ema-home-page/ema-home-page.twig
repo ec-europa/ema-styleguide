@@ -28,7 +28,7 @@
           {% embed '@ec-europa/ecl-forms-fieldsets'  with {} only %}
             {% block fieldset %}
               <div class="ema-card-title">Search for medicines</div>
-              <div class="ema-card-content">Search our database of medicines - including human medicines, veterinary medicines and herbal medicines.</div>
+              <div class="ema-card-content">Search our database of medicines including human medicines, veterinary medicines and herbal medicines.</div>
               {% embed '@ec-europa/ecl-forms-form-groups' %}
                 {% block form_group %}
                   {% include '@ec-europa/ecl-forms-text-inputs' with {
@@ -67,7 +67,7 @@
     </section>
     <section class="ecl-col-lg-4 ecl-u-pa-s">
     {% include '@ec-europa/ema-card' with {
-        title: "Ask EMA",
+        title: "FAQ's",
         content:'Use our online form to ask us a question or request access to unpublished documents.',
     } only %}
     </section>
@@ -77,13 +77,17 @@
     <section class="ecl-col-lg-12">
 
     {% include '@ec-europa/ema-separator' with {
-      title: 'News and medicinal product announcements',
+      title: 'Latest news and medicinal product announcements',
       extra_classes: 'ecl-u-pt-m',
     } only %}
 
     {% include '@ec-europa/ecl-listings' with {
       variant: 'two-columns',
       items: items_news,
+    } only %}
+
+    {% include '@ec-europa/ema-pager' with {
+      label: 'Load more news',
     } only %}
     </section>
   </div>
@@ -133,42 +137,6 @@
     } only %}
     </section>
   </div>
-
-
-  <div class="ecl-row">
-    <section class="ecl-col-lg-4">
-      {% include '@ec-europa/ema-separator' with {
-        modifier: 'secondary',
-        title: 'Key content',
-      } %}
-
-      {% include '@ec-europa/ecl-listings' with {
-        items: items_key_content,
-      } %}
-    </section>
-
-    <section class="ecl-col-lg-4">
-      {% include '@ec-europa/ema-separator' with {
-        modifier: 'secondary',
-        title: 'Services & databases',
-      } %}
-
-      {% include '@ec-europa/ecl-listings' with {
-        items: items_services,
-      } %}
-    </section>
-
-    <section class="ecl-col-lg-4">
-      {% include '@ec-europa/ema-separator' with {
-        modifier: 'secondary',
-        title: 'How does EMA work?',
-      } %}
-
-      {% include '@ec-europa/ecl-listings' with {
-        items: items_how_ema_work,
-      } %}
-    </section>
-</div>
 
   </div>
 </main>

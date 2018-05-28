@@ -5,7 +5,7 @@
 .ema-status {
   color: #fff;
   display: flex;
-  font-size: map-get($ecl-font-size, 's');
+  font-size: map-get($ecl-font-size, 'm');
   margin: 0;
   padding: map-get($ecl-spacing, 'm') map-get($ecl-spacing, 'xs');
 }
@@ -38,6 +38,6 @@
 }
 
 .ema-status-desc {
-  font-size: map-get($ecl-font-size, 'xs');
+  font-size: map-get($ecl-font-size, 's');
   margin-top: map-get($ecl-spacing, 'xxxs');
 }

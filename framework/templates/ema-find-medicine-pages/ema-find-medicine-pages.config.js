@@ -11,28 +11,10 @@ module.exports = {
         src: '../../framework/images/logo_ema.jpg',
         alt: 'EMA logo',
       },
-      links: [
-        {
-          label: '<span class="ecl-icon ecl-icon--rss"></span>',
-          href: '#',
-          extra_classes: 'ema-header__link-item ecl-link--ema-obvious',
-          extra_attributes: [{ name: 'title', value: 'RSS' }],
-        },
-        {
-          label: '<span class="ecl-icon ecl-icon--twitter"></span>',
-          href: '#',
-          extra_classes: 'ema-header__link-item ecl-link--ema-obvious',
-          extra_attributes: [{ name: 'title', value: 'Twitter' }],
-        },
-        {
-          label: '<span class="ecl-icon ecl-icon--generic-lang"></span>',
-          href: '#',
-          extra_classes: 'ema-header__link-item ecl-link--ema-obvious',
-          extra_attributes: [{ name: 'title', value: 'Mail' }],
-        },
-      ],
+      links: [],
     },
     banner: {
+      extra_classes: 'ema-context-banner--standalone',
       title: 'Medicines',
       description:
         'This section of the website provides information on the regulation of medicines for human use in the European Union (EU). It particularly concerns the centralised procedure, where the European Medicines Agency (EMA) plays a key role.',

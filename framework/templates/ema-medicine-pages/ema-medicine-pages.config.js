@@ -255,6 +255,7 @@ module.exports = {
       ],
     },
     banner: {
+      extra_classes: 'ema-context-banner--standalone',
       title: 'Medicines',
       description:
         'This section of the website provides information on the regulation of medicines for human use in the European Union (EU). It particularly concerns the centralised procedure, where the European Medicines Agency (EMA) plays a key role.',
@@ -263,6 +264,41 @@ module.exports = {
       variant: 'authorised',
       status: 'Authorised',
       description: 'This medicine is authorised for use in the European Union',
+    },
+    referral_status: {
+      items: [
+        { title: 'Procedure started' },
+        { title: 'Under evaluation' },
+        { title: 'PRAC recommendation' },
+        { title: 'CHMP opinion', active: true },
+        { title: 'European Commission final decision' },
+      ],
+    },
+    accordion1: {
+      panels: [
+        {
+          id: 'pan1',
+          isExpanded: true,
+          heading: {
+            title:
+              'Jobs, Growth, Investment and Competitiveness with an additional quite long string',
+            icon: 'growth',
+            level: 2,
+          },
+          body:
+            '<p>Bullfights. Bull hockey. Do you like this? The bull is stabbed, prodded, beaten. The bull is wounded. The bull is tired before the matador ever steps into the ring. Now, is that victory? Of course it is. Wanna know the secret to winning? Creative sportsmanship. In other words, one has to rig the game.</p>',
+        },
+        {
+          id: 'pan2',
+          heading: {
+            title: 'Energy Union',
+            icon: 'energy',
+            level: 2,
+          },
+          body:
+            '<p>Bullfights. Bull hockey. Do you like this? The bull is stabbed, prodded, beaten. The bull is wounded. The bull is tired before the matador ever steps into the ring. Now, is that victory? Of course it is. Wanna know the secret to winning? Creative sportsmanship. In other words, one has to rig the game.</p>',
+        },
+      ],
     },
     safety: {
       variant: 'patient-safety',
@@ -324,7 +360,21 @@ module.exports = {
         ECL.megamenu();
         ECL.ratingForm(${JSON.stringify(selector)});
         ECL.initExpandables('.ecl-file__translations-toggle');
-      });`,
+        ECL.accordions();
+      });
+      /* ECL Accordion Components expand/collapse all */
+      function expandAll(selector,action) {
+        var i;
+        var collection = document.querySelector(selector);
+        var collection_aria_hidden = collection.querySelectorAll('[aria-hidden]');
+        var collection_aria_expanded = collection.querySelectorAll('[aria-expanded]');
+        for (i = 0; i < collection_aria_hidden.length; ++i) {
+          collection_aria_hidden[i].setAttribute('aria-hidden',!action);
+        }
+        for (i = 0; i < collection_aria_expanded.length; ++i) {
+          collection_aria_expanded[i].setAttribute('aria-expanded',action);
+        }
+      }`,
     },
   },
 };

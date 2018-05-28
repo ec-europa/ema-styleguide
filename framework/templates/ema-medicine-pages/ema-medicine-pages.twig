@@ -12,18 +12,42 @@
 {% include '@ec-europa/ema-navigation-menus' with menu %}
 
 {% include '@ec-europa/ema-context-banners' with banner %}
+<style>
 
+/* Define accordion custom style. */
+.ecl-accordion__header:active,
+.ecl-accordion__header:focus,
+.ecl-accordion__header:hover,
+.ecl-accordion__header[aria-expanded=true] {
+  background-color: #efefef;
+}
+
+.ecl-accordion__header {
+  font-weight: normal;
+}
+
+.ecl-accordion__header[aria-expanded=true] .ecl-icon--up,
+.ecl-accordion__header[aria-expanded=false] .ecl-icon--down {
+  display: block;
+}
+
+.ecl-accordion__header[aria-expanded=false] .ecl-icon--up,
+.ecl-accordion__header[aria-expanded=true] .ecl-icon--down {
+  display: none;
+}
+</style>
 <main class="ecl-u-mv-l">
   <div class="ecl-container">
-  <div class="ecl-row">
-    <section class="ecl-col-lg-7">
+  <div class="ecl-row ecl-u-mb-lg-l">
+    <section class="ecl-col-lg-8">
       <h2 class="ecl-heading ecl-heading--ema-h2 ecl-u-d-inline">Zydelig</h2>
-      <button class="ecl-button--default ecl-button--default ecl-u-fs-xs ecl-u-ml-lg-xxs ecl-u-pa-xxxs"><span class="ecl-icon ecl-icon--share"></span> Share</button>
-      <p><em>active substance 1 / active substance 2 / active substance 3</em></p>
+      <button class="ecl-button--default ecl-u-fs-xs ecl-u-ml-lg-xxs ecl-u-pa-xxxs"><span class="ecl-icon ecl-icon--share"></span> Share</button>
+      <p class="ecl-u-mv-lg-m"><em>active substance 1 / active substance 2 / active substance 3</em></p>
+      {% include '@ec-europa/ema-status-referral' with referral_status %}
     </section>
-    <section class="ecl-col-lg-5">
-{% include '@ec-europa/ema-status' with status %}
-{% include '@ec-europa/ema-status' with safety %}
+    <section class="ecl-col-lg-4">
+      {% include '@ec-europa/ema-status' with status %}
+      {% include '@ec-europa/ema-status' with safety %}
     </section>
    </div>
 
@@ -32,11 +56,29 @@
 
         <p class="ecl-paragraph ecl-paragraph--ema"><strong>A transfer of the orphan designation is the procedure by which the orphan designation is transferred from the currently approved sponsor (orphan designation holder) to a new sponsor which is a different person/legal entity.</strong></p>
         <p class="ecl-paragraph ecl-paragraph--ema">Such a transfer may result from the designation holder’s commercial decision to divest the orphan designation or be needed in anticipation of the designation holder ceasing to exist as a legal entity and orphan designation being taken over by another legal entity.</p>
-        <p class="ecl-paragraph ecl-paragraph--ema">A transfer of the orphan designation can only be initiated once a designation has been granted by the European Commission. In case there is a need to change the sponsor during validation or evaluation of the application for orphan designation, the applicant who initially applied for the orphan designation is advised to contact the Agency at <a class="ecl-link--ema-default" href="#">orphandrugs@ema.europa.eu</a>.</p>
-        <p class="ecl-paragraph ecl-paragraph--ema">Transfers of orphan designations are free of charge. In case a transfer is sought for several orphan designations, an application must be submitted for each designation (i.e. one application per designation).</p>
-        <p class="ecl-paragraph ecl-paragraph--ema">A transfer of an orphan designation does not include a transfer of marketing authorisation as this is subject to a different procedure (see: <a class="ecl-link--ema-default" href="#">Transfer of marketing authorisation: questions and answers</a>).</p>
-        <p class="ecl-paragraph ecl-paragraph--ema"><strong>To transfer an orphan designation</strong>, the sponsor needs to submit an application to <a class="ecl-link--ema-default" href="#">orphandrugs@ema.europa.eu</a>, together with the documents described in the '<a class="ecl-link--ema-default" href="#">Checklist for sponsors applying for the transfer of orphan medicinal product designation</a>'.</p>
-        <p class="ecl-paragraph ecl-paragraph--ema">The Agency can only provide an opinion on the transfer if all of the documentation required is complete and satisfactory. The Agency will issue an opinion within 30 days of submission of the documentation and the opinion will be forwarded to:</p>
+
+
+        <dl class="ecl-accordion" role="presentation" id="qa-60">
+          <div class="ecl-u-d-flex ecl-u-justify-content-end">
+          <button onclick="expandAll('#qa-60', true)" class="ecl-button--default ecl-u-mr-xs">Expand all</button>
+          <button onclick="expandAll('#qa-60', false)" class="ecl-button--default">Collapse all</button>
+          </div>
+          <dl class="ecl-accordion" role="presentation">
+
+        <dt role="heading">
+
+          <button aria-controls="ecl-accordion-panel-pan2" aria-expanded="false" class="ecl-accordion__header ema-u-bg-light-grey-3" id="ecl-accordion-header-pan2" tabindex="0">
+            <span class="ecl-accordion__header-icon ecl-icon ecl-icon--rounded ecl-icon--down ecl-u-bg-secondary ema-u-bg-primary ecl-u-color-white"></span>
+            <span class="ecl-accordion__header-icon ecl-icon ecl-icon--rounded ecl-icon--up ecl-u-bg-secondary ema-u-bg-primary ecl-u-color-white"></span>
+                  Question 1      </button>
+        </dt>
+        <dd aria-hidden="true" aria-labelledby="ecl-accordion-header-pan2" class="ecl-accordion__panel" id="ecl-accordion-panel-pan2" role="region">
+              <div class="ecl-editor ecl-u-fs-m first last"><p>Answer 1</p>
+        </div>
+          </dd>
+          </dl>
+          </dl>
+
         <ul class="ecl-list">
           <li>the existing sponsor</li>
           <li>the sponsor to whom the designation will be transferred</li>
