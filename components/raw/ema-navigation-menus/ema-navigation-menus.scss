@@ -17,6 +17,7 @@
   .ecl-navigation-menu__link {
     background-color: map-get($ema-colors, 'primary');
     color: #fff;
+    font-size: map-get($ecl-font-size, 'm');
     font-weight: normal;
   }
 
@@ -50,11 +51,8 @@
     background-color: transparent;
   }
 
-  .ema-context-banner__wrapper {
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, .3);
-  }
-
   .ema-context-banner {
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
     margin-left: -(map-get($ecl-spacing, 's'));
   }
 }

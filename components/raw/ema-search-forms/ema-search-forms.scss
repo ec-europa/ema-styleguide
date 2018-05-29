@@ -3,17 +3,13 @@
 */
 
 @mixin ema-search-button() {
-  .ecl-search-form__button {
-    background-color: map-get($ema-colors, 'primary');
-    border-color: map-get($ema-colors, 'primary');
-    color: #fff;
-    font-family: $ema-font-family-base;
-  }
-
   .ecl-search-form__button:hover,
   .ecl-search-form__button:focus {
-    background-color: map-get($ema-colors, 'blue-3');
-    border-color: map-get($ema-colors, 'blue-3');
+    background-color: #fff;
+    border-color: map-get($ema-colors, 'primary');
+  }
+  .ecl-search-form__button::before:hover {
+    color: #fff;
   }
 }
 
@@ -29,10 +25,16 @@
   @include ema-search-button();
 
   .ecl-search-form__textfield {
-    padding: map-get($ecl-spacing, 'xxs') map-get($ecl-spacing, 'xs') map-get($ecl-spacing, 'xxs') map-get($ecl-spacing, 'l');
+    padding: map-get($ecl-spacing, 'xxs') map-get($ecl-spacing, 'xs')
+      map-get($ecl-spacing, 'xxs') map-get($ecl-spacing, 'l');
   }
 
   .ecl-search-form__textfield-wrapper {
     border-width: 2px;
+  }
+
+  .ecl-text-input:focus {
+    border-color: map-get($ema-colors, 'blue-1');
+    outline: 3px solid map-get($ema-colors, 'blue-1');
   }
 }
