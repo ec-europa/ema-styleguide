@@ -22,20 +22,20 @@
   </div>
 
   <div class="ecl-row ecl-u-pt-m">
-    <section class="ecl-col-lg-4">
-
-    {% embed '@ec-europa/ecl-forms-forms'  with { 'extra_class':'ecl-u-pa-s ema-u-bg-light-grey-2'} only %}
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% embed '@ec-europa/ecl-forms-forms'  with { 'extra_class':'ecl-u-pa-s ema-card'} only %}
         {% block form %}
           {% embed '@ec-europa/ecl-forms-fieldsets'  with {} only %}
             {% block fieldset %}
-              {% include '@ec-europa/ecl-forms-legends' with { 'extra_class': 'ecl-form-legend--level-1', 'content': 'Search for medicines' } only %}
-              <p class="ecl-paragraph--ema">Search our database of medicines - including human medicines, veterinary medicines and herbal medicines.</p>
+              <div class="ema-card-title">Search for medicines</div>
+              <div class="ema-card-content">Search our database of medicines including human medicines, veterinary medicines and herbal medicines.</div>
               {% embed '@ec-europa/ecl-forms-form-groups' %}
                 {% block form_group %}
                   {% include '@ec-europa/ecl-forms-text-inputs' with {
                     'id' : 'field-ID-1',
                     'name': 'field-name-1',
                     'type': 'text',
+                    'extraClass': 'ecl-text-input--ema',
                     'extraAttributes': [
                       { 'name': 'placeholder', 'value': 'Medicine name, active substance...' }
                     ]
@@ -58,11 +58,18 @@
       {% endembed %}
 
     </section>
-    <section class="ecl-col-lg-4 ">
-      <div class='ecl-u-pa-s ema-u-bg-light-grey-2'>What's new</div>
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "What's new",
+        extra_class:'ecl-u-pb-m',
+        content:'Find all the latest news and updates published on this website in one place.',
+    } only %}
     </section>
-    <section class="ecl-col-lg-4 ">
-      <div class='ecl-u-pa-s ema-u-bg-light-grey-2'>Ask ema</div>
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "FAQ's",
+        content:'Use our online form to ask us a question or request access to unpublished documents.',
+    } only %}
     </section>
   </div>
 
@@ -70,74 +77,66 @@
     <section class="ecl-col-lg-12">
 
     {% include '@ec-europa/ema-separator' with {
-      title: 'News and medicinal product announcements',
+      title: 'Latest news and medicinal product announcements',
       extra_classes: 'ecl-u-pt-m',
     } only %}
 
     {% include '@ec-europa/ecl-listings' with {
-      variant: 'one-columns',
+      variant: 'two-columns',
       items: items_news,
     } only %}
 
-    {% include '@ec-europa/ema-separator' with {
-      title: 'How does EMA work?',
+    {% include '@ec-europa/ema-pager' with {
+      label: 'Load more news',
     } only %}
+    </section>
+  </div>
 
-    <p class="ecl-paragraph--ema">Lorem ipsum...</p>
-
-    {% include '@ec-europa/ecl-listings' with {
-      variant: 'three-columns',
-      items: items_how_ema_work,
-    } only %}
-
-    </div>
 
   <div class="ecl-row">
-    <section class="ecl-col-lg-4">
-      {% include '@ec-europa/ema-separator' with {
-        title: 'Key content',
-      } %}
-
-      {% include '@ec-europa/ecl-listings' with {
-        items: items_key_content,
-      } %}
+    <section class="ecl-col-lg-12 ecl-u-pa-s">
+    {% include '@ec-europa/ema-separator' with {
+      title: 'Information for',
+    } %}
     </section>
 
-    <section class="ecl-col-lg-4">
-      {% include '@ec-europa/ema-separator' with {
-        title: 'Services & databases',
-      } %}
-
-      {% include '@ec-europa/ecl-listings' with {
-        items: items_services,
-      } %}
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Patients and careers",
+        content:'Featured news and updates for patients and carers',
+    } only %}
     </section>
-
-    <section class="ecl-col-lg-4">
-      {% include '@ec-europa/ema-separator' with {
-        title: 'Information for',
-      } %}
-
-      {% include '@ec-europa/ecl-listings' with {
-        items: items_informations,
-      } %}
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Healthcare professionals",
+        content:'Featured news and updates for healthcare professionals, including doctors, nurses and pharmacists',
+    } only %}
     </section>
-</div>
-
-<div class="ecl-row">
-  <section class="ecl-col-lg-12">
-
-  {% include '@ec-europa/ema-separator' with {
-    title: 'Topics we cover',
-  } %}
-
-  {% include '@ec-europa/ecl-listings' with {
-    variant: 'three-columns',
-    items: items_topics,
-  } %}
-
-  </section>
-</div>
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Animals health professionals",
+        content:'Featured news and updates for animal health professionals and users of veterinary medicines such as pet owners',
+    } only %}
+    </section>
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Pharmaceutical industry",
+        content:'Featured news and updates for pharmaceutical industry stakeholders active in the human and veterinary medicines fields',
+    } only %}
+    </section>
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Media",
+        content:'Featured news and updates for journalists with a professional interest in the development and availability of medicines in the European Union',
+    } only %}
+    </section>
+    <section class="ecl-col-lg-4 ecl-u-pa-s">
+    {% include '@ec-europa/ema-card' with {
+        title: "Academia",
+        content:'Featured news and updates for European academics and researchers in the field of medicine development',
+    } only %}
+    </section>
+  </div>
 
   </div>
 </main>

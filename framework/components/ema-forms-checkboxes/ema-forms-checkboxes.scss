@@ -1,0 +1,8 @@
+/**
+ * Checkbox component
+ * @define checkbox
+ */
+
+.ecl-checkbox--ema .ecl-checkbox__input:focus + .ecl-checkbox__label::before {
+  border-color: map-get($ema-colors, 'blue-1');
+}

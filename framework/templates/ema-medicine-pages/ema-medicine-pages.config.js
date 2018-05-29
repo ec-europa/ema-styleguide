@@ -8,8 +8,8 @@ const feedback = [
 const selector = 'ema-rating-form__review';
 
 module.exports = {
-  title: 'Content pages',
-  label: 'Content pages',
+  title: 'Medicine content pages',
+  label: 'Medicine content pages',
   status: 'ready',
   tags: ['template'],
   preview: '@preview-website',
@@ -256,130 +256,54 @@ module.exports = {
     },
     banner: {
       extra_classes: 'ema-context-banner--standalone',
-      title: 'Human regulatory',
+      title: 'Medicines',
       description:
         'This section of the website provides information on the regulation of medicines for human use in the European Union (EU). It particularly concerns the centralised procedure, where the European Medicines Agency (EMA) plays a key role.',
-      links: [
+    },
+    status: {
+      variant: 'authorised',
+      status: 'Authorised',
+      description: 'This medicine is authorised for use in the European Union',
+    },
+    referral_status: {
+      items: [
+        { title: 'Procedure started' },
+        { title: 'Under evaluation' },
+        { title: 'PRAC recommendation' },
+        { title: 'CHMP opinion', active: true },
+        { title: 'European Commission final decision' },
+      ],
+    },
+    accordion1: {
+      panels: [
         {
-          label: 'Overview',
-          href: '#item1-1',
+          id: 'pan1',
+          isExpanded: true,
+          heading: {
+            title:
+              'Jobs, Growth, Investment and Competitiveness with an additional quite long string',
+            icon: 'growth',
+            level: 2,
+          },
+          body:
+            '<p>Bullfights. Bull hockey. Do you like this? The bull is stabbed, prodded, beaten. The bull is wounded. The bull is tired before the matador ever steps into the ring. Now, is that victory? Of course it is. Wanna know the secret to winning? Creative sportsmanship. In other words, one has to rig the game.</p>',
         },
         {
-          label: 'Marketing authorisation',
-          href: '#item1-4',
-        },
-        {
-          label: 'Research and development',
-          href: '#item1-2',
-          is_active: true,
-        },
-        {
-          label: 'Post authorisation',
-          href: '#item1-5',
-        },
-        {
-          label: 'Herbal products',
-          href: '#item1-3',
+          id: 'pan2',
+          heading: {
+            title: 'Energy Union',
+            icon: 'energy',
+            level: 2,
+          },
+          body:
+            '<p>Bullfights. Bull hockey. Do you like this? The bull is stabbed, prodded, beaten. The bull is wounded. The bull is tired before the matador ever steps into the ring. Now, is that victory? Of course it is. Wanna know the secret to winning? Creative sportsmanship. In other words, one has to rig the game.</p>',
         },
       ],
     },
-    sideNavigation: {
-      list: [
-        {
-          label: 'Adaptive pathways',
-          link: '#',
-        },
-        {
-          label: 'Advanced therapies',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Clinical trials',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Compassionate use',
-          link: '#',
-        },
-        {
-          label: 'Compliance',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Data on medicines (ISO IDMP standards)',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Geriatric medicine',
-          link: '#',
-        },
-        {
-          label: 'Innovation in medicines',
-          link: '#',
-        },
-        {
-          label: 'Non-pharmaceutical products',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Orphan designation',
-          link: '#',
-          list: [
-            {
-              label: 'Annual report',
-              link: '#',
-            },
-            {
-              label: 'How to apply',
-              link: '#',
-              canExpand: true,
-            },
-            {
-              label: 'Incentives',
-              link: '#',
-            },
-            {
-              label: 'Transfers',
-              link: '#',
-              active: true,
-            },
-          ],
-        },
-        {
-          label: 'Paediatric medicines',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Pharmacovigilance',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'PRIME: priority medicines',
-          link: '#',
-        },
-        {
-          label: 'Quality by design',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Scientific advice and protocol assistance',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Scientific guidelines',
-          link: '#',
-          canExpand: true,
-        },
-      ],
+    safety: {
+      variant: 'patient-safety',
+      status: 'Patient safety',
+      description: 'Patient safety informations',
     },
     ratingForm: {
       message: 'Tell us more',
@@ -436,7 +360,21 @@ module.exports = {
         ECL.megamenu();
         ECL.ratingForm(${JSON.stringify(selector)});
         ECL.initExpandables('.ecl-file__translations-toggle');
-      });`,
+        ECL.accordions();
+      });
+      /* ECL Accordion Components expand/collapse all */
+      function expandAll(selector,action) {
+        var i;
+        var collection = document.querySelector(selector);
+        var collection_aria_hidden = collection.querySelectorAll('[aria-hidden]');
+        var collection_aria_expanded = collection.querySelectorAll('[aria-expanded]');
+        for (i = 0; i < collection_aria_hidden.length; ++i) {
+          collection_aria_hidden[i].setAttribute('aria-hidden',!action);
+        }
+        for (i = 0; i < collection_aria_expanded.length; ++i) {
+          collection_aria_expanded[i].setAttribute('aria-expanded',action);
+        }
+      }`,
     },
   },
 };

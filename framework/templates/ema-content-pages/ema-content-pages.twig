@@ -17,17 +17,12 @@
   <div class="ecl-container">
     <div class="ecl-row">
       <aside class="ecl-col-lg-4 ecl-col-xl-3 ecl-u-order-last ecl-u-order-lg-first">
-        {% include '@ec-europa/ema-buttons' with {
-          extra_classes: 'ecl-button--block ecl-u-mb-m',
-          label: '<span class="ecl-icon ecl-icon--share"></span> Share'
-        } %}
-
         {% include '@ec-europa/ema-side-navigation' with sideNavigation %}
       </aside>
 
-      <section class="ecl-col-lg-8 ecl-offset-xl-1">
-        <h2 class="ecl-heading ecl-heading--ema-h2">Transfers of orphan designation</h2>
-
+      <section class="ecl-col-lg-8">
+        <h2 class="ecl-heading ecl-heading--ema-h2 ecl-u-d-inline">Transfers of orphan designation</h2>
+        <button class="ecl-button--default ecl-button--default ecl-u-fs-xs ecl-u-ml-lg-xxs ecl-u-pa-xxxs"><span class="ecl-icon ecl-icon--share"></span> Share</button>
         <p class="ecl-paragraph ecl-paragraph--ema"><strong>A transfer of the orphan designation is the procedure by which the orphan designation is transferred from the currently approved sponsor (orphan designation holder) to a new sponsor which is a different person/legal entity.</strong></p>
         <p class="ecl-paragraph ecl-paragraph--ema">Such a transfer may result from the designation holder’s commercial decision to divest the orphan designation or be needed in anticipation of the designation holder ceasing to exist as a legal entity and orphan designation being taken over by another legal entity.</p>
         <p class="ecl-paragraph ecl-paragraph--ema">A transfer of the orphan designation can only be initiated once a designation has been granted by the European Commission. In case there is a need to change the sponsor during validation or evaluation of the application for orphan designation, the applicant who initially applied for the orphan designation is advised to contact the Agency at <a class="ecl-link--ema-default" href="#">orphandrugs@ema.europa.eu</a>.</p>
@@ -45,6 +40,7 @@
 
         {% include '@ec-europa/ema-separator' with {
           icon: 'related-documents',
+          modifier: 'secondary',
           title: 'Related documents',
         } %}
 
@@ -52,6 +48,7 @@
 
         {% include '@ec-europa/ema-separator' with {
           icon: 'related-links',
+          modifier: 'secondary',
           title: 'Related links',
         } %}
 

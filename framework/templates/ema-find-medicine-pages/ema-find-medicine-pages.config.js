@@ -1,25 +1,23 @@
-const feedback = [
-  'Unhelpful',
-  'Not very helpful',
-  'Fairly helpful',
-  'Helpful',
-  'Very helpful',
-];
-const selector = 'ema-rating-form__review';
-
 module.exports = {
-  title: 'Content pages',
-  label: 'Content pages',
+  title: 'Medecines pages',
+  label: 'Medecines pages',
   status: 'ready',
   tags: ['template'],
   preview: '@preview-website',
   context: {
     header: {
+      has_search: 'false',
       logo: {
         src: '../../framework/images/logo_ema.jpg',
         alt: 'EMA logo',
       },
       links: [],
+    },
+    banner: {
+      extra_classes: 'ema-context-banner--standalone',
+      title: 'Medicines',
+      description:
+        'This section of the website provides information on the regulation of medicines for human use in the European Union (EU). It particularly concerns the centralised procedure, where the European Medicines Agency (EMA) plays a key role.',
     },
     footer: {
       sections: [
@@ -170,10 +168,6 @@ module.exports = {
         src: '../../framework/images/eu.png',
         alt: 'European Union flag',
       },
-      logo_network: {
-        src: '../../framework/images/euan.png',
-        alt: 'European Union agencies network',
-      },
     },
     menu: {
       menu_label: 'Menu',
@@ -190,7 +184,6 @@ module.exports = {
           title: 'Human regulatory',
           description:
             'This section of the website provides information on the regulation of medicines for human use in the European Union (EU). It particularly concerns the centralised procedure, where the European Medicines Agency (EMA) plays a key role.',
-          is_active: true,
           children_links: [
             {
               label: 'Overview',
@@ -203,7 +196,6 @@ module.exports = {
             {
               label: 'Research and development',
               href: '#item1-2',
-              is_active: true,
             },
             {
               label: 'Post authorisation',
@@ -249,155 +241,18 @@ module.exports = {
           ],
         },
         {
-          label: 'Item 3',
+          label: 'Medicines',
           href: '#item3',
-        },
-      ],
-    },
-    banner: {
-      extra_classes: 'ema-context-banner--standalone',
-      title: 'Human regulatory',
-      description:
-        'This section of the website provides information on the regulation of medicines for human use in the European Union (EU). It particularly concerns the centralised procedure, where the European Medicines Agency (EMA) plays a key role.',
-      links: [
-        {
-          label: 'Overview',
-          href: '#item1-1',
-        },
-        {
-          label: 'Marketing authorisation',
-          href: '#item1-4',
-        },
-        {
-          label: 'Research and development',
-          href: '#item1-2',
           is_active: true,
-        },
-        {
-          label: 'Post authorisation',
-          href: '#item1-5',
-        },
-        {
-          label: 'Herbal products',
-          href: '#item1-3',
-        },
-      ],
-    },
-    sideNavigation: {
-      list: [
-        {
-          label: 'Adaptive pathways',
-          link: '#',
-        },
-        {
-          label: 'Advanced therapies',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Clinical trials',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Compassionate use',
-          link: '#',
-        },
-        {
-          label: 'Compliance',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Data on medicines (ISO IDMP standards)',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Geriatric medicine',
-          link: '#',
-        },
-        {
-          label: 'Innovation in medicines',
-          link: '#',
-        },
-        {
-          label: 'Non-pharmaceutical products',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Orphan designation',
-          link: '#',
-          list: [
-            {
-              label: 'Annual report',
-              link: '#',
-            },
-            {
-              label: 'How to apply',
-              link: '#',
-              canExpand: true,
-            },
-            {
-              label: 'Incentives',
-              link: '#',
-            },
-            {
-              label: 'Transfers',
-              link: '#',
-              active: true,
-            },
-          ],
-        },
-        {
-          label: 'Paediatric medicines',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Pharmacovigilance',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'PRIME: priority medicines',
-          link: '#',
-        },
-        {
-          label: 'Quality by design',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Scientific advice and protocol assistance',
-          link: '#',
-          canExpand: true,
-        },
-        {
-          label: 'Scientific guidelines',
-          link: '#',
-          canExpand: true,
-        },
-      ],
-    },
-    ratingForm: {
-      message: 'Tell us more',
-      ratings: [
-        {
-          feedback,
-          title: 'Add your rating',
-          name: 'ema-rating1',
-        },
-        {
-          title: 'Average',
-          name: 'ema-rating2',
-          default_rating: 3,
-          disabled: true,
         },
       ],
     },
     items: [
+      {
+        title: 'Adaptive pathways',
+        detail:
+          '<div class="ema-u-color-grey-2"><small>Published 13/04/2016<br />Updated 13/12/2016</small></div>',
+      },
       {
         title:
           'Checklist for sponsors applying for the transfer of orphan medicinal product designation <small class="ema-u-color-grey-2">(PDF - 230kb)</small>',
@@ -413,6 +268,23 @@ module.exports = {
         ],
         translations_label: 'Available languages (3)',
         translations_tooltip: 'Click to see translations',
+        translations_id: 'translations-1',
+      },
+      {
+        title:
+          'Data on medicines (ISO IDMP standards): research and development',
+        detail:
+          '<div class="ema-u-color-grey-2"><small>Published 24/11/2008<br />Updated 04/07/2013</small></div>',
+      },
+      {
+        title: 'Medicines for older people',
+        detail:
+          '<div class="ema-u-color-grey-2"><small>Published 24/11/2008<br />Updated 04/07/2013</small></div>',
+      },
+      {
+        title: 'Non-pharmaceutical products',
+        detail:
+          '<div class="ema-u-color-grey-2"><small>Published 24/11/2008<br />Updated 04/07/2013</small></div>',
       },
       {
         title:
@@ -421,21 +293,59 @@ module.exports = {
           '<div class="ema-u-color-grey-2"><small>Published 13/04/2016<br />Updated 13/12/2016</small></div>',
         icon: 'word',
         extra_classes: 'ema-list-item--file',
+
+        translations: [
+          { title: 'French', meta: '230 kB - DOC' },
+          { title: 'German', meta: '230 kB - DOC' },
+          { title: 'Spanish', meta: '230 kB - DOC' },
+        ],
+        translations_label: 'Available languages (3)',
+        translations_tooltip: 'Click to see translations',
+        translations_id: 'translations-2',
       },
       {
-        title:
-          'Template 2 - Translations of the active ingredient and indication for transfer of orphan-medicinal-product designation <small class="ema-u-color-grey-2">(DOCX - 132kb)</small>',
+        title: 'Ancillary medicinal substances',
         detail:
           '<div class="ema-u-color-grey-2"><small>Published 24/11/2008<br />Updated 04/07/2013</small></div>',
-        icon: 'word',
-        extra_classes: 'ema-list-item--file',
+      },
+      {
+        title: 'Pharmacovigilance: research and development',
+        detail:
+          '<div class="ema-u-color-grey-2"><small>Published 24/11/2008<br />Updated 04/07/2013</small></div>',
+      },
+      {
+        title: 'EudraVigilance',
+        detail:
+          '<div class="ema-u-color-grey-2"><small>Published 24/11/2008<br />Updated 04/07/2013</small></div>',
+      },
+      {
+        title: 'Scientific advice and protocol assistance',
+        detail:
+          '<div class="ema-u-color-grey-2"><small>Published 24/11/2008<br />Updated 04/07/2013</small></div>',
       },
     ],
     _demo: {
       scripts: `document.addEventListener('DOMContentLoaded', function () {
         ECL.megamenu();
-        ECL.ratingForm(${JSON.stringify(selector)});
         ECL.initExpandables('.ecl-file__translations-toggle');
+        ECL.initExpandables('#form-filter-toggle');
+
+        const date_from = new Pikaday({
+          field: document.getElementById('date-from'),
+          firstDay: 1,
+          maxDate: new Date(2020, 12, 31),
+          theme: 'ecl-pika-theme',
+          yearRange: [2000, 2020],
+          format: 'DD/MM/YYYY',
+        });
+        const date_to = new Pikaday({
+          field: document.getElementById('date-to'),
+          firstDay: 1,
+          maxDate: new Date(2020, 12, 31),
+          theme: 'ecl-pika-theme',
+          yearRange: [2000, 2020],
+          format: 'DD/MM/YYYY',
+        });
       });`,
     },
   },

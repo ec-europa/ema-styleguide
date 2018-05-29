@@ -10,26 +10,7 @@ module.exports = {
         src: '../../framework/images/logo_ema.jpg',
         alt: 'EMA logo',
       },
-      links: [
-        {
-          label: '<span class="ecl-icon ecl-icon--rss"></span>',
-          href: '#',
-          extra_classes: 'ema-header__link-item ecl-link--ema-obvious',
-          extra_attributes: [{ name: 'title', value: 'RSS' }],
-        },
-        {
-          label: '<span class="ecl-icon ecl-icon--twitter"></span>',
-          href: '#',
-          extra_classes: 'ema-header__link-item ecl-link--ema-obvious',
-          extra_attributes: [{ name: 'title', value: 'Twitter' }],
-        },
-        {
-          label: '<span class="ecl-icon ecl-icon--generic-lang"></span>',
-          href: '#',
-          extra_classes: 'ema-header__link-item ecl-link--ema-obvious',
-          extra_attributes: [{ name: 'title', value: 'Mail' }],
-        },
-      ],
+      links: [],
     },
     footer: {
       sections: [
@@ -260,6 +241,7 @@ module.exports = {
       ],
     },
     banner: {
+      extra_classes: 'ema-context-banner--standalone',
       title: 'Healthcare Professionals',
       description:
         'On this page, you will find information on the Agency’s activities that are most relevant to healthcare professionals, including news, and events. You can contribute to the Agency’s work by responding to public consultations. Learn more about how Healthcare Professionals are actively involved in the work of the Agency.',
@@ -315,28 +297,28 @@ module.exports = {
         title: 'Updated measures for pregnancy prevention during retinoid use',
         href: '#listing-default-two-1',
         detail:
-          'Warning on possible risk of neuropsychiatric disorders also to be included for oral retinoids ... Read more',
+          'Warning on possible risk of neuropsychiatric disorders also to be included for oral retinoids.',
         metas: ['23/03/2018'],
       },
       {
         title: 'Withdrawal of pain medicine flupirtine endorsed',
         href: '#listing-default-two-1',
         detail:
-          'Serious liver problems continued to be reported despite previous restrictions in use ... Read more',
+          'Serious liver problems continued to be reported despite previous restrictions in use.',
         metas: ['23/03/2018'],
       },
       {
         title:
           'Workshop on Paediatric Regulation – stakeholders to discuss how to boost development of medicines for children',
         href: '#listing-default-two-1',
-        detail: 'Event to be broadcast live on 20 March ... Read more',
+        detail: 'Event to be broadcast live on 20 March.',
         metas: ['19/03/2018'],
       },
       {
         title: 'EMA Management Board: highlights of March 2018 meeting',
         href: '#listing-default-two-1',
         detail:
-          'Board adopts 2017 report on veterinary medicines for minor use minor species and hears update on clinical trial portal and database ... Read more',
+          'Board adopts 2017 report on veterinary medicines for minor use minor species and hears update on clinical trial portal and database.',
         metas: ['16/03/2018'],
       },
       {
@@ -344,7 +326,7 @@ module.exports = {
           'Meeting highlights from the Pharmacovigilance Risk Assessment Committee (PRAC) 5-8 March 2018',
         href: '#listing-default-two-1',
         detail:
-          'Immediate measures agreed for Zinbryta and Xofigo while reviews are ongoing; public hearing decided for quinolone and fluoroquinolone antibiotics ... Read more',
+          'Immediate measures agreed for Zinbryta and Xofigo while reviews are ongoing; public hearing decided for quinolone and fluoroquinolone antibiotics.',
         metas: ['09/03/2018'],
       },
       {
@@ -352,7 +334,7 @@ module.exports = {
           'Meeting highlights from the Pharmacovigilance Risk Assessment Committee (PRAC) 5-8 March 2018',
         href: '#listing-default-two-1',
         detail:
-          'Immediate measures agreed for Zinbryta and Xofigo while reviews are ongoing; public hearing decided for quinolone and fluoroquinolone antibiotics ... Read more',
+          'Immediate measures agreed for Zinbryta and Xofigo while reviews are ongoing; public hearing decided for quinolone and fluoroquinolone antibiotics.',
         metas: ['09/03/2018'],
       },
     ],
@@ -368,7 +350,7 @@ module.exports = {
           'Pharmacovigilance Risk Assessment Committee (PRAC): 5-8 March 2018',
         href: '#listing-default-two-1',
         detail:
-          'The Pharmacovigilance Risk Assessment Committee (PRAC) is the committee that is responsible for assessing all aspects of the risk management of medicines for human use. ... Read more',
+          'The Pharmacovigilance Risk Assessment Committee (PRAC) is the committee that is responsible for assessing all aspects of the risk management of medicines for human use..',
         metas: ['05/03/2018 - 08/03/2018', 'PRAC'],
       },
       {
@@ -381,7 +363,7 @@ module.exports = {
         title: 'Extraordinary Management Board meeting: 28 February 2018',
         href: '#listing-default-two-1',
         detail:
-          'This extraordinary Management Board meeting is to consider the building approval process for EMA’s premises in Amsterdam. The Management Board is an integral governance body of the Agency. It has a supervisory role with general responsibility for budgetary and planning matters, the appointment of the Executive Director and the monitoring of the Agency’s performance. ... Read more',
+          'This extraordinary Management Board meeting is to consider the building approval process for EMA’s premises in Amsterdam. The Management Board is an integral governance body of the Agency. It has a supervisory role with general responsibility for budgetary and planning matters, the appointment of the Executive Director and the monitoring of the Agency’s performance..',
         metas: ['28/02/2018', 'MB'],
       },
       {
@@ -395,7 +377,7 @@ module.exports = {
           'Submission of referentials management services (RMS) and organisations management services (OMS) change requests',
         href: '#listing-default-two-1',
         detail:
-          'The European Medicines Agency’s (EMA) programme for substance, product, organisation and referential (SPOR) data services held a webinar with industry stakeholders to summarise the milestones and impacts on industry of the referentials management services (RMS) and organisations management services (OMS). The webinar focused on the submission of RMS and OMS change requests relating to referential and organisation data. ... Read more',
+          'The European Medicines Agency’s (EMA) programme for substance, product, organisation and referential (SPOR) data services held a webinar with industry stakeholders to summarise the milestones and impacts on industry of the referentials management services (RMS) and organisations management services (OMS). The webinar focused on the submission of RMS and OMS change requests relating to referential and organisation data..',
         metas: ['12/02/2018', 'EMA'],
       },
       {
@@ -409,33 +391,73 @@ module.exports = {
           'Workshop on site and histology - Independent indications in oncology',
         href: '#listing-default-two-1',
         detail:
-          'Biological drivers that define cancer course across anatomical sites and histologies offer an opportunity to select populations sensitive to specific drugs based on those drivers, independently of the specific site or histology. This workshop aims to provide an exchange of views from different stakeholders about situations where a site and histology-independent clinical development might be a viable option and the associated challenges in terms of drug development, benefit-risk evaluation and health-technology assessment. ... Read more',
+          'Biological drivers that define cancer course across anatomical sites and histologies offer an opportunity to select populations sensitive to specific drugs based on those drivers, independently of the specific site or histology. This workshop aims to provide an exchange of views from different stakeholders about situations where a site and histology-independent clinical development might be a viable option and the associated challenges in terms of drug development, benefit-risk evaluation and health-technology assessment..',
         metas: ['14/12/2017 - 15/12/2017', 'CHMP'],
       },
     ],
-    items_audience: [
+    items_how_ema_work: [
       {
-        title: 'Healthcare professionals',
+        title: 'How we regulate pharmaceutical research and development',
         href: '#list-item-4',
       },
       {
-        title: 'Patients and careers',
+        title: 'Our role in authorisation of medicines in the EU',
         href: '#list-item-4',
       },
       {
-        title: 'Animal health professionals',
+        title: 'How the safety of medicines is monitored and controlled',
         href: '#list-item-4',
       },
       {
-        title: 'Pharmaceutical industry',
+        title: 'Who are EMAs scientific experts?',
         href: '#list-item-4',
       },
       {
-        title: 'Media',
+        title: 'Ensuring independence and transparency',
         href: '#list-item-4',
       },
       {
-        title: 'Academia',
+        title: 'Another one',
+        href: '#list-item-4',
+      },
+    ],
+    items_key_content: [
+      {
+        title: 'CHMP highlights, December 2012',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Guidance for good clinical practice',
+        href: '#list-item-4',
+      },
+      {
+        title: 'European Public Assessment Reports(Human)',
+        href: '#list-item-4',
+      },
+      {
+        title: 'European Public Assessment Reports(Veterinary)',
+        href: '#list-item-4',
+      },
+      {
+        title: 'Pharmacovigilance legislation',
+        href: '#list-item-4',
+      },
+    ],
+    items_services: [
+      {
+        title: 'Suspected ADR reports',
+        href: '#list-item-4',
+      },
+      {
+        title: 'EU Clinical Trials Register',
+        href: '#list-item-4',
+      },
+      {
+        title: 'eSubmission services',
+        href: '#list-item-4',
+      },
+      {
+        title: 'U Telematics services',
         href: '#list-item-4',
       },
     ],

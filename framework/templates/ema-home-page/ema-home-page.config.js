@@ -10,26 +10,7 @@ module.exports = {
         src: '../../framework/images/logo_ema.jpg',
         alt: 'EMA logo',
       },
-      links: [
-        {
-          label: '<span class="ecl-icon ecl-icon--rss"></span>',
-          href: '#',
-          extra_classes: 'ema-header__link-item ecl-link--ema-obvious',
-          extra_attributes: [{ name: 'title', value: 'RSS' }],
-        },
-        {
-          label: '<span class="ecl-icon ecl-icon--twitter"></span>',
-          href: '#',
-          extra_classes: 'ema-header__link-item ecl-link--ema-obvious',
-          extra_attributes: [{ name: 'title', value: 'Twitter' }],
-        },
-        {
-          label: '<span class="ecl-icon ecl-icon--generic-lang"></span>',
-          href: '#',
-          extra_classes: 'ema-header__link-item ecl-link--ema-obvious',
-          extra_attributes: [{ name: 'title', value: 'Mail' }],
-        },
-      ],
+      links: [],
     },
     footer: {
       sections: [
@@ -173,12 +154,22 @@ module.exports = {
           icon: 'twitter',
           extra_classes: 'ecl-link--ema-inverted ecl-u-mr-xs',
         },
+        {
+          label: 'Youtube',
+          href: '#',
+          icon: 'video',
+          extra_classes: 'ecl-link--ema-inverted ecl-u-mr-xs',
+        },
       ],
       copyright: '&copy; 1995-2016 European Medicines Agency',
       description: 'An agency of the European Union',
       logo: {
         src: '../../framework/images/eu.png',
         alt: 'European Union flag',
+      },
+      logo_network: {
+        src: '../../framework/images/euan.png',
+        alt: 'European Union agencies network',
       },
     },
     menu: {
@@ -260,6 +251,7 @@ module.exports = {
       ],
     },
     banner: {
+      extra_classes: 'ema-context-banner--standalone',
       title: 'Healthcare Professionals',
       description:
         'On this page, you will find information on the Agency’s activities that are most relevant to healthcare professionals, including news, and events. You can contribute to the Agency’s work by responding to public consultations. Learn more about how Healthcare Professionals are actively involved in the work of the Agency.',
@@ -268,38 +260,46 @@ module.exports = {
     slider: {
       list: [
         {
-          metas: ['data', 'cluster'],
+          metas: ['report', 'cell therapies'],
           href: '#content-slider-1',
-          title: 'Labore nulla quis irure labore.',
+          title: 'CAR T-cell therapy registries',
+          detail:
+            "EMA's new workshop report describes the opportunities and challenges in using patient registries for the benefit-risk evaluations of chimeric antigen receptor (CAR) T-cell therapies.",
           primary_image: {
-            src: 'https://unsplash.it/640/480?image=222',
+            src: 'https://unsplash.it/640/480?image=221',
             alt: 'sky',
           },
         },
         {
-          metas: ['message', 'market'],
+          metas: ['video', 'about us'],
           href: '#content-slider-2',
-          title: 'Velit mollit in sunt dolor exercitation elit nostrud do.',
+          title: 'Working for every patient in Europe',
+          detail:
+            "Our new video explains EMA's role in enabling timely patient access to new medicines in Europe. Watch the video now.",
           primary_image: {
-            src: 'https://unsplash.it/640/480?image=223',
+            src: 'https://unsplash.it/640/480?image=221',
             alt: 'street',
           },
         },
         {
-          metas: ['content', 'dynamic'],
+          metas: ['report', 'about us'],
           href: '#content-slider-3',
-          title: 'Cupidatat commodo reprehenderit excepteur esse.',
+          title: 'Annual report',
+          detail:
+            "Read about EMA's key achievements and figures in 2017, including statistics on its regulatory procedures, activities, trends and changes in recent years.",
           primary_image: {
             src: 'https://unsplash.it/640/480?image=221',
             alt: 'buildings',
           },
         },
         {
-          metas: ['management', 'team'],
+          metas: ['campaign', 'vaccine'],
           href: '#content-slider-4',
-          title: 'Excepteur ex dolore.',
+          title: 'European Immunization Week',
+          detail:
+            'EMA supports European Immunization Week from 23 to 29 April 2018. This World Health Organization initiative aims to increase vaccination coverage by raising awareness among parents and caregivers, health care professionals, policy and decision-makers, and the media.',
           primary_image: {
-            src: 'https://unsplash.it/640/480?image=225',
+            src: 'https://unsplash.it/640/480?image=221',
             alt: 'tea',
           },
         },
@@ -355,28 +355,28 @@ module.exports = {
         title: 'Updated measures for pregnancy prevention during retinoid use',
         href: '#listing-default-two-1',
         detail:
-          'Warning on possible risk of neuropsychiatric disorders also to be included for oral retinoids ... Read more',
+          'Warning on possible risk of neuropsychiatric disorders also to be included for oral retinoids.',
         metas: ['23/03/2018'],
       },
       {
         title: 'Withdrawal of pain medicine flupirtine endorsed',
         href: '#listing-default-two-1',
         detail:
-          'Serious liver problems continued to be reported despite previous restrictions in use ... Read more',
+          'Serious liver problems continued to be reported despite previous restrictions in use.',
         metas: ['23/03/2018'],
       },
       {
         title:
           'Workshop on Paediatric Regulation – stakeholders to discuss how to boost development of medicines for children',
         href: '#listing-default-two-1',
-        detail: 'Event to be broadcast live on 20 March ... Read more',
+        detail: 'Event to be broadcast live on 20 March.',
         metas: ['19/03/2018'],
       },
       {
         title: 'EMA Management Board: highlights of March 2018 meeting',
         href: '#listing-default-two-1',
         detail:
-          'Board adopts 2017 report on veterinary medicines for minor use minor species and hears update on clinical trial portal and database ... Read more',
+          'Board adopts 2017 report on veterinary medicines for minor use minor species and hears update on clinical trial portal and database.',
         metas: ['16/03/2018'],
       },
       {
@@ -384,7 +384,7 @@ module.exports = {
           'Meeting highlights from the Pharmacovigilance Risk Assessment Committee (PRAC) 5-8 March 2018',
         href: '#listing-default-two-1',
         detail:
-          'Immediate measures agreed for Zinbryta and Xofigo while reviews are ongoing; public hearing decided for quinolone and fluoroquinolone antibiotics ... Read more',
+          'Immediate measures agreed for Zinbryta and Xofigo while reviews are ongoing; public hearing decided for quinolone and fluoroquinolone antibiotics.',
         metas: ['09/03/2018'],
       },
       {
@@ -392,7 +392,7 @@ module.exports = {
           'Meeting highlights from the Pharmacovigilance Risk Assessment Committee (PRAC) 5-8 March 2018',
         href: '#listing-default-two-1',
         detail:
-          'Immediate measures agreed for Zinbryta and Xofigo while reviews are ongoing; public hearing decided for quinolone and fluoroquinolone antibiotics ... Read more',
+          'Immediate measures agreed for Zinbryta and Xofigo while reviews are ongoing; public hearing decided for quinolone and fluoroquinolone antibiotics.',
         metas: ['09/03/2018'],
       },
     ],
@@ -480,86 +480,6 @@ module.exports = {
           src: 'https://picsum.photos/200/100',
           alt: 'Highlighted image',
         },
-      },
-    ],
-    items_informations: [
-      {
-        title: 'Human pharmaceutical industry',
-        href: '#list-item-4',
-      },
-      {
-        title: 'Veterinary pharmaceutical industry',
-        href: '#list-item-4',
-      },
-      {
-        title: 'Human healthcare professionals',
-        href: '#list-item-4',
-      },
-      {
-        title: 'Animal health professionals',
-        href: '#list-item-4',
-      },
-      {
-        title: 'Patients and careers',
-        href: '#list-item-4',
-      },
-      {
-        title: 'SMEs',
-        href: '#list-item-4',
-      },
-      {
-        title: 'Press and media',
-        href: '#list-item-4',
-      },
-    ],
-    items_topics: [
-      {
-        title: 'HIV and AIDS',
-        href: '#list-item-4',
-      },
-      {
-        title: 'Cancer',
-        href: '#list-item-4',
-      },
-      {
-        title: 'Cardiovascular diseases',
-        href: '#list-item-4',
-      },
-      {
-        title: 'Diabetes',
-        href: '#list-item-4',
-      },
-      {
-        title: 'Neurodegenerative diseases',
-        href: '#list-item-4',
-      },
-      {
-        title: 'Immune-system diseases',
-        href: '#list-item-4',
-      },
-      {
-        title: 'Viral diseases',
-        href: '#list-item-4',
-      },
-      {
-        title: 'Transparency',
-        href: '#list-item-4',
-      },
-      {
-        title: 'Releasing clinical-trial data',
-        href: '#list-item-4',
-      },
-      {
-        title: 'Antimicrobial resistance',
-        href: '#list-item-4',
-      },
-      {
-        title: 'Safety monitoring of medicines',
-        href: '#list-item-4',
-      },
-      {
-        title: 'Medicines for children',
-        href: '#list-item-4',
       },
     ],
     _demo: {
