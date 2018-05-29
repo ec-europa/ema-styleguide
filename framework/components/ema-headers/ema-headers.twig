@@ -41,7 +41,7 @@
     <div class="ema-header__logo"><img src="{{ logo.src }}" alt="{{ logo.alt }}" /></div>
 
     {% if (_has_search != 'false') %}
-    {% include '@ec-europa/ecl-search-forms' with {
+    {% include '@ec-europa/ema-search-forms' with {
       'input': { 'id': 'global-search' },
       'extra_classes': 'ecl-site-header__search ecl-search-form--ema'
     } %}
