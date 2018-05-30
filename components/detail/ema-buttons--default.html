@@ -1231,6 +1231,22 @@
   }
 }
 
+<span class="hljs-selector-class">.ecl-button--ema-small</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">border-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'primary'</span>);
+  <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'primary'</span>);
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$ema-font-family-base</span>;
+  <span class="hljs-attribute">font-size</span>: map-get(<span class="hljs-variable">$ecl-font-size</span>, <span class="hljs-string">'xs'</span>);
+  <span class="hljs-attribute">font-weight</span>: initial;
+  <span class="hljs-attribute">padding</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxxs'</span>);
+  &amp;:focus,
+  &amp;:hover {
+    <span class="hljs-attribute">background-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'primary'</span>);
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+    <span class="hljs-attribute">outline-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'primary'</span>);
+  }
+}
+
 <span class="hljs-selector-class">.ecl-button--ema-tag</span>:focus,
 <span class="hljs-selector-class">.ecl-button--ema-primary</span>:focus {
   <span class="hljs-attribute">outline-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'primary'</span>);
@@ -1251,7 +1267,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">704 Bytes</span>
+                    <span class="Meta-value">1.1 KB</span>
                 </li>
             </ul>
         </div>
