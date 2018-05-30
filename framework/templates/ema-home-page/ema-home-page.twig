@@ -77,7 +77,7 @@
     <section class="ecl-col-lg-12">
 
     {% include '@ec-europa/ema-separator' with {
-      title: 'Latest news and medicinal product announcements',
+      title: 'Latest news',
       extra_classes: 'ecl-u-pt-m',
     } only %}
 
@@ -137,6 +137,44 @@
     } only %}
     </section>
   </div>
+
+  <div class="ecl-row ecl-u-mt-lg-m">
+    <section class="ecl-col-lg-4">
+      {% include '@ec-europa/ema-separator' with {
+        modifier: 'secondary',
+extra_classes: 'ecl-u-pv-l',
+        title: 'Key content',
+      } %}
+
+      {% include '@ec-europa/ecl-listings' with {
+        items: items_key_content,
+      } %}
+    </section>
+
+    <section class="ecl-col-lg-4">
+      {% include '@ec-europa/ema-separator' with {
+        modifier: 'secondary',
+extra_classes: 'ecl-u-pv-l',
+        title: 'Services & databases',
+      } %}
+
+      {% include '@ec-europa/ecl-listings' with {
+        items: items_services,
+      } %}
+    </section>
+
+    <section class="ecl-col-lg-4">
+      {% include '@ec-europa/ema-separator' with {
+        modifier: 'secondary',
+extra_classes: 'ecl-u-pv-l',
+        title: 'How does EMA work?',
+      } %}
+
+      {% include '@ec-europa/ecl-listings' with {
+        items: items_how_ema_work,
+      } %}
+    </section>
+</div>
 
   </div>
 </main>

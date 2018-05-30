@@ -16,5 +16,13 @@
       "extra_classes": "ecl-button--ema-tag",
       "modifier": "tag"
     }
+  },
+  {
+    "name": "small",
+    "label": "Small",
+    "context": {
+      "label": "Small",
+      "extra_classes": "ecl-button--ema-small"
+    }
   }
 ]

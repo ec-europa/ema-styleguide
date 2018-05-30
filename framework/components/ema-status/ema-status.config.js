@@ -65,7 +65,7 @@ module.exports = {
       context: {
         variant: 'patient-safety',
         status: 'Patient safety',
-        description: 'Patient safety informations',
+        description: 'Patient safety information',
       },
     },
   ],
