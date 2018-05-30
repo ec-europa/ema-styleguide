@@ -1,5 +1,10 @@
 .ema-content-slider {
+  background-color: map-get($ema-colors, 'light-grey-3');
   margin: 0;
+
+  .ecl-list-item__detail {
+    display: none;
+  }
 }
 
 .ema-content-slider .ecl-link {
@@ -8,7 +13,8 @@
 
 .ema-content-slider .ecl-list-item.ema-content-slider__list-item--default {
   border: 2px solid transparent;
-  padding: map-get($ecl-spacing, 'xs');
+  padding-left: map-get($ecl-spacing, 'xs');
+  padding-right: map-get($ecl-spacing, 'xs');
 }
 
 .ema-content-slider .ecl-list-item.ema-content-slider__list-item--active {
@@ -16,8 +22,6 @@
 }
 
 .ema-content-slider .ecl-list-item.ema-content-slider__list-item--highlight {
-  background-color: map-get($ecl-colors, 'grey-10');
-  margin: map-get($ecl-spacing, 'xs');
   position: relative;
 
   .ecl-list-item__link {
@@ -26,16 +30,16 @@
     top: 0;
   }
 
-  .ecl-list-item__primary {
-    opacity: 0.4;
-  }
-
   .ecl-list-item__body {
-    background-color: transparent;
+    background-color: #fffc;
     bottom: 0;
-    padding-top: 1rem;
+    padding: map-get($ecl-spacing, 's');
     position: absolute;
     width: 100%;
+  }
+
+  .ecl-list-item__detail {
+    display: block;
   }
 }
 
@@ -47,6 +51,9 @@
   .ema-content-slider .ecl-list-item {
     align-items: center;
     grid-column-start: 2;
+    &:hover {
+      background-color: map-get($ema-colors, 'light-grey-2');
+    }
     &:not([aria-hidden='true']) {
       display: flex;
     }
@@ -55,6 +62,6 @@
     grid-column-start: 1;
     grid-row-end: span 4;
     grid-row-start: 1;
-    margin: 0 map-get($ecl-spacing, 's') 0 0;
+    margin: 0;
   }
 }

@@ -1,0 +1,11 @@
+/**
+ * Select
+ * @define select
+ */
+
+.ecl-select--ema {
+  &:focus {
+    border-color: map-get($ema-colors, 'blue-1');
+    outline: 3px solid map-get($ema-colors, 'blue-1');
+  }
+}

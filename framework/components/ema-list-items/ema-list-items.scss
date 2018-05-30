@@ -13,7 +13,8 @@
   .ecl-list-item__meta {
     left: 0;
     position: absolute;
-    top: map-get($ecl-spacing, 'l');
+
+    /* top: map-get($ecl-spacing, 'l'); */
   }
 
   .ema-icon {

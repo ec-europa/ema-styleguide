@@ -4,8 +4,7 @@
 
 .ema-status-referral {
   display: flex;
-  flex-flow: row wrap;
-  flex-wrap: nowrap;
+  flex-flow: column wrap;
   justify-content: center;
   list-style: none;
   margin: 0;
@@ -20,6 +19,9 @@
   padding-left: map-get($ecl-spacing, 'xs');
   padding-right: map-get($ecl-spacing, 'xs');
   text-align: center;
+  &:last-child {
+    border-top-style: dashed;
+  }
 }
 
 .ema-status-referral__step::before {
@@ -33,6 +35,13 @@
   width: map-get($ecl-spacing, 'm');
   z-index: 2;
 }
+.ema-status-referral__step:first-child::before {
+  margin: -1rem auto 1rem -0.9rem;
+}
+.ema-status-referral__step:last-child::before {
+  border-top-style: dashed;
+  margin: -1rem -0.9rem 1rem auto;
+}
 
 .ema-status-referral__step--active {
   border-color: map-get($ema-colors, 'primary');
@@ -40,4 +49,11 @@
 }
 .ema-status-referral__step--active::before {
   background-color: map-get($ema-colors, 'primary');
+}
+
+@media (min-width: map-get($ecl-grid-breakpoints, 'md')) {
+  .ema-status-referral {
+    flex-flow: row wrap;
+    flex-wrap: nowrap;
+  }
 }

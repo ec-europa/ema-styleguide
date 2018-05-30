@@ -1,0 +1,194 @@
+{#
+  This is an example and should not be used as it is.
+#}
+
+{% include '@ec-europa/ecl-skip-links' with {
+    'href': '#main-content',
+    'label': 'Skip to main content'
+} %}
+
+{% include '@ec-europa/ema-headers' with header %}
+
+{% include '@ec-europa/ema-navigation-menus' with menu %}
+
+{% include '@ec-europa/ema-context-banners' with banner %}
+
+<main class="ecl-u-mv-l">
+  <div class="ecl-container">
+
+    <div class="ecl-row ecl-u-mb-l">
+      <div class="ecl-col">
+        {% include '@ec-europa/ecl-search-forms' with {
+          'variant': 'internal',
+          'input': { 'id': 'internal-search' },
+          'extra_classes': 'ecl-search-form--ema-internal'
+        } %}
+      </div>
+    </div>
+
+    <div class="ecl-row ecl-u-mt-l">
+      <aside class="ecl-col-lg-3" role="complementary">
+        <div class="ecl-u-d-flex ecl-u-d-lg-none ecl-u-justify-content-between ecl-u-align-items-baseline">
+          <h2 class="ecl-heading ecl-heading--h2">Search results (65)</h2>
+          {% include '@ec-europa/ecl-buttons' with {
+            'modifier': 'primary',
+            'label': 'Refine',
+            'extra_classes': 'ecl-button--ema-primary ecl-u-d-lg-none ecl-expandable__button',
+            'extra_attributes': [
+              { 'name': 'aria-controls', 'value': 'form-filter' },
+              { 'name': 'aria-expanded', 'value': 'true' },
+              { 'name': 'id', 'value': 'form-filter-toggle' },
+              { 'name': 'type', 'value': 'button' }
+            ]
+          } %}
+        </div>
+
+        {% embed '@ec-europa/ecl-forms-forms' with { 'extra_class': 'ecl-u-d-lg-block ecl-u-mb-m', 'extra_attributes': [{ 'name': 'aria-hidden', 'value': 'false' }, { 'name': 'method', 'value': 'get' }, { 'name': 'id', 'value': 'form-filter' } ] } %}
+          {% block form %}
+            {% embed '@ec-europa/ecl-forms-fieldsets' only %}
+              {% block fieldset %}
+                {% include '@ec-europa/ecl-forms-legends' with { content: 'Search options', level: 1 } only %}
+
+                {# ------- Categories ------- #}
+                {% embed '@ec-europa/ecl-forms-form-groups' %}
+                  {% block form_group %}
+                    {% include '@ec-europa/ecl-forms-labels' with { 'label': 'Categories', 'for_attribute': 'search-option-category', 'extra_classes': 'ecl-u-mb-xxs' } %}
+                    {% include '@ec-europa/ema-forms-checkboxes' with {
+                      'extra_classes': 'ecl-checkbox--ema',
+                      'label': 'Human (4457)',
+                      'id': 'search-filter-comitees-1',
+                      'name': 'search-filter-comitees-1',
+                      'value': '1'
+                    }%}
+                    {% include '@ec-europa/ema-forms-checkboxes' with {
+                      'extra_classes': 'ecl-checkbox--ema',
+                      'label': 'Veterinary (3402)',
+                      'id': 'search-filter-comitees-1',
+                      'name': 'search-filter-comitees-1',
+                      'value': '2'
+                    }%}
+                    {% include '@ec-europa/ema-forms-checkboxes' with {
+                      'extra_classes': 'ecl-checkbox--ema',
+                      'label': 'Herbal (873)',
+                      'id': 'search-filter-comitees-1',
+                      'name': 'search-filter-comitees-1',
+                      'value': '3'
+                    }%}
+                  {% endblock %}
+                {% endembed %}
+
+                {# ------- Dates ------- #}
+                {% embed '@ec-europa/ecl-forms-form-groups' %}
+                  {% block form_group %}
+                    {% include '@ec-europa/ecl-forms-labels' with { 'label': 'First published', 'for_attribute': 'search-option-date' } %}
+                    <div class="ecl-row ecl-u-mt-xxs ecl-u-align-items-center">
+                      <div class="ecl-col-3">
+                        From
+                      </div>
+                      <div class="ecl-col-9">
+                        {% include '@ec-europa/ecl-datepickers' with {
+                          'value': '01/01/2018',
+                          'id': 'date-from',
+                          'extraClass': 'ecl-text-input--ema',
+                        }%}
+                      </div>
+                    </div>
+
+                    <div class="ecl-row ecl-u-mt-xxs ecl-u-align-items-center">
+                      <div class="ecl-col-3">
+                        To
+                      </div>
+                      <div class="ecl-col-9">
+                        {% include '@ec-europa/ecl-datepickers' with {
+                          'value': '13/02/2018',
+                          'id': 'date-to',
+                          'extraClass': 'ecl-text-input--ema',
+                        }%}
+                      </div>
+                    </div>
+                  {% endblock %}
+                {% endembed %}
+
+                {% embed '@ec-europa/ecl-forms-form-groups' %}
+                  {% block form_group %}
+                    {% include '@ec-europa/ecl-forms-labels' with { 'label': 'Revision date', 'for_attribute': 'search-option-date' } %}
+                    <div class="ecl-row ecl-u-mt-xxs ecl-u-align-items-center">
+                      <div class="ecl-col-3">
+                        From
+                      </div>
+                      <div class="ecl-col-9">
+                        {% include '@ec-europa/ecl-datepickers' with {
+                          'value': '01/01/2018',
+                          'id': 'date-from',
+                          'extraClass': 'ecl-text-input--ema',
+                        }%}
+                      </div>
+                    </div>
+
+                    <div class="ecl-row ecl-u-mt-xxs ecl-u-align-items-center">
+                      <div class="ecl-col-3">
+                        To
+                      </div>
+                      <div class="ecl-col-9">
+                        {% include '@ec-europa/ecl-datepickers' with {
+                          'value': '13/02/2018',
+                          'id': 'date-to',
+                          'extraClass': 'ecl-text-input--ema',
+                        }%}
+                      </div>
+                    </div>
+                  {% endblock %}
+                {% endembed %}
+
+              {% endblock %}
+            {% endembed %}
+
+            {% include '@ec-europa/ema-buttons' with {
+              'modifier': 'primary',
+              'label': 'Refine results',
+              'extra_classes': 'ecl-button--ema-primary ema-u-width-100 ecl-u-mt-m'
+            } %}
+
+            {% include '@ec-europa/ema-buttons' with {
+              'modifier': 'tag',
+              'label': 'Clear all',
+              'extra_classes': 'ecl-button--ema-tag ema-u-width-100 ecl-u-mt-s'
+            } %}
+          {% endblock %}
+        {% endembed %}
+      </aside>
+
+      <section class="ecl-col-lg-9">
+        <div class="ecl-u-d-flex ecl-u-align-items-center ecl-u-flex-wrap ecl-u-mb-s">
+          <h3 class="ecl-heading ecl-heading--h3 ema-u-width-grow-1 ecl-u-mb-md-none"> 7665 results </h3>
+          <div class="ecl-u-d-flex ecl-u-align-items-center">
+            <label class="ema-u-width-nowrap ecl-u-mr-s" for="search-sort">Sort by</label>
+            {% include '@ec-europa/ema-forms-selects' with {
+              'id': 'search-sort',
+              'name': 'search-sort',
+              'extra_classes': 'ecl-u-mt-none ecl-select--ema',
+              'options': [
+                { value: '1', label: 'Publication date' },
+                { value: '2', label: 'Last update date' },
+              ]
+            }%}
+          </div>
+        </div>
+
+        <div class="ecl-u-d-flex ecl-u-align-items-center ecl-u-flex-wrap ecl-u-mb-s"></div>
+
+        {% include '@ec-europa/ema-listings' with items %}
+
+        {% include '@ec-europa/ema-pager'  with {
+          href: '#',
+          label: 'Load more',
+        } %}
+      </section>
+    </div>
+  </div>
+</main>
+
+{% include '@ec-europa/ema-footers' with footer %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>

@@ -3,7 +3,12 @@
 */
 
 .ema-context-banner {
+  background-color: map-get($ema-colors, 'light-grey-2');
   margin: 0;
+}
+
+.ema-context-banner--standalone {
+  background-color: map-get($ema-colors, 'light-grey-2');
 }
 
 .ema-context-banner__wrapper {

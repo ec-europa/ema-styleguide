@@ -1,0 +1,11 @@
+/**
+ * Text input component
+ * @define text-input
+ */
+
+.ecl-text-input--ema {
+  &:focus {
+    border-color: map-get($ema-colors, 'blue-1');
+    outline: 3px solid map-get($ema-colors, 'blue-1');
+  }
+}

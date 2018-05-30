@@ -1,0 +1,38 @@
+/**
+ * Status component
+ */
+
+.ema-card {
+  background-color: map-get($ema-colors, 'light-grey-3');
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: map-get($ecl-spacing, 'xs') map-get($ecl-spacing, 'xs');
+
+  &:hover {
+    background-color: map-get($ema-colors, 'light-grey-2');
+  }
+}
+
+.ema-card--- {
+  background-image: url('../../framework/images/icons/ema-icons.svg#ema-icon-set_doi');
+  background-size: 100px 82px;
+}
+
+.ema-card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.ema-card-title {
+  border-bottom: 1px solid #9f9f9f;
+  font-weight: 600;
+  line-height: 1.66;
+  margin-bottom: map-get($ecl-spacing, 's');
+}
+
+.ema-card-content {
+  line-height: 1.66;
+  margin-top: map-get($ecl-spacing, 'xxxs');
+}
