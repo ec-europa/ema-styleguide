@@ -10,38 +10,46 @@ module.exports = {
     },
     list: [
       {
-        metas: ['data', 'cluster'],
+        metas: ['report', 'cell therapies'],
         href: '#content-slider-1',
-        title: 'Labore nulla quis irure labore.',
+        title: 'CAR T-cell therapy registries',
+        detail:
+          "EMA's new workshop report describes the opportunities and challenges in using patient registries for the benefit-risk evaluations of chimeric antigen receptor (CAR) T-cell therapies.",
         primary_image: {
-          src: 'https://unsplash.it/640/480?image=222',
+          src: 'https://unsplash.it/640/480?image=221',
           alt: 'sky',
         },
       },
       {
-        metas: ['message', 'market'],
+        metas: ['video', 'about us'],
         href: '#content-slider-2',
-        title: 'Velit mollit in sunt dolor exercitation elit nostrud do.',
+        title: 'Working for every patient in Europe',
+        detail:
+          "Our new video explains EMA's role in enabling timely patient access to new medicines in Europe. Watch the video now.",
         primary_image: {
-          src: 'https://unsplash.it/640/480?image=223',
+          src: 'https://unsplash.it/640/480?image=221',
           alt: 'street',
         },
       },
       {
-        metas: ['content', 'dynamic'],
+        metas: ['report', 'about us'],
         href: '#content-slider-3',
-        title: 'Cupidatat commodo reprehenderit excepteur esse.',
+        title: 'Annual report',
+        detail:
+          "Read about EMA's key achievements and figures in 2017, including statistics on its regulatory procedures, activities, trends and changes in recent years.",
         primary_image: {
           src: 'https://unsplash.it/640/480?image=221',
           alt: 'buildings',
         },
       },
       {
-        metas: ['management', 'team'],
+        metas: ['campaign', 'vaccine'],
         href: '#content-slider-4',
-        title: 'Excepteur ex dolore.',
+        title: 'European Immunization Week',
+        detail:
+          'EMA supports European Immunization Week from 23 to 29 April 2018. This World Health Organization initiative aims to increase vaccination coverage by raising awareness among parents and caregivers, health care professionals, policy and decision-makers, and the media.',
         primary_image: {
-          src: 'https://unsplash.it/640/480?image=225',
+          src: 'https://unsplash.it/640/480?image=221',
           alt: 'tea',
         },
       },
