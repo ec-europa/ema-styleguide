@@ -63,14 +63,34 @@
     }
   }
   .ema-content-slider .ecl-list-item.ema-content-slider__list-item--highlight {
-    /* stylelint-disable */
-    -ms-grid-column: 2;
     grid-column-start: 1;
-    -ms-grid-row-span: 4;
     grid-row-end: span 4;
-    -ms-grid-row: 1;
     grid-row-start: 1;
+
+    /* stylelint-disable */
+    -ms-grid-column: 1;
+    -ms-grid-row-span: 4;
+    -ms-grid-row: 1;
+    /* stylelint-enable */
+
     margin: 0;
-    /* styleline-enable */
   }
+  
+  /* stylelint-disable */
+  .ema-content-slider__list-item--default {
+    -ms-grid-column: 2;
+  }
+  .ema-content-slider__list-item--row-1 {
+    -ms-grid-row: 1;
+  }
+  .ema-content-slider__list-item--row-2 {
+    -ms-grid-row: 2;
+  }
+  .ema-content-slider__list-item--row-3 {
+    -ms-grid-row: 3;
+  }
+  .ema-content-slider__list-item--row-4 {
+    -ms-grid-row: 4;
+  }
+  /* stylelint-enable */
 }
