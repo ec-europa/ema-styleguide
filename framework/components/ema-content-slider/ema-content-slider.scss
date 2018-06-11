@@ -45,8 +45,12 @@
 
 @media (min-width: map-get($ecl-grid-breakpoints, 'md')) {
   .ema-content-slider {
+    /* stylelint-disable */
+    display: -ms-grid;
     display: grid;
+    -ms-grid-column: 60% 40%;
     grid-template-columns: 60% 40%;
+    /* stylelint-enable */
   }
   .ema-content-slider .ecl-list-item {
     align-items: center;
@@ -59,9 +63,14 @@
     }
   }
   .ema-content-slider .ecl-list-item.ema-content-slider__list-item--highlight {
+    /* stylelint-disable */
+    -ms-grid-column: 2;
     grid-column-start: 1;
+    -ms-grid-row-span: 4;
     grid-row-end: span 4;
+    -ms-grid-row: 1;
     grid-row-start: 1;
     margin: 0;
+    /* styleline-enable */
   }
 }
