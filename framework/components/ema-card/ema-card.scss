@@ -4,7 +4,6 @@
 
 .ema-card {
   background-color: map-get($ema-colors, 'light-grey-3');
-  display: flex;
   height: 100%;
   margin: 0;
   padding: map-get($ecl-spacing, 'xs') map-get($ecl-spacing, 'xs');
