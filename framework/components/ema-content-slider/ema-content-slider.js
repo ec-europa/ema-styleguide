@@ -17,6 +17,16 @@ export const contentSlider = ({
     return null;
 
   // ACTIONS
+  function setGrid() {
+    // hack for IE11: set all row/column of the grid
+    let i = 1;
+    queryAll(listItemSelector).forEach(el => {
+      const className = `ema-content-slider__list-item--row-${i}`;
+      el.classList.add(className);
+      i += 1;
+    });
+  }
+
   function hideAllHighlights() {
     queryAll(listItemSelector).forEach(el => {
       el.classList.remove(listItemActiveClass);
@@ -92,6 +102,7 @@ export const contentSlider = ({
         bindContentSliderEvents(contentSliderContainer);
       });
     }
+    setGrid();
     hideAllHighlights();
     // Hightlight first item in the list by default
     // by simulating a click
