@@ -28,10 +28,11 @@
     padding-bottom: 0;
     position: relative;
     top: 0;
+    width: 100%;
   }
 
   .ecl-list-item__body {
-    background-color: #fffc;
+    background-color: rgba(255, 255, 255, 0.8);
     bottom: 0;
     padding: map-get($ecl-spacing, 's');
     position: absolute;
@@ -45,8 +46,12 @@
 
 @media (min-width: map-get($ecl-grid-breakpoints, 'md')) {
   .ema-content-slider {
+    /* stylelint-disable */
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 60% 40%;
     grid-template-columns: 60% 40%;
+    /* stylelint-enable */
   }
   .ema-content-slider .ecl-list-item {
     align-items: center;
@@ -62,6 +67,25 @@
     grid-column-start: 1;
     grid-row-end: span 4;
     grid-row-start: 1;
+
+    /* stylelint-disable */
+    -ms-grid-column: 1;
+    -ms-grid-row-span: 4;
+    -ms-grid-row: 1;
+    /* stylelint-enable */
+
     margin: 0;
   }
+
+  /* stylelint-disable */
+  .ema-content-slider__list-item--default {
+    -ms-grid-column: 2;
+  }
+
+  @for $i from 1 through 4 {
+    .ema-content-slider__list-item--row-#{$i} {
+      -ms-grid-row: $i;
+    }
+  }
+  /* stylelint-enable */
 }

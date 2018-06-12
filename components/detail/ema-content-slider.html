@@ -1609,6 +1609,16 @@
     <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
 
   <span class="hljs-comment">// ACTIONS</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setGrid</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// hack for IE11: set all row/column of the grid</span>
+    <span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>;
+    queryAll(listItemSelector).forEach(<span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
+      <span class="hljs-keyword">const</span> className = <span class="hljs-string">`ema-content-slider__list-item--row-<span class="hljs-subst">${i}</span>`</span>;
+      el.classList.add(className);
+      i += <span class="hljs-number">1</span>;
+    });
+  }
+
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hideAllHighlights</span>(<span class="hljs-params"></span>) </span>{
     queryAll(listItemSelector).forEach(<span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
       el.classList.remove(listItemActiveClass);
@@ -1684,6 +1694,7 @@
         bindContentSliderEvents(contentSliderContainer);
       });
     }
+    setGrid();
     hideAllHighlights();
     <span class="hljs-comment">// Hightlight first item in the list by default</span>
     <span class="hljs-comment">// by simulating a click</span>
@@ -1717,7 +1728,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3.2 KB</span>
+                    <span class="Meta-value">3.5 KB</span>
                 </li>
             </ul>
         </div>
@@ -1760,10 +1771,11 @@
     <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">position</span>: relative;
     <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
   }
 
   <span class="hljs-selector-class">.ecl-list-item__body</span> {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#fffc</span>;
+    <span class="hljs-attribute">background-color</span>: rgba(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0.8</span>);
     <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">padding</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'s'</span>);
     <span class="hljs-attribute">position</span>: absolute;
@@ -1777,8 +1789,12 @@
 
 @<span class="hljs-keyword">media</span> (min-width: map-get(<span class="hljs-variable">$ecl-grid-breakpoints</span>, <span class="hljs-string">'md'</span>)) {
   <span class="hljs-selector-class">.ema-content-slider</span> {
+    <span class="hljs-comment">/* stylelint-disable */</span>
+    <span class="hljs-attribute">display</span>: -ms-grid;
     <span class="hljs-attribute">display</span>: grid;
+    -ms-grid-<span class="hljs-attribute">columns</span>: <span class="hljs-number">60%</span> <span class="hljs-number">40%</span>;
     grid-template-<span class="hljs-attribute">columns</span>: <span class="hljs-number">60%</span> <span class="hljs-number">40%</span>;
+    <span class="hljs-comment">/* stylelint-enable */</span>
   }
   <span class="hljs-selector-class">.ema-content-slider</span> <span class="hljs-selector-class">.ecl-list-item</span> {
     <span class="hljs-attribute">align-items</span>: center;
@@ -1794,8 +1810,27 @@
     grid-column-start: <span class="hljs-number">1</span>;
     grid-row-end: span <span class="hljs-number">4</span>;
     grid-row-start: <span class="hljs-number">1</span>;
+
+    <span class="hljs-comment">/* stylelint-disable */</span>
+    -ms-grid-column: <span class="hljs-number">1</span>;
+    -ms-grid-row-<span class="hljs-selector-tag">span</span>: <span class="hljs-number">4</span>;
+    -ms-grid-row: <span class="hljs-number">1</span>;
+    <span class="hljs-comment">/* stylelint-enable */</span>
+
     <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
   }
+
+  <span class="hljs-comment">/* stylelint-disable */</span>
+  <span class="hljs-selector-class">.ema-content-slider__list-item--default</span> {
+    -ms-grid-column: <span class="hljs-number">2</span>;
+  }
+
+  @<span class="hljs-keyword">for</span> <span class="hljs-variable">$i</span> from 1 through 4 {
+    <span class="hljs-selector-class">.ema-content-slider__list-item--row-</span>#{<span class="hljs-variable">$i</span>} {
+      -ms-grid-row: <span class="hljs-variable">$i</span>;
+    }
+  }
+  <span class="hljs-comment">/* stylelint-enable */</span>
 }
 </pre>
                             </code>
@@ -1813,7 +1848,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.5 KB</span>
+                    <span class="Meta-value">2 KB</span>
                 </li>
             </ul>
         </div>
