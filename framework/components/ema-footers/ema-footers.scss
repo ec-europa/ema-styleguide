@@ -17,7 +17,6 @@
 
 .ema-footer__section {
   flex-basis: 100%;
-  padding-right: map-get($ecl-spacing, 'xxs');
 
   @include ecl-media-breakpoint-up(sm) {
     flex-basis: 50%;
