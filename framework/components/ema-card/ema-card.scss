@@ -4,9 +4,11 @@
 
 .ema-card {
   background-color: map-get($ema-colors, 'light-grey-3');
+  display: block;
   height: 100%;
   margin: 0;
   padding: map-get($ecl-spacing, 'xs') map-get($ecl-spacing, 'xs');
+  text-decoration: none;
 
   &:hover {
     background-color: map-get($ema-colors, 'light-grey-2');
