@@ -1,0 +1,11 @@
+/*
+ * Date block
+ * @define date-block
+ */
+
+.ecl-date-block--ongoing {
+  background-color: map-get($ecl-colors, 'grey-50');
+}
+.ecl-date-block {
+  border-bottom: 0.2em solid map-get($ecl-colors, 'grey-50');
+}

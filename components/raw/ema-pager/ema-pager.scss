@@ -3,10 +3,9 @@
 */
 
 .ema-pager {
-  background-color: map-get($ema-colors, 'light-grey-3');
   color: map-get($ema-colors, 'grey-3');
   display: block;
-  font-size: map-get($ecl-font-size, 'xl');
+  font-size: map-get($ecl-font-size, 'l');
   line-height: 3;
   padding: map-get($ecl-spacing, 's');
   text-align: center;
