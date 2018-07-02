@@ -21,9 +21,11 @@
 }
 
 .ema-card-text {
+  color: initial;
   display: flex;
   flex-direction: column;
   justify-content: start;
+  text-decoration: none;
 }
 
 .ema-card-title {
