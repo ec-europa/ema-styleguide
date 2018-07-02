@@ -7,6 +7,7 @@
   .ecl-search-form__button:focus {
     background-color: #fff;
     border-color: map-get($ema-colors, 'primary');
+    color: map-get($ema-colors, 'grey-1');
   }
   .ecl-search-form__button::before:hover {
     color: #fff;
@@ -35,6 +36,6 @@
 
   .ecl-text-input:focus {
     border-color: map-get($ema-colors, 'blue-1');
-    outline: 3px solid map-get($ema-colors, 'blue-1');
+    outline-color: 3px solid map-get($ema-colors, 'blue-1');
   }
 }
