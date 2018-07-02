@@ -1053,6 +1053,30 @@
         
         
         <li class="ecl-navigation-menu__item"  data-role="item">
+          <a href="ema-u-outline" class="ecl-navigation-menu__link ">
+            
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="background-color: #467a39; border-color: #467a39;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            <span>Outline</span>
+          </a>
+        </li>
+        
+    
+        
+        
+        <li class="ecl-navigation-menu__item"  data-role="item">
           <a href="ema-u-width" class="ecl-navigation-menu__link ">
             
 
@@ -1271,333 +1295,10 @@ likelihood of mistakes.</p>
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
-                                <pre><span class="hljs-comment">/*
-* Datepicker styles based on Pikaday.
-* @define datepickers
-*/</span>
-
-<span class="hljs-variable">$ecl-datepickers-color-select</span>: <span class="hljs-number">#4f4f4f</span>;
-<span class="hljs-variable">$ecl-datepickers-color-select-separator</span>: <span class="hljs-number">#9f9f9f</span>;
-<span class="hljs-variable">$ecl-datepickers-text-color</span>: <span class="hljs-number">#333</span> !default;
-<span class="hljs-variable">$ecl-datepickers-title-bg</span>: <span class="hljs-number">#404040</span> !default;
-<span class="hljs-variable">$ecl-datepickers-title-color</span>: <span class="hljs-variable">$ecl-datepickers-title-bg</span> !default;
-<span class="hljs-variable">$ecl-datepickers-arrow-size</span>: <span class="hljs-number">50px</span>;
-<span class="hljs-variable">$ecl-datepickers-picker-bg</span>: <span class="hljs-number">#eaeaea</span> !default;
-<span class="hljs-variable">$ecl-datepickers-day-bg</span>: <span class="hljs-number">#f5f5f5</span> !default;
-<span class="hljs-variable">$ecl-datepickers-day-selected-bg</span>: <span class="hljs-number">#ffd617</span> !default;
-<span class="hljs-variable">$ecl-datepickers-day-disabled-color</span>: <span class="hljs-number">#999</span> !default;
-<span class="hljs-variable">$ecl-datepickers-week-color</span>: <span class="hljs-number">#999</span> !default;
-
-<span class="hljs-comment">// Positioning the calendar icon.</span>
-<span class="hljs-selector-class">.ecl-datepickers</span> {
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">position</span>: relative;
-
-  &amp;__icon {
-    <span class="hljs-attribute">color</span>: map-get(<span class="hljs-variable">$ecl-colors</span>, <span class="hljs-string">'grey-50'</span>);
-    <span class="hljs-comment">// For the icon does not interfere with the clickable area.</span>
-    <span class="hljs-attribute">pointer-events</span>: none;
-    <span class="hljs-attribute">position</span>: absolute;
-    <span class="hljs-attribute">right</span>: <span class="hljs-number">0.7em</span>;
-    <span class="hljs-attribute">top</span>: <span class="hljs-number">0.6em</span>;
-  }
-}
-
-<span class="hljs-comment">/* Spacing */</span>
-
-<span class="hljs-comment">/* stylelint-disable-next-line plugin/selector-bem-pattern */</span>
-* + <span class="hljs-selector-class">.ecl-datepickers</span> {
-  <span class="hljs-attribute">margin-top</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xs'</span>);
-}
-
-<span class="hljs-comment">/*
- * @define pika-theme ; weak
- */</span>
-
-<span class="hljs-comment">/* stylelint-disable max-nesting-depth */</span>
-
-<span class="hljs-selector-class">.ecl-pika-theme</span> {
-  <span class="hljs-attribute">background</span>: <span class="hljs-variable">$ecl-datepickers-picker-bg</span>;
-  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$ecl-datepickers-text-color</span>;
-  <span class="hljs-attribute">display</span>: block;
-  <span class="hljs-attribute">position</span>: relative;
-  <span class="hljs-attribute">z-index</span>: map-get(<span class="hljs-variable">$ecl-z-index</span>, <span class="hljs-string">'modal'</span>);
-  zoom: <span class="hljs-number">1</span>;
-
-  <span class="hljs-comment">/* postcss-bem-linter: ignore */</span>
-  &amp;<span class="hljs-selector-class">.is-hidden</span> {
-    <span class="hljs-attribute">display</span>: none;
-  }
-
-  <span class="hljs-comment">/* postcss-bem-linter: ignore */</span>
-  &amp;<span class="hljs-selector-class">.is-bound</span> {
-    <span class="hljs-attribute">position</span>: absolute;
-  }
-
-  <span class="hljs-comment">// clear child float (pika-lendar), using the famous micro clearfix hack</span>
-  <span class="hljs-comment">// http://nicolasgallagher.com/micro-clearfix-hack/</span>
-  &amp;::before,
-  &amp;::after {
-    <span class="hljs-attribute">content</span>: <span class="hljs-string">' '</span>;
-    <span class="hljs-attribute">display</span>: table;
-  }
-
-  &amp;::after {
-    <span class="hljs-attribute">clear</span>: both;
-  }
-
-  <span class="hljs-selector-class">.pika-title</span> {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$ecl-datepickers-title-bg</span>;
-    <span class="hljs-attribute">display</span>: flex;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">2.5rem</span>;
-    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">2.5rem</span>;
-    <span class="hljs-attribute">position</span>: relative;
-    <span class="hljs-attribute">text-align</span>: center;
-  }
-
-  <span class="hljs-selector-class">.pika-label</span> {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$ecl-datepickers-title-bg</span>;
-    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$ecl-datepickers-title-color</span>;
-    <span class="hljs-attribute">display</span>: inline-block;
-    <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">1</span>;
-    <span class="hljs-attribute">position</span>: relative;
-  }
-
-  <span class="hljs-selector-class">.pika-label</span> <span class="hljs-selector-tag">select</span> {
-    @<span class="hljs-keyword">include</span> ecl-form-control();
-    @<span class="hljs-keyword">include</span> ecl-focus-outline-border(<span class="hljs-number">3px</span>, map-get(<span class="hljs-variable">$ecl-colors</span>, <span class="hljs-string">'yellow-100'</span>), -3px, none);
-
-    appearance: none;
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$ecl-datepickers-color-select</span>;
-    <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
-    <span class="hljs-attribute">cursor</span>: pointer;
-    <span class="hljs-attribute">float</span>: none;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
-    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">min-height</span>: auto;
-    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">1em</span>;
-    <span class="hljs-attribute">position</span>: absolute;
-    <span class="hljs-attribute">text-indent</span>: <span class="hljs-number">0.01px</span>;
-    <span class="hljs-attribute">text-overflow</span>: <span class="hljs-string">''</span>;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-    <span class="hljs-attribute">z-index</span>: map-get(<span class="hljs-variable">$ecl-z-index</span>, <span class="hljs-string">'modal'</span>) - <span class="hljs-number">1</span>;
-
-    <span class="hljs-comment">// Fix for IE 10+.</span>
-    &amp;::-ms-expand {
-      display: none;
-    }
-
-    &amp;:focus {
-      <span class="hljs-attribute">z-index</span>: map-get(<span class="hljs-variable">$ecl-z-index</span>, <span class="hljs-string">'highlight'</span>);
-    }
-
-    &amp;:hover,
-    &amp;:active,
-    &amp;:focus {
-      <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$ecl-color-primary</span>;
-      <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
-    }
-  }
-
-  <span class="hljs-comment">// The left select to the left.</span>
-  <span class="hljs-selector-class">.pika-label</span>:nth-child(1) <span class="hljs-selector-tag">select</span> {
-    <span class="hljs-attribute">border-right</span>: <span class="hljs-number">2px</span> solid <span class="hljs-variable">$ecl-datepickers-color-select-separator</span>;
-    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
-  }
-
-  <span class="hljs-comment">// The right select to the right.</span>
-  <span class="hljs-selector-class">.pika-label</span>:nth-child(2) <span class="hljs-selector-tag">select</span> {
-    <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
-  }
-
-  <span class="hljs-selector-class">.pika-prev</span>,
-  <span class="hljs-selector-class">.pika-next</span> {
-    <span class="hljs-attribute">background-color</span>: transparent;
-    <span class="hljs-attribute">background-position</span>: center center;
-    <span class="hljs-attribute">background-repeat</span>: no-repeat;
-    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">75%</span> <span class="hljs-number">75%</span>;
-    <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$ecl-datepickers-title-bg</span>; <span class="hljs-comment">// hide text</span>
-    <span class="hljs-attribute">cursor</span>: pointer;
-    <span class="hljs-attribute">display</span>: block;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
-    <span class="hljs-attribute">outline</span>: none;
-    <span class="hljs-attribute">overflow</span>: hidden;
-    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">position</span>: relative;
-    <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">white-space</span>: nowrap;
-    <span class="hljs-attribute">width</span>: <span class="hljs-variable">$ecl-datepickers-arrow-size</span>;
-  }
-
-  <span class="hljs-selector-class">.pika-prev</span> {
-    <span class="hljs-attribute">float</span>: left;
-    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">order</span>: -<span class="hljs-number">1</span>;
-
-    &amp;::after {
-      @<span class="hljs-keyword">extend</span> %ecl-icon--after;
-      @<span class="hljs-keyword">extend</span> %ecl-icon--right;
-
-      @<span class="hljs-keyword">include</span> ecl-icon(<span class="hljs-string">'right'</span>);
-
-      <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
-      <span class="hljs-attribute">left</span>: <span class="hljs-number">15px</span>;
-      <span class="hljs-attribute">position</span>: absolute;
-      <span class="hljs-attribute">top</span>: <span class="hljs-number">15px</span>;
-      <span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">180deg</span>);
-    }
-  }
-
-  <span class="hljs-selector-class">.pika-next</span> {
-    <span class="hljs-attribute">float</span>: right;
-    <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
-
-    &amp;::after {
-      @<span class="hljs-keyword">extend</span> %ecl-icon--after;
-      @<span class="hljs-keyword">extend</span> %ecl-icon--right;
-
-      @<span class="hljs-keyword">include</span> ecl-icon(<span class="hljs-string">'right'</span>);
-
-      <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
-      <span class="hljs-attribute">position</span>: absolute;
-      <span class="hljs-attribute">right</span>: <span class="hljs-number">15px</span>;
-      <span class="hljs-attribute">top</span>: <span class="hljs-number">15px</span>;
-    }
-  }
-
-  <span class="hljs-selector-class">.pika-prev</span>:hover,
-  <span class="hljs-selector-class">.pika-next</span>:hover {
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
-  }
-
-  <span class="hljs-selector-class">.pika-prev</span><span class="hljs-selector-class">.is-disabled</span>,
-  <span class="hljs-selector-class">.pika-next</span><span class="hljs-selector-class">.is-disabled</span> {
-    <span class="hljs-attribute">cursor</span>: default;
-  }
-
-  <span class="hljs-selector-class">.is-rtl</span> <span class="hljs-selector-class">.pika-prev</span> {
-    <span class="hljs-attribute">float</span>: right;
-    <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
-
-    &amp;::after {
-      @<span class="hljs-keyword">extend</span> %ecl-icon--after;
-      @<span class="hljs-keyword">extend</span> %ecl-icon--right;
-
-      @<span class="hljs-keyword">include</span> ecl-icon(<span class="hljs-string">'right'</span>);
-
-      <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
-      <span class="hljs-attribute">position</span>: absolute;
-      <span class="hljs-attribute">right</span>: <span class="hljs-number">15px</span>;
-      <span class="hljs-attribute">top</span>: <span class="hljs-number">15px</span>;
-    }
-  }
-
-  <span class="hljs-selector-class">.is-rtl</span> <span class="hljs-selector-class">.pika-next</span> {
-    <span class="hljs-attribute">float</span>: left;
-    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">order</span>: -<span class="hljs-number">1</span>;
-
-    &amp;::after {
-      @<span class="hljs-keyword">extend</span> %ecl-icon--after;
-      @<span class="hljs-keyword">extend</span> %ecl-icon--right;
-
-      @<span class="hljs-keyword">include</span> ecl-icon(<span class="hljs-string">'right'</span>);
-
-      <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
-      <span class="hljs-attribute">left</span>: <span class="hljs-number">15px</span>;
-      <span class="hljs-attribute">position</span>: absolute;
-      <span class="hljs-attribute">top</span>: <span class="hljs-number">15px</span>;
-      <span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">180deg</span>);
-    }
-  }
-
-  <span class="hljs-selector-class">.pika-select</span> {
-    <span class="hljs-attribute">display</span>: inline-block;
-  }
-
-  <span class="hljs-selector-class">.pika-table</span> {
-    <span class="hljs-attribute">background-color</span>: map-get(<span class="hljs-variable">$ecl-colors</span>, <span class="hljs-string">'grey-15'</span>);
-    <span class="hljs-attribute">border-bottom</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxs'</span>) solid transparent;
-    <span class="hljs-attribute">border-collapse</span>: collapse;
-    <span class="hljs-attribute">border-left</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxs'</span>) solid transparent;
-    <span class="hljs-attribute">border-right</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxs'</span>) solid transparent;
-    <span class="hljs-attribute">border-spacing</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-
-    <span class="hljs-selector-tag">th</span>,
-    <span class="hljs-selector-tag">td</span> {
-      <span class="hljs-attribute">padding</span>: <span class="hljs-number">1px</span>;
-    }
-
-    <span class="hljs-selector-tag">th</span> {
-      <span class="hljs-attribute">padding</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxs'</span>) map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxxs'</span>);
-      <span class="hljs-attribute">text-align</span>: center;
-    }
-
-    <span class="hljs-selector-tag">abbr</span> {
-      <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">0</span>;
-      <span class="hljs-attribute">cursor</span>: help;
-      <span class="hljs-attribute">font-weight</span>: normal;
-      <span class="hljs-attribute">text-decoration</span>: none;
-    }
-  }
-
-  <span class="hljs-selector-class">.pika-button</span> {
-    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$ecl-datepickers-day-bg</span>;
-    <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">box-sizing</span>: border-box;
-    <span class="hljs-attribute">cursor</span>: pointer;
-    <span class="hljs-attribute">display</span>: block;
-    <span class="hljs-attribute">font-size</span>: map-get(<span class="hljs-variable">$ecl-font-size</span>, <span class="hljs-string">'m'</span>);
-    <span class="hljs-attribute">margin</span>: <span class="hljs-number">1px</span>;
-    <span class="hljs-attribute">outline</span>: none;
-    <span class="hljs-attribute">padding</span>: map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxxs'</span>) map-get(<span class="hljs-variable">$ecl-spacing</span>, <span class="hljs-string">'xxs'</span>);
-    <span class="hljs-attribute">text-align</span>: center;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-
-    <span class="hljs-selector-class">.is-selection-disabled</span> {
-      <span class="hljs-attribute">cursor</span>: default;
-      <span class="hljs-attribute">pointer-events</span>: none;
-    }
-  }
-
-  <span class="hljs-selector-class">.is-today</span> <span class="hljs-selector-class">.pika-button</span> {
-    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$ecl-datepickers-day-selected-bg</span>;
-  }
-
-  <span class="hljs-selector-class">.is-selected</span> <span class="hljs-selector-class">.pika-button</span> {
-    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$ecl-datepickers-day-selected-bg</span>;
-  }
-
-  <span class="hljs-selector-class">.is-disabled</span> <span class="hljs-selector-class">.pika-button</span>,
-  <span class="hljs-selector-class">.is-outside-current-month</span> <span class="hljs-selector-class">.pika-button</span> {
-    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$ecl-datepickers-day-disabled-color</span>;
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.3</span>;
-  }
-
-  <span class="hljs-selector-class">.is-disabled</span> <span class="hljs-selector-class">.pika-button</span> {
-    <span class="hljs-attribute">cursor</span>: default;
-    <span class="hljs-attribute">pointer-events</span>: none;
-  }
-
-  <span class="hljs-selector-class">.pika-week</span> {
-    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$ecl-datepickers-week-color</span>;
-  }
-
-  <span class="hljs-selector-class">.is-inrange</span> <span class="hljs-selector-class">.pika-button</span> {
-    <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span>;
-  }
-}
-
-@<span class="hljs-keyword">include</span> ecl-media-breakpoint-up(xs) {
-  <span class="hljs-selector-class">.ecl-pika-theme</span> {
-    <span class="hljs-selector-class">.pika-lendar</span>,
-    <span class="hljs-selector-class">.pika-single</span>,
-    <span class="hljs-selector-class">.pika-table</span> {
-      <span class="hljs-attribute">width</span>: auto;
-    }
+                                <pre><span class="hljs-selector-class">.ecl-datepickers</span> {
+  &amp;:focus {
+    <span class="hljs-attribute">border-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'blue-1'</span>);
+    <span class="hljs-attribute">outline-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'blue-1'</span>);
   }
 }
 </pre>
@@ -1616,7 +1317,7 @@ likelihood of mistakes.</p>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">6.5 KB</span>
+                    <span class="Meta-value">138 Bytes</span>
                 </li>
             </ul>
         </div>
