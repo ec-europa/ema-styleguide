@@ -1,0 +1,9 @@
+/*
+  ECL Outline
+  ===========
+*/
+
+.ema-u-outline:focus {
+  border-color: map-get($ema-colors, 'blue-1');
+  outline-color: map-get($ema-colors, 'blue-1');
+}

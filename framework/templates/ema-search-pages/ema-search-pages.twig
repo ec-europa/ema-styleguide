@@ -56,9 +56,10 @@
                         From
                       </div>
                       <div class="ecl-col-9">
-                        {% include '@ec-europa/ecl-datepickers' with {
+                        {% include '@ec-europa/ema-datepickers' with {
                           'value': '01/01/2018',
-                          'id': 'date-from'
+                          'id': 'date-from',
+                          'extra_classes':'ema-u-outline'
                         }%}
                       </div>
                     </div>
@@ -68,7 +69,7 @@
                         To
                       </div>
                       <div class="ecl-col-9">
-                        {% include '@ec-europa/ecl-datepickers' with {
+                        {% include '@ec-europa/ema-datepickers' with {
                           'value': '13/02/2018',
                           'id': 'date-to'
                         }%}
@@ -81,7 +82,7 @@
                 {% embed '@ec-europa/ecl-forms-form-groups' %}
                   {% block form_group %}
                     {% include '@ec-europa/ecl-forms-labels' with { 'label': 'Category', 'for_attribute': 'search-option-category' } %}
-                    {% embed '@ec-europa/ecl-forms-selects' with { 'name': 'category', 'id': 'search-option-category' } %}
+                    {% embed '@ec-europa/ecl-forms-selects' with { 'name': 'category', 'id': 'search-option-category', 'extra_classes': 'ema-u-outline', } %}
                       {% block options %}
                         <option value="all">All categories</option>
                         <option value="1" selected>Contact listing page (75)</option>
@@ -277,7 +278,7 @@
             {% include '@ec-europa/ecl-forms-selects' with {
               'id': 'search-sort',
               'name': 'search-sort',
-              'extra_classes': 'ecl-u-mt-none',
+              'extra_classes': 'ecl-u-mt-none ema-u-outline',
               'options': [
                 { value: '1', label: 'Publication date' },
                 { value: '2', label: 'Last update date' },
