@@ -16,7 +16,6 @@ module.exports = {
       name: 'default',
       label: 'Separator',
       context: {
-        icon: 'related-documents',
         title: 'Related documents',
       },
     },
