@@ -1,10 +1,6 @@
 // EMA Headers
 @import 'headings-mixins';
 
-.ecl-heading {
-  max-width: 56em;
-}
-
 .ecl-heading--ema-h1 {
   @include heading-1();
 }
