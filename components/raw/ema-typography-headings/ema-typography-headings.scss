@@ -2,18 +2,22 @@
 @import 'headings-mixins';
 
 .ecl-heading--ema-h1 {
+  @include heading();
   @include heading-1();
 }
 
 .ecl-heading--ema-h2 {
+  @include heading();
   @include heading-2();
 }
 
 .ecl-heading--ema-h3 {
+  @include heading();
   @include heading-3();
 }
 
 .ecl-heading--ema-h4 {
+  @include heading();
   @include heading-4();
 }
 
