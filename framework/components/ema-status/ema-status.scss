@@ -27,12 +27,6 @@
   background-color: map-get($ema-colors, 'epar-red');
 }
 
-.ema-status-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .ema-status-title {
   text-transform: uppercase;
 }
