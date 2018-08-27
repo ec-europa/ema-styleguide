@@ -6,6 +6,21 @@ const outputFolder = isProd ? 'dist/framework' : 'static/framework';
 module.exports = {
   scripts: [
     {
+      entry: path.resolve(
+        __dirname,
+        'node_modules/svg4everybody/dist/svg4everybody.js'
+      ),
+      dest: path.resolve(
+        __dirname,
+        outputFolder,
+        'scripts/svg4everybody.min.js'
+      ),
+      options: {
+        sourceMap: isProd ? true : 'inline',
+        moduleName: 'svg4everybody',
+      },
+    },
+    {
       entry: path.resolve(__dirname, 'framework/index.js'),
       dest: path.resolve(__dirname, outputFolder, 'scripts/ema.js'),
       options: {

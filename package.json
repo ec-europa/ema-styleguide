@@ -46,8 +46,9 @@
     "stylelint-config-prettier": "2.0.0"
   },
   "dependencies": {
+    "@ec-europa/ecl-base": "0.10.0",
     "@ec-europa/ecl-preset-full": "0.6.0",
-    "@ec-europa/ecl-base": "0.10.0"
+    "svg4everybody": "^2.1.9"
   },
   "engines": {
     "node": ">=8.9.1"
