@@ -12,6 +12,8 @@
 
   .ecl-navigation-menu__group::before {
     background-color: transparent;
+    content: none;
+    width: auto;
   }
 
   .ecl-navigation-menu__link {
