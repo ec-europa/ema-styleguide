@@ -9,7 +9,9 @@ export const ratingForm = (selector = '') => {
     return null;
 
   // SETUP
-  const ratingStars = queryAll(`#${selector} .ema-rating__star:not([disabled]`);
+  const ratingStars = queryAll(
+    `#${selector} .ema-rating__star:not([disabled])`
+  );
 
   const eventItemClick = () => {
     const block = queryAll(`#${selector}`)[0].getAttribute('aria-controls');
