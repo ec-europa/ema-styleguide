@@ -1277,7 +1277,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs ema-status-icon"</span> </span></span><span class="hljs-template-variable">{{ _extra_attributes }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _icon_path }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">#ema-icon-set_</span></span></span><span class="hljs-template-variable">{{ _icon }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-text"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-title"</span>&gt;</span></span><span class="hljs-template-variable">{{ status }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-desc"</span>&gt;</span></span><span class="hljs-template-variable">{{ description }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -1309,7 +1309,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs ema-status-icon "</span> &gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../framework/images/icons/ema-icons.svg#ema-icon-set_info "</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-text "</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-title "</span>&gt;</span>Current status<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ema-status-desc "</span>&gt;</span>European Commission final decision<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -1372,12 +1372,6 @@
   <span class="hljs-attribute">background-color</span>: map-get(<span class="hljs-variable">$ema-colors</span>, <span class="hljs-string">'epar-red'</span>);
 }
 
-<span class="hljs-selector-class">.ema-status-text</span> {
-  <span class="hljs-attribute">display</span>: flex;
-  <span class="hljs-attribute">flex-direction</span>: column;
-  <span class="hljs-attribute">justify-content</span>: center;
-}
-
 <span class="hljs-selector-class">.ema-status-title</span> {
   <span class="hljs-attribute">text-transform</span>: uppercase;
 }
@@ -1402,7 +1396,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">812 Bytes</span>
+                    <span class="Meta-value">720 Bytes</span>
                 </li>
             </ul>
         </div>

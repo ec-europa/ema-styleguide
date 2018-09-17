@@ -289,7 +289,7 @@
   <svg class="ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs ema-status-icon" >
     <use xlink:href="../../framework/images/icons/ema-icons.svg#ema-icon-set_select" />
   </svg>
-  <span class="ema-status-text">
+  <span>
     <div class="ema-status-title">Authorised</div>
     <div class="ema-status-desc">This medicine is authorised for use in the European Union</div>
   </span>
@@ -314,7 +314,7 @@
   <svg class="ema-icon ema-icon--xl ecl-u-fs-xxl ecl-u-mr-xs ema-status-icon" >
     <use xlink:href="../../framework/images/icons/ema-icons.svg#ema-icon-set_info" />
   </svg>
-  <span class="ema-status-text">
+  <span>
     <div class="ema-status-title">Patient safety</div>
     <div class="ema-status-desc">Patient safety informations</div>
   </span>
@@ -1337,8 +1337,10 @@
 
 </footer>
 
+  <script src="../../framework/scripts/svg4everybody.min.js"></script>
   <script src="../../framework/scripts/ema.js"></script>
-    <script type="text/javascript">document.addEventListener('DOMContentLoaded', function () {
+    <script type="text/javascript">svg4everybody.default();</script>
+  <script type="text/javascript">document.addEventListener('DOMContentLoaded', function () {
         ECL.megamenu();
         ECL.ratingForm("ema-rating-form__review");
         ECL.initExpandables('.ecl-file__translations-toggle');
